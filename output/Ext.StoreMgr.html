@@ -1,0 +1,2844 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.StoreMgr-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.StoreMgr-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.StoreMgr-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.StoreMgr-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.StoreMgr" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/StoreMgr.html#cls-Ext.StoreMgr">Ext.StoreMgr</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                StoreMgr.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/StoreMgr.html#cls-Ext.StoreMgr">Ext.StoreMgr</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.util.MixedCollection.html"  ext:cls="Ext.util.MixedCollection" ext:member="">Ext.util.MixedCollection</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        store组管理器。这是全局的、并且是缺省的。<br /> The default global group of stores. @singleton
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.StoreMgr-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.StoreMgr-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.StoreMgr-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-add"></a>
+                        <!--名称+参数列表-->
+                        <b>add</b>(
+	                        
+                                <code>
+                                    String key
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                加入一个item到集合中。 
+                            </div>
+                            <div class="long">
+                                加入一个item到集合中。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    item的键名称
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    加入的item
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            已加入的item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-addAll"></a>
+                        <!--名称+参数列表-->
+                        <b>addAll</b>(
+	                        
+                                <code>
+                                    Object/Array objs
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                将数组中或是对象中的所有元素加入到集合中。 
+                            </div>
+                            <div class="long">
+                                将数组中或是对象中的所有元素加入到集合中。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    objs
+                                                </code> : Object/Array
+                                                <div class="sub-desc">
+                                                    对象中包含的所有属性，或是数组中所有的值，都分别逐一加入集合中。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-clear"></a>
+                        <!--名称+参数列表-->
+                        <b>clear</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                清除集合中所有item 
+                            </div>
+                            <div class="long">
+                                清除集合中所有item
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-clone"></a>
+                        <!--名称+参数列表-->
+                        <b>clone</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : MixedCollection
+                        <div class="mdesc">
+                            <div class="short">
+                                创建该集合的浅表副本shallow copy（shallow copy） 
+                            </div>
+                            <div class="long">
+                                创建该集合的浅表副本shallow copy（shallow copy）
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        MixedCollection
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-contains"></a>
+                        <!--名称+参数列表-->
+                        <b>contains</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                若在集合中找到传入的item，则返回true。 
+                            </div>
+                            <div class="long">
+                                若在集合中找到传入的item，则返回true。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    要在集合中查找的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True表示为在集合中找到该item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-containsKey"></a>
+                        <!--名称+参数列表-->
+                        <b>containsKey</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                若在集合中找到传入的key，则返回true。 
+                            </div>
+                            <div class="long">
+                                若在集合中找到传入的key，则返回true。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    要在集合中查找的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True表示为在集合中找到该key
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-each"></a>
+                        <!--名称+参数列表-->
+                        <b>each</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                在集合中执行每个Item的指定函数。函数执行时，会有下列的参数：  i... 
+                            </div>
+                            <div class="long">
+                                在集合中执行每个Item的指定函数。函数执行时，会有下列的参数： <div class="mdetail-params"><ul> <li><b>item</b> : Mixed<p class="sub-desc">集合中的item</p></li> <li><b>index</b> : Number<p class="sub-desc">item的索引</p></li> <li><b>length</b> : Number<p class="sub-desc">集合中的items的总数</p></li> </ul></div> 那个函数应该要返回一个布尔值。若函数返回false便终止枚举。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    每个item要执行的函数
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    (optional) 函数执行时的作用域
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-eachKey"></a>
+                        <!--名称+参数列表-->
+                        <b>eachKey</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                传入一个函数类型的参数，然后在集合中的每个Item执行。key和其相关... 
+                            </div>
+                            <div class="long">
+                                传入一个函数类型的参数，然后在集合中的每个Item执行。key和其相关的item都作为头两个参数传入。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    每个item要执行的函数。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    执行函数的作用域
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-filter"></a>
+                        <!--名称+参数列表-->
+                        <b>filter</b>(
+	                        
+                                <code>
+                                    String property
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String/RegExp value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean anyMatch
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean caseSensitive
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : MixedCollection
+                        <div class="mdesc">
+                            <div class="short">
+                                由指定的属性过滤集合中的对象。返回以过滤后的新集合。 
+                            </div>
+                            <div class="long">
+                                由指定的属性过滤集合中的<i>对象</i>。返回以过滤后的新集合。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    property
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    你对象身上的属性
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String/RegExp
+                                                <div class="sub-desc">
+                                                    也可以是属性开始的值或对于这个属性的正则表达式
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    anyMatch
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    (optional) True to match any part of the string, not just the beginning
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    caseSensitive
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    (optional) True for case sensitive comparison (defaults to False).
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        MixedCollection
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            过滤后的新对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-filterBy"></a>
+                        <!--名称+参数列表-->
+                        <b>filterBy</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : MixedCollection
+                        <div class="mdesc">
+                            <div class="short">
+                                由函数过滤集合中的对象。返回以过滤后的新集合 传入的函数会被集合中每个... 
+                            </div>
+                            <div class="long">
+                                由函数过滤集合中的<i>对象</i>。返回以过滤后的<i>新</i>集合 传入的函数会被集合中每个对象执行。如果函数返回true，则value会被包含否则会被过滤、
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    被调用的函数，会接收o(object)和k (the key)参数
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数的作用域（默认为 this）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        MixedCollection
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            过滤后的新对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-find"></a>
+                        <!--名称+参数列表-->
+                        <b>find</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                根据传入的函数，执行该函数若返回true便说明这是要找到的那个item。 
+                            </div>
+                            <div class="long">
+                                根据传入的函数，执行该函数若返回true便说明这是要找到的那个item。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    每个item要执行的查询函数。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    执行函数的作用域
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            根据规则函数在集合中第一个找到的item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-findIndex"></a>
+                        <!--名称+参数列表-->
+                        <b>findIndex</b>(
+	                        
+                                <code>
+                                    String property
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String/RegExp value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Number start]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean anyMatch]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean caseSensitive]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                由指定的属性/值查找集合中的第一个匹配对象。这个对象是过滤后的新集合 
+                            </div>
+                            <div class="long">
+                                由指定的属性/值查找集合中的第一个匹配对象。这个对象是过滤后的<i>新</i>集合
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    property
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    当前对象下的属性名称
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String/RegExp
+                                                <div class="sub-desc">
+                                                    代表属性值的字符串，也可以是一个正则表达式以测试属性。y.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    start
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    从第几个字符开始搜索（默认为0）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    anyMatch
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    True表示为匹配字符串的任意一部分，不只是开始的部分
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    caseSensitive
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    True表示为打开大小写敏感
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            匹配的索引或-1
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-findIndexBy"></a>
+                        <!--名称+参数列表-->
+                        <b>findIndexBy</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Number start]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : MixedCollection
+                        <div class="mdesc">
+                            <div class="short">
+                                由函数过滤集合中的对象。返回以过滤后的新集合 传入的函数会被集合中每个... 
+                            </div>
+                            <div class="long">
+                                由函数过滤集合中的<i>对象</i>。返回以过滤后的<i>新</i>集合 传入的函数会被集合中每个对象执行。如果函数返回true，则value会被包含否则会被过滤、
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    被调用的函数，会接收o(object)和k (the key)参数
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数的作用域（默认为 this）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    start
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    从第几个字符开始搜索（默认为0）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        MixedCollection
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            匹配的索引或-1
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-first"></a>
+                        <!--名称+参数列表-->
+                        <b>first</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                返回集合中第一个item 
+                            </div>
+                            <div class="long">
+                                返回集合中第一个item
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            集合中第一个item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-get"></a>
+                        <!--名称+参数列表-->
+                        <b>get</b>(
+	                        
+                                <code>
+                                    String/Number key
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                根据key或索引返回item。key的优先权高于索引。@method 
+                            </div>
+                            <div class="long">
+                                根据key或索引返回item。key的优先权高于索引。@method
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code> : String/Number
+                                                <div class="sub-desc">
+                                                    或者是item的索引
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            传入key所关联的item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-getCount"></a>
+                        <!--名称+参数列表-->
+                        <b>getCount</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                返回集合中的item总数。 
+                            </div>
+                            <div class="long">
+                                返回集合中的item总数。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            item总数
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-getKey"></a>
+                        <!--名称+参数列表-->
+                        <b>getKey</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                如果你执行getKey的方法，MixedCollection有一个通用... 
+                            </div>
+                            <div class="long">
+                                如果你执行getKey的方法，MixedCollection有一个通用的方法来取得keys。默认的实现只是简单地返回<tt style="font-weight:bold;">item.id</tt>， 不过你可以按照下面的例子自定义一个实现，以返回另外一个值 
+<pre><code>
+// 一般方式
+var mc = new Ext.util.MixedCollection();
+mc.add(someEl.dom.id, someEl);
+mc.add(otherEl.dom.id, otherEl);
+//等等
+
+// 使用getKey
+var mc = new Ext.util.MixedCollection();
+mc.getKey = function(el){
+   return el.dom.id;
+};
+mc.add(someEl);
+mc.add(otherEl);
+
+// 或通过构造器
+var mc = new Ext.util.MixedCollection(false, function(el){
+   return el.dom.id;
+});
+mc.add(someEl);
+mc.add(otherEl);
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    根据item找到key
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            传入item的key
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-getRange"></a>
+                        <!--名称+参数列表-->
+                        <b>getRange</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[Number startIndex]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Number endIndex]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Array
+                        <div class="mdesc">
+                            <div class="short">
+                                返回这个集合中的某个范围内的items 
+                            </div>
+                            <div class="long">
+                                返回这个集合中的某个范围内的items
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    startIndex
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    默认为 0
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    endIndex
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    默认为最后的item
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Array
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            items数组
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-indexOf"></a>
+                        <!--名称+参数列表-->
+                        <b>indexOf</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                传入一个对象，返回它的索引。 
+                            </div>
+                            <div class="long">
+                                传入一个对象，返回它的索引。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    要寻找索引的item
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            item的索引。返回－1表示找不到。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-indexOfKey"></a>
+                        <!--名称+参数列表-->
+                        <b>indexOfKey</b>(
+	                        
+                                <code>
+                                    String key
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                传入一个Key，返回它的索引。 
+                            </div>
+                            <div class="long">
+                                传入一个Key，返回它的索引。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    寻找索引的key
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            key的索引
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-insert"></a>
+                        <!--名称+参数列表-->
+                        <b>insert</b>(
+	                        
+                                <code>
+                                    Number index
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String key
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                指定集合中的某个索引然后插入一个Item 
+                            </div>
+                            <div class="long">
+                                指定集合中的某个索引然后插入一个Item
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    要插入item的索引。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    包含新item的key名称，或item本身
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    (可选的) 如果第二个参数是key,新item
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            以插入的item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-item"></a>
+                        <!--名称+参数列表-->
+                        <b>item</b>(
+	                        
+                                <code>
+                                    String/Number key
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                根据key或索引（index）返回item。key的优先权高于索引。这... 
+                            </div>
+                            <div class="long">
+                                根据key或索引（index）返回item。key的优先权高于索引。这个方法相当于先调用<a href="output/Ext.StoreMgr.html#Ext.StoreMgr-key" ext:cls="Ext.StoreMgr" ext:member="key">key</a>，如不匹配在调用<a href="/output/Ext.StoreMgr.html#Ext.StoreMgr-itemAt" ext:cls="Ext.StoreMgr" ext:member="itemAt">itemAt</a>。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code> : String/Number
+                                                <div class="sub-desc">
+                                                    或者是item的索引
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            传入key所关联的item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-itemAt"></a>
+                        <!--名称+参数列表-->
+                        <b>itemAt</b>(
+	                        
+                                <code>
+                                    Number index
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                根据索引找到item 
+                            </div>
+                            <div class="long">
+                                根据索引找到item
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    item的索引index
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            指定索引的item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-key"></a>
+                        <!--名称+参数列表-->
+                        <b>key</b>(
+	                        
+                                <code>
+                                    String/Number key
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                根据key找到item 
+                            </div>
+                            <div class="long">
+                                根据key找到item
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code> : String/Number
+                                                <div class="sub-desc">
+                                                    item的key
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            key所关联的item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-keySort"></a>
+                        <!--名称+参数列表-->
+                        <b>keySort</b>(
+	                        
+                                <code>
+                                    String dir
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Function fn]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                按key顺序排列集合 
+                            </div>
+                            <div class="long">
+                                按key顺序排列集合
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    dir
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    方向（可选的） "ASC" 或 "DESC"
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    一个参照的function（默认为非敏感字符串）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-last"></a>
+                        <!--名称+参数列表-->
+                        <b>last</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                返回集合中最后一个item 
+                            </div>
+                            <div class="long">
+                                返回集合中最后一个item
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            集合中最后一个item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-lookup"></a>
+                        <!--名称+参数列表-->
+                        <b>lookup</b>(
+	                        
+                                <code>
+                                    String/Object id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.data.Store
+                        <div class="mdesc">
+                            <div class="short">
+                                由id返回一个已登记的Store。Gets a registered ... 
+                            </div>
+                            <div class="long">
+                                由id返回一个已登记的Store。Gets a registered Store by id
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String/Object
+                                                <div class="sub-desc">
+                                                    Store的id或是Store对象。The id of the Store, or a Store instance
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.data.Store
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        StoreMgr
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-register"></a>
+                        <!--名称+参数列表-->
+                        <b>register</b>(
+	                        
+                                <code>
+                                    Ext.data.Store store1
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Ext.data.Store store2]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Ext.data.Store etc
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                登记更多的Store对象到StoreMgr。一般情况下你不需要手动加入... 
+                            </div>
+                            <div class="long">
+                                登记更多的Store对象到StoreMgr。一般情况下你不需要手动加入。任何透过<a href="/output/Ext.StoreMgr.html#Ext.StoreMgr-Ext.data.StorestoreId" ext:cls="Ext.StoreMgr" ext:member="Ext.data.StorestoreId">Ext.data.StorestoreId</a>初始化的Store都会自动登记。Registers one or more Stores with the StoreMgr. You do not normally need to register stores manually.  Any store initialized with a <a href="/output/Ext.StoreMgr.html#Ext.StoreMgr-Ext.data.StorestoreId" ext:cls="Ext.StoreMgr" ext:member="Ext.data.StorestoreId">Ext.data.StorestoreId</a> will be auto-registered.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    store1
+                                                </code> : Ext.data.Store
+                                                <div class="sub-desc">
+                                                    Store实例。A Store instance
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    store2
+                                                </code> : Ext.data.Store
+                                                <div class="sub-desc">
+                                                    Store实例2。(optional)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    etc
+                                                </code> : Ext.data.Store
+                                                <div class="sub-desc">
+                                                    ... （可选的）Store实例x……。(optional)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        StoreMgr
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-remove"></a>
+                        <!--名称+参数列表-->
+                        <b>remove</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                从集合中移除Item 
+                            </div>
+                            <div class="long">
+                                从集合中移除Item
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    移除的item
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            被移除的Item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-removeAt"></a>
+                        <!--名称+参数列表-->
+                        <b>removeAt</b>(
+	                        
+                                <code>
+                                    Number index
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                从集合中移除由index指定的Item。完成后触发remove事件。 
+                            </div>
+                            <div class="long">
+                                从集合中移除由index指定的Item。完成后触发<a href="/output/Ext.StoreMgr.html#Ext.StoreMgr-remove" ext:cls="Ext.StoreMgr" ext:member="remove">remove</a>事件。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    移除item的索引
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            被移除的item或是false就代表没有移除。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-removeKey"></a>
+                        <!--名称+参数列表-->
+                        <b>removeKey</b>(
+	                        
+                                <code>
+                                    String key
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                根据传入参数key，从集合中移除相关的item 
+                            </div>
+                            <div class="long">
+                                根据传入参数key，从集合中移除相关的item
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要移除item的key
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            被移除的item或是false就代表没有移除。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-replace"></a>
+                        <!--名称+参数列表-->
+                        <b>replace</b>(
+	                        
+                                <code>
+                                    String key
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object o]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                替换集合中的item。完成后触发replace事件。 
+                            </div>
+                            <div class="long">
+                                替换集合中的item。完成后触发<a href="/output/Ext.StoreMgr.html#Ext.StoreMgr-replace" ext:cls="Ext.StoreMgr" ext:member="replace">replace</a>事件。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要替换item所关联的那个key，或是item。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    如果传入的第一个参数是key，那么item就是key的键名称。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新的item。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-sort"></a>
+                        <!--名称+参数列表-->
+                        <b>sort</b>(
+	                        
+                                <code>
+                                    String dir
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Function fn]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                按传入的函数排列集合 
+                            </div>
+                            <div class="long">
+                                按传入的函数排列集合
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    dir
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    方向（可选的） "ASC" 或 "DESC"
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    一个供参照的function
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MixedCollection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.StoreMgr-unregister"></a>
+                        <!--名称+参数列表-->
+                        <b>unregister</b>(
+	                        
+                                <code>
+                                    String/Object id1
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[String/Object id2]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String/Object etc
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                注销一个或多个Stores。Unregisters one or mo... 
+                            </div>
+                            <div class="long">
+                                注销一个或多个Stores。Unregisters one or more Stores with the StoreMgr
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id1
+                                                </code> : String/Object
+                                                <div class="sub-desc">
+                                                    Store的id或是Store对象The id of the Store, or a Store instance
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id2
+                                                </code> : String/Object
+                                                <div class="sub-desc">
+                                                    Store实例2。(optional)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    etc
+                                                </code> : String/Object
+                                                <div class="sub-desc">
+                                                    ... （可选的）Store实例x……。(optional)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        StoreMgr
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.StoreMgr-events"></a>
+    <h2>公共事件</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    事件
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="add-add"></a>
+                        <!--名称+参数列表-->
+                        <b>add</b>(
+	                        
+                                <code>
+                                    Number index,
+                                </code>
+	                        
+                                <code>
+                                    Object o,
+                                </code>
+	                        
+                                <code>
+                                    String key
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当item被加入到集合之后触发。 
+                            </div>
+                            <div class="long">
+                                当item被加入到集合之后触发。
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    加入item的索引
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    加入的item
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code>String
+                                                <div class="sub-desc">
+                                                    加入item的键名称
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MixedCollection</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="clear-clear"></a>
+                        <!--名称+参数列表-->
+                        <b>clear</b>(
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当集合被清除后触发。 
+                            </div>
+                            <div class="long">
+                                当集合被清除后触发。
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MixedCollection</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="remove-remove"></a>
+                        <!--名称+参数列表-->
+                        <b>remove</b>(
+	                        
+                                <code>
+                                    Object o,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[String key]</span>
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当item被移除集合时触发。 
+                            </div>
+                            <div class="long">
+                                当item被移除集合时触发。
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    被移除的item
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code>String
+                                                <div class="sub-desc">
+                                                    被移除的item的键名称
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MixedCollection</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="replace-replace"></a>
+                        <!--名称+参数列表-->
+                        <b>replace</b>(
+	                        
+                                <code>
+                                    String key,
+                                </code>
+	                        
+                                <code>
+                                    Object old,
+                                </code>
+	                        
+                                <code>
+                                    Object new
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                集合中的item被替换后触发。 
+                            </div>
+                            <div class="long">
+                                集合中的item被替换后触发。
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code>String
+                                                <div class="sub-desc">
+                                                    新加入item的键名称
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    old
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    被替换之item
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    new
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    新item.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MixedCollection</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束事件------>	
+</div>

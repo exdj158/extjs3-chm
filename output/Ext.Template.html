@@ -1,0 +1,1013 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.Template-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.Template-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.Template-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.Template-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.Template" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/Template.html#cls-Ext.Template">Ext.Template</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                Template.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/Template.html#cls-Ext.Template">Ext.Template</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+          将一段Html片段呈现为模板。可将模板编译以获取更高的性能。针对格式化的函数的可用列表,请参阅<a href="output/Ext.util.Format.html" ext:cls="Ext.util.Format">Ext.util.Format</a>.<br /> 用法：
+<pre><code>
+var t = new Ext.Template(
+    '&lt;div name="{id}"&gt;',
+        '&lt;span class="{cls}"&gt;{name:trim} {value:ellipsis(10)}&lt;/span&gt;',
+    '&lt;/div&gt;'
+);
+t.append('some-element', {id: 'myid', cls: 'myclass', name: 'foo', value: 'bar'});
+</code></pre> 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.Template-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.Template-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disableFormats-activeItem"></a>
+                        <b>
+                        disableFormats: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                Ture表示为禁止格式化功能（默认为false） @type Boo...
+                            </div>
+                            <div class="long">
+                                Ture表示为禁止格式化功能（默认为false） @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Template</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.Template-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-append"></a>
+                        <!--名称+参数列表-->
+                        <b>append</b>(
+	                        
+                                <code>
+                                    Mixed el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/Array values
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean returnElement]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                填充模板的数据,形成为一个或多个新节点，并追加到e1。 
+                            </div>
+                            <div class="long">
+                                填充模板的数据,形成为一个或多个新节点，并追加到e1。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    上下文的元素
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    values
+                                                </code> : Object/Array
+                                                <div class="sub-desc">
+                                                    模板填充值。该参数可以是一个数组(如果参数是数值型,如{0},或是一个对象,如{foo: 'bar'}.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为返回 Ext.Element (默认为undefined)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点或元素
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-apply"></a>
+                        <!--名称+参数列表-->
+                        <b>apply</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                applyTemplate的简写方式 @method 
+                            </div>
+                            <div class="long">
+                                <a href="/output/Ext.Template.html#Ext.Template-applyTemplate" ext:cls="Ext.Template" ext:member="applyTemplate">applyTemplate</a>的简写方式 @method
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-applyTemplate"></a>
+                        <!--名称+参数列表-->
+                        <b>applyTemplate</b>(
+	                        
+                                <code>
+                                    Object/Array values
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                返回HTML片段,这块片断是由数据填充模板之后而成的。 
+                            </div>
+                            <div class="long">
+                                返回HTML片段,这块片断是由数据填充模板之后而成的。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    values
+                                                </code> : Object/Array
+                                                <div class="sub-desc">
+                                                    模板填充值。该参数可以是一个数组(如果参数是数值型,如{0},或是一个对象,如{foo: 'bar'}.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            HTML片段
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-compile"></a>
+                        <!--名称+参数列表-->
+                        <b>compile</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Template
+                        <div class="mdesc">
+                            <div class="short">
+                                将模板编译成内置调用函数,消除刚才的正则表达式 
+                            </div>
+                            <div class="long">
+                                将模板编译成内置调用函数,消除刚才的正则表达式
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Template
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-from"></a>
+                        <!--名称+参数列表-->
+                        <b>from</b>(
+	                        
+                                <code>
+                                    String/HTMLElement DOM
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object config
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : s
+                        <div class="mdesc">
+                            <div class="short">
+                                传入一个元素的值的参数,用于创建模板,（推荐display:none ... 
+                            </div>
+                            <div class="long">
+                                传入一个元素的值的参数,用于创建模板,（推荐<i>display:none</i> textarea）或innerHTML.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    DOM
+                                                </code> : String/HTMLElement
+                                                <div class="sub-desc">
+                                                    元素或某id
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    一个配置项对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        s
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            s  创建好的模板
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-html"></a>
+                        <!--名称+参数列表-->
+                        <b>html</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                 
+                            </div>
+                            <div class="long">
+                                
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-insertAfter"></a>
+                        <!--名称+参数列表-->
+                        <b>insertAfter</b>(
+	                        
+                                <code>
+                                    Mixed el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/Array values
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean returnElement]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                填充模板的数据,形成为一个或多个新节点，并位于el之后的位置插入。 
+                            </div>
+                            <div class="long">
+                                填充模板的数据,形成为一个或多个新节点，并位于el之后的位置插入。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    上下文的元素
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    values
+                                                </code> : Object/Array
+                                                <div class="sub-desc">
+                                                    模板填充值。该参数可以是一个数组(如果参数是数值型,如{0},或是一个对象,如{foo: 'bar'}.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为返回 Ext.Element (默认为undefined)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点或元素
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-insertBefore"></a>
+                        <!--名称+参数列表-->
+                        <b>insertBefore</b>(
+	                        
+                                <code>
+                                    Mixed el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/Array values
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean returnElement]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                填充模板的数据,形成为一个或多个新节点，并位于el之前的位置插入。 
+                            </div>
+                            <div class="long">
+                                填充模板的数据,形成为一个或多个新节点，并位于el之前的位置插入。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    上下文的元素
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    values
+                                                </code> : Object/Array
+                                                <div class="sub-desc">
+                                                    模板填充值。该参数可以是一个数组(如果参数是数值型,如{0},或是一个对象,如{foo: 'bar'}.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为返回 Ext.Element (默认为undefined)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点或元素
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-insertFirst"></a>
+                        <!--名称+参数列表-->
+                        <b>insertFirst</b>(
+	                        
+                                <code>
+                                    Mixed el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/Array values
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean returnElement]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                填充模板的数据,形成为一个或多个新节点，作为首个子节点插入到e1。 
+                            </div>
+                            <div class="long">
+                                填充模板的数据,形成为一个或多个新节点，作为首个子节点插入到e1。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    上下文的元素
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    values
+                                                </code> : Object/Array
+                                                <div class="sub-desc">
+                                                    模板填充值。该参数可以是一个数组(如果参数是数值型,如{0},或是一个对象,如{foo: 'bar'}.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为返回 Ext.Element (默认为undefined)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点或元素
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-overwrite"></a>
+                        <!--名称+参数列表-->
+                        <b>overwrite</b>(
+	                        
+                                <code>
+                                    Mixed el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/Array values
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean returnElement]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                填充模板的数据,形成为一个或多个新节点，对el的内容进行覆盖。 
+                            </div>
+                            <div class="long">
+                                填充模板的数据,形成为一个或多个新节点，对el的内容进行覆盖。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    正文元素
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    values
+                                                </code> : Object/Array
+                                                <div class="sub-desc">
+                                                    模板填充值。该参数可以是一个数组(如果参数是数值型,如{0},或是一个对象,如{foo: 'bar'}.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为返回 Ext.Element（默认为undefined）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点或元素
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Template-set"></a>
+                        <!--名称+参数列表-->
+                        <b>set</b>(
+	                        
+                                <code>
+                                    String html
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean compile]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Template
+                        <div class="mdesc">
+                            <div class="short">
+                                使得某段HTML可作用模板使用,也可将其编译 
+                            </div>
+                            <div class="long">
+                                使得某段HTML可作用模板使用,也可将其编译
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    html
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    compile
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    ture表示为编译模板（默认为undefined）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Template
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Template
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.Template-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

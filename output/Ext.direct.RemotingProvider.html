@@ -1,0 +1,1904 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.direct.RemotingProvider-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.direct.RemotingProvider-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.direct.RemotingProvider-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.direct.RemotingProvider-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.direct.RemotingProvider" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/RemotingProvider.html#cls-Ext.direct.RemotingProvider">Ext.direct.RemotingProvider</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extdirect
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                RemotingProvider.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/RemotingProvider.html#cls-Ext.direct.RemotingProvider">Ext.direct.RemotingProvider</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.direct.JsonProvider.html"  ext:cls="Ext.direct.JsonProvider" ext:member="">Ext.direct.JsonProvider</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        <p> <a href="/output/Ext.direct.RemotingProvider.html" ext:cls="Ext.direct.RemotingProvider">RemotingProvider</a>暴露了在客户端上访问服务端方法的方式方法。这是一种RPC（remote procedure call，远程过程调录）的连接类型，即客户端可以初始化服务端上的进程。<br /> The <a href="/output/Ext.direct.RemotingProvider.html" ext:cls="Ext.direct.RemotingProvider">RemotingProvider</a> exposes access to server side methods on the client (a remote procedure call (RPC) type of connection where the client can initiate a procedure on the server). </p>  <p> 这样的话，组织代码的时候会更具可维护性，客户端与服务端之间的道路怎么走也会越加地清晰。如果单使用URL的话这点是不容易做到的。<br /> This allows for code to be organized in a fashion that is maintainable, while providing a clear path between client and server, something that is not always apparent when using URLs.</p>  <p> 完成上述功能，服务端必须将有关类和方法的信息告诉给客户端知道。一般这些配置的信息由服务端的Ext.Direct包完成，构建一系列的API信息输出。<br /> To accomplish this the server-side needs to describe what classes and methods are available on the client-side. This configuration will typically be outputted by the server-side Ext.Direct stack when the API description is built.</p>
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.direct.RemotingProvider-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="actions-header"></a>
+                        <b>actions</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                用对象字面化（Object literal）确定服务端的动作或方法。例...
+                            </div>
+                            <div class="long">
+                                用对象字面化（Object literal）确定服务端的动作或方法。例如，如果供应器（Provider）是如下配置的： Object literal defining the server side actions and methods. For example, if the Provider is configured with: <pre><code>
+"actions":{ // actions对象下面的属性每个都代表者对应服务端的类。each property within the 'actions' object represents a server side Class 
+    "TestAction":[ // 服务端的类其方法所组成的数组，要将他们暴露给客户端。array of methods within each server side Class to be   
+    {              // stubbed out on client
+        "name":"doEcho", 
+        "len":1            
+    },{
+        "name":"multiply",// name of method
+        "len":2           // 参数的个数是多少。一定要是数字类型，而不能是字符串。The number of parameters that will be used to create an
+                          // array of data to send to the server side function.
+                          // Ensure the server sends back a Number, not a String. 
+    },{
+        "name":"doForm",
+        "formHandler":true, // direct the client to use specialized form handling method 
+        "len":1
+    }]
+} </code></pre> <p> 注意Store不是必须的，一个服务端方法可以在任何的时候被调用。下面的例子中我们<b>客户端</b>的方法调用服务端中的“乘法”，就在服务端的“TestAction”类中： <br /> Note that a Store is not required, a server method can be called at any time. In the following example a <b>client side</b> handler is used to call the server side method "multiply" in the server-side "TestAction" Class:</p> <pre><code>
+TestAction.multiply(
+    2, 4, // 这两个参数都会传到服务器中，所以指定len=2。pass two arguments to server, so specify len=2
+    // 下面的回调函数在服务端调用后执行。callback function after the server is called
+    // result: the result returned by the server
+    //      e: Ext.Direct.RemotingEvent object result就是由服务端返回的对象，例如Ext.Direct.RemotingEvent类型的对象
+    function(result, e){
+        var t = e.getTransaction();
+        var action = t.action; // 调用服务端的类。server side Class called
+        var method = t.method; // 调用服务端的方法。server side method called
+        if(e.status){
+            var answer = Ext.encode(result); // 8
+    
+        }else{
+            var msg = e.message; // 失败的信息 failure message
+        }
+    }
+); </code></pre> 上面的例子中，服务端的“multiply”函数会送入两个参数（2和4）。“multiply”函数就应该返回8，最后变为<tt>result</tt>变量。In the example above, the server side "multiply" function will be passed two arguments (2 and 4).  The "multiply" method should return the value 8 which will be available as the <tt>result</tt> in the example above.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RemotingProvider</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableBuffer-header"></a>
+                        <b>enableBuffer</b>
+                        : Number/Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                 设置为true或false决定是否捆绑多个方法调用在一起。如果指定...
+                            </div>
+                            <div class="long">
+                                <p> 设置为<tt>true</tt>或<tt>false</tt>决定是否捆绑多个方法调用在一起。如果指定一个数字表示就等待形成一次批调用的机会（默认为10毫秒）。<br /> <tt>true</tt> or <tt>false</tt> to enable or disable combining of method calls. If a number is specified this is the amount of time in milliseconds to wait before sending a batched request (defaults to <tt>10</tt>).</p> <br> <p> 多个调用按一定的时候聚集在一起然后统一在一次请求中发出，就可以优化程序了，因为减少了服务端之间的往返次数。<br /> Calls which are received within the specified timeframe will be concatenated together and sent in a single request, optimizing the application by reducing the amount of round trips that have to be made to the server.</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RemotingProvider</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableUrlEncode-header"></a>
+                        <b>enableUrlEncode</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                指定哪个param会保存方法的参数。默认是'data'。Specify...
+                            </div>
+                            <div class="long">
+                                指定哪个param会保存方法的参数。默认是<tt>'data'</tt>。Specify which param will hold the arguments for the method. Defaults to <tt>'data'</tt>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RemotingProvider</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="id-header"></a>
+                        <b>id</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                供应器的id（默认的由{@link Ext#id auto-assig...
+                            </div>
+                            <div class="long">
+                                供应器的id（默认的由{@link Ext#id auto-assigned id}方法产生）。如果你没有用全局变量保存着这个供应器，那么你就应该分配一个id来记住这个供应器，以便日后寻找。例如： The unique id of the provider (defaults to an {@link Ext#id auto-assigned id}). You should assign an id if you need to be able to access the provider later and you do not have an object reference available, for example: <pre><code>
+Ext.Direct.addProvider(
+    {
+        type: 'polling',
+        url:  'php/poll.php',
+        id:   'poll-provider'
+    }
+);
+     
+var p = <a href="/output/Ext.Direct.html" ext:cls="Ext.Direct">Ext.Direct</a>.<a href="/output/Ext.Direct.html#Ext.Direct-getProvider" ext:cls="Ext.Direct" ext:member="getProvider">getProvider</a>('poll-provider');
+p.disconnect(); </code></pre>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Provider</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="listeners-header"></a>
+                        <b>listeners</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                (optional) A config object containi...
+                            </div>
+                            <div class="long">
+                                (optional) A config object containing one or more event handlers to be added to this object during initialization.  This should be a valid listeners config object as specified in the <a href="/output/Ext.direct.RemotingProvider.html#Ext.direct.RemotingProvider-addListener" ext:cls="Ext.direct.RemotingProvider" ext:member="addListener">addListener</a> example for attaching multiple handlers at once.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Observable</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxRetries-header"></a>
+                        <b>maxRetries</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                当failure后，尝试再连接的次数。默认为一次。Number of ...
+                            </div>
+                            <div class="long">
+                                当failure后，尝试再连接的次数。默认为一次。Number of times to re-attempt delivery on failure of a call. Defaults to <tt>1</tt>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RemotingProvider</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="namespace-header"></a>
+                        <b>namespace</b>
+                        : String/Object
+                        <div class="mdesc">
+                            <div class="short">
+                                远程供应器的命名空间（默认为浏览器的全局空间window）。完全命名这...
+                            </div>
+                            <div class="long">
+                                远程供应器的命名空间（默认为浏览器的全局空间<i>window</i>）。完全命名这个空间，或者指定一个String执行<a href="/output/Ext.html#Ext-namespace" ext:cls="Ext" ext:member="namespace">namespace created</a>隐式命名。<br /> Namespace for the Remoting Provider (defaults to the browser global scope of <i>window</i>). Explicitly specify the namespace Object, or specify a String to have a <a href="/output/Ext.html#Ext-namespace" ext:cls="Ext" ext:member="namespace">namespace created</a> implicitly.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RemotingProvider</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="priority-header"></a>
+                        <b>priority</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                请求的优先权（priority）,数值愈低表示优先权愈高，0就表示“双...
+                            </div>
+                            <div class="long">
+                                请求的优先权（priority）,数值愈低表示优先权愈高，<tt>0</tt>就表示“双工的”（总是打开）。所有的供应器默认为<tt>1</tt>，但PollingProvider就除外，默认为<tt>3</tt>。<br /> Priority of the request. Lower is higher priority, <tt>0</tt> means "duplex" (always on). All Providers default to <tt>1</tt> except for PollingProvider which defaults to <tt>3</tt>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Provider</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="timeout-header"></a>
+                        <b>timeout</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                每次请求的超时时限。默认为undefined。The timeout ...
+                            </div>
+                            <div class="long">
+                                每次请求的超时时限。默认为<tt>undefined</tt>。The timeout to use for each request. Defaults to <tt>undefined</tt>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RemotingProvider</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="type-header"></a>
+                        <b>type</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                这是Ext.Direct的类型，这是必须的，默认是undefined。...
+                            </div>
+                            <div class="long">
+                                这是<a href="/output/Ext.Direct.html" ext:cls="Ext.Direct">Ext.Direct</a>的类型，这是<b>必须的</b>，默认是<tt>undefined</tt>。执行<a href="output/Ext.Direct.html#Ext.Direct-addProvider" ext:cls="Ext.Direct" ext:member="addProvider">addProvider</a>创建新的供应器的时候就会用到这个类型。默认可识别的类型如下规格：<br /> <b>Required</b>, <tt>undefined</tt> by default.  The <tt>type</tt> of provider specified to <a href="/output/Ext.Direct.html" ext:cls="Ext.Direct">Ext.Direct</a>.<a href="/output/Ext.Direct.html#Ext.Direct-addProvider" ext:cls="Ext.Direct" ext:member="addProvider">addProvider</a> to create a new Provider. Acceptable values by default are:<div class="mdetail-params"><ul> <li><b><tt>polling</tt></b> : <a href="/output/Ext.direct.PollingProvider.html" ext:cls="Ext.direct.PollingProvider">PollingProvider</a></li> <li><b><tt>remoting</tt></b> : <a href="/output/Ext.direct.RemotingProvider.html" ext:cls="Ext.direct.RemotingProvider">RemotingProvider</a></li> </ul></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Provider</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="url-header"></a>
+                        <b>url</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                该项是必须的。连接到Ext.Direct所在的服务端路由器（route...
+                            </div>
+                            <div class="long">
+                                该项是必须的。连接到<a href="/output/Ext.Direct.html" ext:cls="Ext.Direct">Ext.Direct</a>所在的服务端路由器（router）。<b>Required<b>. The url to connect to the <a href="/output/Ext.Direct.html" ext:cls="Ext.Direct">Ext.Direct</a> server-side router.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RemotingProvider</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.direct.RemotingProvider-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.direct.RemotingProvider-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-addEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>addEvents</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                定义观察者的事件。Used to define events on t... 
+                            </div>
+                            <div class="long">
+                                定义观察者的事件。Used to define events on this Observable
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    定义的事件对象。object The object with the events defined
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-addListener"></a>
+                        <!--名称+参数列表-->
+                        <b>addListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object options]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                加入一个事件处理函数。on是其简写方式。Appends an even... 
+                            </div>
+                            <div class="long">
+                                加入一个事件处理函数。<a href="output/Ext.direct.RemotingProvider.html#Ext.direct.RemotingProvider-on" ext:cls="Ext.direct.RemotingProvider" ext:member="on">on</a>是其简写方式。Appends an event handler to this element.  The shorthand version <a href="/output/Ext.direct.RemotingProvider.html#Ext.direct.RemotingProvider-on" ext:cls="Ext.direct.RemotingProvider" ext:member="on">on</a> is equivalent.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件处理函数的名称。The type of event to handle
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件处理函数。该函数会送入以下的参数：The handler function the event invokes. This function is passed the following parameters:<ul> <li>evt : EventObject<div class="sub-desc">用于描述这次事件<a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a>的事件对象。The <a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a> describing the event.</div></li> <li>t : Element<div class="sub-desc">事件源对象，类型是<a href="output/Ext.Element.html" ext:cls="Ext.Element">Element</a> The <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Element</a> which was the target of the event. 注意该项可能会选项<tt>delegate</tt>筛选而发生变化Note that this may be filtered by using the <tt>delegate</tt> option.</div></li> <li>o : Object<div class="sub-desc">调用addListener时送入的选项对象The options object from the addListener call.</div></li> </ul>
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    事件处理函数执行时所在的作用域。处理函数“this”的上下文。(optional) The scope (The <tt>this</tt> reference) of the handler function. Defaults to this Element.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    包含句柄配置属性的一个对象。该对象可能会下来的属性： (optional) An object containing handler configuration properties. This may contain any of the following properties:<ul> <li>scope {Object} : 事件处理函数执行时所在的作用域。处理函数“this”的上下文环境。The scope in which to execute the handler function. The handler function's "this" context.</li> <li>delegate {String} : 一个简易选择符，用于过滤目标，或是查找目标的子孙。A simple selector to filter the target or look for a descendant of the target</li> <li>stopEvent {Boolean} : true表示为阻止事件。即停止传播、阻止默认动作。True to stop the event. That is stop propagation, and prevent the default action.</li> <li>preventDefault {Boolean} : true表示为阻止默认动作。True to prevent the default action</li> <li>stopPropagation {Boolean} : true表示为阻止事件传播。True to prevent event propagation</li> <li>normalized {Boolean} : false表示对处理函数送入一个原始、未封装过的浏览器对象而非标准的Ext.EventObject。False to pass a browser event to the handler function instead of an Ext.EventObject</li> <li>delay {Number} : 触发事件后处理函数延时执行的时间。The number of milliseconds to delay the invocation of the handler after te event fires.</li> <li>single {Boolean} : true代表为事件触发后加入一个下次移除本身的处理函数。True to add a handler to handle just the next firing of the event, and then remove itself.</li> <li>buffer {Number} : 若指定一个毫秒数会把该处理函数安排到<a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a>延时之后才执行。如果事件在那个事件再次触发，则原处理器句柄将<em>不会</em> 被启用，但是新处理器句柄会安排在其位置。Causes the handler to be scheduled to run in an <a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a> delayed by the specified number of milliseconds. If the event fires again within that time, the original handler is <em>not</em> invoked, but the new handler is scheduled in its place.</li> </ul><br> <p> <b>不同配搭方式的选项 Combining Options</b><br> 下面的例子，使用的是<a href="output/addListener.html#addListener-on" ext:cls="addListener" ext:member="on">on</a>的简写方式。和addListener是等价的。利用参数选项，可以组合成不同类型的侦听器： In the following examples, the shorthand form <a href="output/addListener.html#addListener-on" ext:cls="addListener" ext:member="on">on</a> is used rather than the more verbose addListener.  The two are equivalent.  Using the options argument, it is possible to combine different types of listeners:<br> <br> 这个事件的含义是，已常规化的，延时的，自动停止事件并有传入一个自定义的参数（forumId）的一次性侦听器。这些事件设置在处理函数（也就是第三个的参数）中也可以找到的。A normalized, delayed, one-time listener that auto stops the event and adds a custom argument (forumId) to the options object. The options object is available as the third parameter in the handler function.<div style="margin: 5px 20px 20px;"> 代码：Code:<pre><code>
+el.on('click', this.onClick, this, {
+    single: true,
+    delay: 100,
+    stopEvent : true,
+    forumId: 4
+});</code></pre></p> <p> <b>多个处理函数一次性登记。Attaching multiple handlers in 1 call</b><br> 这样的话，可允许多个事件处理函数都共享一个配置事件的配置项对象。The method also allows for a single argument to be passed which is a config object containing properties which specify multiple handlers.</p> <p> 代码：Code:<pre><code>
+el.on({
+    'click' : {
+        fn: this.onClick,
+        scope: this,
+        delay: 100
+    },
+    'mouseover' : {
+        fn: this.onMouseOver,
+        scope: this
+    },
+    'mouseout' : {
+        fn: this.onMouseOut,
+        scope: this
+    }
+});</code></pre></p> <p> 或者是简写的语法：Or a shorthand syntax:<br> Code:<pre><code>
+el.on({
+    'click' : this.onClick,
+    'mouseover' : this.onMouseOver,
+    'mouseout' : this.onMouseOut,
+    scope: this
+});</code></pre></p>
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-capture"></a>
+                        <!--名称+参数列表-->
+                        <b>capture</b>(
+	                        
+                                <code>
+                                    Observable o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                开始捕捉特定的观察者。在事件触发之前，所有的事件会以“事件名称+标准签... 
+                            </div>
+                            <div class="long">
+                                开始捕捉特定的观察者。在事件触发<b>之前</b>，所有的事件会以“事件名称+标准签名”的形式传入到函数（传入的参数是function类型）。如果传入的函数执行后返回false，则接下的事件将不会触发。Starts capture on the specified Observable. All events will be passed to the supplied function with the event name + standard signature of the event <b>before</b> the event is fired. If the supplied function returns false, the event will not fire.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Observable
+                                                <div class="sub-desc">
+                                                    要捕捉的观察者The Observable to capture
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    要调用的函数The function to call
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数作用域(optional) The scope (this object) for the fn
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-connect"></a>
+                        <!--名称+参数列表-->
+                        <b>connect</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                由子类实现的抽象方法。Abstract methods for sub... 
+                            </div>
+                            <div class="long">
+                                由子类实现的抽象方法。Abstract methods for subclasses to implement.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Provider
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-disconnect"></a>
+                        <!--名称+参数列表-->
+                        <b>disconnect</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                由子类实现的抽象方法。Abstract methods for sub... 
+                            </div>
+                            <div class="long">
+                                由子类实现的抽象方法。Abstract methods for subclasses to implement.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Provider
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-fireEvent"></a>
+                        <!--名称+参数列表-->
+                        <b>fireEvent</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object... args
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                触发指定的事件,并在这里把处理函数的参数传入（应该至少要有事件的名称）... 
+                            </div>
+                            <div class="long">
+                                触发指定的事件,并在这里把处理函数的参数传入（应该至少要有事件的名称）。Fires the specified event with the passed parameters (minus the event name).
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件名称The name of the event to fire. If the event is to bubble up an Observable parent hierarchy (See <a href="output/fireEvent.html#fireEvent-Ext.ComponentgetBubbleTarget" ext:cls="fireEvent" ext:member="Ext.ComponentgetBubbleTarget">Ext.ComponentgetBubbleTarget</a>) then the first argument must be passed as <tt>true</tt>, and the event name is passed as the second argument. 如果这个事件是要在Observable父类上逐层上报（参阅<a href="output/fireEvent.html#fireEvent-Ext.ComponentgetBubbleTarget" ext:cls="fireEvent" ext:member="Ext.ComponentgetBubbleTarget">Ext.ComponentgetBubbleTarget</a>），那么第一个参数一定是<tt>true</tt>，然后第二个参数是事件名称。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    args
+                                                </code> : Object...
+                                                <div class="sub-desc">
+                                                    传入事件处理函数的参数Variable number of parameters are passed to handlers
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            从处理函数返回true或者false returns false if any of the handlers return false otherwise it returns true
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-hasListener"></a>
+                        <!--名称+参数列表-->
+                        <b>hasListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                检测当前对象是否有指定的事件。Checks to see if thi... 
+                            </div>
+                            <div class="long">
+                                检测当前对象是否有指定的事件。Checks to see if this object has any listeners for a specified event
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要检查的事件名称。The name of the event to check for
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True表示有事件正在被监听，否则为false。True if the event is being listened for, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-isConnected"></a>
+                        <!--名称+参数列表-->
+                        <b>isConnected</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                返回是否与服务端链接者的。由子类实现的抽象方法。Returns whe... 
+                            </div>
+                            <div class="long">
+                                返回是否与服务端链接者的。由子类实现的抽象方法。Returns whether or not the server-side is currently connected. Abstract method for subclasses to implement.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Provider
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-on"></a>
+                        <!--名称+参数列表-->
+                        <b>on</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                为该元素添加事件处理函数（addListener的简写方式）。Appe... 
+                            </div>
+                            <div class="long">
+                                为该元素添加事件处理函数（addListener的简写方式）。Appends an event handler to this element (shorthand for addListener)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件名称The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    处理函数The method the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    执行处理函数的作用域。“this”对象指针(optional) The scope in which to execute the handler function. The handler function's "this" context.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的）(optional) @method
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-purgeListeners"></a>
+                        <!--名称+参数列表-->
+                        <b>purgeListeners</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                从这个对象身上移除所有的侦听器。Removes all listene... 
+                            </div>
+                            <div class="long">
+                                从这个对象身上移除所有的侦听器。Removes all listeners for this object
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-relayEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>relayEvents</b>(
+	                        
+                                <code>
+                                    Object o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Array events
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Relays selected events from the spe... 
+                            </div>
+                            <div class="long">
+                                Relays selected events from the specified Observable as if the events were fired by <tt><b>this</b></tt>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    The Observable whose events this object is to relay.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    events
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    Array of event names to relay.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-releaseCapture"></a>
+                        <!--名称+参数列表-->
+                        <b>releaseCapture</b>(
+	                        
+                                <code>
+                                    Observable o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                从Observable身上移除所有已加入的捕捉captures。Rem... 
+                            </div>
+                            <div class="long">
+                                从Observable身上移除<b>所有</b>已加入的捕捉captures。Removes <b>all</b> added captures from the Observable.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Observable
+                                                <div class="sub-desc">
+                                                    要释放的观察者The Observable to release
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-removeListener"></a>
+                        <!--名称+参数列表-->
+                        <b>removeListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除侦听器Removes a listener 
+                            </div>
+                            <div class="long">
+                                移除侦听器Removes a listener
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    侦听事件的类型The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    移除的处理函数The handler to remove
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的） 处理函数之作用域(optional) The scope (this object) for the handler
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-resumeEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>resumeEvents</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                重新触发事件（参阅suspendEvents）。Resume firi... 
+                            </div>
+                            <div class="long">
+                                重新触发事件（参阅<a href="output/Ext.direct.RemotingProvider.html#Ext.direct.RemotingProvider-suspendEvents" ext:cls="Ext.direct.RemotingProvider" ext:member="suspendEvents">suspendEvents</a>）。Resume firing events. (see <a href="/output/Ext.direct.RemotingProvider.html#Ext.direct.RemotingProvider-suspendEvents" ext:cls="Ext.direct.RemotingProvider" ext:member="suspendEvents">suspendEvents</a>) If events were suspended using the <tt><b>queueSuspended</b></tt> parameter, then all events fired during event suspension will be sent to any listeners now.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-suspendEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>suspendEvents</b>(
+	                        
+                                <code>
+                                    Boolean queueSuspended
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                暂停触发所有的事件（参阅resumeEvents）。Suspend t... 
+                            </div>
+                            <div class="long">
+                                暂停触发所有的事件（参阅<a href="output/Ext.direct.RemotingProvider.html#Ext.direct.RemotingProvider-resumeEvents" ext:cls="Ext.direct.RemotingProvider" ext:member="resumeEvents">resumeEvents</a>）。Suspend the firing of all events. (see <a href="/output/Ext.direct.RemotingProvider.html#Ext.direct.RemotingProvider-resumeEvents" ext:cls="Ext.direct.RemotingProvider" ext:member="resumeEvents">resumeEvents</a>)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    queueSuspended
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    Pass as true to queue up suspended events to be fired after the <a href="output/suspendEvents.html#suspendEvents-resumeEvents" ext:cls="suspendEvents" ext:member="resumeEvents">resumeEvents</a> call instead of discarding all suspended events;
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.direct.RemotingProvider-un"></a>
+                        <!--名称+参数列表-->
+                        <b>un</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除侦听器（removeListener的快捷方式）Removes a... 
+                            </div>
+                            <div class="long">
+                                移除侦听器（removeListener的快捷方式）Removes a listener (shorthand for removeListener)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    侦听事件的类型The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件涉及的方法 The handler to remove
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的） 处理函数的作用域(optional) The scope (this object) for the handler @method
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.direct.RemotingProvider-events"></a>
+    <h2>公共事件</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    事件
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="event-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="beforecall-beforecall"></a>
+                        <!--名称+参数列表-->
+                        <b>beforecall</b>(
+	                        
+                                <code>
+                                    Ext.direct.RemotingProvider provider,
+                                </code>
+	                        
+                                <code>
+                                    Ext.Direct.Transaction transaction
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                在客户端发送PRC请求之前触发。事件处理器中返回false的话表示阻止... 
+                            </div>
+                            <div class="long">
+                                在客户端发送PRC请求之前触发。事件处理器中返回false的话表示阻止这次远程调用。Fires immediately before the client-side sends off the RPC call. By returning false from an event handler you can prevent the call from executing.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    provider
+                                                </code>Ext.direct.RemotingProvider
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    transaction
+                                                </code>Ext.Direct.Transaction
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RemotingProvider</td>
+                </tr>
+            
+                <tr class="event-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="call-call"></a>
+                        <!--名称+参数列表-->
+                        <b>call</b>(
+	                        
+                                <code>
+                                    Ext.direct.RemotingProvider provider,
+                                </code>
+	                        
+                                <code>
+                                    Ext.Direct.Transaction transaction
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当送往服务端的请求发送后触发。有响应的时候不会触发该事件。Fires ... 
+                            </div>
+                            <div class="long">
+                                当送往服务端的请求发送后触发。有响应的时候不会触发该事件。Fires immediately after the request to the server-side is sent. This does NOT fire after the response has come back from the call.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    provider
+                                                </code>Ext.direct.RemotingProvider
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    transaction
+                                                </code>Ext.Direct.Transaction
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RemotingProvider</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="connect-connect"></a>
+                        <!--名称+参数列表-->
+                        <b>connect</b>(
+	                        
+                                <code>
+                                    Ext.direct.Provider provider
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当连接服务端之后触发。Fires when the Provider ... 
+                            </div>
+                            <div class="long">
+                                当连接服务端之后触发。Fires when the Provider connects to the server-side
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    provider
+                                                </code>Ext.direct.Provider
+                                                <div class="sub-desc">
+                                                    The <a href="/output/Ext.direct.Provider.html" ext:cls="Ext.direct.Provider">Provider</a>.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Provider</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="data-data"></a>
+                        <!--名称+参数列表-->
+                        <b>data</b>(
+	                        
+                                <code>
+                                    Ext.direct.Provider provider,
+                                </code>
+	                        
+                                <code>
+                                    event e
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当接收到来自服务端的数据的时候触发。Fires when the Pr... 
+                            </div>
+                            <div class="long">
+                                当接收到来自服务端的数据的时候触发。Fires when the Provider receives data from the server-side
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    provider
+                                                </code>Ext.direct.Provider
+                                                <div class="sub-desc">
+                                                    The <a href="/output/Ext.direct.Provider.html" ext:cls="Ext.direct.Provider">Provider</a>.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code>event
+                                                <div class="sub-desc">
+                                                    The <a href="/output/Ext.Direct.html#Ext.Direct-eventTypes" ext:cls="Ext.Direct" ext:member="eventTypes">Ext.Direct.Event type</a> that occurred.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Provider</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="disconnect-disconnect"></a>
+                        <!--名称+参数列表-->
+                        <b>disconnect</b>(
+	                        
+                                <code>
+                                    Ext.direct.Provider provider
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当与服务端断开之后触发。Fires when the Provider... 
+                            </div>
+                            <div class="long">
+                                当与服务端断开之后触发。Fires when the Provider disconnects from the server-side
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    provider
+                                                </code>Ext.direct.Provider
+                                                <div class="sub-desc">
+                                                    The <a href="/output/Ext.direct.Provider.html" ext:cls="Ext.direct.Provider">Provider</a>.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Provider</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="exception-exception"></a>
+                        <!--名称+参数列表-->
+                        <b>exception</b>(
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当供应器接收一个服务端的异常后触发。Fires when the Pr... 
+                            </div>
+                            <div class="long">
+                                当供应器接收一个服务端的异常后触发。Fires when the Provider receives an exception from the server-side
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Provider</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束事件------>	
+</div>

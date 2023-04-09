@@ -1,0 +1,2967 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.grid.RowSelectionModel-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.grid.RowSelectionModel-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.grid.RowSelectionModel-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.grid.RowSelectionModel-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.grid.RowSelectionModel" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/RowSelectionModel.html#cls-Ext.grid.RowSelectionModel">Ext.grid.RowSelectionModel</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extgrid
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                RowSelectionModel.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/RowSelectionModel.html#cls-Ext.grid.RowSelectionModel">Ext.grid.RowSelectionModel</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.grid.AbstractSelectionModel.html"  ext:cls="Ext.grid.AbstractSelectionModel" ext:member="">Ext.grid.AbstractSelectionModel</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        <a href="/output/Ext.grid.GridPanel.html" ext:cls="Ext.grid.GridPanel">Ext.grid.GridPanel</a>的默认选区模型。它支持多选区和键盘选区/导航。<a href="output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-getSelected" ext:cls="Ext.grid.RowSelectionModel" ext:member="getSelected">getSelected</a>方法返回选中的对象，<a href="/output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-getSelections" ext:cls="Ext.grid.RowSelectionModel" ext:member="getSelections">getSelections</a>就是多个已选择的<a href="output/Ext.data.Record.html" ext:cls="Ext.data.Record">Record</a>（支持多选的）。<br /> The default SelectionModel used by <a href="/output/Ext.grid.GridPanel.html" ext:cls="Ext.grid.GridPanel">Ext.grid.GridPanel</a>. It supports multiple selections and keyboard selection/navigation. The objects stored as selections and returned by <a href="/output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-getSelected" ext:cls="Ext.grid.RowSelectionModel" ext:member="getSelected">getSelected</a>, and <a href="/output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-getSelections" ext:cls="Ext.grid.RowSelectionModel" ext:member="getSelections">getSelections</a> are the <a href="/output/Ext.data.Record.html" ext:cls="Ext.data.Record">Record</a>s which provide the data for the selected rows.
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.grid.RowSelectionModel-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="listeners-header"></a>
+                        <b>listeners</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                (optional) A config object containi...
+                            </div>
+                            <div class="long">
+                                (optional) A config object containing one or more event handlers to be added to this object during initialization.  This should be a valid listeners config object as specified in the <a href="/output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-addListener" ext:cls="Ext.grid.RowSelectionModel" ext:member="addListener">addListener</a> example for attaching multiple handlers at once.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Observable</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="moveEditorOnEnter-header"></a>
+                        <b>moveEditorOnEnter</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                False表示禁止按下回车键时就是移动到下一行，shift+回车就是网...
+                            </div>
+                            <div class="long">
+                                False表示禁止按下回车键时就是移动到下一行，shift+回车就是网上移动。False to turn off moving the editor to the next row down when the enter key is pressed or the next row up when shift + enter keys are pressed.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RowSelectionModel</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="singleSelect-header"></a>
+                        <b>singleSelect</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为同时只能选单行（默认false）。True to all...
+                            </div>
+                            <div class="long">
+                                True表示为同时只能选单行（默认false）。True to allow selection of only one row at a time (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RowSelectionModel</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.grid.RowSelectionModel-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.grid.RowSelectionModel-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-addEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>addEvents</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                定义观察者的事件。Used to define events on t... 
+                            </div>
+                            <div class="long">
+                                定义观察者的事件。Used to define events on this Observable
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    定义的事件对象。object The object with the events defined
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-addListener"></a>
+                        <!--名称+参数列表-->
+                        <b>addListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object options]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                加入一个事件处理函数。on是其简写方式。Appends an even... 
+                            </div>
+                            <div class="long">
+                                加入一个事件处理函数。<a href="output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-on" ext:cls="Ext.grid.RowSelectionModel" ext:member="on">on</a>是其简写方式。Appends an event handler to this element.  The shorthand version <a href="/output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-on" ext:cls="Ext.grid.RowSelectionModel" ext:member="on">on</a> is equivalent.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件处理函数的名称。The type of event to handle
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件处理函数。该函数会送入以下的参数：The handler function the event invokes. This function is passed the following parameters:<ul> <li>evt : EventObject<div class="sub-desc">用于描述这次事件<a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a>的事件对象。The <a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a> describing the event.</div></li> <li>t : Element<div class="sub-desc">事件源对象，类型是<a href="output/Ext.Element.html" ext:cls="Ext.Element">Element</a> The <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Element</a> which was the target of the event. 注意该项可能会选项<tt>delegate</tt>筛选而发生变化Note that this may be filtered by using the <tt>delegate</tt> option.</div></li> <li>o : Object<div class="sub-desc">调用addListener时送入的选项对象The options object from the addListener call.</div></li> </ul>
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    事件处理函数执行时所在的作用域。处理函数“this”的上下文。(optional) The scope (The <tt>this</tt> reference) of the handler function. Defaults to this Element.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    包含句柄配置属性的一个对象。该对象可能会下来的属性： (optional) An object containing handler configuration properties. This may contain any of the following properties:<ul> <li>scope {Object} : 事件处理函数执行时所在的作用域。处理函数“this”的上下文环境。The scope in which to execute the handler function. The handler function's "this" context.</li> <li>delegate {String} : 一个简易选择符，用于过滤目标，或是查找目标的子孙。A simple selector to filter the target or look for a descendant of the target</li> <li>stopEvent {Boolean} : true表示为阻止事件。即停止传播、阻止默认动作。True to stop the event. That is stop propagation, and prevent the default action.</li> <li>preventDefault {Boolean} : true表示为阻止默认动作。True to prevent the default action</li> <li>stopPropagation {Boolean} : true表示为阻止事件传播。True to prevent event propagation</li> <li>normalized {Boolean} : false表示对处理函数送入一个原始、未封装过的浏览器对象而非标准的Ext.EventObject。False to pass a browser event to the handler function instead of an Ext.EventObject</li> <li>delay {Number} : 触发事件后处理函数延时执行的时间。The number of milliseconds to delay the invocation of the handler after te event fires.</li> <li>single {Boolean} : true代表为事件触发后加入一个下次移除本身的处理函数。True to add a handler to handle just the next firing of the event, and then remove itself.</li> <li>buffer {Number} : 若指定一个毫秒数会把该处理函数安排到<a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a>延时之后才执行。如果事件在那个事件再次触发，则原处理器句柄将<em>不会</em> 被启用，但是新处理器句柄会安排在其位置。Causes the handler to be scheduled to run in an <a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a> delayed by the specified number of milliseconds. If the event fires again within that time, the original handler is <em>not</em> invoked, but the new handler is scheduled in its place.</li> </ul><br> <p> <b>不同配搭方式的选项 Combining Options</b><br> 下面的例子，使用的是<a href="output/addListener.html#addListener-on" ext:cls="addListener" ext:member="on">on</a>的简写方式。和addListener是等价的。利用参数选项，可以组合成不同类型的侦听器： In the following examples, the shorthand form <a href="output/addListener.html#addListener-on" ext:cls="addListener" ext:member="on">on</a> is used rather than the more verbose addListener.  The two are equivalent.  Using the options argument, it is possible to combine different types of listeners:<br> <br> 这个事件的含义是，已常规化的，延时的，自动停止事件并有传入一个自定义的参数（forumId）的一次性侦听器。这些事件设置在处理函数（也就是第三个的参数）中也可以找到的。A normalized, delayed, one-time listener that auto stops the event and adds a custom argument (forumId) to the options object. The options object is available as the third parameter in the handler function.<div style="margin: 5px 20px 20px;"> 代码：Code:<pre><code>
+el.on('click', this.onClick, this, {
+    single: true,
+    delay: 100,
+    stopEvent : true,
+    forumId: 4
+});</code></pre></p> <p> <b>多个处理函数一次性登记。Attaching multiple handlers in 1 call</b><br> 这样的话，可允许多个事件处理函数都共享一个配置事件的配置项对象。The method also allows for a single argument to be passed which is a config object containing properties which specify multiple handlers.</p> <p> 代码：Code:<pre><code>
+el.on({
+    'click' : {
+        fn: this.onClick,
+        scope: this,
+        delay: 100
+    },
+    'mouseover' : {
+        fn: this.onMouseOver,
+        scope: this
+    },
+    'mouseout' : {
+        fn: this.onMouseOut,
+        scope: this
+    }
+});</code></pre></p> <p> 或者是简写的语法：Or a shorthand syntax:<br> Code:<pre><code>
+el.on({
+    'click' : this.onClick,
+    'mouseover' : this.onMouseOver,
+    'mouseout' : this.onMouseOut,
+    scope: this
+});</code></pre></p>
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-capture"></a>
+                        <!--名称+参数列表-->
+                        <b>capture</b>(
+	                        
+                                <code>
+                                    Observable o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                开始捕捉特定的观察者。在事件触发之前，所有的事件会以“事件名称+标准签... 
+                            </div>
+                            <div class="long">
+                                开始捕捉特定的观察者。在事件触发<b>之前</b>，所有的事件会以“事件名称+标准签名”的形式传入到函数（传入的参数是function类型）。如果传入的函数执行后返回false，则接下的事件将不会触发。Starts capture on the specified Observable. All events will be passed to the supplied function with the event name + standard signature of the event <b>before</b> the event is fired. If the supplied function returns false, the event will not fire.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Observable
+                                                <div class="sub-desc">
+                                                    要捕捉的观察者The Observable to capture
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    要调用的函数The function to call
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数作用域(optional) The scope (this object) for the fn
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-clearSelections"></a>
+                        <!--名称+参数列表-->
+                        <b>clearSelections</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                清除全部的选区。Clears all selections. 
+                            </div>
+                            <div class="long">
+                                清除全部的选区。Clears all selections.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-deselectRange"></a>
+                        <!--名称+参数列表-->
+                        <b>deselectRange</b>(
+	                        
+                                <code>
+                                    Number startRow
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number endRow
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                反选某个范围内的行（rows）。所有在startRow和endRow之... 
+                            </div>
+                            <div class="long">
+                                反选某个范围内的行（rows）。所有在startRow和endRow之间的行都会被选反。Deselects a range of rows. All rows in between startRow and endRow are also deselected.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    startRow
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    范围内的第一行之索引。The index of the first row in the range
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    endRow
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    范围内的最后一行之索引。The index of the last row in the range
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-deselectRow"></a>
+                        <!--名称+参数列表-->
+                        <b>deselectRow</b>(
+	                        
+                                <code>
+                                    Number row
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                反选一个行。Deselects a row. 
+                            </div>
+                            <div class="long">
+                                反选一个行。Deselects a row.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    row
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    反选行的索引。The index of the row to deselect
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-each"></a>
+                        <!--名称+参数列表-->
+                        <b>each</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                对选区执行传入函数。如果函数返回false，枚举将会中止，each函数... 
+                            </div>
+                            <div class="long">
+                                对选区执行传入函数。如果函数返回false，枚举将会中止，each函数就会返回false，否则返回true。Calls the passed function with each selection. If the function returns false, iteration is stopped and this function returns false. Otherwise it returns true.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    (optional)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            true表示为已枚举所有的记录。true if all selections were iterated
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-fireEvent"></a>
+                        <!--名称+参数列表-->
+                        <b>fireEvent</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object... args
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                触发指定的事件,并在这里把处理函数的参数传入（应该至少要有事件的名称）... 
+                            </div>
+                            <div class="long">
+                                触发指定的事件,并在这里把处理函数的参数传入（应该至少要有事件的名称）。Fires the specified event with the passed parameters (minus the event name).
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件名称The name of the event to fire. If the event is to bubble up an Observable parent hierarchy (See <a href="output/fireEvent.html#fireEvent-Ext.ComponentgetBubbleTarget" ext:cls="fireEvent" ext:member="Ext.ComponentgetBubbleTarget">Ext.ComponentgetBubbleTarget</a>) then the first argument must be passed as <tt>true</tt>, and the event name is passed as the second argument. 如果这个事件是要在Observable父类上逐层上报（参阅<a href="output/fireEvent.html#fireEvent-Ext.ComponentgetBubbleTarget" ext:cls="fireEvent" ext:member="Ext.ComponentgetBubbleTarget">Ext.ComponentgetBubbleTarget</a>），那么第一个参数一定是<tt>true</tt>，然后第二个参数是事件名称。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    args
+                                                </code> : Object...
+                                                <div class="sub-desc">
+                                                    传入事件处理函数的参数Variable number of parameters are passed to handlers
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            从处理函数返回true或者false returns false if any of the handlers return false otherwise it returns true
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-getCount"></a>
+                        <!--名称+参数列表-->
+                        <b>getCount</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                获取已选择的行数。Gets the number of selecte... 
+                            </div>
+                            <div class="long">
+                                获取已选择的行数。Gets the number of selected rows.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-getSelected"></a>
+                        <!--名称+参数列表-->
+                        <b>getSelected</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Record
+                        <div class="mdesc">
+                            <div class="short">
+                                返回选区中的第一个记录。Returns the first selec... 
+                            </div>
+                            <div class="long">
+                                返回选区中的第一个记录。Returns the first selected record.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Record
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-getSelections"></a>
+                        <!--名称+参数列表-->
+                        <b>getSelections</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Array
+                        <div class="mdesc">
+                            <div class="short">
+                                返回以选取的纪录。Returns the selected records 
+                            </div>
+                            <div class="long">
+                                返回以选取的纪录。Returns the selected records
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Array
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            已选取记录的数组。Array of selected records
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-hasListener"></a>
+                        <!--名称+参数列表-->
+                        <b>hasListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                检测当前对象是否有指定的事件。Checks to see if thi... 
+                            </div>
+                            <div class="long">
+                                检测当前对象是否有指定的事件。Checks to see if this object has any listeners for a specified event
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要检查的事件名称。The name of the event to check for
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True表示有事件正在被监听，否则为false。True if the event is being listened for, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-hasNext"></a>
+                        <!--名称+参数列表-->
+                        <b>hasNext</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                若有下一个可选取的记录返回true。Returns true if t... 
+                            </div>
+                            <div class="long">
+                                若有下一个可选取的记录返回true。Returns true if there is a next record to select
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-hasPrevious"></a>
+                        <!--名称+参数列表-->
+                        <b>hasPrevious</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                若有前一个可选取的记录返回true。Returns true if t... 
+                            </div>
+                            <div class="long">
+                                若有前一个可选取的记录返回true。Returns true if there is a previous record to select
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-hasSelection"></a>
+                        <!--名称+参数列表-->
+                        <b>hasSelection</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                返回True表示有选中。Returns True if there i... 
+                            </div>
+                            <div class="long">
+                                返回True表示有选中。Returns True if there is a selection.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-isIdSelected"></a>
+                        <!--名称+参数列表-->
+                        <b>isIdSelected</b>(
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                返回True表示特定的记录是否被选中。Returns True if ... 
+                            </div>
+                            <div class="long">
+                                返回True表示特定的记录是否被选中。Returns True if the specified record id is selected.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要检查的记录id。The id of record to check
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-isLocked"></a>
+                        <!--名称+参数列表-->
+                        <b>isLocked</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                返回true如果选区被锁。Returns true if the se... 
+                            </div>
+                            <div class="long">
+                                返回true如果选区被锁。Returns true if the selections are locked.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        AbstractSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-isSelected"></a>
+                        <!--名称+参数列表-->
+                        <b>isSelected</b>(
+	                        
+                                <code>
+                                    Number/Record record
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                返回True表示有特定的行是被选中的。Returns True if ... 
+                            </div>
+                            <div class="long">
+                                返回True表示有特定的行是被选中的。Returns True if the specified row is selected.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    record
+                                                </code> : Number/Record
+                                                <div class="sub-desc">
+                                                    Record对象或Record的id。The record or index of the record to check
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-lock"></a>
+                        <!--名称+参数列表-->
+                        <b>lock</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                锁定多个选区。Locks the selections. 
+                            </div>
+                            <div class="long">
+                                锁定多个选区。Locks the selections.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        AbstractSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-on"></a>
+                        <!--名称+参数列表-->
+                        <b>on</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                为该元素添加事件处理函数（addListener的简写方式）。Appe... 
+                            </div>
+                            <div class="long">
+                                为该元素添加事件处理函数（addListener的简写方式）。Appends an event handler to this element (shorthand for addListener)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件名称The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    处理函数The method the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    执行处理函数的作用域。“this”对象指针(optional) The scope in which to execute the handler function. The handler function's "this" context.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的）(optional) @method
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-purgeListeners"></a>
+                        <!--名称+参数列表-->
+                        <b>purgeListeners</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                从这个对象身上移除所有的侦听器。Removes all listene... 
+                            </div>
+                            <div class="long">
+                                从这个对象身上移除所有的侦听器。Removes all listeners for this object
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-relayEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>relayEvents</b>(
+	                        
+                                <code>
+                                    Object o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Array events
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Relays selected events from the spe... 
+                            </div>
+                            <div class="long">
+                                Relays selected events from the specified Observable as if the events were fired by <tt><b>this</b></tt>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    The Observable whose events this object is to relay.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    events
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    Array of event names to relay.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-releaseCapture"></a>
+                        <!--名称+参数列表-->
+                        <b>releaseCapture</b>(
+	                        
+                                <code>
+                                    Observable o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                从Observable身上移除所有已加入的捕捉captures。Rem... 
+                            </div>
+                            <div class="long">
+                                从Observable身上移除<b>所有</b>已加入的捕捉captures。Removes <b>all</b> added captures from the Observable.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Observable
+                                                <div class="sub-desc">
+                                                    要释放的观察者The Observable to release
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-removeListener"></a>
+                        <!--名称+参数列表-->
+                        <b>removeListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除侦听器Removes a listener 
+                            </div>
+                            <div class="long">
+                                移除侦听器Removes a listener
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    侦听事件的类型The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    移除的处理函数The handler to remove
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的） 处理函数之作用域(optional) The scope (this object) for the handler
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-resumeEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>resumeEvents</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                重新触发事件（参阅suspendEvents）。Resume firi... 
+                            </div>
+                            <div class="long">
+                                重新触发事件（参阅<a href="output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-suspendEvents" ext:cls="Ext.grid.RowSelectionModel" ext:member="suspendEvents">suspendEvents</a>）。Resume firing events. (see <a href="/output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-suspendEvents" ext:cls="Ext.grid.RowSelectionModel" ext:member="suspendEvents">suspendEvents</a>) If events were suspended using the <tt><b>queueSuspended</b></tt> parameter, then all events fired during event suspension will be sent to any listeners now.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-selectAll"></a>
+                        <!--名称+参数列表-->
+                        <b>selectAll</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选择所有的行 Selects all rows. 
+                            </div>
+                            <div class="long">
+                                选择所有的行 Selects all rows.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-selectFirstRow"></a>
+                        <!--名称+参数列表-->
+                        <b>selectFirstRow</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选择GRID的第一行。Selects the first row in... 
+                            </div>
+                            <div class="long">
+                                选择GRID的第一行。Selects the first row in the grid.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-selectLastRow"></a>
+                        <!--名称+参数列表-->
+                        <b>selectLastRow</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean keepExisting]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选择最后一行。Select the last row. 
+                            </div>
+                            <div class="long">
+                                选择最后一行。Select the last row.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    keepExisting
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为保持当前现有的选区。(optional) True to keep existing selections
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-selectNext"></a>
+                        <!--名称+参数列表-->
+                        <b>selectNext</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean keepExisting]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                选取上次选取的最后一行。Selects the row immedia... 
+                            </div>
+                            <div class="long">
+                                选取上次选取的最后一行。Selects the row immediately following the last selected row.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    keepExisting
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为保持当前现有的选区。(optional)True to keep existing selections
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True if there is a next row, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-selectPrevious"></a>
+                        <!--名称+参数列表-->
+                        <b>selectPrevious</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean keepExisting]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                选取上次选取的最前一行。Selects the row that pr... 
+                            </div>
+                            <div class="long">
+                                选取上次选取的最前一行。Selects the row that precedes the last selected row.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    keepExisting
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为保持当前现有的选区。(optional)True to keep existing selections
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True表示为有前一行，false表示没有。True if there is a previous row, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-selectRange"></a>
+                        <!--名称+参数列表-->
+                        <b>selectRange</b>(
+	                        
+                                <code>
+                                    Number startRow
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number endRow
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean keepExisting]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选取某个范围内的行（rows）。所有在startRow和endRow之... 
+                            </div>
+                            <div class="long">
+                                选取某个范围内的行（rows）。所有在startRow和endRow之间的行都会被选中。Selects a range of rows. All rows in between startRow and endRow are also selected.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    startRow
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    范围内的第一行之索引。The index of the first row in the range
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    endRow
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    范围内的最后一行之索引。The index of the last row in the range
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    keepExisting
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    表示为保持现有的选区。(optional)True to retain existing selections
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-selectRecords"></a>
+                        <!--名称+参数列表-->
+                        <b>selectRecords</b>(
+	                        
+                                <code>
+                                    Array records
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean keepExisting]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选择多个记录。Select records. 
+                            </div>
+                            <div class="long">
+                                选择多个记录。Select records.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    records
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    要选择的record。The records to select
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    keepExisting
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为保持当前现有的选区。(optional)True to keep existing selections
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-selectRow"></a>
+                        <!--名称+参数列表-->
+                        <b>selectRow</b>(
+	                        
+                                <code>
+                                    Number row
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean keepExisting
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选择一行。Selects a row. 
+                            </div>
+                            <div class="long">
+                                选择一行。Selects a row.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    row
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    要选择行的索引。The index of the row to select
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    keepExisting
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    (optional) （可选的）表示为保持现有的选区。True to keep existing selections
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-selectRows"></a>
+                        <!--名称+参数列表-->
+                        <b>selectRows</b>(
+	                        
+                                <code>
+                                    Array rows
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean keepExisting]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选取多行。Selects multiple rows. 
+                            </div>
+                            <div class="long">
+                                选取多行。Selects multiple rows.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    rows
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    要选取行的索引的集合。Array of the indexes of the row to select
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    keepExisting
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    表示为保持现有的选区。(optional)True to keep existing selections (defaults to false)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        RowSelectionModel
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-suspendEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>suspendEvents</b>(
+	                        
+                                <code>
+                                    Boolean queueSuspended
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                暂停触发所有的事件（参阅resumeEvents）。Suspend t... 
+                            </div>
+                            <div class="long">
+                                暂停触发所有的事件（参阅<a href="output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-resumeEvents" ext:cls="Ext.grid.RowSelectionModel" ext:member="resumeEvents">resumeEvents</a>）。Suspend the firing of all events. (see <a href="/output/Ext.grid.RowSelectionModel.html#Ext.grid.RowSelectionModel-resumeEvents" ext:cls="Ext.grid.RowSelectionModel" ext:member="resumeEvents">resumeEvents</a>)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    queueSuspended
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    Pass as true to queue up suspended events to be fired after the <a href="output/suspendEvents.html#suspendEvents-resumeEvents" ext:cls="suspendEvents" ext:member="resumeEvents">resumeEvents</a> call instead of discarding all suspended events;
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-un"></a>
+                        <!--名称+参数列表-->
+                        <b>un</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除侦听器（removeListener的快捷方式）Removes a... 
+                            </div>
+                            <div class="long">
+                                移除侦听器（removeListener的快捷方式）Removes a listener (shorthand for removeListener)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    侦听事件的类型The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件涉及的方法 The handler to remove
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的） 处理函数的作用域(optional) The scope (this object) for the handler @method
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.RowSelectionModel-unlock"></a>
+                        <!--名称+参数列表-->
+                        <b>unlock</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                解锁多个选区。Unlocks the selections. 
+                            </div>
+                            <div class="long">
+                                解锁多个选区。Unlocks the selections.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        AbstractSelectionModel
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.grid.RowSelectionModel-events"></a>
+    <h2>公共事件</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    事件
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="event-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="beforerowselect-beforerowselect"></a>
+                        <!--名称+参数列表-->
+                        <b>beforerowselect</b>(
+	                        
+                                <code>
+                                    SelectionModel this,
+                                </code>
+	                        
+                                <code>
+                                    Number rowIndex,
+                                </code>
+	                        
+                                <code>
+                                    Boolean keepExisting,
+                                </code>
+	                        
+                                <code>
+                                    Record record
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当行（row）是选中又被选择触发，返回false取消。Fires wh... 
+                            </div>
+                            <div class="long">
+                                当行（row）是选中又被选择触发，返回false取消。Fires when a row is being selected, return false to cancel.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>SelectionModel
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    rowIndex
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    The index to be selected
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    keepExisting
+                                                </code>Boolean
+                                                <div class="sub-desc">
+                                                    选中的索引。False if other selections will be cleared
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    record
+                                                </code>Record
+                                                <div class="sub-desc">
+                                                    The record to be selected
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RowSelectionModel</td>
+                </tr>
+            
+                <tr class="event-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="rowdeselect-rowdeselect"></a>
+                        <!--名称+参数列表-->
+                        <b>rowdeselect</b>(
+	                        
+                                <code>
+                                    SelectionModel this,
+                                </code>
+	                        
+                                <code>
+                                    Number rowIndex,
+                                </code>
+	                        
+                                <code>
+                                    Record record
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当行（row）反选时触发。Fires when a row is de... 
+                            </div>
+                            <div class="long">
+                                当行（row）反选时触发。Fires when a row is deselected.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>SelectionModel
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    rowIndex
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    选中的索引。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    record
+                                                </code>Record
+                                                <div class="sub-desc">
+                                                    记录
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RowSelectionModel</td>
+                </tr>
+            
+                <tr class="event-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="rowselect-rowselect"></a>
+                        <!--名称+参数列表-->
+                        <b>rowselect</b>(
+	                        
+                                <code>
+                                    SelectionModel this,
+                                </code>
+	                        
+                                <code>
+                                    Number rowIndex,
+                                </code>
+	                        
+                                <code>
+                                    Ext.data.Record r
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当行（row）被选中时触发。Fires when a row is s... 
+                            </div>
+                            <div class="long">
+                                当行（row）被选中时触发。Fires when a row is selected.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>SelectionModel
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    rowIndex
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    选中的索引。The selected index
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    r
+                                                </code>Ext.data.Record
+                                                <div class="sub-desc">
+                                                    The selected record
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RowSelectionModel</td>
+                </tr>
+            
+                <tr class="event-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="selectionchange-selectionchange"></a>
+                        <!--名称+参数列表-->
+                        <b>selectionchange</b>(
+	                        
+                                <code>
+                                    SelectionModel this
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当选区改变时触发。Fires when the selection c... 
+                            </div>
+                            <div class="long">
+                                当选区改变时触发。Fires when the selection changes
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>SelectionModel
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">RowSelectionModel</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束事件------>	
+</div>

@@ -1,0 +1,1856 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.Ajax-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.Ajax-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.Ajax-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.Ajax-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.Ajax" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/Connection.html#cls-Ext.Ajax">Ext.Ajax</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                Connection.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/Connection.html#cls-Ext.Ajax">Ext.Ajax</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.data.Connection.html"  ext:cls="Ext.data.Connection" ext:member="">Ext.data.Connection</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        Ext.Ajax类继承了Ext.data.Connection，为Ajax的请求提供了最大灵活性的操作方式。示例代码： Global Ajax request class.  Provides a simple way to make Ajax requests with maximum flexibility.  Example usage: <pre><code>
+// 简单的请求 Basic request
+Ext.Ajax.request({
+   url: 'foo.php',
+   success: someFn,
+   failure: otherFn,
+   headers: {
+       'my-header': 'foo'
+   },
+   params: { foo: 'bar' }
+});
+
+// 简单的Ajax式的表单提交。Simple ajax form submission
+Ext.Ajax.request({
+    form: 'some-form',
+    params: 'foo=bar'
+});
+
+// 规定每次请求的头部都有这样的字段。Default headers to pass in every request
+Ext.Ajax.defaultHeaders = {
+    'Powered-By': 'Ext'
+};
+
+// 规定每次请求的头部都有这样的事件！Global Ajax events can be handled on every request!
+Ext.Ajax.on('beforerequest', this.showSpinner, this);
+</code></pre> @singleton
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.Ajax-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="autoAbort-header"></a>
+                        <b>autoAbort</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                可选项）该request是否应当中断挂起的请求（默认值为false）。...
+                            </div>
+                            <div class="long">
+                                可选项）该request是否应当中断挂起的请求（默认值为false）。(Optional) Whether this request should abort any pending requests. (defaults to false) @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="defaultHeaders-header"></a>
+                        <b>defaultHeaders</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                可选项）一个包含请求头信息的对象，此请求头被附加在该Connectio...
+                            </div>
+                            <div class="long">
+                                可选项）一个包含请求头信息的对象，此请求头被附加在该Connection对象的每次请求中（默认值为undefined）。(Optional) An object containing request headers which are added  to each request made by this object. (defaults to undefined)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disableCaching-header"></a>
+                        <b>disableCaching</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                可选项）设置为true就会添加一个独一无二的cache-buster参...
+                            </div>
+                            <div class="long">
+                                可选项）设置为true就会添加一个独一无二的cache-buster参数来获取请求（默认值为true）。(Optional) True to add a unique cache-buster param to GET requests. (defaults to true) @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disableCachingParam-header"></a>
+                        <b>disableCachingParam</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                可选项）(Optional) Change the parameter...
+                            </div>
+                            <div class="long">
+                                可选项）(Optional) Change the parameter which is sent went disabling caching through a cache buster. Defaults to '_dc' @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="extraParams-header"></a>
+                        <b>extraParams</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                可选项）一个包含属性值的对象，这些属性在该Connection发起的每...
+                            </div>
+                            <div class="long">
+                                可选项）一个包含属性值的对象，这些属性在该Connection发起的每次请求中作为外部参数（默认值为undefined）。(Optional) An object containing properties which are used as extra parameters to each request made by this object. (defaults to undefined)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="listeners-header"></a>
+                        <b>listeners</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                (optional) A config object containi...
+                            </div>
+                            <div class="long">
+                                (optional) A config object containing one or more event handlers to be added to this object during initialization.  This should be a valid listeners config object as specified in the <a href="/output/Ext.Ajax.html#Ext.Ajax-addListener" ext:cls="Ext.Ajax" ext:member="addListener">addListener</a> example for attaching multiple handlers at once.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Observable</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="method-header"></a>
+                        <b>method</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                可选项）请求时使用的默认的http方法（默认为undefined；如果...
+                            </div>
+                            <div class="long">
+                                可选项）请求时使用的默认的http方法（默认为undefined；如果存在参数但没有设值，则值为post,否则为get）。(Optional) The default HTTP method to be used for requests. (defaults to undefined; if not set, but <a href="/output/Ext.Ajax.html#Ext.Ajax-request" ext:cls="Ext.Ajax" ext:member="request">request</a> params are present, POST will be used; otherwise, GET will be used.)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="timeout-header"></a>
+                        <b>timeout</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                可选项）一次请求超时的毫秒数（默认为30秒钟）。(Optional) ...
+                            </div>
+                            <div class="long">
+                                可选项）一次请求超时的毫秒数（默认为30秒钟）。(Optional) The timeout in milliseconds to be used for requests. (defaults to 30000)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="url-header"></a>
+                        <b>url</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                可选项）被用来向服务发起请求默认的url（默认值为undefined）...
+                            </div>
+                            <div class="long">
+                                可选项）被用来向服务发起请求默认的url（默认值为undefined）。(Optional) The default URL to be used for requests to the server. (defaults to undefined)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.Ajax-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.Ajax-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-abort"></a>
+                        <!--名称+参数列表-->
+                        <b>abort</b>(
+	                        
+                                <code>
+                                    Number transactionId
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                中断任何正在的请求。Aborts any outstanding re... 
+                            </div>
+                            <div class="long">
+                                中断任何正在的请求。Aborts any outstanding request.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    transactionId
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    (或选项)默认值为最后一次事务。{(Optional) defaults to the last transaction
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Connection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-addEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>addEvents</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                定义观察者的事件。Used to define events on t... 
+                            </div>
+                            <div class="long">
+                                定义观察者的事件。Used to define events on this Observable
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    定义的事件对象。object The object with the events defined
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-addListener"></a>
+                        <!--名称+参数列表-->
+                        <b>addListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object options]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                加入一个事件处理函数。on是其简写方式。Appends an even... 
+                            </div>
+                            <div class="long">
+                                加入一个事件处理函数。<a href="output/Ext.Ajax.html#Ext.Ajax-on" ext:cls="Ext.Ajax" ext:member="on">on</a>是其简写方式。Appends an event handler to this element.  The shorthand version <a href="/output/Ext.Ajax.html#Ext.Ajax-on" ext:cls="Ext.Ajax" ext:member="on">on</a> is equivalent.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件处理函数的名称。The type of event to handle
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件处理函数。该函数会送入以下的参数：The handler function the event invokes. This function is passed the following parameters:<ul> <li>evt : EventObject<div class="sub-desc">用于描述这次事件<a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a>的事件对象。The <a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a> describing the event.</div></li> <li>t : Element<div class="sub-desc">事件源对象，类型是<a href="output/Ext.Element.html" ext:cls="Ext.Element">Element</a> The <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Element</a> which was the target of the event. 注意该项可能会选项<tt>delegate</tt>筛选而发生变化Note that this may be filtered by using the <tt>delegate</tt> option.</div></li> <li>o : Object<div class="sub-desc">调用addListener时送入的选项对象The options object from the addListener call.</div></li> </ul>
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    事件处理函数执行时所在的作用域。处理函数“this”的上下文。(optional) The scope (The <tt>this</tt> reference) of the handler function. Defaults to this Element.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    包含句柄配置属性的一个对象。该对象可能会下来的属性： (optional) An object containing handler configuration properties. This may contain any of the following properties:<ul> <li>scope {Object} : 事件处理函数执行时所在的作用域。处理函数“this”的上下文环境。The scope in which to execute the handler function. The handler function's "this" context.</li> <li>delegate {String} : 一个简易选择符，用于过滤目标，或是查找目标的子孙。A simple selector to filter the target or look for a descendant of the target</li> <li>stopEvent {Boolean} : true表示为阻止事件。即停止传播、阻止默认动作。True to stop the event. That is stop propagation, and prevent the default action.</li> <li>preventDefault {Boolean} : true表示为阻止默认动作。True to prevent the default action</li> <li>stopPropagation {Boolean} : true表示为阻止事件传播。True to prevent event propagation</li> <li>normalized {Boolean} : false表示对处理函数送入一个原始、未封装过的浏览器对象而非标准的Ext.EventObject。False to pass a browser event to the handler function instead of an Ext.EventObject</li> <li>delay {Number} : 触发事件后处理函数延时执行的时间。The number of milliseconds to delay the invocation of the handler after te event fires.</li> <li>single {Boolean} : true代表为事件触发后加入一个下次移除本身的处理函数。True to add a handler to handle just the next firing of the event, and then remove itself.</li> <li>buffer {Number} : 若指定一个毫秒数会把该处理函数安排到<a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a>延时之后才执行。如果事件在那个事件再次触发，则原处理器句柄将<em>不会</em> 被启用，但是新处理器句柄会安排在其位置。Causes the handler to be scheduled to run in an <a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a> delayed by the specified number of milliseconds. If the event fires again within that time, the original handler is <em>not</em> invoked, but the new handler is scheduled in its place.</li> </ul><br> <p> <b>不同配搭方式的选项 Combining Options</b><br> 下面的例子，使用的是<a href="output/addListener.html#addListener-on" ext:cls="addListener" ext:member="on">on</a>的简写方式。和addListener是等价的。利用参数选项，可以组合成不同类型的侦听器： In the following examples, the shorthand form <a href="output/addListener.html#addListener-on" ext:cls="addListener" ext:member="on">on</a> is used rather than the more verbose addListener.  The two are equivalent.  Using the options argument, it is possible to combine different types of listeners:<br> <br> 这个事件的含义是，已常规化的，延时的，自动停止事件并有传入一个自定义的参数（forumId）的一次性侦听器。这些事件设置在处理函数（也就是第三个的参数）中也可以找到的。A normalized, delayed, one-time listener that auto stops the event and adds a custom argument (forumId) to the options object. The options object is available as the third parameter in the handler function.<div style="margin: 5px 20px 20px;"> 代码：Code:<pre><code>
+el.on('click', this.onClick, this, {
+    single: true,
+    delay: 100,
+    stopEvent : true,
+    forumId: 4
+});</code></pre></p> <p> <b>多个处理函数一次性登记。Attaching multiple handlers in 1 call</b><br> 这样的话，可允许多个事件处理函数都共享一个配置事件的配置项对象。The method also allows for a single argument to be passed which is a config object containing properties which specify multiple handlers.</p> <p> 代码：Code:<pre><code>
+el.on({
+    'click' : {
+        fn: this.onClick,
+        scope: this,
+        delay: 100
+    },
+    'mouseover' : {
+        fn: this.onMouseOver,
+        scope: this
+    },
+    'mouseout' : {
+        fn: this.onMouseOut,
+        scope: this
+    }
+});</code></pre></p> <p> 或者是简写的语法：Or a shorthand syntax:<br> Code:<pre><code>
+el.on({
+    'click' : this.onClick,
+    'mouseover' : this.onMouseOver,
+    'mouseout' : this.onMouseOut,
+    scope: this
+});</code></pre></p>
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-capture"></a>
+                        <!--名称+参数列表-->
+                        <b>capture</b>(
+	                        
+                                <code>
+                                    Observable o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                开始捕捉特定的观察者。在事件触发之前，所有的事件会以“事件名称+标准签... 
+                            </div>
+                            <div class="long">
+                                开始捕捉特定的观察者。在事件触发<b>之前</b>，所有的事件会以“事件名称+标准签名”的形式传入到函数（传入的参数是function类型）。如果传入的函数执行后返回false，则接下的事件将不会触发。Starts capture on the specified Observable. All events will be passed to the supplied function with the event name + standard signature of the event <b>before</b> the event is fired. If the supplied function returns false, the event will not fire.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Observable
+                                                <div class="sub-desc">
+                                                    要捕捉的观察者The Observable to capture
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    要调用的函数The function to call
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数作用域(optional) The scope (this object) for the fn
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-fireEvent"></a>
+                        <!--名称+参数列表-->
+                        <b>fireEvent</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object... args
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                触发指定的事件,并在这里把处理函数的参数传入（应该至少要有事件的名称）... 
+                            </div>
+                            <div class="long">
+                                触发指定的事件,并在这里把处理函数的参数传入（应该至少要有事件的名称）。Fires the specified event with the passed parameters (minus the event name).
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件名称The name of the event to fire. If the event is to bubble up an Observable parent hierarchy (See <a href="output/fireEvent.html#fireEvent-Ext.ComponentgetBubbleTarget" ext:cls="fireEvent" ext:member="Ext.ComponentgetBubbleTarget">Ext.ComponentgetBubbleTarget</a>) then the first argument must be passed as <tt>true</tt>, and the event name is passed as the second argument. 如果这个事件是要在Observable父类上逐层上报（参阅<a href="output/fireEvent.html#fireEvent-Ext.ComponentgetBubbleTarget" ext:cls="fireEvent" ext:member="Ext.ComponentgetBubbleTarget">Ext.ComponentgetBubbleTarget</a>），那么第一个参数一定是<tt>true</tt>，然后第二个参数是事件名称。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    args
+                                                </code> : Object...
+                                                <div class="sub-desc">
+                                                    传入事件处理函数的参数Variable number of parameters are passed to handlers
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            从处理函数返回true或者false returns false if any of the handlers return false otherwise it returns true
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-hasListener"></a>
+                        <!--名称+参数列表-->
+                        <b>hasListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                检测当前对象是否有指定的事件。Checks to see if thi... 
+                            </div>
+                            <div class="long">
+                                检测当前对象是否有指定的事件。Checks to see if this object has any listeners for a specified event
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要检查的事件名称。The name of the event to check for
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True表示有事件正在被监听，否则为false。True if the event is being listened for, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-isLoading"></a>
+                        <!--名称+参数列表-->
+                        <b>isLoading</b>(
+	                        
+                                <code>
+                                    Number transactionId
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                确认该对象是否有正在的请求。Determine whether thi... 
+                            </div>
+                            <div class="long">
+                                确认该对象是否有正在的请求。Determine whether this object has a request outstanding.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    transactionId
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    可选项）默认是最后一次通讯。(Optional) defaults to the last transaction
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            如果这是个正在的请求的话，返回true。True if there is an outstanding request.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Connection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-on"></a>
+                        <!--名称+参数列表-->
+                        <b>on</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                为该元素添加事件处理函数（addListener的简写方式）。Appe... 
+                            </div>
+                            <div class="long">
+                                为该元素添加事件处理函数（addListener的简写方式）。Appends an event handler to this element (shorthand for addListener)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件名称The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    处理函数The method the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    执行处理函数的作用域。“this”对象指针(optional) The scope in which to execute the handler function. The handler function's "this" context.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的）(optional) @method
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-purgeListeners"></a>
+                        <!--名称+参数列表-->
+                        <b>purgeListeners</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                从这个对象身上移除所有的侦听器。Removes all listene... 
+                            </div>
+                            <div class="long">
+                                从这个对象身上移除所有的侦听器。Removes all listeners for this object
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-relayEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>relayEvents</b>(
+	                        
+                                <code>
+                                    Object o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Array events
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Relays selected events from the spe... 
+                            </div>
+                            <div class="long">
+                                Relays selected events from the specified Observable as if the events were fired by <tt><b>this</b></tt>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    The Observable whose events this object is to relay.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    events
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    Array of event names to relay.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-releaseCapture"></a>
+                        <!--名称+参数列表-->
+                        <b>releaseCapture</b>(
+	                        
+                                <code>
+                                    Observable o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                从Observable身上移除所有已加入的捕捉captures。Rem... 
+                            </div>
+                            <div class="long">
+                                从Observable身上移除<b>所有</b>已加入的捕捉captures。Removes <b>all</b> added captures from the Observable.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Observable
+                                                <div class="sub-desc">
+                                                    要释放的观察者The Observable to release
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-removeListener"></a>
+                        <!--名称+参数列表-->
+                        <b>removeListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除侦听器Removes a listener 
+                            </div>
+                            <div class="long">
+                                移除侦听器Removes a listener
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    侦听事件的类型The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    移除的处理函数The handler to remove
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的） 处理函数之作用域(optional) The scope (this object) for the handler
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-request"></a>
+                        <!--名称+参数列表-->
+                        <b>request</b>(
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                 向远程服务器发送一http请求。Sends an HTTP requ... 
+                            </div>
+                            <div class="long">
+                                <p> 向远程服务器发送一http请求。Sends an HTTP request to a remote server.</p> <p> <b>Important:</b> Ajax server requests are asynchronous, and this call will return before the response has been received. Process any returned data in a callback function.</p>
+ <p> 要正确指定回调函数的作用域，应适用<tt>scope</tt>选项。To execute a callback function in the correct scope, use the <tt>scope</tt> option.</p>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    包含如下属性的一对象：An object which may contain the following properties:<ul> <li><b>url</b> : String/Function (Optional)<div class="sub-desc"> （可选项）发送请求的url，默认为配置的url。若为函数类型那么其作用域将由配置项<tt>scope</tt>所指定。默认为配置好的URL。The URL to which to send the request, or a function to call which returns a URL string. The scope of the function is specified by the <tt>scope</tt> option. Defaults to configured URL.</div></li>  <li><b>params</b> : Object/String/Function （可选项）(Optional)<div class="sub-desc"> 一包含属性的对象（这些属性被用作request的参数）或一个编码后的url字串或一个能调用其中任一一属性的函数。若为函数类型那么其作用域将由配置项<tt>scope</tt>所指定。An object containing properties which are used as parameters to the request, a url encoded string or a function to call to get either. The scope of the function is specified by the <tt>scope</tt> option.</div></li>  <li><b>method</b> : String （可选项）(Optional)<div class="sub-desc"> 该请求所用的http方面，默认值为配置的方法，或者当没有方法被配置时，如果没有发送参数时用get，有参数时用post。The HTTP method to use for the request. Defaults to the configured method, or if no method was configured, "GET" if no parameters are being sent, and "POST" if parameters are being sent.  Note that the method name is case-sensitive and should be all caps.</div></li>  <li><b>callback</b> : Function （可选项）(Optional)<div class="sub-desc"> 该方法被调用时附上返回的http response对象。不管成功还是失败，该回调函数都将被调用，该函数中传入了如下参数: The function to be called upon receipt of the HTTP response. The callback is called regardless of success or failure and is passed the following parameters:<ul> <li><b>options</b> : Object<div class="sub-desc">>请求所调用的参数。The parameter to the request call.</div></li> <li><b>success</b> : Boolean<div class="sub-desc">请求成功则为true。True if the request succeeded.</div></li> <li><b>response</b> : Object<div class="sub-desc">包含了返回数据的xhr对象。The XMLHttpRequest object containing the response data.  See <a href="http://www.w3.org/TR/XMLHttpRequest/">http://www.w3.org/TR/XMLHttpRequest/</a> for details about  accessing elements of the response.</div></li> </ul></div></li> <li><a id="request-option-success"></a><b>success</b>: Function （可选项）(Optional)<div class="sub-desc"> 该函数被调用取决于请求是否成功。该回调函数被传入如下参数: The function to be called upon success of the request. The callback is passed the following parameters:<ul> <li><b>response</b> : Object<div class="sub-desc">包含数据的xhr对象。The XMLHttpRequest object containing the response data.</div></li> <li><b>options</b> : Object<div class="sub-desc">请求所调用的参数。The parameter to the request call.</div></li> </ul></div></li> <li><b>failure</b> : Function （可选项）(Optional)<div class="sub-desc"> 该函数被调用取决于请求失败。该回调函数被传入如下参数: The function to be called upon failure of the request. The callback is passed the following parameters:<ul>  <li><b>response</b> : Object<div class="sub-desc"> 包含数据的xhr对象。The XMLHttpRequest object containing the response data.</div></li>  <li><b>options</b> : Object<div class="sub-desc"> 请求所调用的参数。The parameter to the request call.</div></li> </ul></div></li>  <li><b>scope</b> : Object （可选项）(Optional)<div class="sub-desc"> 回调函数的作用域：回调函数"this"对象指针。默认值为浏览器窗口。The scope in which to execute the callbacks: The "this" object for the callback function. If the <tt>url</tt>, or <tt>params</tt> options were specified as functions from which to draw values, then this also serves as the scope for those function calls. Defaults to the browser window.</div></li>  <li><b>form</b> : Element/HTMLElement/String （可选项）(Optional)<div class="sub-desc"> 用来压入参数的一个<tt>&lt;form&gt;</tt>元素或<tt>&lt;form&gt;</tt>的标识。The <tt>&lt;form&gt;</tt> Element or the id of the <tt>&lt;form&gt;</tt> to pull parameters from.</div></li>  <li><a id="request-option-isUpload"></a><b>isUpload</b> : Boolean （可选项）(Optional)<div class="sub-desc"><b> 如果该form对象是上传form，为true（通常情况下会自动探测）。Only meaningful when used with the <tt>form</tt> option</b>. <p>True if the form object is a file upload (will be set automatically if the form was configured with <b><tt>enctype</tt></b> "multipart/form-data").</p> <p>File uploads are not performed using normal "Ajax" techniques, that is they are <b>not</b> performed using XMLHttpRequests. Instead the form is submitted in the standard manner with the DOM <tt>&lt;form></tt> element temporarily modified to have its <a href="http://www.w3.org/TR/REC-html40/present/frames.html#adef-target">target</a> set to refer to a dynamically generated, hidden <tt>&lt;iframe></tt> which is inserted into the document but removed after the return data has been gathered.</p> <p>The server response is parsed by the browser to create the document for the IFRAME. If the server is using JSON to send the return object, then the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a> header must be set to "text/html" in order to tell the browser to insert the text unchanged into the document body.</p> <p>The response text is retrieved from the document, and a fake XMLHttpRequest object is created containing a <tt>responseText</tt> property in order to conform to the requirements of event handlers and callbacks.</p> <p>Be aware that file upload packets are sent with the content type <a href="http://www.faqs.org/rfcs/rfc2388.html">multipart/form</a> and some server technologies (notably JEE) may require some custom processing in order to retrieve parameter names and parameter values from the packet content.</p> </div></li>  <li><b>headers</b> : Object （可选项）(Optional)<div class="sub-desc">为请求所加的请求头。Request headers to set for the request.</div></li>  <li><b>xmlData</b> : Object （可选项）(Optional)<div class="sub-desc"> 用于发送的xml document。注意:它将会被用来在发送数据中代替参数任务参数将会被追加在url中。XML document to use for the post. Note: This will be used instead of params for the post data. Any params will be appended to the URL.</div></li>  <li> <b>jsonData</b> : Object/String （可选项）(Optional)<div class="sub-desc">  JSON data to use as the post. Note: This will be used instead of params for the post data. Any params will be appended to the URL.</div> </li>  <li> <b>disableCaching</b> : Boolean （可选项）(Optional)<div class="sub-desc"> 设置为True,则添加一个独一无二的cache-buster参数来获取请求。True to add a unique cache-buster param to GET requests.</div> </li>  </ul></p> <p>The options object may also contain any other property which might be needed to perform postprocessing in a callback because it is passed to callback functions.</p>
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            transactionId The id of the server transaction. This may be used to cancel the request.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Connection
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-resumeEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>resumeEvents</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                重新触发事件（参阅suspendEvents）。Resume firi... 
+                            </div>
+                            <div class="long">
+                                重新触发事件（参阅<a href="output/Ext.Ajax.html#Ext.Ajax-suspendEvents" ext:cls="Ext.Ajax" ext:member="suspendEvents">suspendEvents</a>）。Resume firing events. (see <a href="/output/Ext.Ajax.html#Ext.Ajax-suspendEvents" ext:cls="Ext.Ajax" ext:member="suspendEvents">suspendEvents</a>) If events were suspended using the <tt><b>queueSuspended</b></tt> parameter, then all events fired during event suspension will be sent to any listeners now.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-serializeForm"></a>
+                        <!--名称+参数列表-->
+                        <b>serializeForm</b>(
+	                        
+                                <code>
+                                    String/HTMLElement form
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                序列化传入的form为编码后的url字符串。Serialize the... 
+                            </div>
+                            <div class="long">
+                                序列化传入的form为编码后的url字符串。Serialize the passed form into a url encoded string
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    form
+                                                </code> : String/HTMLElement
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ajax
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-suspendEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>suspendEvents</b>(
+	                        
+                                <code>
+                                    Boolean queueSuspended
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                暂停触发所有的事件（参阅resumeEvents）。Suspend t... 
+                            </div>
+                            <div class="long">
+                                暂停触发所有的事件（参阅<a href="output/Ext.Ajax.html#Ext.Ajax-resumeEvents" ext:cls="Ext.Ajax" ext:member="resumeEvents">resumeEvents</a>）。Suspend the firing of all events. (see <a href="/output/Ext.Ajax.html#Ext.Ajax-resumeEvents" ext:cls="Ext.Ajax" ext:member="resumeEvents">resumeEvents</a>)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    queueSuspended
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    Pass as true to queue up suspended events to be fired after the <a href="output/suspendEvents.html#suspendEvents-resumeEvents" ext:cls="suspendEvents" ext:member="resumeEvents">resumeEvents</a> call instead of discarding all suspended events;
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Ajax-un"></a>
+                        <!--名称+参数列表-->
+                        <b>un</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除侦听器（removeListener的快捷方式）Removes a... 
+                            </div>
+                            <div class="long">
+                                移除侦听器（removeListener的快捷方式）Removes a listener (shorthand for removeListener)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    侦听事件的类型The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件涉及的方法 The handler to remove
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的） 处理函数的作用域(optional) The scope (this object) for the handler @method
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.Ajax-events"></a>
+    <h2>公共事件</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    事件
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="beforerequest-beforerequest"></a>
+                        <!--名称+参数列表-->
+                        <b>beforerequest</b>(
+	                        
+                                <code>
+                                    Connection conn,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                任何Ajax请求发送之前触发。Fires before a netwo... 
+                            </div>
+                            <div class="long">
+                                任何Ajax请求发送之前触发。Fires before a network request is made to retrieve a data object.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    conn
+                                                </code>Connection
+                                                <div class="sub-desc">
+                                                    This Connection object.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    The options config object passed to the <a href="output/beforerequest.html#beforerequest-request" ext:cls="beforerequest" ext:member="request">request</a> method.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="requestcomplete-requestcomplete"></a>
+                        <!--名称+参数列表-->
+                        <b>requestcomplete</b>(
+	                        
+                                <code>
+                                    Connection conn,
+                                </code>
+	                        
+                                <code>
+                                    Object response,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                任何Ajax成功请求后触发。Fires if the request ... 
+                            </div>
+                            <div class="long">
+                                任何Ajax成功请求后触发。Fires if the request was successfully completed.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    conn
+                                                </code>Connection
+                                                <div class="sub-desc">
+                                                    This Connection object.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    response
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    The XHR object containing the response data. See <a href="http://www.w3.org/TR/XMLHttpRequest/">The XMLHttpRequest Object</a> for details.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    The options config object passed to the <a href="output/requestcomplete.html#requestcomplete-request" ext:cls="requestcomplete" ext:member="request">request</a> method.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="requestexception-requestexception"></a>
+                        <!--名称+参数列表-->
+                        <b>requestexception</b>(
+	                        
+                                <code>
+                                    Connection conn,
+                                </code>
+	                        
+                                <code>
+                                    Object response,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                服务端返回一个错误的HTTP状态码时触发。Fires if an er... 
+                            </div>
+                            <div class="long">
+                                服务端返回一个错误的HTTP状态码时触发。Fires if an error HTTP status was returned from the server. See <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP Status Code Definitions</a> for details of HTTP status codes.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    conn
+                                                </code>Connection
+                                                <div class="sub-desc">
+                                                    This Connection object.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    response
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    The XHR object containing the response data. See <a href="http://www.w3.org/TR/XMLHttpRequest/">The XMLHttpRequest Object</a> for details.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    The options config object passed to the <a href="output/requestexception.html#requestexception-request" ext:cls="requestexception" ext:member="request">request</a> method.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Connection</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束事件------>	
+</div>

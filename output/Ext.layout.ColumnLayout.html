@@ -1,0 +1,223 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.layout.ColumnLayout-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.layout.ColumnLayout-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.layout.ColumnLayout-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.layout.ColumnLayout-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.layout.ColumnLayout" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/ColumnLayout.html#cls-Ext.layout.ColumnLayout">Ext.layout.ColumnLayout</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extlayout
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                ColumnLayout.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/ColumnLayout.html#cls-Ext.layout.ColumnLayout">Ext.layout.ColumnLayout</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.layout.ContainerLayout.html"  ext:cls="Ext.layout.ContainerLayout" ext:member="">Ext.layout.ContainerLayout</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        <p> 这是为构建多个垂直式结构而准备的布局，当中包含已指定宽度的多个列，列的宽度可以是固定值，也可以是可伸缩的百分比宽度，但里面的内容就是自适应高度了。应通过继承此类或设置<a href="output/Ext.layout.ColumnLayout.html#Ext.layout.ColumnLayout-Ext.Containerlayout" ext:cls="Ext.layout.ColumnLayout" ext:member="Ext.Containerlayout">Ext.Containerlayout</a>的配置layout:'column'的方式创建该类，一般很少通过关键字new直接使用该类。<br /> This is the layout style of choice for creating structural layouts in a multi-column format where the width of each column can be specified as a percentage or fixed width, but the height is allowed to vary based on the content. This class is intended to be extended or created via the layout:'column' <a href="/output/Ext.layout.ColumnLayout.html#Ext.layout.ColumnLayout-Ext.Containerlayout" ext:cls="Ext.layout.ColumnLayout" ext:member="Ext.Containerlayout">Ext.Containerlayout</a> config, and should generally not need to be created directly via the new keyword. </p> <p> 虽然ColumnLayout没有直接的配置项（不同于继承），但是ColumnLayout的任意一个子面板都支持特殊的配置项属性<b>columnWidth</b>。可采用width（像素）或columnWidth（百分比）的方式来决定面板的尺寸大小，如不为面板指定width或columnWidth，那么将缺省为面板的自动宽度。<br /> ColumnLayout does not have any direct config options (other than inherited ones), but it does support a specific config property of <b><tt>columnWidth</tt></b> that can be included in the config of any panel added to it.  The layout will use the columnWidth (if present) or width of each panel during layout to determine how to size each panel. If width or columnWidth is not specified for a given panel, its width will default to the panel's width (or auto). </p> <p> 属性width总是以象素（pixles）来固定宽度，并必须是数字大于或等于1；属性columnWidth是百分比相对单位，并必须是百分比字符串区间是大于0小于1（像.25）。<br /> The width property is always evaluated as pixels, and must be a number greater than or equal to 1. The columnWidth property is always evaluated as a percentage, and must be a decimal value greater than 0 and less than 1 (e.g., .25). </p> <p> 分配列宽度的基本规则非常简单。UI逻辑会将所包含的一组面板分成两类： 第一类是宽度固定值或不指定的（设置为auto）面板，当此类面板传入到布局时，先不立即渲染，但它们的宽度就会从容器的总宽度减去； 第二类是以百分比指定的面板，百分比的含义时在基于剩下宽度中计算的百分比。当传入布局时，会将这些百分比转换为宽度的固定数字值，分配到面板上。换句话讲，百分比的面板的用途填充由固定值宽度或AUTO宽度面板占据后<b>所留下</b>的空间。因此，虽然你可以以不同的百分比来分配列，但columnWidth加起来必须是等于1（或100%）。否则的话，渲染出来的布局可能出现不正常。用法举例：<br /> The basic rules for specifying column widths are pretty simple.  The logic makes two passes through the set of contained panels.  During the first layout pass, all panels that either have a fixed width or none specified (auto) are skipped, but their widths are subtracted from the overall container width.  During the second pass, all panels with columnWidths are assigned pixel widths in proportion to their percentages based on the total <b>remaining</b> container width.  In other words, percentage width panels are designed to fill the space left over by all the fixed-width and/or auto-width panels.  Because of this, while you can specify any number of columns with different percentages, the columnWidths must always add up to 1 (or 100%) when added together, otherwise your layout may not render as expected.  Example usage: </p> <pre><code>
+// 所有的列都是百分比单位，加起来就应该是1。// All columns are percentages -- they must add up to 1
+var p = new Ext.Panel({
+    title: '列布局 - 百分比Only',
+    layout:'column',
+    items: [{
+        title: '列一',
+        columnWidth: .25 
+    },{
+        title: '列二',
+        columnWidth: .6
+    },{
+        title: '列三',
+        columnWidth: .15
+    }]
+});
+
+// width的配置项和columnWidth的配置项两者都可以混合使用，但columnWidth的值加起来就一定要是1。// 例子的第一列就精确指明120px，剩余的两个列就自适应了容器内余下的部分。// Mix of width and columnWidth -- all columnWidth values must add up
+// to 1. The first column will take up exactly 120px, and the last two
+// columns will fill the remaining container width.
+var p = new Ext.Panel({
+    title: 'Column Layout - Mixed',
+    layout:'column',
+    items: [{
+        title: 'Column 1',
+        width: 120
+    },{
+        title: 'Column 2',
+        columnWidth: .8
+    },{
+        title: 'Column 3',
+        columnWidth: .2
+    }]
+});
+</code></pre>
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.layout.ColumnLayout-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="extraCls-header"></a>
+                        <b>extraCls</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                一个可选添加的CSS样式类，加入到组件的容器上（默认为''）。这为容器...
+                            </div>
+                            <div class="long">
+                                一个可选添加的CSS样式类，加入到组件的容器上（默认为''）。这为容器或容器的子节点加入标准CSS规则提供了方便。<br /> An optional extra CSS class that will be added to the container (defaults to '').  This can be useful for adding customized styles to the container or any of its children using standard CSS rules.  <p> An optional extra CSS class that will be added to the container. This can be useful for adding customized styles to the container or any of its children using standard CSS rules. See <a href="/output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a>.<a href="/output/Ext.Component.html#Ext.Component-ctCls" ext:cls="Ext.Component" ext:member="ctCls">ctCls</a> also.</p> <p><b>Note</b>: <tt>extraCls</tt> defaults to <tt>''</tt> except for the following classes which assign a value by default: <div class="mdetail-params"><ul> <li><a href="/output/Ext.layout.AbsoluteLayout.html" ext:cls="Ext.layout.AbsoluteLayout">Absolute Layout</a> : <tt>'x-abs-layout-item'</tt></li> <li><a href="/output/Ext.layout.Box.html" ext:cls="Ext.layout.Box">Box Layout</a> : <tt>'x-box-item'</tt></li> <li><a href="/output/Ext.layout.ColumnLayout.html" ext:cls="Ext.layout.ColumnLayout">Column Layout</a> : <tt>'x-column'</tt></li> </ul></div> To configure the above Classes with an extra CSS class append to the default.  For example, for ColumnLayout:<pre><code> extraCls: 'x-column custom-class' </code></pre> </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ContainerLayout</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="renderHidden-header"></a>
+                        <b>renderHidden</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为在渲染时隐藏包含的每一项（缺省为false）。True ...
+                            </div>
+                            <div class="long">
+                                True表示为在渲染时隐藏包含的每一项（缺省为false）。True to hide each contained item on render (defaults to false).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ContainerLayout</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.layout.ColumnLayout-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.layout.ColumnLayout-methods"></a>
+    <h2>公共方法</h2>
+    
+    
+        这个类没有公告方法。
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.layout.ColumnLayout-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

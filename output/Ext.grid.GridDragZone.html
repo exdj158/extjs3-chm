@@ -1,0 +1,1346 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.grid.GridDragZone-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.grid.GridDragZone-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.grid.GridDragZone-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.grid.GridDragZone-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.grid.GridDragZone" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/GridDD.html#cls-Ext.grid.GridDragZone">Ext.grid.GridDragZone</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extgrid
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                GridDD.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/GridDD.html#cls-Ext.grid.GridDragZone">Ext.grid.GridDragZone</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.dd.DragZone.html"  ext:cls="Ext.dd.DragZone" ext:member="">Ext.dd.DragZone</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        <p>A customized implementation of a <a href="/output/Ext.dd.DragZone.html" ext:cls="Ext.dd.DragZone">DragZone</a> which provides default implementations of two of the template methods of DragZone to enable dragging of the selected rows of a GridPanel.</p> <p>A cooperating <a href="/output/Ext.dd.DropZone.html" ext:cls="Ext.dd.DropZone">DropZone</a> must be created who's template method implementations of <a href="/output/Ext.dd.DropZone.html#Ext.dd.DropZone-onNodeEnter" ext:cls="Ext.dd.DropZone" ext:member="onNodeEnter">onNodeEnter</a>, <a href="/output/Ext.dd.DropZone.html#Ext.dd.DropZone-onNodeOver" ext:cls="Ext.dd.DropZone" ext:member="onNodeOver">onNodeOver</a>, <a href="/output/Ext.dd.DropZone.html#Ext.dd.DropZone-onNodeOut" ext:cls="Ext.dd.DropZone" ext:member="onNodeOut">onNodeOut</a> and <a href="/output/Ext.dd.DropZone.html#Ext.dd.DropZone-onNodeDrop" ext:cls="Ext.dd.DropZone" ext:member="onNodeDrop">onNodeDrop</a></p> are able to process the <a href="output/.html#-getDragData" ext:cls="" ext:member="getDragData">data</a> which is provided.
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.grid.GridDragZone-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="containerScroll-header"></a>
+                        <b>containerScroll</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                设为True 用来将此容器在Scrollmanager上注册,使得在拖...
+                            </div>
+                            <div class="long">
+                                设为True 用来将此容器在Scrollmanager上注册,使得在拖动操作发生时可以自动卷动。True to register this container with the Scrollmanager for auto scrolling during drag operations.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DragZone</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="dropAllowed-header"></a>
+                        <b>dropAllowed</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当落下被允许的时候返回到拖动源的样式（默认为"x-dd-drop-ok"）。
+                            </div>
+                            <div class="long">
+                                当落下被允许的时候返回到拖动源的样式（默认为"x-dd-drop-ok"）。
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DragSource</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="dropNotAllowed-header"></a>
+                        <b>dropNotAllowed</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当落下不允许的时候返回到拖动源的样式（默认为"x-dd-drop-no...
+                            </div>
+                            <div class="long">
+                                当落下不允许的时候返回到拖动源的样式（默认为"x-dd-drop-nodrop"）。
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DragSource</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="hlColor-header"></a>
+                        <b>hlColor</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                第二个参数:hlColor 用于在一次失败的拖动操作后调用afterR...
+                            </div>
+                            <div class="long">
+                                第二个参数:hlColor 用于在一次失败的拖动操作后调用afterRepair方法会用在此设定的颜色(默认颜色为亮蓝"c3daf9")来标识可见的拽源 The color to use when visually highlighting the drag source in the afterRepair method after a failed drop (defaults to "c3daf9" - light blue)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DragZone</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.grid.GridDragZone-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.grid.GridDragZone-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-afterRepair"></a>
+                        <!--名称+参数列表-->
+                        <b>afterRepair</b>(
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，在由实现促成的无效落下发生之后，你应该提供一个自定义... 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，在由实现促成的无效落下发生之后，你应该提供一个自定义的动作。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    落下元素的id @method afterInvalidDrop
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-beforeDragDrop"></a>
+                        <!--名称+参数列表-->
+                        <b>beforeDragDrop</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragDrop target
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，在拖动项被放下到目标之前，你应该提供一个自定义的动作... 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，在拖动项被放下到目标之前，你应该提供一个自定义的动作。该动作可被取消。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    target
+                                                </code> : Ext.dd.DragDrop
+                                                <div class="sub-desc">
+                                                    落下目标
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    被拖动元素之id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            isValid true的话说明拖动事件是有效的，false代表取消
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-beforeDragEnter"></a>
+                        <!--名称+参数列表-->
+                        <b>beforeDragEnter</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragDrop target
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，在拖动项进入落下目标时，你应该提供一个自定义的动作。... 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，在拖动项进入落下目标时，你应该提供一个自定义的动作。该动作可被取消onDragEnter。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    target
+                                                </code> : Ext.dd.DragDrop
+                                                <div class="sub-desc">
+                                                    落下目标
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    被拖动元素之id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            isValid true的话说明拖动事件是有效的，false代表取消
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-beforeDragOut"></a>
+                        <!--名称+参数列表-->
+                        <b>beforeDragOut</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragDrop target
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，在拖动项离开目标而没有落下之前，你应该提供一个自定义... 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，在拖动项离开目标而没有落下之前，你应该提供一个自定义的动作。该动作可被取消。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    target
+                                                </code> : Ext.dd.DragDrop
+                                                <div class="sub-desc">
+                                                    落下目标
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    被拖动元素之id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            isValid true的话说明拖动事件是有效的，false代表取消
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-beforeDragOver"></a>
+                        <!--名称+参数列表-->
+                        <b>beforeDragOver</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragDrop target
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，在拖动项位于落下目标上方时，你应该提供一个自定义的动... 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，在拖动项位于落下目标上方时，你应该提供一个自定义的动作。该动作可被取消。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    target
+                                                </code> : Ext.dd.DragDrop
+                                                <div class="sub-desc">
+                                                    落下目标
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    被拖动元素之id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            isValid true的话说明拖动事件是有效的，false代表取消
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-beforeInvalidDrop"></a>
+                        <!--名称+参数列表-->
+                        <b>beforeInvalidDrop</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragDrop target
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，在一次无效的落下发生之后，你应该提供一个自定义的动作。 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，在一次无效的落下发生之后，你应该提供一个自定义的动作。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    target
+                                                </code> : Ext.dd.DragDrop
+                                                <div class="sub-desc">
+                                                    落下目标
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    拖动元素的id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            isValid true的话说明拖动事件是有效的，false代表取消
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-cachedTarget"></a>
+                        <!--名称+参数列表-->
+                        <b>cachedTarget</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragDrop target
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，在拖动项离开目标而没有落下之前，你应该提供一个自定义... 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，在拖动项离开目标而没有落下之前，你应该提供一个自定义的动作。该动作可被取消。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    target
+                                                </code> : Ext.dd.DragDrop
+                                                <div class="sub-desc">
+                                                    落下目标
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    被拖动元素之id @method afterDragOut
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-getDragData"></a>
+                        <!--名称+参数列表-->
+                        <b>getDragData</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                返回与拖动源关联的数据对象 
+                            </div>
+                            <div class="long">
+                                返回与拖动源关联的数据对象
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            data 包含自定义数据的对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-getProxy"></a>
+                        <!--名称+参数列表-->
+                        <b>getProxy</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.dd.StatusProxy
+                        <div class="mdesc">
+                            <div class="short">
+                                返回拖动源所在的Ext.dd.StatusProxy 
+                            </div>
+                            <div class="long">
+                                返回拖动源所在的<a href="/output/Ext.dd.StatusProxy.html" ext:cls="Ext.dd.StatusProxy">Ext.dd.StatusProxy</a>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.dd.StatusProxy
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            proxy StatusProxy对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-getRepairXY"></a>
+                        <!--名称+参数列表-->
+                        <b>getRepairXY</b>(
+	                        
+                                <code>
+                                    Object target
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，在由实现促成的有效落下发生之后，你应该提供一个自定义... 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，在由实现促成的有效落下发生之后，你应该提供一个自定义的动作。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    target
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    DD目标
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    落下元素的id @method afterInvalidDrop
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-hideProxy"></a>
+                        <!--名称+参数列表-->
+                        <b>hideProxy</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                隐藏拖动源的Ext.dd.StatusProxy 
+                            </div>
+                            <div class="long">
+                                隐藏拖动源的<a href="/output/Ext.dd.StatusProxy.html" ext:cls="Ext.dd.StatusProxy">Ext.dd.StatusProxy</a>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-onBeforeDrag"></a>
+                        <!--名称+参数列表-->
+                        <b>onBeforeDrag</b>(
+	                        
+                                <code>
+                                    Object data
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，在初始化拖动事件之前，你应该提供一个自定义的动作。该... 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，在初始化拖动事件之前，你应该提供一个自定义的动作。该动作可被取消。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    data
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    与落下目标共享的自定义数据对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            isValid True的话拖动事件有效，否则false取消
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-onInitDrag"></a>
+                        <!--名称+参数列表-->
+                        <b>onInitDrag</b>(
+	                        
+                                <code>
+                                    Number x
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number y
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                该方法在拖拽动作开始，初始化代理元素时调用，默认情况下，它克隆了thi... 
+                            </div>
+                            <div class="long">
+                                该方法在拖拽动作开始，初始化代理元素时调用，默认情况下，它克隆了this.dragData.ddel。Called once drag threshold has been reached to initialize the proxy element. By default, it clones the this.dragData.ddel.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    x
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    被点击的拖拽对象的X坐标The x position of the click on the dragged object
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    y
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    被点击的拖拽对象的y坐标The y position of the click on the dragged object
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            该方法返回一个布尔常量,当返回true时,表示继续(保持)拖拽,返回false时,表示取消拖拽true to continue the drag, false to cancel
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragZone
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GridDragZone-onStartDrag"></a>
+                        <!--名称+参数列表-->
+                        <b>onStartDrag</b>(
+	                        
+                                <code>
+                                    Number x
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number y
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                默认是一个空函数，一旦拖动事件开始，你应该提供一个自定义的动作。不能在... 
+                            </div>
+                            <div class="long">
+                                默认是一个空函数，一旦拖动事件开始，你应该提供一个自定义的动作。不能在该函数中取消拖动。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    x
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    在拖动对象身上单击点的x值
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    y
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    在拖动对象身上单击点的y值
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragSource
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.grid.GridDragZone-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

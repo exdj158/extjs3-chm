@@ -1,0 +1,2662 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/Ext.html#cls-Ext">Ext</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                Ext.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/Ext.html#cls-Ext">Ext</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+          Ext核心工具与函数 @singleton
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="BLANK_IMAGE_URL-activeItem"></a>
+                        <b>
+                        BLANK_IMAGE_URL: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                1的透明gif图片连接，用于内置图标和css背景。默认地址为"http...
+                            </div>
+                            <div class="long">
+                                1的透明gif图片连接，用于内置图标和css背景。默认地址为"http://extjs.com/s.gif"，应用时应该设为自己的服务器连接。URL to a 1x1 transparent gif image used by Ext to create inline icons with CSS background images. (Defaults to "http://extjs.com/s.gif" and you should change this to a URL on your server). @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="SSL_SECURE_URL-activeItem"></a>
+                        <b>
+                        SSL_SECURE_URL: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                在非安全模式下，Ext要一个空白文件的链接，链接是为了iframe与o...
+                            </div>
+                            <div class="long">
+                                在非安全模式下，Ext要一个空白文件的链接，链接是为了iframe与onReady所指向的连接（src），以便能够组织IE不安全内容的警告（默认为javascript:fasle） URL to a blank file used by Ext when in secure mode for iframe src and onReady src to prevent the IE insecure content warning (defaults to javascript:false). @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="USE_NATIVE_JSON-activeItem"></a>
+                        <b>
+                        USE_NATIVE_JSON: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                是否使用浏览器的原生JSON解析方法，一些新型的浏览器会提供该方法。I...
+                            </div>
+                            <div class="long">
+                                是否使用浏览器的原生JSON解析方法，一些新型的浏览器会提供该方法。Indicates whether to use native browser parsing for JSON methods. This option is ignored if the browser does not support native JSON methods. <b>需要注意的是，原生JSON方法对于那些携带函数的对象没作用，而且属性名称（即key）必须是要引号套着的，否则将不能被解析（严格很多）（默认为false）。Note: Native JSON methods will not work with objects that have functions. Also, property names must be quoted, otherwise the data will not parse.</b> (Defaults to false) @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableGarbageCollector-activeItem"></a>
+                        <b>
+                        enableGarbageCollector: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                是否自动定时清除孤立的Ext.Elements缓存（默认为是）。Tru...
+                            </div>
+                            <div class="long">
+                                是否自动定时清除孤立的Ext.Elements缓存（默认为是）。True to automatically uncache orphaned Ext.Elements periodically (defaults to true) @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableListenerCollection-activeItem"></a>
+                        <b>
+                        enableListenerCollection: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                是否在清除缓存后自动清除事件监听器（默认为否）。注意:仅当enable...
+                            </div>
+                            <div class="long">
+                                是否在清除缓存后自动清除事件监听器（默认为否）。注意:仅当enableGarbageCollector为true时该项的设置才有效。True to automatically purge event listeners after uncaching an element (defaults to false). Note: this only happens if enableGarbageCollector is true. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isAir-activeItem"></a>
+                        <b>
+                        isAir: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为Adobe Air平台的系统。True if the d...
+                            </div>
+                            <div class="long">
+                                True表示为Adobe Air平台的系统。True if the detected platform is Adobe Air. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isBorderBox-activeItem"></a>
+                        <b>
+                        isBorderBox: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是非strict模式状态下的Internet Ex...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是非strict模式状态下的Internet Explorer。True if the detected browser is Internet Explorer running in non-strict mode. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isChrome-activeItem"></a>
+                        <b>
+                        isChrome: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Chrome。True if the detec...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Chrome。True if the detected browser is Chrome. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isGecko-activeItem"></a>
+                        <b>
+                        isGecko: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Gecko。True if the detect...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Gecko。True if the detected browser uses the Gecko layout engine (e.g. Mozilla, Firefox). @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isGecko2-activeItem"></a>
+                        <b>
+                        isGecko2: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是pre-Gecko 1.9。True if th...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是pre-Gecko 1.9。True if the detected browser uses a pre-Gecko 1.9 layout engine (e.g. Firefox 2.x). @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isGecko3-activeItem"></a>
+                        <b>
+                        isGecko3: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Gecko 1.9+引擎的（如Firefox 3...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Gecko 1.9+引擎的（如Firefox 3.X）。True if the detected browser uses a Gecko 1.9+ layout engine (e.g. Firefox 3.x). @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isIE-activeItem"></a>
+                        <b>
+                        isIE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Internet Explorer。True i...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Internet Explorer。True if the detected browser is Internet Explorer. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isIE6-activeItem"></a>
+                        <b>
+                        isIE6: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Internet Explorer6。True ...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Internet Explorer6。True if the detected browser is Internet Explorer 6.x. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isIE7-activeItem"></a>
+                        <b>
+                        isIE7: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Internet Explorer7。True ...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Internet Explorer7。True if the detected browser is Internet Explorer 7.x. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isIE8-activeItem"></a>
+                        <b>
+                        isIE8: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Internet Explorer8。True ...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Internet Explorer8。True if the detected browser is Internet Explorer 8.x. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isLinux-activeItem"></a>
+                        <b>
+                        isLinux: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为Linux平台的系统。True if the detec...
+                            </div>
+                            <div class="long">
+                                True表示为Linux平台的系统。True if the detected platform is Linux. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isMac-activeItem"></a>
+                        <b>
+                        isMac: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为Mac OS平台的系统。True if the dete...
+                            </div>
+                            <div class="long">
+                                True表示为Mac OS平台的系统。True if the detected platform is Mac OS. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isOpera-activeItem"></a>
+                        <b>
+                        isOpera: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是True表示为浏览器是Opera。True if...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是True表示为浏览器是Opera。True if the detected browser is Opera. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isReady-activeItem"></a>
+                        <b>
+                        isReady: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                页面是否完全被初始化，并可供使用。True when the docu...
+                            </div>
+                            <div class="long">
+                                页面是否完全被初始化，并可供使用。True when the document is fully initialized and ready for action @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isSafari-activeItem"></a>
+                        <b>
+                        isSafari: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Safari。True if the detec...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Safari。True if the detected browser is Chrome. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isSafari2-activeItem"></a>
+                        <b>
+                        isSafari2: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Safari 2.x。True if the d...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Safari 2.x。True if the detected browser is Safari 2.x. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isSafari3-activeItem"></a>
+                        <b>
+                        isSafari3: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为浏览器是Safari 3.x。True if the d...
+                            </div>
+                            <div class="long">
+                                True表示为浏览器是Safari 3.x。True if the detected browser is Safari 3.x. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isSecure-activeItem"></a>
+                        <b>
+                        isSecure: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                判断页面是否运行在SSL状态。True if the page is ...
+                            </div>
+                            <div class="long">
+                                判断页面是否运行在SSL状态。True if the page is running over SSL @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isStrict-activeItem"></a>
+                        <b>
+                        isStrict: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                判断浏览器是否是精确（Strict）模式，以相对于怪癖模式（quirk...
+                            </div>
+                            <div class="long">
+                                判断浏览器是否是精确（Strict）模式，以相对于怪癖模式（quirks mode）。True if the browser is in strict (standards-compliant) mode, as opposed to quirks mode @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="isWindows-activeItem"></a>
+                        <b>
+                        isWindows: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为Windows平台的系统。True if the det...
+                            </div>
+                            <div class="long">
+                                True表示为Windows平台的系统。True if the detected platform is Windows. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="useShims-activeItem"></a>
+                        <b>
+                        useShims: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                默认下，Ext会自动决定浮动元素是否应该被填充。如果你在用Flash那...
+                            </div>
+                            <div class="long">
+                                默认下，Ext会自动决定浮动元素是否应该被填充。如果你在用Flash那么该值很可能要设置为True。By default, Ext intelligently decides whether floating elements should be shimmed. If you are using flash, you may want to set this to true. @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Ext</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-addBehaviors"></a>
+                        <!--名称+参数列表-->
+                        <b>addBehaviors</b>(
+	                        
+                                <code>
+                                    Object obj
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                页面被初始化完毕后，在元素上绑定事件监听。事件名在'@'符号后。App... 
+                            </div>
+                            <div class="long">
+                                页面被初始化完毕后，在元素上绑定事件监听。事件名在'@'符号后。Applies event listeners to elements by selectors when the document is ready. The event name is specified with an @ suffix.
+<pre><code>
+Ext.addBehaviors({
+   // 为id为foo的锚点元素增加onclick事件监听。// add a listener for click on all anchors in element with id foo
+   '#foo a@click' : function(e, t){
+       // do something
+   },
+
+   // 为多个元素增加mouseover事件监听（在'@'前用逗号(,)分隔）。// add the same listener to multiple selectors (separated by comma BEFORE the @)
+   '#foo a, #bar span.some-class@mouseover' : function(){
+       // do something
+   }
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    obj
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    所绑定的事件及其行为。The list of behaviors to apply
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-apply"></a>
+                        <!--名称+参数列表-->
+                        <b>apply</b>(
+	                        
+                                <code>
+                                    Object obj
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object config
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object defaults
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                复制config对象的所有属性到obj（第一个参数为obj，第二个参数... 
+                            </div>
+                            <div class="long">
+                                复制config对象的所有属性到obj（第一个参数为obj，第二个参数为config）。Copies all the properties of config to obj.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    obj
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    属性接受方对象。The receiver of the properties
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    属性源对象。The source of the properties
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    defaults
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    默认对象，如果该参数存在，obj将会得到那些defaults有而config没有的属性。A different object that will also be applied for default values
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            returns obj @member Ext apply
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-applyIf"></a>
+                        <!--名称+参数列表-->
+                        <b>applyIf</b>(
+	                        
+                                <code>
+                                    Object obj
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object config
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                复制所有config的属性至obj，如果obj已有该属性，则不复制（第... 
+                            </div>
+                            <div class="long">
+                                复制所有config的属性至obj，如果obj已有该属性，则不复制（第一个参数为obj，第二个参数为config）。Copies all the properties of config to obj if they don't already exist.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    obj
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    接受方对象。The receiver of the properties
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    源对象。The source of the properties
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            returns obj
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-copyTo"></a>
+                        <!--名称+参数列表-->
+                        <b>copyTo</b>(
+	                        
+                                <code>
+                                    Object dest
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object source
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Array/String names
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                复制源对象身上指定的属性到目标对象。Copies a set of n... 
+                            </div>
+                            <div class="long">
+                                复制源对象身上指定的属性到目标对象。Copies a set of named properties fom the source object to the destination object.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    dest
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    目标对象。The destination object.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    source
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    源对象。The source object.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    names
+                                                </code> : Array/String
+                                                <div class="sub-desc">
+                                                    可以是属性名称构成的数组，也可以是属性名称构成的字符串，用逗号、分号隔开。Either an Array of property names, or a comma-delimited list of property names to copy.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            以修改的对象。The modified object. <p>例子：example:<pre><code>
+ImageComponent = Ext.extend(Ext.BoxComponent, {
+    initComponent: function() {
+        this.autoEl = { tag: 'img' };
+        MyComponent.superclass.initComponent.apply(this, arguments);
+        this.initialBox = Ext.copyTo({}, this.initialConfig, 'x,y,width,height');
+    }
+});
+</code></pre>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-destroy"></a>
+                        <!--名称+参数列表-->
+                        <b>destroy</b>(
+	                        
+                                <code>
+                                    Mixed arg1
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Mixed arg2]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Mixed etc
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                尝试去移除每个传入的对象，包括DOM，事件侦听者，并呼叫他们的dest... 
+                            </div>
+                            <div class="long">
+                                尝试去移除每个传入的对象，包括DOM，事件侦听者，并呼叫他们的destroy方法（如果存在）。该方法主要接纳<a href="/output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a>与<a href="output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a>类型的参数。但理论上任何继承自Ext.util.Observable的子类都可以做为参数传入（支持传入多参）。Attempts to destroy any objects passed to it by removing all event listeners, removing them from the DOM (if applicable) and calling their destroy functions (if available).   This method is primarily intended for arguments of type <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a> and <a href="/output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a>, but any subclass of <a href="/output/Ext.util.Observable.html" ext:cls="Ext.util.Observable">Ext.util.Observable</a> can be passed in.  Any number of elements and/or components can be passed into this function in a single call as separate arguments.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    arg1
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    任意要销毁的<a href="/output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a>或<a href="output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a>。An <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a> or <a href="/output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a> to destroy
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    arg2
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    etc
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    ... （可选的）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-destroyMembers"></a>
+                        <!--名称+参数列表-->
+                        <b>destroyMembers</b>(
+	                        
+                                <code>
+                                    Object o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Mixed arg1
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Mixed etc
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                删除对象的指定属性（支持传入多参，同时删除多个属性）。Attempts... 
+                            </div>
+                            <div class="long">
+                                删除对象的指定属性（支持传入多参，同时删除多个属性）。Attempts to destroy and then remove a set of named properties of the passed object.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    打算删除的对象（通常是Component类型的对象）。The object (most likely a Component) who's properties you wish to destroy.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    arg1
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    打算删除的属性名称。The name of the property to destroy and remove from the object.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    etc
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    ... 其他更多要删除的属性名称。More property names to destroy and remove.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-each"></a>
+                        <!--名称+参数列表-->
+                        <b>each</b>(
+	                        
+                                <code>
+                                    Array/NodeList/Mixed array
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                迭代一个数组，数组中每个成员都将调用一次所传函数，直到函数返回fals... 
+                            </div>
+                            <div class="long">
+                                迭代一个数组，数组中每个成员都将调用一次所传函数，直到函数返回false才停止执行。如果传递的数组并非一个真正的数组，所传递的函数只调用它一次。（译注：如果不是数组，就将该“数组”放入一个[]中，而且会返回一个隐藏的int参数，代表为该array调用function的次数。） Iterates an array calling the passed function with each item, stopping if your function returns false. If the passed array is not really an array, your function is called once with it. The supplied function is called with (Object item, Number index, Array allItems).
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    array
+                                                </code> : Array/NodeList/Mixed
+                                                <div class="sub-desc">
+                                                    数组
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    函数
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    作用域
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-escapeRe"></a>
+                        <!--名称+参数列表-->
+                        <b>escapeRe</b>(
+	                        
+                                <code>
+                                    String str
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                避免传递的字符串参数被正则表达式读取。Escapes the pass... 
+                            </div>
+                            <div class="long">
+                                避免传递的字符串参数被正则表达式读取。Escapes the passed string for use in a regular expression
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    str
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-extend"></a>
+                        <!--名称+参数列表-->
+                        <b>extend</b>(
+	                        
+                                <code>
+                                    Function subclass
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function superclass
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object overrides]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                OO继承，并由传递的值决定是否覆盖原对象的属性。返回的类对象中也增加了... 
+                            </div>
+                            <div class="long">
+                                OO继承，并由传递的值决定是否覆盖原对象的属性。返回的类对象中也增加了“override()”函数，用于覆盖实例的成员。Extends one class with another class and optionally overrides members with the passed literal. This class also adds the function "override()" to the class that can be used to override members on an instance. <p> 另外一种用法是，第一个参数不是父类（严格说是父类构造器）的话那么将会发生如下的变化（这是使用2个参数的方式）： This function also supports a 2-argument call in which the subclass's constructor is not passed as an argument. In this form, the parameters are as follows:</p><p> <div class="mdetail-params"><ul> <li><code>superclass</code> <div class="sub-desc">被继承的类。The class being extended</div></li> <li><code>overrides</code> <div class="sub-desc"> 成员列表，就是将会复制到子类的prototype对象身上，——这便会让该新类的实例可共享这些成员。A literal with members which are copied into the subclass's prototype, and are therefore shared among all instances of the new class.<p> 注意其中可以包含一个元素为属于子类的构造器，叫<tt><b>constructor</b></tt>的成员。如果该项<i>不</i>指定，就意味引用父类的构造器，父类构造器就会直接接收所有的参数。This may contain a special member named <tt><b>constructor</b></tt>. This is used to define the constructor of the new class, and is returned. If this property is <i>not</i> specified, a constructor is generated and returned which just calls the superclass's constructor passing on its parameters.</p></div></li> </ul></div></p><p> 例如，这样创建Ext GridPanel的子类。For example, to create a subclass of the Ext GridPanel: <pre><code>
+    MyGridPanel = Ext.extend(Ext.grid.GridPanel, {
+        constructor: function(config) {
+            // 你先这样调用……（就是调用父类的构造函数）
+            MyGridPanel.superclass.constructor.apply(this, arguments);
+            // 然后接着是子类的代码……
+        },
+
+        yourMethod: function() {
+            // ……
+        }
+    });
+</code></pre> </p>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    subclass
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    子类，用于继承（该类继承了父类所有属性，并最终返回该对象）。The class inheriting the functionality
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    superclass
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    父类，被继承。The class being extended
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    overrides
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    一个对象，将它本身携带的属性对子类进行覆盖。(optional) A literal with members which are copied into the subclass's prototype, and are therefore shared between all instances of the new class.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Function
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            子类的构造器。The subclass constructor. @method extend
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-getBody"></a>
+                        <!--名称+参数列表-->
+                        <b>getBody</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                返回当前document.body的Ext.Element类型。Ret... 
+                            </div>
+                            <div class="long">
+                                返回当前document.body的<a href="output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a>类型。Returns the current document body as an <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Ext.Element document对象。The document body
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-getCmp"></a>
+                        <!--名称+参数列表-->
+                        <b>getCmp</b>(
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Component
+                        <div class="mdesc">
+                            <div class="short">
+                                Ext.ComponentMgrget的简写方式。Shorthand ... 
+                            </div>
+                            <div class="long">
+                                <a href="/output/Ext.html#Ext-Ext.ComponentMgrget" ext:cls="Ext" ext:member="Ext.ComponentMgrget">Ext.ComponentMgrget</a>的简写方式。Shorthand for <a href="/output/Ext.html#Ext-Ext.ComponentMgrget" ext:cls="Ext" ext:member="Ext.ComponentMgrget">Ext.ComponentMgrget</a>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Component
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Ext.Component
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-getDoc"></a>
+                        <!--名称+参数列表-->
+                        <b>getDoc</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                返回当前HTML文档的Ext.Element类型。Returns th... 
+                            </div>
+                            <div class="long">
+                                返回当前HTML文档的<a href="output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a>类型。Returns the current HTML document object as an <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Ext.Element document对象。The document
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-getDom"></a>
+                        <!--名称+参数列表-->
+                        <b>getDom</b>(
+	                        
+                                <code>
+                                    Mixed el
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                返回dom对象，参数可以是string(id)，dom node，或E... 
+                            </div>
+                            <div class="long">
+                                返回dom对象，参数可以是string(id)，dom node，或Ext.Element。Return the dom node for the passed string (id), dom node, or Ext.Element
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            HTMLElement
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-getScrollBarWidth"></a>
+                        <!--名称+参数列表-->
+                        <b>getScrollBarWidth</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean force]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                计算浏览器滚动体实际的物理宽度。该值根据OS的不同有所变化，例如主题、... 
+                            </div>
+                            <div class="long">
+                                计算浏览器滚动体实际的物理宽度。该值根据OS的不同有所变化，例如主题、字体大小的影响。Utility method for getting the width of the browser scrollbar. This can differ depending on operating system settings, such as the theme or font size.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    force
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    True表示为计算一次实际的值。(optional) true to force a recalculation of the value.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            滚动体的宽度。The width of the scrollbar.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-id"></a>
+                        <!--名称+参数列表-->
+                        <b>id</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[Mixed el]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[String prefix]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                对页面元素生成唯一id，如果该元素已存在id，则不会再生成。Gener... 
+                            </div>
+                            <div class="long">
+                                对页面元素生成唯一id，如果该元素已存在id，则不会再生成。Generates unique ids. If the element already has an id, it is unchanged
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    将要生成id的元素。(optional)The element to generate an id for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    prefix
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    该id的前缀（默认为 "ext-gen"）。(optional) Id prefix (defaults "ext-gen")
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            生成的Id。The generated Id.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-isArray"></a>
+                        <!--名称+参数列表-->
+                        <b>isArray</b>(
+	                        
+                                <code>
+                                    Object v
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                返回true表名送入的对象是JavaScript的array类型对象，... 
+                            </div>
+                            <div class="long">
+                                返回true表名送入的对象是JavaScript的array类型对象，否则为false。Returns true if the passed object is a JavaScript array, otherwise false.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    v
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    要测试的对象。The object to test
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-isDate"></a>
+                        <!--名称+参数列表-->
+                        <b>isDate</b>(
+	                        
+                                <code>
+                                    Object v
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                返回true表名送入的对象是JavaScript的date类型对象，否... 
+                            </div>
+                            <div class="long">
+                                返回true表名送入的对象是JavaScript的date类型对象，否则为false。Returns true if the passed object is a JavaScript date object, otherwise false.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    v
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    要测试的对象。The object to test
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-isEmpty"></a>
+                        <!--名称+参数列表-->
+                        <b>isEmpty</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean allowBlank]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                如果传入的值是null、undefined或空字符串，则返回true。... 
+                            </div>
+                            <div class="long">
+                                如果传入的值是null、undefined或空字符串，则返回true。（可选的） Returns true if the passed value is null, undefined or an empty string.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    要验证的值。The value to test
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    allowBlank
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    如果该值为true，则空字符串不会当作空而返回true。(optional) true to allow empty strings (defaults to false)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-namespace"></a>
+                        <!--名称+参数列表-->
+                        <b>namespace</b>(
+	                        
+                                <code>
+                                    String namespace1
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String namespace2
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String etc
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                为变量创建其命名空间，这样类就有了“安身之所”，不是飘荡四处的“全局变... 
+                            </div>
+                            <div class="long">
+                                为变量创建其命名空间，这样类就有了“安身之所”，不是飘荡四处的“全局变量”。例如： Creates namespaces to be used for scoping variables and classes so that they are not global.  Usage: <pre><code>
+Ext.namespace('Company', 'Company.data');
+Company.Widget = function() { ... }
+Company.data.CustomStore = function(config) { ... }
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    namespace1
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    命名空间一
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    namespace2
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    命名空间二
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    etc
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    @method namespace
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-num"></a>
+                        <!--名称+参数列表-->
+                        <b>num</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number defaultValue
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                验证某个值是否数字的一个辅助方法，若不是，返回指定的缺省值。Utili... 
+                            </div>
+                            <div class="long">
+                                验证某个值是否数字的一个辅助方法，若不是，返回指定的缺省值。Utility method for validating that a value is numeric, returning the specified default value if it is not.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    应该是一个数字，但其它的类型的值亦可适当地处理。Should be a number, but any type will be handled appropriately
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    defaultValue
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    若传入的值是非数字，则返回缺省值。The value to return if the original value is non-numeric
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            数字或缺省值Value。if numeric, else defaultValue
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-override"></a>
+                        <!--名称+参数列表-->
+                        <b>override</b>(
+	                        
+                                <code>
+                                    Object origclass
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object overrides
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                在类上添加overrides指定的方法（多个方法），同名则覆盖，例如：... 
+                            </div>
+                            <div class="long">
+                                在类上添加overrides指定的方法（多个方法），同名则覆盖，例如： Adds a list of functions to the prototype of an existing class, overwriting any existing methods with the same name. Usage:<pre><code>
+Ext.override(MyClass, {
+    newMethod1: function(){
+        // etc.
+    },
+    newMethod2: function(foo){
+        // etc.
+    }
+});
+ </code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    origclass
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    要override的类。The class to override
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    overrides
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    加入到origClass的函数列表。这应该是一个包含一个或多个方法的对象。The list of functions to add to origClass.  This should be specified as an object literal containing one or more methods. @method override
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-removeNode"></a>
+                        <!--名称+参数列表-->
+                        <b>removeNode</b>(
+	                        
+                                <code>
+                                    HTMLElement node
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除document的DOM节点。如果是body节点的话会被忽略。Re... 
+                            </div>
+                            <div class="long">
+                                移除document的DOM节点。如果是body节点的话会被忽略。Removes a DOM node from the document.  The body node will be ignored if passed in.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    node
+                                                </code> : HTMLElement
+                                                <div class="sub-desc">
+                                                    要移除的节点。The node to remove
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-type"></a>
+                        <!--名称+参数列表-->
+                        <b>type</b>(
+	                        
+                                <code>
+                                    Mixed object
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                返回参数类型的详细信息。如果送入的对象是null或undefined那... 
+                            </div>
+                            <div class="long">
+                                返回参数类型的详细信息。如果送入的对象是null或undefined那么返回false，又或是以下类型： Returns the type of object that is passed in. If the object passed in is null or undefined it return false otherwise it returns one of the following values:<ul> <li><b>string</b>: 如果传入的是字符串。If the object passed is a string</li> <li><b>number</b>: 如果输入的是数字。If the object passed is a number</li> <li><b>boolean</b>: 如果传入的是布尔值。If the object passed is a boolean value</li> <li><b>date</b>: 如果传入的是日期。If the object passed is a Date object</li> <li><b>function</b>: 如果传入的是函数。If the object passed is a function reference</li> <li><b>object</b>: 如果传入的是对象。If the object passed is an object</li> <li><b>array</b>: 如果传入的是数组。If the object passed is an array</li> <li><b>regexp</b>: 如果传入的是正则表达式。If the object passed is a regular expression</li> <li><b>element</b>: 如果传入的是DOM Element。If the object passed is a DOM Element</li> <li><b>nodelist</b>: 如果传入的是DOM NodeList。If the object passed is a DOM NodeList</li> <li><b>textnode</b>: 如果传入的是DOM Text，且非空或空格。If the object passed is a DOM text node and contains something other than whitespace</li> <li><b>whitespace</b>: 如果传入的是DOM Text，且是空格。If the object passed is a DOM text node and contains only whitespace</li>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    object
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-urlDecode"></a>
+                        <!--名称+参数列表-->
+                        <b>urlDecode</b>(
+	                        
+                                <code>
+                                    String string
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean overwrite]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                把一个已经encoded的URL字符串转换为对象。如Ext.urlDe... 
+                            </div>
+                            <div class="long">
+                                把一个已经encoded的URL字符串转换为对象。如Ext.urlDecode("foo=1&bar=2"); 就是{foo: "1", bar: "2"}； Ext.urlDecode("foo=1&bar=2&bar=3&bar=4", false);就是{foo: "1", bar: ["2", "3", "4"]}。Takes an encoded URL and and converts it to an object. e.g. Ext.urlDecode("foo=1&bar=2"); would return {foo: "1", bar: "2"} or Ext.urlDecode("foo=1&bar=2&bar=3&bar=4", false); would return {foo: "1", bar: ["2", "3", "4"]}.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    string
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    URL字符串
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    overwrite
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    重复名称的就当作为数组，如果该项为true就禁止该功能（默认为false）。(optional) Items of the same name will overwrite previous values instead of creating an an array (Defaults to false).
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            成员实体。A literal with members
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-urlEncode"></a>
+                        <!--名称+参数列表-->
+                        <b>urlEncode</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                把一个对象转换为一串以编码的URL字符。例如Ext.urlEncode... 
+                            </div>
+                            <div class="long">
+                                把一个对象转换为一串以编码的URL字符。例如Ext.urlEncode({foo: 1, bar: 2});变为"foo=1&bar=2"。可选地，如果遇到属性的类型是数组的话，那么该属性对应的key就是每个数组元素的key，逐一进行“结对的”编码。Takes an object and converts it to an encoded URL. e.g. Ext.urlEncode({foo: 1, bar: 2}); would return "foo=1&bar=2".   Optionally, property values can be arrays,  instead of keys and the resulting string that's returned will contain a name/value pair for each array value.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext-value"></a>
+                        <!--名称+参数列表-->
+                        <b>value</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Mixed defaultValue
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean allowBlank]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Mixed
+                        <div class="mdesc">
+                            <div class="short">
+                                验证值是否非空、非null、非undefined、非空白字符的便捷方法... 
+                            </div>
+                            <div class="long">
+                                验证值是否非空、非null、非undefined、非空白字符的便捷方法。如指定了默认值还会返回默认值。Utility method for validating that a value is non-empty (i.e. i) not null, ii) not undefined, and iii) not an empty string),  returning the specified default value if it is.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    要测试的值。The value to test
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    defaultValue
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    如果原值是空的所返回的值。The value to return if the original value is empty
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    allowBlank
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示为允许空白的字符串（默认为false）。(optional) true to allow empty strings (defaults to false)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Mixed
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            值，若果是非空，就是defalutValue。value, if non-empty, else defaultValue
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Ext
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

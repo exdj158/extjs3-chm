@@ -1,0 +1,625 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Function-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Function-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Function-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Function-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Function" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/Ext.html#cls-Function">Function</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                Ext.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/Ext.html#cls-Function">Function</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+          这些函数在所有Function对象上均可用的（随便一个JavaScript函数）。These functions are available on every Function object (any JavaScript function).
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Function-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Function-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Function-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Function-createCallback"></a>
+                        <!--名称+参数列表-->
+                        <b>createCallback</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                创建一个回调函数，该回调传递参数的形式为：arguments[0], ... 
+                            </div>
+                            <div class="long">
+                                创建一个回调函数，该回调传递参数的形式为：arguments[0], arguments[1], arguments[2], ... 对于任何函数来说都是可以直接调用的，例如<code>myFunction.createCallback(arg1, arg2)</code>。这样就会为这个函数绑定它两个参数。<b>如果需要指定这个函数的作用域，就应使用<a href="/output/Function.html#Function-createDelegate" ext:cls="Function" ext:member="createDelegate">createDelegate</a>。</b> 如果这个函数需要作用域，请使用#createDelegate。本方法仅使用于Window作用域。在回调方法的参数引用中，如果是一个没有任何参数的方法，那么直接指明其引用即可，并不需要本方法，如（如callback:myFn）。然而，如果想指定带有参数的方法， 就应该使用该方法了。因为callback: myFn(arg1, arg2)会引起myFn的方法调用，而得到结果却不是函数引用而是这个函数的返回值。要得到一个加参的方法引用就需要使用本方法了，达到对函数“加壳”的目的，如下例： Creates a callback that passes arguments[0], arguments[1], arguments[2], ... Call directly on any function. Example: <code>myFunction.createCallback(arg1, arg2)</code> Will create a function that is bound to those 2 args. <b>If a specific scope is required in the callback, use <a href="/output/Function.html#Function-createDelegate" ext:cls="Function" ext:member="createDelegate">createDelegate</a> instead.</b> The function returned by createCallback always executes in the window scope. This method is required when you want to pass arguments to a callback function.  If no arguments are needed, you can simply pass a reference to the function as a callback (e.g., callback: myFn). However, if you tried to pass a function with arguments (e.g., callback: myFn(arg1, arg2)) the function would simply execute immediately when the code is parsed. Example usage: <pre><code>
+var sayHi = function(name){
+    alert('Hi, ' + name);
+}
+
+// 点击按钮就提示“Hi, Fred”。clicking the button alerts "Hi, Fred"
+new Ext.Button({
+    text: 'Say Hi',
+    renderTo: Ext.getBody(),
+    handler: sayHi.createCallback('Fred')
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Function
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新产生的函数。The new function
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Function
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Function-createDelegate"></a>
+                        <!--名称+参数列表-->
+                        <b>createDelegate</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[Object obj]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Array args]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean/Number appendArgs]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                创建一个委派对象（就是回调），该对象的作用域指向obj。对于任何函数来... 
+                            </div>
+                            <div class="long">
+                                创建一个委派对象（就是回调），该对象的作用域指向obj。对于任何函数来说都是可以直接调用的。例如：<code>this.myFunction.createDelegate(this)</code> 将创建一个函数，该函数的作用域会自动指向<tt>this</tt>。Creates a delegate (callback) that sets the scope to obj. Call directly on any function. Example: <code>this.myFunction.createDelegate(this, [arg1, arg2])</code> Will create a function that is automatically scoped to obj so that the <tt>this</tt> variable inside the callback points to obj. Example usage: <pre><code>
+var sayHi = function(name){
+    // Note this use of "this.text" here.  This function expects to
+    // execute within a scope that contains a text property.  In this
+    // example, the "this" variable is pointing to the btn object that
+    // was passed in createDelegate below.
+    alert('Hi, ' + name + '. You clicked the "' + this.text + '" button.');
+}
+
+var btn = new Ext.Button({
+    text: 'Say Hi',
+    renderTo: Ext.getBody()
+});
+
+// This callback will execute in the scope of the
+// button instance. Clicking the button alerts
+// "Hi, Fred. You clicked the "Say Hi" button."
+btn.on('click', sayHi.createDelegate(btn, ['Fred']));
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    obj
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    自定义的作用域对象。(optional) The object for which the scope is set
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    args
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    覆盖该次调用的参数列表。（默认为该函数的arguments）。(optional) Overrides arguments for the call. (Defaults to the arguments passed by the caller)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    appendArgs
+                                                </code> : Boolean/Number
+                                                <div class="sub-desc">
+                                                    如果该参数为true，将args加载到该函数的后面，如果该参数为数字类型，则args将插入到所指定的位置。(optional) if True args are appended to call args instead of overriding, if a number the args are inserted at the specified position
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Function
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新产生的函数。The new function
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Function
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Function-createInterceptor"></a>
+                        <!--名称+参数列表-->
+                        <b>createInterceptor</b>(
+	                        
+                                <code>
+                                    Function fcn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                创建一个拦截器函数。传递的参数fcn被原函数之前调用。如果fcn的返回... 
+                            </div>
+                            <div class="long">
+                                创建一个拦截器函数。传递的参数fcn被原函数之前调用。如果fcn的返回值为false，则原函数不会被调用。在返回函数中，将返回原函数的返回值。参数fcn会被调用，fcn被调用时会被传入原函数的参数。Creates an interceptor function.  The passed fcn is called before the original one. If it returns false, the original one is not called.  The resulting function returns the results of the original function. The passed fcn is called with the parameters of the original function.  例如：Example usage: <pre><code>
+var sayHi = function(name){
+    alert('Hi, ' + name);
+}
+
+sayHi('Fred'); // 提示"Hi, Fred"
+
+// 不修改原函数的前提下创建新验证的函数。// create a new function that validates input without
+// directly modifying the original function:
+var sayHiToFriend = sayHi.createInterceptor(function(name){
+    return name == 'Brian';
+});
+
+sayHiToFriend('Fred');  // 没提示
+sayHiToFriend('Brian'); // 提示 "Hi, Brian"
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fcn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    在原函数被调用前调用的函数。The function to call before the original
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    fcn的作用域（默认指向原函数或window）。(optional) The scope of the passed fcn (Defaults to scope of original function or window)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Function
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新产生的函数。The new function
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Function
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Function-createSequence"></a>
+                        <!--名称+参数列表-->
+                        <b>createSequence</b>(
+	                        
+                                <code>
+                                    Function fcn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                创建一个组合函数，调用次序为：原函数 + 参数中的函数。该函数返回了原... 
+                            </div>
+                            <div class="long">
+                                创建一个组合函数，调用次序为：原函数 + 参数中的函数。该函数返回了原函数执行的结果（也就是返回了原函数的返回值）。在参数中传递的函数fcn，它的参数也是原函数的参数。Create a combined function call sequence of the original function + the passed function. The resulting function returns the results of the original function. The passed fcn is called with the parameters of the original function. 举例：Example usage: <pre><code>
+var sayHi = function(name){
+    alert('Hi, ' + name);
+}
+
+sayHi('Fred'); // 提示 "Hi, Fred"
+
+var sayGoodbye = sayHi.createSequence(function(name){
+    alert('Bye, ' + name);
+});
+
+sayGoodbye('Fred'); // both alerts show
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fcn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    将要进行组合的函数。The function to sequence
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    fcn的作用域（默认指向原函数或window）。(optional) The scope of the passed fcn (Defaults to scope of original function or window)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Function
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新产生的函数。The new function
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Function
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Function-defer"></a>
+                        <!--名称+参数列表-->
+                        <b>defer</b>(
+	                        
+                                <code>
+                                    Number millis
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object obj]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Array args]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean/Number appendArgs]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                延迟调用该函数。你可以加入一个作用域的参数，例如： Calls th... 
+                            </div>
+                            <div class="long">
+                                延迟调用该函数。你可以加入一个作用域的参数，例如： Calls this function after the number of millseconds specified, optionally in a specific scope. Example usage: <pre><code>
+var sayHi = function(name){
+    alert('Hi, ' + name);
+}
+
+//即刻执行的：
+sayHi('Fred');
+
+// 两秒过后执行的：
+sayHi.defer(2000, this, ['Fred']);
+
+// 有时候加上一个匿名函数也是很方便的：this syntax is sometimes useful for deferring
+// execution of an anonymous function:
+(function(){
+    alert('Anonymous');
+}).defer(100);
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    millis
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    延迟时间，以毫秒为单位（如果是0则立即执行）。The number of milliseconds for the setTimeout call (if 0 the function is executed immediately)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    obj
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    fcn的作用域（默认指向原函数或window）。(optional) The object for which the scope is set
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    args
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    覆盖原函数的参数列表（默认为该函数的arguments）。(optional) Overrides arguments for the call. (Defaults to the arguments passed by the caller)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    appendArgs
+                                                </code> : Boolean/Number
+                                                <div class="sub-desc">
+                                                    如果该参数为true，将args加载到该函数的后面，如果该参数为数字类型，则args将插入到所指定的位置。(optional) if True args are appended to call args instead of overriding,if a number the args are inserted at the specified position
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            可被clearTimeout所使用的timeout id。The timeout id that can be used with clearTimeout
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Function
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Function-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

@@ -1,0 +1,951 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.DomHelper-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.DomHelper-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.DomHelper-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.DomHelper-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.DomHelper" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/DomHelper.html#cls-Ext.DomHelper">Ext.DomHelper</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                DomHelper.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/DomHelper.html#cls-Ext.DomHelper">Ext.DomHelper</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+          处理DOM或模板（Templates）的实用类。能以JavaScript较清晰地编写HTML片段（HTML fragments）或DOM。这是一个范例，产生五个子元素的无须列表，追加到当前元素'my-div'：<br>
+ <pre><code>
+var list = dh.append('my-div', {
+    tag: 'ul', cls: 'my-list', children: [
+        {tag: 'li', id: 'item0', html: 'List Item 0'},
+        {tag: 'li', id: 'item1', html: 'List Item 1'},
+        {tag: 'li', id: 'item2', html: 'List Item 2'},
+        {tag: 'li', id: 'item3', html: 'List Item 3'},
+        {tag: 'li', id: 'item4', html: 'List Item 4'}
+    ]
+});
+ </code></pre> 更多资讯，请参阅 <a href="http://www.jackslocum.com/yui/2006/10/06/domhelper-create-elements-using-dom-html-fragments-or-templates/">BLOG和一些例子</a>. @singleton
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.DomHelper-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.DomHelper-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="useDom-activeItem"></a>
+                        <b>
+                        useDom: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为强制使用DOM而非html片断 @type Boolean
+                            </div>
+                            <div class="long">
+                                True表示为强制使用DOM而非html片断 @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DomHelper</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.DomHelper-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomHelper-append"></a>
+                        <!--名称+参数列表-->
+                        <b>append</b>(
+	                        
+                                <code>
+                                    String/HTMLElement/Element el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/String o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean returnElement
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                创建新的Dom元素并加入到el中 
+                            </div>
+                            <div class="long">
+                                创建新的Dom元素并加入到el中
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement/Element
+                                                <div class="sub-desc">
+                                                    元素内容
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object/String
+                                                <div class="sub-desc">
+                                                    指定的Dom对象（和子孙）或是原始的HTML部分
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    (可选的) true表示返回一个Ext.Element
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomHelper
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomHelper-applyStyles"></a>
+                        <!--名称+参数列表-->
+                        <b>applyStyles</b>(
+	                        
+                                <code>
+                                    String/HTMLElement el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String/Object/Function styles
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                把指定的样式应用到元素 
+                            </div>
+                            <div class="long">
+                                把指定的样式应用到元素
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement
+                                                <div class="sub-desc">
+                                                    样式所应用的元素
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    styles
+                                                </code> : String/Object/Function
+                                                <div class="sub-desc">
+                                                    表示样式的特定格式字符串，如“width:100px”，或是对象的形式如{width:"100px"}，或是能返回这些格式的函数
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomHelper
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomHelper-createTemplate"></a>
+                        <!--名称+参数列表-->
+                        <b>createTemplate</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.DomHelper.Template
+                        <div class="mdesc">
+                            <div class="short">
+                                根据指定的Dom对象创建新的Ext.DomHelper.Template对象 
+                            </div>
+                            <div class="long">
+                                根据指定的Dom对象创建新的Ext.DomHelper.Template对象
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    指定的Dom对象（连同子孙）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.DomHelper.Template
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新模板
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomHelper
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomHelper-insertAfter"></a>
+                        <!--名称+参数列表-->
+                        <b>insertAfter</b>(
+	                        
+                                <code>
+                                    String/HTMLElement/Element el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/String o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean returnElement]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                创建新的Dom元素并插入到el之后 
+                            </div>
+                            <div class="long">
+                                创建新的Dom元素并插入到el之后
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement/Element
+                                                <div class="sub-desc">
+                                                    元素内容
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object/String
+                                                <div class="sub-desc">
+                                                    指定的Dom对象（和子孙）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示返回一个Ext.Element
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomHelper
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomHelper-insertBefore"></a>
+                        <!--名称+参数列表-->
+                        <b>insertBefore</b>(
+	                        
+                                <code>
+                                    String/HTMLElement/Element el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/String o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean returnElement]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                创建新的Dom元素并插入到el之前 
+                            </div>
+                            <div class="long">
+                                创建新的Dom元素并插入到el之前
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement/Element
+                                                <div class="sub-desc">
+                                                    元素内容
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object/String
+                                                <div class="sub-desc">
+                                                    指定的Dom对象（和子孙）或是裸HTML部分
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示返回一个Ext.Element
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomHelper
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomHelper-insertFirst"></a>
+                        <!--名称+参数列表-->
+                        <b>insertFirst</b>(
+	                        
+                                <code>
+                                    String/HTMLElement/Element el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/String o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean returnElement]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                创建新的Dom元素并插入到el中，元素是第一个孩子。 
+                            </div>
+                            <div class="long">
+                                创建新的Dom元素并插入到el中，元素是第一个孩子。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement/Element
+                                                <div class="sub-desc">
+                                                    元素内容
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object/String
+                                                <div class="sub-desc">
+                                                    指定的Dom对象（和子孙）或是原始的HTML部分
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    true表示返回一个Ext.Element
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomHelper
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomHelper-insertHtml"></a>
+                        <!--名称+参数列表-->
+                        <b>insertHtml</b>(
+	                        
+                                <code>
+                                    String where
+
+,
+                                </code>
+	                        
+                                <code>
+                                    HTMLElement el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String html
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                插入HTML片断到Dom 
+                            </div>
+                            <div class="long">
+                                插入HTML片断到Dom
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    where
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    插入的html要放在元素的哪里 - beforeBegin, afterBegin, beforeEnd, afterEnd.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : HTMLElement
+                                                <div class="sub-desc">
+                                                    元素内容
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    html
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    HTML片断
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomHelper
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomHelper-markup"></a>
+                        <!--名称+参数列表-->
+                        <b>markup</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                返回元素的装饰（markup） 
+                            </div>
+                            <div class="long">
+                                返回元素的装饰（markup）
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    DOM对象（包含子孙）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomHelper
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomHelper-overwrite"></a>
+                        <!--名称+参数列表-->
+                        <b>overwrite</b>(
+	                        
+                                <code>
+                                    String/HTMLElement/Element el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/String o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean returnElement
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                创建新的Dom元素并覆盖el的内容 
+                            </div>
+                            <div class="long">
+                                创建新的Dom元素并覆盖el的内容
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement/Element
+                                                <div class="sub-desc">
+                                                    元素内容
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object/String
+                                                <div class="sub-desc">
+                                                    指定的Dom对象（和子孙）或是原始的HTML部分
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnElement
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    (可选的) true表示返回一个Ext.Element
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            新节点
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomHelper
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.DomHelper-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

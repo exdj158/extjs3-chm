@@ -1,0 +1,660 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.layout.BorderLayout.Region-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.layout.BorderLayout.Region-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.layout.BorderLayout.Region-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.layout.BorderLayout.Region-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.layout.BorderLayout.Region" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/BorderLayout.html#cls-Ext.layout.BorderLayout.Region">Ext.layout.BorderLayout.Region</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			ExtlayoutBorderLayout
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                BorderLayout.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/BorderLayout.html#cls-Ext.layout.BorderLayout.Region">Ext.layout.BorderLayout.Region</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         这是属于BorderLayout的区域，用作布局内的子容器。每一个区域都有自己的布局，并可容纳BorderLayout，或是任意类型的Ext布局类型。区域的大小是自动管理并且不能由用户改变--关于可变化大小的区域，参阅<a href="output/Ext.layout.BorderLayout.SplitRegion.html" ext:cls="Ext.layout.BorderLayout.SplitRegion">Ext.layout.BorderLayout.SplitRegion</a>。This is a region of a BorderLayout that acts as a subcontainer within the layout.  Each region has its own layout that is independent of other regions and the containing BorderLayout, and can be any of the valid Ext layout types.  Region size is managed automatically and cannot be changed by the user -- for resizable regions, see <a href="/output/Ext.layout.BorderLayout.SplitRegion.html" ext:cls="Ext.layout.BorderLayout.SplitRegion">Ext.layout.BorderLayout.SplitRegion</a>. 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.layout.BorderLayout.Region-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="animFloat-header"></a>
+                        <b>animFloat</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                当一个已关闭的区域上的工具条被点击时，一旦用户的鼠标移开时面板会再次关...
+                            </div>
+                            <div class="long">
+                                当一个已关闭的区域上的工具条被点击时，一旦用户的鼠标移开时面板会再次关闭（或在外面点击，若autoHide=false的话）。设置animFloat为fasle会阻止这些浮动的面板以动画的方式打开和关闭（默认为true）。When a collapsed region's bar is clicked, the region's panel will be displayed as a floated panel that will close again once the user mouses out of that panel (or clicks out if autoHide = false).  Setting animFloat to false will prevent the open and close of these floated panels from being animated (defaults to true).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="autoHide-header"></a>
+                        <b>autoHide</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                当一个已关闭的区域上的工具条被点击时，区域的面板会显示为浮动的面板。如...
+                            </div>
+                            <div class="long">
+                                当一个已关闭的区域上的工具条被点击时，区域的面板会显示为浮动的面板。如果autoHide为true，用户鼠标移开面板时会自动隐藏面板。若autoHide为false，面板会一直显示除非用户点击了面板以外的区域（默认为true）。When a collapsed region's bar is clicked, the region's panel will be displayed as a floated panel.  If autoHide is true, the panel will automatically hide after the user mouses out of the panel.  If autoHide is false, the panel will continue to display until the user clicks outside of the panel (defaults to true).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="cmargins-header"></a>
+                        <b>cmargins</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                作用在区域闭合元素上的外补丁对象，对象的格式如{left: （左边距）...
+                            </div>
+                            <div class="long">
+                                作用在区域闭合元素上的外补丁对象，对象的格式如{left: （左边距）, top: （上边距）, right: （右边距）, bottom: （下边距）}。An object containing margins to apply to the region's collapsed element in the format {left: (left margin), top: (top margin), right: (right margin), bottom: (bottom margin)}
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="collapseMode-header"></a>
+                        <b>collapseMode</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                默认下，可关闭的区域是通过点击区域标题条上的工具按钮来控制区域是否关闭...
+                            </div>
+                            <div class="long">
+                                默认下，可关闭的区域是通过点击区域标题条上的工具按钮来控制区域是否关闭的。可选的，当collapseMdoe被设置为'mini'时，区域的分隔条中间仍然会有一个小小的关闭按钮。在'mini'模式下区域会闭合成为一个比常规模式下更细小的水平条。默认下collapseMode是设置为undefined，支持两种值undefined和'mini'。注意如果可关闭的区域如果没有标题条，那么collapseMode必须设置为'mini'以便即使工具按钮没有渲染也可以由用户来关闭区域。By default, collapsible regions are collapsed by clicking the expand/collapse tool button that renders into the region's title bar.  Optionally, when collapseMode is set to 'mini' the region's split bar will also display a small collapse button in the center of the bar.  In 'mini' mode the region will collapse to a thinner bar than in normal mode.  By default collapseMode is undefined, and the only two supported values are undefined and 'mini'.  Note that if a collapsible region does not have a title bar, then collapseMode must be set to 'mini' in order for the region to be collapsible by the user as the tool button will not be rendered.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="collapsible-header"></a>
+                        <b>collapsible</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为允许用户闭合此区域（默认为false）。如为true，区...
+                            </div>
+                            <div class="long">
+                                True表示为允许用户闭合此区域（默认为false）。如为true，区域上的title bar将会渲染出“展开/收缩”的按钮，否则将不会显示。注意title bar需要显示的是一个轮换按钮－－如不指定区域的title，那么只有当<a href="/output/Ext.layout.BorderLayout.Region.html#Ext.layout.BorderLayout.Region-collapseMode" ext:cls="Ext.layout.BorderLayout.Region" ext:member="collapseMode">collapseMode</a>设为'mini'时，区域才能收缩。True to allow the user to collapse this region (defaults to false).  If true, an expand/collapse tool button will automatically be rendered into the title bar of the region, otherwise the button will not be shown. Note that a title bar is required to display the toggle button -- if no region title is specified, the region will only be collapsible if <a href="/output/Ext.layout.BorderLayout.Region.html#Ext.layout.BorderLayout.Region-collapseMode" ext:cls="Ext.layout.BorderLayout.Region" ext:member="collapseMode">collapseMode</a> is set to 'mini'.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="floatable-header"></a>
+                        <b>floatable</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                true表示为可通过单击收缩区域条状就能显示整个区域的面板，浮动在布局...
+                            </div>
+                            <div class="long">
+                                true表示为可通过单击收缩区域条状就能显示整个区域的面板，浮动在布局上。false表示为限制用户只能通过单击“展开expand”按钮才能展开收缩的区域。（缺省为true） True to allow clicking a collapsed region's bar to display the region's panel floated above the layout, false to force the user to fully expand a collapsed region by clicking the expand button to see it again (defaults to true).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="margins-header"></a>
+                        <b>margins</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                作用在区域上的外补丁对象，对象的格式如{left: （左边距）, to...
+                            </div>
+                            <div class="long">
+                                作用在区域上的外补丁对象，对象的格式如{left: （左边距）, top: （上边距）, right: （右边距）, bottom: （下边距）}。An object containing margins to apply to the region in the format {left: (left margin), top: (top margin), right: (right margin), bottom: (bottom margin)}
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minHeight-header"></a>
+                        <b>minHeight</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                此区域可允许的最大宽度象素值（缺省为50）。The minimum a...
+                            </div>
+                            <div class="long">
+                                此区域可允许的最大宽度象素值（缺省为50）。The minimum allowable height in pixels for this region (defaults to 50)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minWidth-header"></a>
+                        <b>minWidth</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                此区域可允许的最小宽度象素值（缺省为50）。The minimum a...
+                            </div>
+                            <div class="long">
+                                此区域可允许的最小宽度象素值（缺省为50）。The minimum allowable width in pixels for this region (defaults to 50)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="split-header"></a>
+                        <b>split</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为显示在此区域与旁边区域显示Ext.SplitBar，可允...
+                            </div>
+                            <div class="long">
+                                True表示为显示在此区域与旁边区域显示<a href="/output/Ext.SplitBar.html" ext:cls="Ext.SplitBar">Ext.SplitBar</a>，可允许用户动态调节区域的大小（缺省为false）。当split=true，通常需要指定区域的<a href="/output/Ext.layout.BorderLayout.Region.html#Ext.layout.BorderLayout.Region-minSize" ext:cls="Ext.layout.BorderLayout.Region" ext:member="minSize">minSize</a>和<a href="output/Ext.layout.BorderLayout.Region.html#Ext.layout.BorderLayout.Region-maxSize" ext:cls="Ext.layout.BorderLayout.Region" ext:member="maxSize">maxSize</a>。True to display a <a href="/output/Ext.SplitBar.html" ext:cls="Ext.SplitBar">Ext.SplitBar</a> between this region and its neighbor, allowing the user to resize the regions dynamically (defaults to false).  When split == true, it is common to specify a minSize and maxSize for the BoxComponent representing the region. These are not native configs of BoxComponent, and are used only by this class.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Region</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.layout.BorderLayout.Region-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.layout.BorderLayout.Region-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.BorderLayout.Region-getMargins"></a>
+                        <!--名称+参数列表-->
+                        <b>getMargins</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                返回当前区域的外补丁。如果区域是闭合的，就返回cmargins（col... 
+                            </div>
+                            <div class="long">
+                                返回当前区域的外补丁。如果区域是闭合的，就返回cmargins（collapsed margins）值。Returns the current margins for this region. If the region is collapsed, the cmargins (collapsed margins) value will be returned, otherwise the margins value will be returned.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Region
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.BorderLayout.Region-getMinHeight"></a>
+                        <!--名称+参数列表-->
+                        <b>getMinHeight</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                返回此区域可允许的最小高度。Returns the minimum a... 
+                            </div>
+                            <div class="long">
+                                返回此区域可允许的最小高度。Returns the minimum allowable height for this region.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            最小高度The minimum height
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Region
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.BorderLayout.Region-getMinWidth"></a>
+                        <!--名称+参数列表-->
+                        <b>getMinWidth</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                返回此区域可允许的最小宽度。Returns the minimum a... 
+                            </div>
+                            <div class="long">
+                                返回此区域可允许的最小宽度。Returns the minimum allowable width for this region.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            最小宽度The minimum width
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Region
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.BorderLayout.Region-getSize"></a>
+                        <!--名称+参数列表-->
+                        <b>getSize</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                返回此区域的当前大小尺寸。如果区域是闭合的，那么就返回collapse... 
+                            </div>
+                            <div class="long">
+                                返回此区域的当前大小尺寸。如果区域是闭合的，那么就返回collapsedEl的大小。Returns the current size of this region.  If the region is collapsed, the size of the collapsedEl will be returned, otherwise the size of the region's panel will be returned.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Region
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.BorderLayout.Region-isVisible"></a>
+                        <!--名称+参数列表-->
+                        <b>isVisible</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为当前区域已隐藏，反之为false。True if thi... 
+                            </div>
+                            <div class="long">
+                                True表示为当前区域已隐藏，反之为false。True if this region is currently visible, else false.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Region
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.BorderLayout.Region-setPanel"></a>
+                        <!--名称+参数列表-->
+                        <b>setPanel</b>(
+	                        
+                                <code>
+                                    Ext.Panel panel
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                指定一个面板作为此区域的容器元素 Sets the specified... 
+                            </div>
+                            <div class="long">
+                                指定一个面板作为此区域的容器元素 Sets the specified panel as the container element for this region.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    panel
+                                                </code> : Ext.Panel
+                                                <div class="sub-desc">
+                                                    新面板The new panel
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Region
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.layout.BorderLayout.Region-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

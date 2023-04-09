@@ -1,0 +1,1480 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.util.Format-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.util.Format-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.util.Format-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.util.Format-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.util.Format" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/Format.html#cls-Ext.util.Format">Ext.util.Format</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extutil
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                Format.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/Format.html#cls-Ext.util.Format">Ext.util.Format</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+          可复用的数据格式化函数。@singleton
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.util.Format-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.util.Format-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.util.Format-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-capitalize"></a>
+                        <!--名称+参数列表-->
+                        <b>capitalize</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                返回一个字符串，该字符串中的第一个字母转化为大写字母，剩余的为小写。 
+                            </div>
+                            <div class="long">
+                                返回一个字符串，该字符串中的第一个字母转化为大写字母，剩余的为小写。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要转换的字符串
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            转换后的字符串
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-date"></a>
+                        <!--名称+参数列表-->
+                        <b>date</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[String format]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                将某个值解析成为一个特定格式的日期。 
+                            </div>
+                            <div class="long">
+                                将某个值解析成为一个特定格式的日期。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    要格式化的值
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    format
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    任何有效的日期字符串（默认为“月/日/年”）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Function
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            日期格式函数
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-dateRenderer"></a>
+                        <!--名称+参数列表-->
+                        <b>dateRenderer</b>(
+	                        
+                                <code>
+                                    String format
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                返回一个函数，该函数的作用是渲染日期格式，便于复用。 
+                            </div>
+                            <div class="long">
+                                返回一个函数，该函数的作用是渲染日期格式，便于复用。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    format
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    任何有效的日期字符串
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Function
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            日期格式函数
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-defaultValue"></a>
+                        <!--名称+参数列表-->
+                        <b>defaultValue</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String defaultValue
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                检查一个引用值是否为空，若是则转换到缺省值。 
+                            </div>
+                            <div class="long">
+                                检查一个引用值是否为空，若是则转换到缺省值。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    要检查的引用值
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    defaultValue
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    默认赋予的值（默认为""）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-ellipsis"></a>
+                        <!--名称+参数列表-->
+                        <b>ellipsis</b>(
+	                        
+                                <code>
+                                    String value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number length
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean word
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                对大于指定长度部分的字符串，进行裁剪，增加省略号（“...”）的显示。 
+                            </div>
+                            <div class="long">
+                                对大于指定长度部分的字符串，进行裁剪，增加省略号（“...”）的显示。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要裁剪的字符串
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    length
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    允许的最大长度
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    word
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    True表示尝试以一个单词来结束
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            转换后的文本
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-fileSize"></a>
+                        <!--名称+参数列表-->
+                        <b>fileSize</b>(
+	                        
+                                <code>
+                                    Number/String size
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                对文件大小进行简单的格式化（xxx bytes、xxx KB、xxx MB） 
+                            </div>
+                            <div class="long">
+                                对文件大小进行简单的格式化（xxx bytes、xxx KB、xxx MB）
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    size
+                                                </code> : Number/String
+                                                <div class="sub-desc">
+                                                    要格式化的数值
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            已格式化的值
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-htmlDecode"></a>
+                        <!--名称+参数列表-->
+                        <b>htmlDecode</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                将&, , and '字符从HTML显示的格式还原。 
+                            </div>
+                            <div class="long">
+                                将&, <, >, and '字符从HTML显示的格式还原。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    解码的字符串
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            编码后的文本
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-htmlEncode"></a>
+                        <!--名称+参数列表-->
+                        <b>htmlEncode</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                为能在HTML显示的字符转义&、以及'。 
+                            </div>
+                            <div class="long">
+                                为能在HTML显示的字符转义&、<、>以及'。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要编码的字符串
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            编码后的文本
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-lowercase"></a>
+                        <!--名称+参数列表-->
+                        <b>lowercase</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                返回一个字符串，该字符串中的字母被转换为小写字母。 
+                            </div>
+                            <div class="long">
+                                返回一个字符串，该字符串中的字母被转换为小写字母。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要转换的字符串
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            转换后的字符串
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-number"></a>
+                        <!--名称+参数列表-->
+                        <b>number</b>(
+	                        
+                                <code>
+                                    Number v
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String format
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                依据某种（字符串）格式来转换数字。例子 (123456.789): ... 
+                            </div>
+                            <div class="long">
+                                依据某种（字符串）格式来转换数字。<div style="margin-left:40px">例子 (123456.789): <div style="margin-left:10px"> 0 - (123456) 只显示整数，没有小数位<br> 0.00 - (123456.78) 显示整数，保留两位小数位<br> 0.0000 - (123456.7890) 显示整数，保留四位小数位<br> 0,000 - (123,456) 只显示整数，用逗号分开<br> 0,000.00 - (123,456.78) 显示整数，用逗号分开，保留两位小数位<br> 0,0.00 - (123,456.78) 快捷方法，显示整数，用逗号分开，保留两位小数位<br> 在一些国际化的场合需要反转分组（,）和小数位（.），那么就在后面加上/i 例如： 0.000,00/i </div></div> @method format
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    v
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    要转换的数字。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    format
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    格式化数字的“模”。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            已转换的数字。@public
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-numberRenderer"></a>
+                        <!--名称+参数列表-->
+                        <b>numberRenderer</b>(
+	                        
+                                <code>
+                                    String format
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                在多次转换数字时，为提高效率，不断复用由这个方法返回的函数。 
+                            </div>
+                            <div class="long">
+                                在多次转换数字时，为提高效率，不断复用由这个方法返回的函数。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    format
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    任何<a href="output/numberRenderer.html#numberRenderer-number" ext:cls="numberRenderer" ext:member="number">number</a>可接受的字符串
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Function
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            数字格式化函数
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-plural"></a>
+                        <!--名称+参数列表-->
+                        <b>plural</b>(
+	                        
+                                <code>
+                                    Number value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String singular
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[String plural]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                可选地为一个单词转为为复数形式。例如在模板中，{commentCoun... 
+                            </div>
+                            <div class="long">
+                                可选地为一个单词转为为复数形式。例如在模板中，{commentCount:plural("Comment")}这样的模板语言如果commentCount是1那就是 "1 Comment"； 如果是0或者大于1就是"x Comments"。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    参与比较的数
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    singular
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    单词的单数形式
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    plural
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    单词的复数部分（默认为加上's'）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-stripScripts"></a>
+                        <!--名称+参数列表-->
+                        <b>stripScripts</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                剥去所有脚本（...）标签 
+                            </div>
+                            <div class="long">
+                                剥去所有脚本（<script>...</script>）标签
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    要剥去的文本
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            剥去后的HTML标签
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-stripTags"></a>
+                        <!--名称+参数列表-->
+                        <b>stripTags</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                剥去所有HTML标签。 
+                            </div>
+                            <div class="long">
+                                剥去所有HTML标签。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    要剥去的文本
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            剥去后的HTML标签
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-substr"></a>
+                        <!--名称+参数列表-->
+                        <b>substr</b>(
+	                        
+                                <code>
+                                    String value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number start
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number length
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                返回一个从指定位置开始的指定长度的子字符串。 
+                            </div>
+                            <div class="long">
+                                返回一个从指定位置开始的指定长度的子字符串。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    原始文本
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    start
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    所需的子字符串的起始位置
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    length
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    在返回的子字符串中应包括的字符个数。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            指定长度的子字符串
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-trim"></a>
+                        <!--名称+参数列表-->
+                        <b>trim</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                裁剪一段文本的前后多余的空格。 
+                            </div>
+                            <div class="long">
+                                裁剪一段文本的前后多余的空格。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要裁剪的文本
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            裁剪后的文本
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-undef"></a>
+                        <!--名称+参数列表-->
+                        <b>undef</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Mixed
+                        <div class="mdesc">
+                            <div class="short">
+                                检查一个引用值是否为underfined，若是的话转换其为空值。 
+                            </div>
+                            <div class="long">
+                                检查一个引用值是否为underfined，若是的话转换其为空值。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    要检查的值
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Mixed
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            转换成功为空白字符串，否则为原来的值
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-uppercase"></a>
+                        <!--名称+参数列表-->
+                        <b>uppercase</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                返回一个字符串，该字符串中的字母被转换为大写字母。 
+                            </div>
+                            <div class="long">
+                                返回一个字符串，该字符串中的字母被转换为大写字母。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要转换的字符串
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            转换后的字符串
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.Format-usMoney"></a>
+                        <!--名称+参数列表-->
+                        <b>usMoney</b>(
+	                        
+                                <code>
+                                    Number/String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                格式化数字到美元货币 
+                            </div>
+                            <div class="long">
+                                格式化数字到美元货币
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Number/String
+                                                <div class="sub-desc">
+                                                    要格式化的数字
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            已格式化的货币
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Format
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.util.Format-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

@@ -1,0 +1,463 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.LoadMask-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.LoadMask-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.LoadMask-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.LoadMask-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.LoadMask" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/LoadMask.html#cls-Ext.LoadMask">Ext.LoadMask</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                LoadMask.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/LoadMask.html#cls-Ext.LoadMask">Ext.LoadMask</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         一个简单的工具类，用于在加载数据时为元素做出类似于遮罩的效果。对于有可用的<a href="output/Ext.data.Store.html" ext:cls="Ext.data.Store">Ext.data.Store</a>，可将效果与Store的加载达到同步，而mask本身会被缓存以备复用。而对于其他元素，这个遮照类会替换元素本身的UpdateManager加载指示器，并在初始化完毕后销毁。A simple utility class for generically masking elements while loading data.  If the <a href="/output/Ext.LoadMask.html#Ext.LoadMask-store" ext:cls="Ext.LoadMask" ext:member="store">store</a> config option is specified, the masking will be automatically synchronized with the store's loading process and the mask element will be cached for reuse.  For all other elements, this mask will replace the element's Updater load indicator and will be destroyed after the initial load. <p>用法举例：Example usage:</p><pre><code>
+// Basic mask:
+var myMask = new Ext.LoadMask(Ext.getBody(), {msg:"Please wait..."});
+myMask.show();
+</code></pre> 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.LoadMask-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="msg-header"></a>
+                        <b>msg</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                加载信息中显示文字（默认为'Loading...'）。The text...
+                            </div>
+                            <div class="long">
+                                加载信息中显示文字（默认为'Loading...'）。The text to display in a centered loading message box (defaults to 'Loading...')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">LoadMask</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="msgCls-header"></a>
+                        <b>msgCls</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                加载信息元素的样式（默认为"x-mask-loading"）。The ...
+                            </div>
+                            <div class="long">
+                                加载信息元素的样式（默认为"x-mask-loading"）。The CSS class to apply to the loading message element (defaults to "x-mask-loading")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">LoadMask</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="removeMask-header"></a>
+                        <b>removeMask</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为一次性使用，即加载之后自动销毁（页面加载时有用），fal...
+                            </div>
+                            <div class="long">
+                                True表示为一次性使用，即加载之后自动销毁（页面加载时有用），false表示为多次使用模版效果，保留这个mask（例如，页面上数据的加载）。默认为false。True to create a single-use mask that is automatically destroyed after loading (useful for page loads), False to persist the mask element reference for multiple uses (e.g., for paged data widgets).  Defaults to false.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">LoadMask</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="store-header"></a>
+                        <b>store</b>
+                        : Ext.data.Store
+                        <div class="mdesc">
+                            <div class="short">
+                                可选地你可以为该蒙板绑定一个Store对象。当Store的load请求...
+                            </div>
+                            <div class="long">
+                                可选地你可以为该蒙板绑定一个Store对象。当Store的load请求被发起就显示该蒙版，不论load成功或失败之后都隐藏该蒙板。Optional Store to which the mask is bound. The mask is displayed when a load request is issued, and hidden on either load sucess, or load fail.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">LoadMask</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.LoadMask-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disabled-activeItem"></a>
+                        <b>
+                        disabled: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                只读的。True表示为mask已被禁止，所以不会显示出来（默认为fal...
+                            </div>
+                            <div class="long">
+                                只读的。True表示为mask已被禁止，所以不会显示出来（默认为false）。Read-only. True if the mask is currently disabled so that it will not be displayed (defaults to false) @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">LoadMask</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.LoadMask-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.LoadMask-disable"></a>
+                        <!--名称+参数列表-->
+                        <b>disable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                禁用遮罩致使遮罩不会被显示。Disables the mask to ... 
+                            </div>
+                            <div class="long">
+                                禁用遮罩致使遮罩不会被显示。Disables the mask to prevent it from being displayed
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        LoadMask
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.LoadMask-enable"></a>
+                        <!--名称+参数列表-->
+                        <b>enable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                启用遮罩以显示。Enables the mask so that it... 
+                            </div>
+                            <div class="long">
+                                启用遮罩以显示。Enables the mask so that it can be displayed
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        LoadMask
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.LoadMask-hide"></a>
+                        <!--名称+参数列表-->
+                        <b>hide</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                隐藏此LoadMask。Hide this LoadMask. 
+                            </div>
+                            <div class="long">
+                                隐藏此LoadMask。Hide this LoadMask.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        LoadMask
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.LoadMask-show"></a>
+                        <!--名称+参数列表-->
+                        <b>show</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                在已配置元素之前显示LoadMask。Show this LoadMa... 
+                            </div>
+                            <div class="long">
+                                在已配置元素之前显示LoadMask。Show this LoadMask over the configured Element.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        LoadMask
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.LoadMask-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

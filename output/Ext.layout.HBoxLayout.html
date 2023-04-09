@@ -1,0 +1,713 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.layout.HBoxLayout-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.layout.HBoxLayout-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.layout.HBoxLayout-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.layout.HBoxLayout-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.layout.HBoxLayout" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/BoxLayout.html#cls-Ext.layout.HBoxLayout">Ext.layout.HBoxLayout</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extlayout
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                BoxLayout.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/BoxLayout.html#cls-Ext.layout.HBoxLayout">Ext.layout.HBoxLayout</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.layout.BoxLayout.html"  ext:cls="Ext.layout.BoxLayout" ext:member="">Ext.layout.BoxLayout</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        <p>水平方向分配子项的布局。可选地，这种布局会把有设定<code>flex</code>配置的子项划分水平的空间。这种布局可以用子项的<a href="/output/Ext.layout.HBoxLayout.html#Ext.layout.HBoxLayout-align" ext:cls="Ext.layout.HBoxLayout" ext:member="align">align</a>来设置子项的高度。A layout that arranges items horizontally across a Container. This layout optionally divides available horizontal space between child items containing a numeric <code>flex</code> configuration.</p> This layout may also be used to set the heights of child items by configuring it with the <a href="/output/Ext.layout.HBoxLayout.html#Ext.layout.HBoxLayout-align" ext:cls="Ext.layout.HBoxLayout" ext:member="align">align</a> option.
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.layout.HBoxLayout-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="align-header"></a>
+                        <b>align</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                控制容器内每个子项是如何对齐的。可接纳的值有以下几种：Controls...
+                            </div>
+                            <div class="long">
+                                控制容器内每个子项是如何对齐的。可接纳的值有以下几种：Controls how the child items of the container are aligned. Acceptable configuration values for this property are: <div class="mdetail-params"><ul> <li><b><tt>top</tt></b> : <b>默认的 Default</b><div class="sub-desc">顶部对齐，从容器的<b>top</b>开始垂直对齐。child items are aligned vertically at the <b>top</b> of the container</div></li> <li><b><tt>middle</tt></b> : <div class="sub-desc">居中对齐，从容器的<b>middle</b>开始垂直对齐。child items are aligned vertically in the <b>middle</b> of the container</div></li> <li><b><tt>stretch</tt></b> : <div class="sub-desc">拉伸子项以填充容器的垂直高度。child items are stretched vertically to fill the height of the container</div></li> <li><b><tt>stretchmax</tt></b> : <div class="sub-desc">拿最高的那个子项拉伸，适应容器的垂直高度。child items are stretched vertically to the height of the largest item.</div></li>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">HBoxLayout</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="defaultMargins-header"></a>
+                        <b>defaultMargins</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                设置外边距（margins）。如果不制定每个子项的margins属性，...
+                            </div>
+                            <div class="long">
+                                <p>设置外边距（margins）。如果不制定每个子项的<tt>margins</tt>属性，那么就会使用默认的margins。If the individual contained items do not have a <tt>margins</tt> property specified, the default margins from this property will be applied to each item.</p> <br><p>This property may be specified as an object containing margins to apply in the format:指定margin的格式如下：</p><pre><code>
+{
+    top: (top margin),
+    right: (right margin),
+    bottom: (bottom margin),
+    left: (left margin)
+}</code></pre> <p>This property may also be specified as a string containing space-separated, numeric margin values. The order of the sides associated with each value matches the way CSS processes margin values:该属性接纳的格式也可以是字符串的，其格式规定为空格隔开，数字类型的margin值。各个方向的排列顺序为CSS的顺序：</p> <div class="mdetail-params"><ul> <li>如果只是一个值，就是各个方向都是这个值。If there is only one value, it applies to all sides.</li> <li>如果有两个值，那么第一个值代表是上下方向的值，第二值则是左右方向的值。If there are two values, the top and bottom borders are set to the first value and the right and left are set to the second.</li> <li>如果有三个值，第一个值是顶部的值，第二个值是左右两边的值，第三个值是底部的值。If there are three values, the top is set to the first value, the left and right are set to the second, and the bottom is set to the third.</li> <li>如果有四个值，分别代表就是顶部、右边、底部和左边的值（顺时针方向）。If there are four values, they apply to the top, right, bottom, and left, respectively.</li> </ul></div> <p>默认为：Defaults to:</p><pre><code> {top:0, right:0, bottom:0, left:0} </code></pre>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">BoxLayout</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="extraCls-header"></a>
+                        <b>extraCls</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                一个可选添加的CSS样式类，加入到组件的容器上（默认为''）。这为容器...
+                            </div>
+                            <div class="long">
+                                一个可选添加的CSS样式类，加入到组件的容器上（默认为''）。这为容器或容器的子节点加入标准CSS规则提供了方便。<br /> An optional extra CSS class that will be added to the container (defaults to '').  This can be useful for adding customized styles to the container or any of its children using standard CSS rules.  <p> An optional extra CSS class that will be added to the container. This can be useful for adding customized styles to the container or any of its children using standard CSS rules. See <a href="/output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a>.<a href="/output/Ext.Component.html#Ext.Component-ctCls" ext:cls="Ext.Component" ext:member="ctCls">ctCls</a> also.</p> <p><b>Note</b>: <tt>extraCls</tt> defaults to <tt>''</tt> except for the following classes which assign a value by default: <div class="mdetail-params"><ul> <li><a href="/output/Ext.layout.AbsoluteLayout.html" ext:cls="Ext.layout.AbsoluteLayout">Absolute Layout</a> : <tt>'x-abs-layout-item'</tt></li> <li><a href="/output/Ext.layout.Box.html" ext:cls="Ext.layout.Box">Box Layout</a> : <tt>'x-box-item'</tt></li> <li><a href="/output/Ext.layout.ColumnLayout.html" ext:cls="Ext.layout.ColumnLayout">Column Layout</a> : <tt>'x-column'</tt></li> </ul></div> To configure the above Classes with an extra CSS class append to the default.  For example, for ColumnLayout:<pre><code> extraCls: 'x-column custom-class' </code></pre> </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ContainerLayout</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="flex-header"></a>
+                        <b>flex</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                该配置项是设置在子项的配置项，在容器其中。每个子项相对的flex值都会...
+                            </div>
+                            <div class="long">
+                                该配置项是设置在<b>子项</b>的配置项，在容器其中。每个子项<b>相对的</b><tt>flex</tt>值都会与全体子项<tt>flex</tt>累加的值相比较，根据此结果，处理每个子项的<tt>flex</tt>最后是多少。如果是<tt>flex = 0</tt>的子项或<tt>flex = undefined</tt>的子项就是不自伸缩处理，即采用最初的尺寸。This configuation option is to be applied to <b>child <tt>items</tt></b> of the container managed by this layout. Each child item with a <tt>flex</tt> property will be flexed <b>horizontally</b> according to each item's <b>relative</b> <tt>flex</tt> value compared to the sum of all items with a <tt>flex</tt> value specified.  Any child items that have either a <tt>flex = 0</tt> or <tt>flex = undefined</tt> will not be 'flexed' (the initial size will not be changed).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">HBoxLayout</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="pack-header"></a>
+                        <b>pack</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                控制容器里面的子项是如何停靠的。可接纳的值有以下几种：Controls...
+                            </div>
+                            <div class="long">
+                                控制容器里面的子项是如何停靠的。可接纳的值有以下几种：Controls how the child items of the container are packed together. Acceptable configuration values for this property are: <div class="mdetail-params"><ul> <li><b><tt>start</tt></b> : <b>默认的 Default</b><div class="sub-desc">居左，从左边开始排列内容。child items are packed together at <b>left</b> side of container</div></li> <li><b><tt>center</tt></b> : <div class="sub-desc">居中，也就是从容器的<b>mid-width</b>开始停靠内容。child items are packed together at <b>mid-width</b> of container</div></li> <li><b><tt>end</tt></b> : <div class="sub-desc">居右，从容器的<b>右边</b>开始停靠内容。child items are packed together at <b>right</b> side of container</div></li> </ul></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">HBoxLayout</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="padding-header"></a>
+                        <b>padding</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                设置内边距（margins）。Sets the padding to ...
+                            </div>
+                            <div class="long">
+                                <p>设置内边距（margins）。Sets the padding to be applied to all child items managed by this layout.</p> <p>该属性接纳的格式也可以是字符串的，其格式规定为空格隔开，数字类型的margin值。各个方向的排列顺序为CSS的顺序：This property must be specified as a string containing space-separated, numeric padding values. The order of the sides associated with each value matches the way CSS processes padding values:</p> <div class="mdetail-params"><ul> <li>如果只是一个值，就是各个方向都是这个值。If there is only one value, it applies to all sides.</li> <li>如果有两个值，那么第一个值代表是上下方向的值，第二值则是左右方向的值。If there are two values, the top and bottom borders are set to the first value and the right and left are set to the second.</li> <li>如果有三个值，第一个值是顶部的值，第二个值是左右两边的值，第三个值是底部的值。If there are three values, the top is set to the first value, the left and right are set to the second, and the bottom is set to the third.</li> <li>如果有四个值，分别代表就是顶部、右边、底部和左边的值（顺时针方向）。If there are four values, they apply to the top, right, bottom, and left, respectively.</li> </ul></div> <p>Defaults to: <code>"0"</code></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">BoxLayout</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="renderHidden-header"></a>
+                        <b>renderHidden</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为在渲染时隐藏包含的每一项（缺省为false）。True ...
+                            </div>
+                            <div class="long">
+                                True表示为在渲染时隐藏包含的每一项（缺省为false）。True to hide each contained item on render (defaults to false).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ContainerLayout</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.layout.HBoxLayout-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.layout.HBoxLayout-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.HBoxLayout-calculateChildBoxes"></a>
+                        <!--名称+参数列表-->
+                        <b>calculateChildBoxes</b>(
+	                        
+                                <code>
+                                    Array visibleItems
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object targetSize
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                 
+                            </div>
+                            <div class="long">
+                                
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    visibleItems
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    The array of all rendered, visible items to be calculated for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    targetSize
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    Object containing target size and height
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Object
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Object containing box measurements for each child, plus meta data
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        HBoxLayout
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.HBoxLayout-getVisibleItems"></a>
+                        <!--名称+参数列表-->
+                        <b>getVisibleItems</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Array
+                        <div class="mdesc">
+                            <div class="short">
+                                 
+                            </div>
+                            <div class="long">
+                                
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Array
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            All 命中的项集合。matching items
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        BoxLayout
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.HBoxLayout-handleTargetOverflow"></a>
+                        <!--名称+参数列表-->
+                        <b>handleTargetOverflow</b>(
+	                        
+                                <code>
+                                    Object previousTargetSize
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Ext.Container container
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Ext.Element target
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                 
+                            </div>
+                            <div class="long">
+                                
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    previousTargetSize
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    The size and height of the layout target before we just laid out
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    container
+                                                </code> : Ext.Container
+                                                <div class="sub-desc">
+                                                    The container
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    target
+                                                </code> : Ext.Element
+                                                <div class="sub-desc">
+                                                    The target element
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        BoxLayout
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.HBoxLayout-onLayout"></a>
+                        <!--名称+参数列表-->
+                        <b>onLayout</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                 
+                            </div>
+                            <div class="long">
+                                
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        BoxLayout
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.HBoxLayout-updateChildBoxes"></a>
+                        <!--名称+参数列表-->
+                        <b>updateChildBoxes</b>(
+	                        
+                                <code>
+                                    Array boxes
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                对每个子组件调整大小和从新布局。Resizes and reposit... 
+                            </div>
+                            <div class="long">
+                                对每个子组件调整大小和从新布局。Resizes and repositions each child component
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    boxes
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    箱子的大小。The box measurements
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        BoxLayout
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.layout.HBoxLayout-updateInnerCtSize"></a>
+                        <!--名称+参数列表-->
+                        <b>updateInnerCtSize</b>(
+	                        
+                                <code>
+                                    Object currentSize
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Array calculations
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                 
+                            </div>
+                            <div class="long">
+                                
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    currentSize
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    The current height and width of the innerCt
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    calculations
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    The new box calculations of all items to be laid out
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        BoxLayout
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.layout.HBoxLayout-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

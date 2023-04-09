@@ -1,0 +1,1189 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.EventManager-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.EventManager-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.EventManager-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.EventManager-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.EventManager" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/EventManager.html#cls-Ext.EventManager">Ext.EventManager</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                EventManager.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/EventManager.html#cls-Ext.EventManager">Ext.EventManager</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         对于登记的事件处理器（Event handlers），能够接受一个常规化的（已作跨浏览器处理的）EventObject的参数，而非浏览器的标准事件，并直接提供一些有用的事件。更多“已常规化的事件对象（normalized event objects）”的信息，请参阅<a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">Ext.EventObject</a>。Registers event handlers that want to receive a normalized EventObject instead of the standard browser event and provides several useful events directly. See <a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">Ext.EventObject</a> for more details on normalized event objects. @singleton
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.EventManager-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.EventManager-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.EventManager-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-addListener"></a>
+                        <!--名称+参数列表-->
+                        <b>addListener</b>(
+	                        
+                                <code>
+                                    String/HTMLElement el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object options]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                加入一个事件处理函数，方法on是其简写方式。Appends an ev... 
+                            </div>
+                            <div class="long">
+                                加入一个事件处理函数，方法<a href="/output/Ext.EventManager.html#Ext.EventManager-on" ext:cls="Ext.EventManager" ext:member="on">on</a>是其简写方式。Appends an event handler to an element.  The shorthand version <a href="/output/Ext.EventManager.html#Ext.EventManager-on" ext:cls="Ext.EventManager" ext:member="on">on</a> is equivalent.  Typically you will use <a href="/output/Ext.EventManager.html#Ext.EventManager-Ext.ElementaddListener" ext:cls="Ext.EventManager" ext:member="Ext.ElementaddListener">Ext.ElementaddListener</a> directly on an Element in favor of calling this version.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement
+                                                <div class="sub-desc">
+                                                    要分配的html元素或者其id。The html element or id to assign the event handler to
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件处理函数的名称。The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件处理函数。该函数会送入以下的参数：The handler function the event invokes This function is passed the following parameters:<ul> <li>evt : EventObject<div class="sub-desc"> 用于描述这次事件<a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a>的事件对象。The <a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a> describing the event.</div></li> <li>t : Element<div class="sub-desc"> 事件源对象，类型为<a href="output/Ext.Element.html" ext:cls="Ext.Element">Element</a>。注意该项可能会因<tt>delegate</tt>选项的筛选而发生变化。The <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Element</a> which was the target of the event. Note that this may be filtered by using the <tt>delegate</tt> option.</div></li> <li>o : Object<div class="sub-desc"> 调用addListener时送入的选项对象。The options object from the addListener call.</div></li> </ul>
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    事件处理函数执行时所在的作用域。处理函数“this”的上下文。(optional) The scope in which to execute the handler function (the handler function's "this" context)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    包含句柄配置属性的一个对象。该对象可能会下来的属性：(optional) An object containing handler configuration properties. This may contain any of the following properties:<ul> <li>scope {Object} : 事件处理函数执行时所在的作用域。处理函数“this”的上下文环境。The scope in which to execute the handler function. The handler function's "this" context.</li> <li>delegate {String} : 一个简易选择符，用于过滤目标，或是查找目标的子孙。A simple selector to filter the target or look for a descendant of the target</li> <li>stopEvent {Boolean} : true表示为阻止事件。即停止传播、阻止默认动作。True to stop the event. That is stop propagation, and prevent the default action.</li> <li>preventDefault {Boolean} : true表示为阻止默认动作。True to prevent the default action</li> <li>stopPropagation {Boolean} : true表示为阻止事件传播。True to prevent event propagation</li> <li>normalized {Boolean} : false表示对处理函数送入一个原始、未封装过的浏览器对象而非标准的Ext.EventObject。False to pass a browser event to the handler function instead of an Ext.EventObject</li> <li>delay {Number} : 触发事件后处理函数延时执行的时间。The number of milliseconds to delay the invocation of the handler after te event fires.</li> <li>single {Boolean} : true代表为下次事件触发加入一个要处理的函数，然后再移除本身。True to add a handler to handle just the next firing of the event, and then remove itself.</li> <li>buffer {Number} : 若指定一个毫秒数会把该处理函数安排到<a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a>延时之后才执行。如果事件在那个事件再次触发，则原句柄将<em>不会</em> 被启用，但是新句柄会安排在其位置。Causes the handler to be scheduled to run in an <a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a> delayed by the specified number of milliseconds. If the event fires again within that time, the original handler is <em>not</em> invoked, but the new handler is scheduled in its place.</li> <li>target {Element} :  只在目标元素触发的事件才有在这句柄上，事件上报中的子元素就<i>没有</i>。Only call the handler if the event was fired on the target Element, <i>not</i> if the event was bubbled up from a child node.</li> </ul><br> <p> 请参阅<a href="output/addListener.html#addListener-Ext.ElementaddListener" ext:cls="addListener" ext:member="Ext.ElementaddListener">Ext.ElementaddListener</a>其中的例子以了解这些选项更多的用法。See <a href="output/addListener.html#addListener-Ext.ElementaddListener" ext:cls="addListener" ext:member="Ext.ElementaddListener">Ext.ElementaddListener</a> for examples of how to use these options.</p>
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-ieDeferSrc"></a>
+                        <!--名称+参数列表-->
+                        <b>ieDeferSrc</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                配合SSL为onDocumentReady使用的Url（默认为Ext.... 
+                            </div>
+                            <div class="long">
+                                配合SSL为onDocumentReady使用的Url（默认为Ext.SSL_SECURE_URL）。Url used for onDocumentReady with using SSL (defaults to Ext.SSL_SECURE_URL)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-on"></a>
+                        <!--名称+参数列表-->
+                        <b>on</b>(
+	                        
+                                <code>
+                                    String/HTMLElement el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Appends an event handler to an elem... 
+                            </div>
+                            <div class="long">
+                                Appends an event handler to an element.  Shorthand for <a href="/output/Ext.EventManager.html#Ext.EventManager-addListener" ext:cls="Ext.EventManager" ext:member="addListener">addListener</a>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement
+                                                <div class="sub-desc">
+                                                    The html element or id to assign the event handler to
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    The handler function the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    (optional) The scope in which to execute the handler function (the handler function's "this" context)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    (optional) An object containing standard <a href="output/on.html#on-addListener" ext:cls="on" ext:member="addListener">addListener</a> options @member Ext.EventManager @method on
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-onDocumentReady"></a>
+                        <!--名称+参数列表-->
+                        <b>onDocumentReady</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[boolean options]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当Document准备好的时候触发（在onload之前和在图片加载之前... 
+                            </div>
+                            <div class="long">
+                                当Document准备好的时候触发（在onload之前和在图片加载之前）。可以简写为Ext.onReady()。Fires when the document is ready (before onload and before images are loaded). Can be accessed shorthanded as Ext.onReady().
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    执行的函数。The method the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数的作用域。(optional) An object that becomes the scope of the handler
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : boolean
+                                                <div class="sub-desc">
+                                                    标准<a href="output/onDocumentReady.html#onDocumentReady-addListener" ext:cls="onDocumentReady" ext:member="addListener">addListener</a>的选项对象。(optional) An object containing standard <a href="output/onDocumentReady.html#onDocumentReady-addListener" ext:cls="onDocumentReady" ext:member="addListener">addListener</a> options
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-onReady"></a>
+                        <!--名称+参数列表-->
+                        <b>onReady</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+,
+                                </code>
+	                        
+                                <code>
+                                    boolean options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当文档准备好的时候触发（在onload之前和在图片加载之前）。系Ext... 
+                            </div>
+                            <div class="long">
+                                当文档准备好的时候触发（在onload之前和在图片加载之前）。系<a href="/output/Ext.EventManager.html#Ext.EventManager-Ext.EventManageronDocumentReady" ext:cls="Ext.EventManager" ext:member="Ext.EventManageronDocumentReady">Ext.EventManageronDocumentReady</a>的简写方式。Fires when the document is ready (before onload and before images are loaded).  Shorthand of <a href="/output/Ext.EventManager.html#Ext.EventManager-Ext.EventManageronDocumentReady" ext:cls="Ext.EventManager" ext:member="Ext.EventManageronDocumentReady">Ext.EventManageronDocumentReady</a>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    The method the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    An object that becomes the scope of the handler
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : boolean
+                                                <div class="sub-desc">
+                                                    (optional) An object containing standard <a href="output/onReady.html#onReady-addListener" ext:cls="onReady" ext:member="addListener">addListener</a> options @member Ext @method onReady
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-onTextResize"></a>
+                        <!--名称+参数列表-->
+                        <b>onTextResize</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+,
+                                </code>
+	                        
+                                <code>
+                                    boolean options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当激活的文本尺寸被用户改变时触发该事件。对回调函数传入旧尺寸、新尺寸的... 
+                            </div>
+                            <div class="long">
+                                当激活的文本尺寸被用户改变时触发该事件。对回调函数传入旧尺寸、新尺寸的参数。Fires when the user changes the active text size. Handler gets called with 2 params, the old size and the new size.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件执行的函数。The method the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数的作用域。An object that becomes the scope of the handler
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : boolean
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-onWindowResize"></a>
+                        <!--名称+参数列表-->
+                        <b>onWindowResize</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+,
+                                </code>
+	                        
+                                <code>
+                                    boolean options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当window改变大小后触发，并有随改变大小的缓冲（50毫秒），对回调... 
+                            </div>
+                            <div class="long">
+                                当window改变大小后触发，并有随改变大小的缓冲（50毫秒），对回调函数传入新视图的高度、宽度的参数。Fires when the window is resized and provides resize event buffering (50 milliseconds), passes new viewport width and height to handlers.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件执行的函数。The method the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数的作用域。An object that becomes the scope of the handler
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : boolean
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-removeAll"></a>
+                        <!--名称+参数列表-->
+                        <b>removeAll</b>(
+	                        
+                                <code>
+                                    String/HTMLElement el
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除某个元素所有的事件处理器。一般而言你直接在元素身上调用Ext.El... 
+                            </div>
+                            <div class="long">
+                                移除某个元素所有的事件处理器。一般而言你直接在元素身上调用<a href="/output/Ext.EventManager.html#Ext.EventManager-Ext.ElementremoveAllListeners" ext:cls="Ext.EventManager" ext:member="Ext.ElementremoveAllListeners">Ext.ElementremoveAllListeners</a>方法即可。Removes all event handers from an element.  Typically you will use <a href="/output/Ext.EventManager.html#Ext.EventManager-Ext.ElementremoveAllListeners" ext:cls="Ext.EventManager" ext:member="Ext.ElementremoveAllListeners">Ext.ElementremoveAllListeners</a> directly on an Element in favor of calling this version.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement
+                                                <div class="sub-desc">
+                                                    HTML元素或其id。The id or html element from which to remove the event
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-removeListener"></a>
+                        <!--名称+参数列表-->
+                        <b>removeListener</b>(
+	                        
+                                <code>
+                                    String/HTMLElement el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除事件处理器（event handler），跟简写方式un是一样的。... 
+                            </div>
+                            <div class="long">
+                                移除事件处理器（event handler），跟简写方式<a href="output/Ext.EventManager.html#Ext.EventManager-un" ext:cls="Ext.EventManager" ext:member="un">un</a>是一样的。通常你会更多的使用元素本身<a href="output/Ext.EventManager.html#Ext.EventManager-Ext.ElementremoveListener" ext:cls="Ext.EventManager" ext:member="Ext.ElementremoveListener">Ext.ElementremoveListener</a>的方法。Removes an event handler from an element.  The shorthand version <a href="/output/Ext.EventManager.html#Ext.EventManager-un" ext:cls="Ext.EventManager" ext:member="un">un</a> is equivalent.  Typically you will use <a href="/output/Ext.EventManager.html#Ext.EventManager-Ext.ElementremoveListener" ext:cls="Ext.EventManager" ext:member="Ext.ElementremoveListener">Ext.ElementremoveListener</a> directly on an Element in favor of calling this version.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement
+                                                <div class="sub-desc">
+                                                    欲移除事件的html元素或id。The id or html element from which to remove the event
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件的类型。The type of event
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件的执行那个函数。The handler function to remove
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-removeResizeListener"></a>
+                        <!--名称+参数列表-->
+                        <b>removeResizeListener</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除传入的window resize侦听器。Removes the p... 
+                            </div>
+                            <div class="long">
+                                移除传入的window resize侦听器。Removes the passed window resize listener.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件执行的函数。The method the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数的作用域。The scope of handler
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-textResizeInterval"></a>
+                        <!--名称+参数列表-->
+                        <b>textResizeInterval</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                检查resize事件的频率，单位是毫秒数（默认为50）。The fre... 
+                            </div>
+                            <div class="long">
+                                检查resize事件的频率，单位是毫秒数（默认为50）。The frequency, in milliseconds, to check for text resize events (defaults to 50)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventManager-un"></a>
+                        <!--名称+参数列表-->
+                        <b>un</b>(
+	                        
+                                <code>
+                                    String/HTMLElement el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                Removes an event handler from an el... 
+                            </div>
+                            <div class="long">
+                                Removes an event handler from an element.  Shorthand for <a href="/output/Ext.EventManager.html#Ext.EventManager-removeListener" ext:cls="Ext.EventManager" ext:member="removeListener">removeListener</a>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement
+                                                <div class="sub-desc">
+                                                    The id or html element from which to remove the event
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    The type of event
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    The handler function to remove
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True if a listener was actually removed, else false @member Ext.EventManager @method un
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventManager
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.EventManager-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

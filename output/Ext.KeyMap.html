@@ -1,0 +1,534 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.KeyMap-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.KeyMap-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.KeyMap-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.KeyMap-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.KeyMap" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/KeyMap.html#cls-Ext.KeyMap">Ext.KeyMap</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                KeyMap.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/KeyMap.html#cls-Ext.KeyMap">Ext.KeyMap</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+          Ext.KeyMap类负责在某一元素上，键盘和用户动作（Actions）之间的映射。构建器可接收由<a href="/output/Ext.KeyMap.html#Ext.KeyMap-addBinding" ext:cls="Ext.KeyMap" ext:member="addBinding">addBinding</a>定义的相同配置项对象。如果你绑定了一个KeyMap的回调函数,KeyMap会在该回调函数上提供下列参数（String key, Ext.EventObject e） 如果匹配的是组合键，回调函数也只会执行一次） KepMap能够实现以字符串来表示key<br /> 一个key可用于多个动作。用法：
+ <pre><code>
+ // 映射key（由keycode指定）
+ var map = new Ext.KeyMap("my-element", {
+     key: 13, // 或者是 Ext.EventObject.ENTER
+     fn: myHandler,
+     scope: myObject
+ });
+
+ // 映射组合键（由字符串指定）
+ var map = new Ext.KeyMap("my-element", {
+     key: "a\r\n\t",
+     fn: myHandler,
+     scope: myObject
+ });
+
+ // 映射多个动作的组合键（由字符串和code数组指定）
+ var map = new Ext.KeyMap("my-element", [
+    {
+        key: [10,13],
+        fn: function(){ alert("Return was pressed"); }
+    }, {
+        key: "abc",
+        fn: function(){ alert('a, b or c was pressed'); }
+    }, {
+        key: "\t",
+        ctrl:true,
+        shift:true,
+        fn: function(){ alert('Control + shift + tab was pressed.'); }
+    }
+]);
+</code></pre> <b>一个KeyMap开始激活</b> 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.KeyMap-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.KeyMap-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="stopEvent-activeItem"></a>
+                        <b>
+                        stopEvent: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                如果让KeyMap来处理key，设置true的话，则停止事件上报（ev...
+                            </div>
+                            <div class="long">
+                                如果让KeyMap来处理key，设置true的话，则停止事件上报（event from bubbling），并阻拦默认浏览器动作（默认为false） @type Boolean
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">KeyMap</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.KeyMap-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.KeyMap-addBinding"></a>
+                        <!--名称+参数列表-->
+                        <b>addBinding</b>(
+	                        
+                                <code>
+                                    Object config
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                新增该KeyMap的新绑定。下列配置项（对象的属性）均被支持： 
+... 
+                            </div>
+                            <div class="long">
+                                新增该KeyMap的新绑定。下列配置项（对象的属性）均被支持： <pre>
+属性    类型             描述
+----------  ---------------  ----------------------------------------------------------------------
+key         String/Array      进行处理的单个keycode或keycodes组成的数组
+shift       Boolean           True：只有shift按下的的同时处理key （默认false）
+ctrl        Boolean           True：只有ctrl按下的的同时处理key （默认false）
+handler     Function          当KeyMap找到预期的组合键时所执行的函数
+alt         Boolean           True：只有alt按下的的同时处理key （默认false）
+fn          Function          当组合键按下后回调函数
+scope       Object            回调函数的作用域
+</pre> 用法： <pre><code>
+// 创建一个KeyMap
+var map = new Ext.KeyMap(document, {
+    key: Ext.EventObject.ENTER,
+    fn: handleKey,
+    scope: this
+});
+
+//对现有的KeyMap延迟再绑定
+map.addBinding({
+    key: 'abc',
+    shift: true,
+    fn: handleKey,
+    scope: this
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    单个KeyMap配置
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        KeyMap
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.KeyMap-disable"></a>
+                        <!--名称+参数列表-->
+                        <b>disable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                禁止该KeyMap 
+                            </div>
+                            <div class="long">
+                                禁止该KeyMap
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        KeyMap
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.KeyMap-enable"></a>
+                        <!--名称+参数列表-->
+                        <b>enable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                激活KeyMap 
+                            </div>
+                            <div class="long">
+                                激活KeyMap
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        KeyMap
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.KeyMap-isEnabled"></a>
+                        <!--名称+参数列表-->
+                        <b>isEnabled</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                KeyMap是已激活的话返回true 
+                            </div>
+                            <div class="long">
+                                KeyMap是已激活的话返回true
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        KeyMap
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.KeyMap-on"></a>
+                        <!--名称+参数列表-->
+                        <b>on</b>(
+	                        
+                                <code>
+                                    Number/Array/Object key
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                加入单个键侦听器的简写方式 
+                            </div>
+                            <div class="long">
+                                加入单个键侦听器的简写方式
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    key
+                                                </code> : Number/Array/Object
+                                                <div class="sub-desc">
+                                                    既可是key code，也可以是key codes的集合，或者是下列的对象 {key: (number or array), shift: (true/false), ctrl: (true/false), alt: (true/false)}
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    调用的函数
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    (optional) 函数的作用域
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        KeyMap
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.KeyMap-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

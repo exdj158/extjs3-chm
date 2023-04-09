@@ -1,0 +1,591 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.dd.DropTarget-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.dd.DropTarget-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.dd.DropTarget-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.dd.DropTarget-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.dd.DropTarget" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/DropTarget.html#cls-Ext.dd.DropTarget">Ext.dd.DropTarget</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extdd
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                DropTarget.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/DropTarget.html#cls-Ext.dd.DropTarget">Ext.dd.DropTarget</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="output/Ext.dd.DDTarget..html"  ext:cls="Ext.dd.DDTarget." ext:member="">Ext.dd.DDTarget.</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        一个简单的基础类，该实现使得任何元素变成为可落下的目标，以便让拖动的元素放到其身上。落下（drop）过程没有特别效果，除非提供了notifyDrop的实现。
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.dd.DropTarget-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="dropAllowed-header"></a>
+                        <b>dropAllowed</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当可以被落下时拖动源的样式（默认为"x-dd-drop-ok"）。
+                            </div>
+                            <div class="long">
+                                当可以被落下时拖动源的样式（默认为"x-dd-drop-ok"）。
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DropTarget</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="dropNotAllowed-header"></a>
+                        <b>dropNotAllowed</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当不可以被落下时拖动源的样式（默认为"x-dd-drop-nodrop"）。
+                            </div>
+                            <div class="long">
+                                当不可以被落下时拖动源的样式（默认为"x-dd-drop-nodrop"）。
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DropTarget</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="overClass-header"></a>
+                        <b>overClass</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当拖动源到达落下目标上方时的CSS class。
+                            </div>
+                            <div class="long">
+                                当拖动源到达落下目标上方时的CSS class。
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DropTarget</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.dd.DropTarget-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.dd.DropTarget-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DropTarget-notifyDrop"></a>
+                        <!--名称+参数列表-->
+                        <b>notifyDrop</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragSource source
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object data
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                当源Ext.dd.DragSource在落下目标身上完成落下动作后，它... 
+                            </div>
+                            <div class="long">
+                                当源<a href="/output/Ext.dd.DragSource.html" ext:cls="Ext.dd.DragSource">Ext.dd.DragSource</a>在落下目标身上完成落下动作后，它执行通知落下目标的那个函数。该方法没有默认的实现并返回false，所以你必须提供处理落下事件的实现并返回true，才能修复拖动源没有运行的动作。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    source
+                                                </code> : Ext.dd.DragSource
+                                                <div class="sub-desc">
+                                                    处于落下目标上方的拖动源。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    data
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    由拖动源规定格式的数据对象。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True 有效的落下返回true否则为false。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DropTarget
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DropTarget-notifyEnter"></a>
+                        <!--名称+参数列表-->
+                        <b>notifyEnter</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragSource source
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object data
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当源Ext.dd.DragSource进入到目标的范围内，它执行通知落... 
+                            </div>
+                            <div class="long">
+                                当源<a href="/output/Ext.dd.DragSource.html" ext:cls="Ext.dd.DragSource">Ext.dd.DragSource</a>进入到目标的范围内，它执行通知落下目标的那个函数。默认的实现是，如存在overClass（或其它）的样式,将其加入到落下元素（drop element），并返回dropAllowed配置的值。如需对落下验证（drop validation）的话可重写该方法。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    source
+                                                </code> : Ext.dd.DragSource
+                                                <div class="sub-desc">
+                                                    处于落下目标上方的拖动源
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    data
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    由拖动源规定格式的数据对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            可被更新。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DropTarget
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DropTarget-notifyOut"></a>
+                        <!--名称+参数列表-->
+                        <b>notifyOut</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragSource dd
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object data
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                .   当源Ext.dd.DragSource移出落下目标的范围后，... 
+                            </div>
+                            <div class="long">
+                                .   当源<a href="/output/Ext.dd.DragSource.html" ext:cls="Ext.dd.DragSource">Ext.dd.DragSource</a>移出落下目标的范围后，它执行通知落下目标的那个函数。默认的实现仅是移除由overClass（或其它）指定的CSS class。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    dd
+                                                </code> : Ext.dd.DragSource
+                                                <div class="sub-desc">
+                                                    处于落下目标上方的拖动源
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    data
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    由拖动源规定格式的数据对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DropTarget
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DropTarget-notifyOver"></a>
+                        <!--名称+参数列表-->
+                        <b>notifyOver</b>(
+	                        
+                                <code>
+                                    Ext.dd.DragSource source
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object data
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当源Ext.dd.DragSource进入到目标的范围内，每一下移动鼠... 
+                            </div>
+                            <div class="long">
+                                当源<a href="/output/Ext.dd.DragSource.html" ext:cls="Ext.dd.DragSource">Ext.dd.DragSource</a>进入到目标的范围内，每一下移动鼠标，它不断执行通知落下目标的那个函数。默认的实现是返回dropAllowed配置值而已
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    source
+                                                </code> : Ext.dd.DragSource
+                                                <div class="sub-desc">
+                                                    处于落下目标上方的拖动源
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    事件对象
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    data
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    由拖动源规定格式的数据对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            可被更新。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DropTarget
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.dd.DropTarget-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

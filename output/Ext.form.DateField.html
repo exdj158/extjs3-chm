@@ -1,0 +1,1860 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.form.DateField-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.form.DateField-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.form.DateField-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.form.DateField-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.form.DateField" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/DateField.html#cls-Ext.form.DateField">Ext.form.DateField</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extform
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                DateField.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/DateField.html#cls-Ext.form.DateField">Ext.form.DateField</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.form.TriggerField.html"  ext:cls="Ext.form.TriggerField" ext:member="">Ext.form.TriggerField</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        提供一个下拉的<a href="/output/Ext.DatePicker.html" ext:cls="Ext.DatePicker">Ext.DatePicker</a>日期选择、自动效验控件的日期输入字段。<br /> Provides a date input field with a <a href="/output/Ext.DatePicker.html" ext:cls="Ext.DatePicker">Ext.DatePicker</a> dropdown and automatic date validation.
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.form.DateField-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="allowBlank-header"></a>
+                        <b>allowBlank</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为 false 时将效验输入字符个数大于0(默认为 true)  F...
+                            </div>
+                            <div class="long">
+                                值为 false 时将效验输入字符个数大于0(默认为 true)  False to validate that the value length > 0 (defaults to true)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="altFormats-header"></a>
+                        <b>altFormats</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                用 "|" 符号分隔的多个日期格式化字串，当输入的日期与默认的格式不符...
+                            </div>
+                            <div class="long">
+                                用 "|" 符号分隔的多个日期格式化字串，当输入的日期与默认的格式不符时用来尝试格式化输入值(默认为 'm/d/Y|m-d-y|m-d-Y|m/d|m-d|d')。Multiple date formats separated by "|" to try when parsing a user input value and it doesn't match the defined format (defaults to 'm/d/Y|n/j/Y|n/j/y|m/j/y|n/d/y|m/j/Y|n/d/Y|m-d-y|m-d-Y|m/d|m-d|md|mdy|mdY|d|Y-m-d').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="autoCreate-header"></a>
+                        <b>autoCreate</b>
+                        : String/Object
+                        <div class="mdesc">
+                            <div class="short">
+                                一个DomHelper创建元素的对象，或者为true，表示采用默认的方...
+                            </div>
+                            <div class="long">
+                                一个DomHelper创建元素的对象，或者为true，表示采用默认的方式创建元素。（默认为{tag: "input", type: "text", size: "16", autocomplete: "off"}） A DomHelper element spec, or true for a default element spec (defaults to {tag: "input", type: "text", size: "16", autocomplete: "off"})
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TriggerField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="blankText-header"></a>
+                        <b>blankText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当允许为空效验失败时显示的错误文本（默认为 "This field i...
+                            </div>
+                            <div class="long">
+                                当允许为空效验失败时显示的错误文本（默认为 "This field is required"）。Error text to display if the allow blank validation fails (defaults to "This field is required")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disableKeyFilter-header"></a>
+                        <b>disableKeyFilter</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为 true 时禁用输入按键过滤(默认为 false)  True ...
+                            </div>
+                            <div class="long">
+                                值为 true 时禁用输入按键过滤(默认为 false)  True to disable input keystroke filtering (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disabledDates-header"></a>
+                        <b>disabledDates</b>
+                        : Array
+                        <div class="mdesc">
+                            <div class="short">
+                                一个以字串形式表示的禁用的日期数组。这些字串将会被用来创建一个动态正则...
+                            </div>
+                            <div class="long">
+                                一个以字串形式表示的禁用的日期数组。这些字串将会被用来创建一个动态正则表达式，所以它们是很强大的。一个例子:  An array of "dates" to disable, as strings. These strings will be used to build a dynamic regular expression so they are very powerful. Some examples: <ul> <li>["03/08/2003", "09/16/2003"] 将会禁用那些确切的日期 would disable those exact dates</li> <li>["03/08", "09/16"] 将会禁用每年中的那些日子 would disable those days for every year</li> <li>["^03/08"]将会只匹配开头(当使用短年份时非常有用 would only match the beginning (useful if you are using short years)</li> <li>["03/../2006"]将会禁用 2006 年 三月 的每一天 would disable every day in March 2006</li> <li>["^03"]将会禁用每年三月的每一天 would disable every day in every March</li> </ul> 注意日期的格式必须一定要符合<a href="/output/Ext.form.DateField.html#Ext.form.DateField-format" ext:cls="Ext.form.DateField" ext:member="format">format</a>的配置格式。为了提供正则表达式的支持, 如果你使用一个包含 "." 的日期格式，你就得将小数点转义使用。例如: ["03\\.08\\.03"]。Note that the format of the dates included in the array should exactly match the <a href="/output/Ext.form.DateField.html#Ext.form.DateField-format" ext:cls="Ext.form.DateField" ext:member="format">format</a> config. In order to support regular expressions, if you are using a date format that has "." in it, you will have to escape the dot when restricting dates. For example: ["03\\.08\\.03"].
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disabledDatesText-header"></a>
+                        <b>disabledDatesText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                禁用星期上显示的工具提示(默认为 'Disabled')。The to...
+                            </div>
+                            <div class="long">
+                                禁用星期上显示的工具提示(默认为 'Disabled')。The tooltip text to display when the date falls on a disabled date (defaults to 'Disabled')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disabledDays-header"></a>
+                        <b>disabledDays</b>
+                        : Array
+                        <div class="mdesc">
+                            <div class="short">
+                                禁用日子的数组，从0开始。[0, 6]禁止了从星期日到星期六（默认为n...
+                            </div>
+                            <div class="long">
+                                禁用日子的数组，从0开始。[0, 6]禁止了从星期日到星期六（默认为null）。An array of days to disable, 0 based. For example, [0, 6] disables Sunday and Saturday (defaults to null).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disabledDaysText-header"></a>
+                        <b>disabledDaysText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                一个禁用的星期数组，以 0 开始。例如，[0，6] 表示禁用周六和周日...
+                            </div>
+                            <div class="long">
+                                一个禁用的星期数组，以 0 开始。例如，[0，6] 表示禁用周六和周日(默认为 null)。The tooltip to display when the date falls on a disabled day (defaults to 'Disabled')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="emptyClass-header"></a>
+                        <b>emptyClass</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                emptyText使用的CSS样式类名(默认为 'x-form-emp...
+                            </div>
+                            <div class="long">
+                                <a href="/output/Ext.form.DateField.html#Ext.form.DateField-emptyText" ext:cls="Ext.form.DateField" ext:member="emptyText">emptyText</a>使用的CSS样式类名(默认为 'x-form-empty-field')。此类的添加与移除均由当前字段是否有值来自动处理。The CSS class to apply to an empty field to style the <a href="/output/Ext.form.DateField.html#Ext.form.DateField-emptyText" ext:cls="Ext.form.DateField" ext:member="emptyText">emptyText</a> (defaults to 'x-form-empty-field').  This class is automatically added and removed as needed depending on the current field value.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="emptyText-header"></a>
+                        <b>emptyText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                空字段中显示的文本(默认为 null)。注意，只要这个字段是被激活的而...
+                            </div>
+                            <div class="long">
+                                空字段中显示的文本(默认为 null)。注意，只要这个字段是被激活的而且name属性是有被指定的，那么也会发送到服务端。The default text to place into an empty field (defaults to null). Note that this value will be submitted to the server if this field is enabled and configured with a <a href="/output/Ext.form.DateField.html#Ext.form.DateField-name" ext:cls="Ext.form.DateField" ext:member="name">name</a>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableKeyEvents-header"></a>
+                        <b>enableKeyEvents</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示，为HTML的input输入字段激活键盘事件的代理（默认为...
+                            </div>
+                            <div class="long">
+                                True表示，为HTML的input输入字段激活键盘事件的代理（默认为false）  True to enable the proxying of key events for the HTML input field (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="format-header"></a>
+                        <b>format</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                用以覆盖本地化的默认日期格式化字串。字串必须为符合指定Datepars...
+                            </div>
+                            <div class="long">
+                                用以覆盖本地化的默认日期格式化字串。字串必须为符合指定<a href="/output/Ext.form.DateField.html#Ext.form.DateField-DateparseDate" ext:cls="Ext.form.DateField" ext:member="DateparseDate">DateparseDate</a>的形式(默认为 'm/d/y')。The default date format string which can be overriden for localization support.  The format must be valid according to <a href="/output/Ext.form.DateField.html#Ext.form.DateField-DateparseDate" ext:cls="Ext.form.DateField" ext:member="DateparseDate">DateparseDate</a> (defaults to 'm/d/Y').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="grow-header"></a>
+                        <b>grow</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                当值为 true 时表示字段可以根据内容自动伸缩。True if th...
+                            </div>
+                            <div class="long">
+                                当值为 true 时表示字段可以根据内容自动伸缩。True if this field should automatically grow and shrink to its content
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="growMax-header"></a>
+                        <b>growMax</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                当 grow = true 时允许的字段最大宽度(默认为 800)  ...
+                            </div>
+                            <div class="long">
+                                当 grow = true 时允许的字段最大宽度(默认为 800)  The maximum width to allow when grow = true (defaults to 800)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="growMin-header"></a>
+                        <b>growMin</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                当 grow = true 时允许的字段最小宽度（默认为 30） Th...
+                            </div>
+                            <div class="long">
+                                当 grow = true 时允许的字段最小宽度（默认为 30） The minimum width to allow when grow = true (defaults to 30)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="hideTrigger-header"></a>
+                        <b>hideTrigger</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                为true时隐藏触发元素，只显示基本文本域（默认为false）。Tru...
+                            </div>
+                            <div class="long">
+                                为true时隐藏触发元素，只显示基本文本域（默认为false）。True to hide the trigger element and display only the base text field (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TriggerField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="invalidText-header"></a>
+                        <b>invalidText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当字段的日期无效时显示的错误文本(默认为'{value} is not...
+                            </div>
+                            <div class="long">
+                                当字段的日期无效时显示的错误文本(默认为'{value} is not a valid date - it must be in the format {format}')  The error text to display when the date in the field is invalid (defaults to '{value} is not a valid date - it must be in the format {format}').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maskRe-header"></a>
+                        <b>maskRe</b>
+                        : RegExp
+                        <div class="mdesc">
+                            <div class="short">
+                                一个用来过滤无效按键的正则表达式(默认为 null)  An inpu...
+                            </div>
+                            <div class="long">
+                                一个用来过滤无效按键的正则表达式(默认为 null)  An input mask regular expression that will be used to filter keystrokes that don't match (defaults to null)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxLength-header"></a>
+                        <b>maxLength</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段允许的最大字符数(默认为 Number.MAX_VALUE) ...
+                            </div>
+                            <div class="long">
+                                输入字段允许的最大字符数(默认为 Number.MAX_VALUE)  Maximum input field length allowed (defaults to Number.MAX_VALUE)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxLengthText-header"></a>
+                        <b>maxLengthText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字符数小于最小字符数时显示的文本（默认为"The maximum ...
+                            </div>
+                            <div class="long">
+                                输入字符数小于最小字符数时显示的文本（默认为"The maximum length for this field is {maxLength}"） Error text to display if the maximum length validation fails (defaults to "The maximum length for this field is {maxLength}")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxText-header"></a>
+                        <b>maxText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当字段的日期晚于 maxValue 属性指定值时显示的错误文本(默认为...
+                            </div>
+                            <div class="long">
+                                当字段的日期晚于 maxValue 属性指定值时显示的错误文本(默认为'The date in this field must be before {maxValue}') The error text to display when the date in the cell is after maxValue (defaults to ).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxValue-header"></a>
+                        <b>maxValue</b>
+                        : Date/String
+                        <div class="mdesc">
+                            <div class="short">
+                                允许最晚的日期。可以是JavaScript日期对象或者是一个符合日期格...
+                            </div>
+                            <div class="long">
+                                允许最晚的日期。可以是JavaScript日期对象或者是一个符合日期格式要求的字符串（默认为null）。The maximum allowed date. Can be either a Javascript date object or a string date in a valid format (defaults to null).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minLength-header"></a>
+                        <b>minLength</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段所需的最小字符数(默认为 0)  Minimum input ...
+                            </div>
+                            <div class="long">
+                                输入字段所需的最小字符数(默认为 0)  Minimum input field length required (defaults to 0)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minLengthText-header"></a>
+                        <b>minLengthText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字符数小于最小字符数时显示的文本（默认为"The minimum ...
+                            </div>
+                            <div class="long">
+                                输入字符数小于最小字符数时显示的文本（默认为"The minimum length for this field is {minLength}"） Error text to display if the minimum length validation fails (defaults to "The minimum length for this field is {minLength}")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minText-header"></a>
+                        <b>minText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当字段的日期早于 minValue 属性指定值时显示的错误文本(默认为...
+                            </div>
+                            <div class="long">
+                                当字段的日期早于 minValue 属性指定值时显示的错误文本(默认为'The date in this field must be after {minValue}')   The error text to display when the date in the cell is before minValue (defaults to 'The date in this field must be after {minValue}').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minValue-header"></a>
+                        <b>minValue</b>
+                        : Date/String
+                        <div class="mdesc">
+                            <div class="short">
+                                允许最早的日期。可以是JavaScript日期对象或者是一个符合日期格...
+                            </div>
+                            <div class="long">
+                                允许最早的日期。可以是JavaScript日期对象或者是一个符合日期格式要求的字符串（默认为null）。The minimum allowed date. Can be either a Javascript date object or a string date in a valid format (defaults to null).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="regex-header"></a>
+                        <b>regex</b>
+                        : RegExp
+                        <div class="mdesc">
+                            <div class="short">
+                                一个用以在效验时使用的 JavaScript 正则表达式对象(默认为 ...
+                            </div>
+                            <div class="long">
+                                一个用以在效验时使用的 JavaScript 正则表达式对象(默认为 null)。如果启用此项，则此正则表达式将在所有基础效验成功之后被执行，执行此正则表达式时传递的参数为该字段的值。如果效验失败，则根据<a href="output/Ext.form.DateField.html#Ext.form.DateField-regexText" ext:cls="Ext.form.DateField" ext:member="regexText">regexText</a>的设置将字段标记为无效。A JavaScript RegExp object to be tested against the field value during validation (defaults to null). If available, this regex will be evaluated only after the basic validators all return true, and will be passed the current field value.  If the test fails, the field will be marked invalid using <a href="/output/Ext.form.DateField.html#Ext.form.DateField-regexText" ext:cls="Ext.form.DateField" ext:member="regexText">regexText</a>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="regexText-header"></a>
+                        <b>regexText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当regex被设置且效验失败时显示的错误文本(默认为 "")。The ...
+                            </div>
+                            <div class="long">
+                                当<a href="output/Ext.form.DateField.html#Ext.form.DateField-regex" ext:cls="Ext.form.DateField" ext:member="regex">regex</a>被设置且效验失败时显示的错误文本(默认为 "")。The error text to display if <a href="/output/Ext.form.DateField.html#Ext.form.DateField-regex" ext:cls="Ext.form.DateField" ext:member="regex">regex</a> is used and the test fails during validation (defaults to "")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="selectOnFocus-header"></a>
+                        <b>selectOnFocus</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为 ture 时表示字段获取焦点时自动选择字段既有文本(默认为 fa...
+                            </div>
+                            <div class="long">
+                                值为 ture 时表示字段获取焦点时自动选择字段既有文本(默认为 false)。True to automatically select any existing field text when the field receives input focus (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="showToday-header"></a>
+                        <b>showToday</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                False表示隐藏底部的Today按钮并禁止空格的快捷键来选择当日日期...
+                            </div>
+                            <div class="long">
+                                False表示隐藏底部的Today按钮并禁止空格的快捷键来选择当日日期（默认为true）。False to hide the footer area of the DatePicker containing the Today button and disable the keyboard handler for spacebar that selects the current date (defaults to true).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="stripCharsRe-header"></a>
+                        <b>stripCharsRe</b>
+                        : RegExp
+                        <div class="mdesc">
+                            <div class="short">
+                                一个JavaScript正则表达式，用于在进行验证该动作之前抽离不需要...
+                            </div>
+                            <div class="long">
+                                一个JavaScript正则表达式，用于在进行验证该动作之前抽离不需要的内容（默认为null）。A JavaScript RegExp object used to strip unwanted content from the value before validation (defaults to null).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="triggerClass-header"></a>
+                        <b>triggerClass</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                应用到触发器身上的CSS样式类。A CSS class to appl...
+                            </div>
+                            <div class="long">
+                                应用到触发器身上的CSS样式类。A CSS class to apply to the trigger
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TriggerField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="validator-header"></a>
+                        <b>validator</b>
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                字段效验时调用的自定义的效验函数(默认为 null)。如果启用此项，则...
+                            </div>
+                            <div class="long">
+                                字段效验时调用的自定义的效验函数(默认为 null)。如果启用此项，则此函数将在所有基础效验（<a href="output/Ext.form.DateField.html#Ext.form.DateField-allowBlank" ext:cls="Ext.form.DateField" ext:member="allowBlank">allowBlank</a>、<a href="output/Ext.form.DateField.html#Ext.form.DateField-minLength" ext:cls="Ext.form.DateField" ext:member="minLength">minLength</a>、<a href="output/Ext.form.DateField.html#Ext.form.DateField-maxLength" ext:cls="Ext.form.DateField" ext:member="maxLength">maxLength</a>和任意的<a href="/output/Ext.form.DateField.html#Ext.form.DateField-vtype" ext:cls="Ext.form.DateField" ext:member="vtype">vtype</a>）成功之后被调用，调用函数时传递的参数为该字段的值。且此函数的有效返回应为成功时返回 true，失败时返回错误文本。A custom validation function to be called during field validation (defaults to null). If specified, this function will be called only after the built-in validations (<a href="/output/Ext.form.DateField.html#Ext.form.DateField-allowBlank" ext:cls="Ext.form.DateField" ext:member="allowBlank">allowBlank</a>, <a href="/output/Ext.form.DateField.html#Ext.form.DateField-minLength" ext:cls="Ext.form.DateField" ext:member="minLength">minLength</a>, <a href="/output/Ext.form.DateField.html#Ext.form.DateField-maxLength" ext:cls="Ext.form.DateField" ext:member="maxLength">maxLength</a>) and any configured <a href="/output/Ext.form.DateField.html#Ext.form.DateField-vtype" ext:cls="Ext.form.DateField" ext:member="vtype">vtype</a> all return true. This function will be passed the current field value and expected to return boolean true if the value is valid or a string error message if invalid.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="vtype-header"></a>
+                        <b>vtype</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                中定义的效验类型名(默认为 null)  A validation t...
+                            </div>
+                            <div class="long">
+                                中定义的效验类型名(默认为 null)  A validation type name as defined in <a href="/output/Ext.form.VTypes.html" ext:cls="Ext.form.VTypes">Ext.form.VTypes</a> (defaults to null)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="vtypeText-header"></a>
+                        <b>vtypeText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                在当前字段的vtype中，制定一个错误信息代替默认的（默认为null）...
+                            </div>
+                            <div class="long">
+                                在当前字段的<a href="/output/Ext.form.DateField.html#Ext.form.DateField-vtype" ext:cls="Ext.form.DateField" ext:member="vtype">vtype</a>中，制定一个错误信息代替默认的（默认为null）。如vtype不设置该项就无效。A custom error message to display in place of the default message provided for the <a href="/output/Ext.form.DateField.html#Ext.form.DateField-vtype" ext:cls="Ext.form.DateField" ext:member="vtype">vtype</a> currently set for this field (defaults to '').  Only applies if vtype is set, else ignored.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.form.DateField-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.form.DateField-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-autoSize"></a>
+                        <!--名称+参数列表-->
+                        <b>autoSize</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                自动增长字段宽度以便容纳字段所允许的最大文本。仅在 grow = tr... 
+                            </div>
+                            <div class="long">
+                                自动增长字段宽度以便容纳字段所允许的最大文本。仅在 grow = true 时有效，并触发<a href="output/Ext.form.DateField.html#Ext.form.DateField-autosize" ext:cls="Ext.form.DateField" ext:member="autosize">autosize</a>事件。Automatically grows the field to accomodate the width of the text up to the maximum field width allowed. This only takes effect if grow = true, and fires the <a href="/output/Ext.form.DateField.html#Ext.form.DateField-autosize" ext:cls="Ext.form.DateField" ext:member="autosize">autosize</a> event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TextField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-getValue"></a>
+                        <!--名称+参数列表-->
+                        <b>getValue</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Date
+                        <div class="mdesc">
+                            <div class="short">
+                                返回当前日期字段的值。Returns the current date... 
+                            </div>
+                            <div class="long">
+                                返回当前日期字段的值。Returns the current date value of the date field.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Date
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            日期值 The date value
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DateField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-onTriggerClick"></a>
+                        <!--名称+参数列表-->
+                        <b>onTriggerClick</b>(
+	                        
+                                <code>
+                                    EventObject e
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                该方法应该用于处理触发器的click事件。默认为空方法，要被某个实现的... 
+                            </div>
+                            <div class="long">
+                                该方法应该用于处理触发器的click事件。默认为空方法，要被某个实现的方法重写后才会有效。The function that should handle the trigger's click event.  This method does nothing by default until overridden by an implementing function. @method
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : EventObject
+                                                <div class="sub-desc">
+                                                    参数e是（{EventObject}类型）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TriggerField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-reset"></a>
+                        <!--名称+参数列表-->
+                        <b>reset</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                将字段值重置为原始值，并清除所有效验信息。如果原始值为空时还将使 em... 
+                            </div>
+                            <div class="long">
+                                将字段值重置为原始值，并清除所有效验信息。如果原始值为空时还将使 emptyText 和 emptyClass 属性生效。Resets the current field value to the originally-loaded value and clears any validation messages. Also adds emptyText and emptyClass if the original value was blank.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TextField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-selectText"></a>
+                        <!--名称+参数列表-->
+                        <b>selectText</b>(
+	                        
+                                <code>
+                                    Number start
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number end
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选择此字段中的文本。Selects text in this field 
+                            </div>
+                            <div class="long">
+                                选择此字段中的文本。Selects text in this field
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    start
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    可选项） 选择区域的索引起点(默认为 0) (optional)The index where the selection should start (defaults to 0)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    end
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    可选项） 选择区域的索引终点(默认为文本长度) (optional)The index where the selection should end (defaults to the text length)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TextField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-setDisabledDates"></a>
+                        <!--名称+参数列表-->
+                        <b>setDisabledDates</b>(
+	                        
+                                <code>
+                                    Array disabledDates
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                更换当前禁用的日期，并刷新日期拾取器。Replaces any exi... 
+                            </div>
+                            <div class="long">
+                                更换当前禁用的日期，并刷新日期拾取器。Replaces any existing disabled dates with new values and refreshes the DatePicker.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    disabledDates
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    禁用日子的数组。参阅<a href="output/setDisabledDates.html#setDisabledDates-disabledDates" ext:cls="setDisabledDates" ext:member="disabledDates">disabledDates</a>的配置了解可支持值的详细内容。An array of date strings (see the <a href="output/setDisabledDates.html#setDisabledDates-disabledDates" ext:cls="setDisabledDates" ext:member="disabledDates">disabledDates</a> config for details on supported values) used to disable a pattern of dates.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DateField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-setDisabledDays"></a>
+                        <!--名称+参数列表-->
+                        <b>setDisabledDays</b>(
+	                        
+                                <code>
+                                    Array disabledDays
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                更换当前禁用的日子，并刷新日期拾取器。Replaces any exi... 
+                            </div>
+                            <div class="long">
+                                更换当前禁用的日子，并刷新日期拾取器。Replaces any existing disabled days (by index, 0-6) with new values and refreshes the DatePicker.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    disabledDays
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    禁用日子的数组。参阅<a href="output/setDisabledDays.html#setDisabledDays-disabledDays" ext:cls="setDisabledDays" ext:member="disabledDays">disabledDays</a>的配置 An array of disabled day indexes. See the <a href="output/setDisabledDays.html#setDisabledDays-disabledDays" ext:cls="setDisabledDays" ext:member="disabledDays">disabledDays</a> config for details on supported values.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DateField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-setMaxValue"></a>
+                        <!--名称+参数列表-->
+                        <b>setMaxValue</b>(
+	                        
+                                <code>
+                                    Date value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                更换现有的maxValue，并刷新日期拾取器。Replaces any... 
+                            </div>
+                            <div class="long">
+                                更换现有的<a href="output/Ext.form.DateField.html#Ext.form.DateField-maxValue" ext:cls="Ext.form.DateField" ext:member="maxValue">maxValue</a>，并刷新日期拾取器。Replaces any existing <a href="/output/Ext.form.DateField.html#Ext.form.DateField-maxValue" ext:cls="Ext.form.DateField" ext:member="maxValue">maxValue</a> with the new value and refreshes the DatePicker.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Date
+                                                <div class="sub-desc">
+                                                    最晚可选择的日期 The maximum date that can be selected
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DateField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-setMinValue"></a>
+                        <!--名称+参数列表-->
+                        <b>setMinValue</b>(
+	                        
+                                <code>
+                                    Date value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                更换现有的minValue，并刷新日期拾取器。Replaces any... 
+                            </div>
+                            <div class="long">
+                                更换现有的<a href="output/Ext.form.DateField.html#Ext.form.DateField-minValue" ext:cls="Ext.form.DateField" ext:member="minValue">minValue</a>，并刷新日期拾取器。Replaces any existing <a href="/output/Ext.form.DateField.html#Ext.form.DateField-minValue" ext:cls="Ext.form.DateField" ext:member="minValue">minValue</a> with the new value and refreshes the DatePicker.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Date
+                                                <div class="sub-desc">
+                                                    最早可选择的日期 The minimum date that can be selected
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DateField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-setValue"></a>
+                        <!--名称+参数列表-->
+                        <b>setValue</b>(
+	                        
+                                <code>
+                                    String/Date date
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                设置日期字段的值。你可以传递一个日期对象或任何可以被转换为有效日期的字... 
+                            </div>
+                            <div class="long">
+                                设置日期字段的值。你可以传递一个日期对象或任何可以被转换为有效日期的字串，使用 DateField.format 当作日期格式化字串，与 <a href="/output/Ext.form.DateField.html#Ext.form.DateField-DateparseDate" ext:cls="Ext.form.DateField" ext:member="DateparseDate">DateparseDate</a> 规则相同。(默认的格式化字串为 "m/d/y")。Sets the value of the date field.  You can pass a date object or any string that can be parsed into a valid date, using DateField.format as the date format, according to the same rules as <a href="/output/Ext.form.DateField.html#Ext.form.DateField-DateparseDate" ext:cls="Ext.form.DateField" ext:member="DateparseDate">DateparseDate</a> (the default format used is "m/d/Y"). <br />用法: Usage: <pre><code>
+//所有的调用均设置同样的日期(May 4, 2006) All of these calls set the same date value (May 4, 2006)
+
+//传递一个日期对象: Pass a date object:
+var dt = new Date('5/4/2006');
+dateField.setValue(dt);
+
+//传递一个日期字串(采用默认的格式化字串): Pass a date string (default format):
+dateField.setValue('05/04/2006');
+
+//转换一个日期字串(自定义的格式化字串): Pass a date string (custom format):
+dateField.format = 'Y-m-d';
+dateField.setValue('2006-05-04');
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    date
+                                                </code> : String/Date
+                                                <div class="sub-desc">
+                                                    日期对象或有效的日期字串。The date or valid date string
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DateField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.DateField-validateValue"></a>
+                        <!--名称+参数列表-->
+                        <b>validateValue</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                根据字段的效验规则效验字段值，并在效验失败时将字段标记为无效。Vali... 
+                            </div>
+                            <div class="long">
+                                根据字段的效验规则效验字段值，并在效验失败时将字段标记为无效。Validates a value according to the field's validation rules and marks the field as invalid if the validation fails
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    要效验的值 The value to validate
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            值有效时返回true，否则返回 false True if the value is valid, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TextField
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.form.DateField-events"></a>
+    <h2>公共事件</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    事件
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="autosize-autosize"></a>
+                        <!--名称+参数列表-->
+                        <b>autosize</b>(
+	                        
+                                <code>
+                                    Ext.form.Field this,
+                                </code>
+	                        
+                                <code>
+                                    Number width
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当autosize函数调用时触发。根据缺省的逻辑，字段有可能不会真正地... 
+                            </div>
+                            <div class="long">
+                                当autosize函数调用时触发。根据缺省的逻辑，字段有可能不会真正地改变大小，但该事件的目的在于，允许开发人员在运行时加入额外的逻辑，以备调整输入字段的大小。Fires when the autosize function is triggered.  The field may or may not have actually changed size according to the default logic, but this event provides a hook for the developer to apply additional logic at runtime to resize the field if needed.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>Ext.form.Field
+                                                <div class="sub-desc">
+                                                    文本输入字段。This text field
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    width
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    新宽度。The new field width
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="keydown-keydown"></a>
+                        <!--名称+参数列表-->
+                        <b>keydown</b>(
+	                        
+                                <code>
+                                    Ext.form.TextField this,
+                                </code>
+	                        
+                                <code>
+                                    Ext.EventObject e
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段键盘下降时的事件。该事件只会在enableKeyEvents为... 
+                            </div>
+                            <div class="long">
+                                输入字段键盘下降时的事件。该事件只会在enableKeyEvents为true时有效。Keydown input field event. This event only fires if enableKeyEvents is set to true.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>Ext.form.TextField
+                                                <div class="sub-desc">
+                                                    文本输入字段。This text field
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code>Ext.EventObject
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="keypress-keypress"></a>
+                        <!--名称+参数列表-->
+                        <b>keypress</b>(
+	                        
+                                <code>
+                                    Ext.form.TextField this,
+                                </code>
+	                        
+                                <code>
+                                    Ext.EventObject e
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段键盘按下时的事件。该事件只会在enableKeyEvents为... 
+                            </div>
+                            <div class="long">
+                                输入字段键盘按下时的事件。该事件只会在enableKeyEvents为true时有效。Keypress input field event. This event only fires if enableKeyEvents is set to true.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>Ext.form.TextField
+                                                <div class="sub-desc">
+                                                    文本输入字段。This text field
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code>Ext.EventObject
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="keyup-keyup"></a>
+                        <!--名称+参数列表-->
+                        <b>keyup</b>(
+	                        
+                                <code>
+                                    Ext.form.TextField this,
+                                </code>
+	                        
+                                <code>
+                                    Ext.EventObject e
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段键盘升起时的事件。该事件只会在enableKeyEvents为... 
+                            </div>
+                            <div class="long">
+                                输入字段键盘升起时的事件。该事件只会在enableKeyEvents为true时有效。Keyup input field event. This event only fires if enableKeyEvents is set to true.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>Ext.form.TextField
+                                                <div class="sub-desc">
+                                                    文本输入字段。This text field
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code>Ext.EventObject
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="event-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="select-select"></a>
+                        <!--名称+参数列表-->
+                        <b>select</b>(
+	                        
+                                <code>
+                                    Ext.form.DateField this,
+                                </code>
+	                        
+                                <code>
+                                    Date date
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当日期选择器选取日期后触发的事件。Fires when a date ... 
+                            </div>
+                            <div class="long">
+                                当日期选择器选取日期后触发的事件。Fires when a date is selected via the date picker.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>Ext.form.DateField
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    date
+                                                </code>Date
+                                                <div class="sub-desc">
+                                                    选取的日期 The date that was selected
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">DateField</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束事件------>	
+</div>

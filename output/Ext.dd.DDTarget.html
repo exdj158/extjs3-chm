@@ -1,0 +1,3723 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.dd.DDTarget-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.dd.DDTarget-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.dd.DDTarget-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.dd.DDTarget-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.dd.DDTarget" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/d.html#cls-Ext.dd.DDTarget">Ext.dd.DDTarget</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extdd
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                d.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="source/d.html#cls-Ext.dd.DDTarget">Ext.dd.DDTarget</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.dd.DragDrop.html"  ext:cls="Ext.dd.DragDrop" ext:member="">Ext.dd.DragDrop</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        一种拖放的实现，不能移动，但可以置下目标，对于事件回调，省略一些简单的实现也可得到相同的结果。但这样降低了event listener和回调的处理成本。
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.dd.DDTarget-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.dd.DDTarget-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.dd.DDTarget-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-DragDrop"></a>
+                        <!--名称+参数列表-->
+                        <b>DragDrop</b>(
+	                        
+                                <code>
+                                    String id
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String sGroup
+
+,
+                                </code>
+	                        
+                                <code>
+                                    object config
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                必须在onload事件发生之后才能实例化这个类，以保证关联元素已准备可... 
+                            </div>
+                            <div class="long">
+                                必须在onload事件发生之后才能实例化这个类，以保证关联元素已准备可用。下列语句会将拖放对象放进"group1"的组中，与组内其他拖放对象交互： <pre>  dd = new Ext.dd.DragDrop("div1", "group1"); </pre> 由于没有实现任何的事件处理器，所以上面的代码运行后不会有实际的效果发生。通常的做法是你要先重写这个类或者某个默的实现，但是你可以重写你想出现在这个实例上的方法 <pre>  dd.onDragDrop = function(e, id) {  &nbsp;&nbsp;alert("DD落在" + id+"的身上");  } </pre> @constructor
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    关联到这个实例的那个元素的id
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    sGroup
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    相关拖放对象的组
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : object
+                                                <div class="sub-desc">
+                                                    包含可配置的对象属性                DragDrop的有效属性：                    padding, isTarget, maintainOffset, primaryButtonOnly
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-addInvalidHandleClass"></a>
+                        <!--名称+参数列表-->
+                        <b>addInvalidHandleClass</b>(
+	                        
+                                <code>
+                                    string cssClass
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                可指定某个css样式类，则这个css样式类的子元素将不会引发拖动的操作... 
+                            </div>
+                            <div class="long">
+                                可指定某个css样式类，则这个css样式类的子元素将不会引发拖动的操作。@method addInvalidHandleClass
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    cssClass
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    你希望会被忽略的css样式类
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-addInvalidHandleId"></a>
+                        <!--名称+参数列表-->
+                        <b>addInvalidHandleId</b>(
+	                        
+                                <code>
+                                    string id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                可指定某个元素的id，则这个id下的子元素将不会引发拖动的操作。@me... 
+                            </div>
+                            <div class="long">
+                                可指定某个元素的id，则这个id下的子元素将不会引发拖动的操作。@method addInvalidHandleId
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    你希望会被忽略的元素id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-addInvalidHandleType"></a>
+                        <!--名称+参数列表-->
+                        <b>addInvalidHandleType</b>(
+	                        
+                                <code>
+                                    string tagName
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                指定某个标签名称（tag Name），这个标签的元素单击时便不会引发拖... 
+                            </div>
+                            <div class="long">
+                                指定某个标签名称（tag Name），这个标签的元素单击时便不会引发拖动的操作。这个设计目的在于某个拖动区域中同时又有链接（links）避免执行拖动的动作。@method addInvalidHandleType
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    tagName
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    避免执行元素的类型
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-addToGroup"></a>
+                        <!--名称+参数列表-->
+                        <b>addToGroup</b>(
+	                        
+                                <code>
+                                    string sGroup
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                将该对象加入到相关的拖放组之中。所有组实例至少要分配到一个组，也可以是... 
+                            </div>
+                            <div class="long">
+                                将该对象加入到相关的拖放组之中。所有组实例至少要分配到一个组，也可以是多个组。@method addToGroup
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    sGroup
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    组名称
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-applyConfig"></a>
+                        <!--名称+参数列表-->
+                        <b>applyConfig</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                将配置参数应用到构造器。该方法应该在继承链上的每一个环节调用。所以为了... 
+                            </div>
+                            <div class="long">
+                                将配置参数应用到构造器。该方法应该在继承链上的每一个环节调用。所以为了获取每个对象的可用参数，配置将会由DDPRoxy实现应用在DDProxy， DD，DragDrop身上。@method applyConfig
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-b4Drag"></a>
+                        <!--名称+参数列表-->
+                        <b>b4Drag</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                onDrag事件发生之前执行的代码。@method b4Drag 
+                            </div>
+                            <div class="long">
+                                onDrag事件发生之前执行的代码。@method b4Drag
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-b4DragDrop"></a>
+                        <!--名称+参数列表-->
+                        <b>b4DragDrop</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                onDragDrop事件发生之前执行的代码。@method b4Dra... 
+                            </div>
+                            <div class="long">
+                                onDragDrop事件发生之前执行的代码。@method b4DragDrop
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-b4DragOut"></a>
+                        <!--名称+参数列表-->
+                        <b>b4DragOut</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                onDragOut事件发生之前执行的代码。@method b4DragOut 
+                            </div>
+                            <div class="long">
+                                onDragOut事件发生之前执行的代码。@method b4DragOut
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-b4DragOver"></a>
+                        <!--名称+参数列表-->
+                        <b>b4DragOver</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                onDragOver事件发生在前执行的代码。@method b4Dra... 
+                            </div>
+                            <div class="long">
+                                onDragOver事件发生在前执行的代码。@method b4DragOver
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-b4EndDrag"></a>
+                        <!--名称+参数列表-->
+                        <b>b4EndDrag</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                在endDrag事件触发之前立即执行的代码。@method b4End... 
+                            </div>
+                            <div class="long">
+                                在endDrag事件触发之前立即执行的代码。@method b4EndDrag
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-b4MouseDown"></a>
+                        <!--名称+参数列表-->
+                        <b>b4MouseDown</b>(
+	                        
+                                <code>
+                                    Event e
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                在onMouseDown事件触发之前立即执行的代码。@method b... 
+                            </div>
+                            <div class="long">
+                                在onMouseDown事件触发之前立即执行的代码。@method b4MouseDown
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mousedown事件
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-b4StartDrag"></a>
+                        <!--名称+参数列表-->
+                        <b>b4StartDrag</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                在startDrag时间之前立即执行的代码。@method b4Sta... 
+                            </div>
+                            <div class="long">
+                                在startDrag时间之前立即执行的代码。@method b4StartDrag
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-clearConstraints"></a>
+                        <!--名称+参数列表-->
+                        <b>clearConstraints</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                清除该实例的所有坐标。也清除ticks，因为这时候已不存在任何的坐标。... 
+                            </div>
+                            <div class="long">
+                                清除该实例的所有坐标。也清除ticks，因为这时候已不存在任何的坐标。@method clearConstraints
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-clearTicks"></a>
+                        <!--名称+参数列表-->
+                        <b>clearTicks</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                清除该实例的所有tick间歇定义。@method clearTicks 
+                            </div>
+                            <div class="long">
+                                清除该实例的所有tick间歇定义。@method clearTicks
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-constrainTo"></a>
+                        <!--名称+参数列表-->
+                        <b>constrainTo</b>(
+	                        
+                                <code>
+                                    String/HTMLElement/Element constrainTo
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object/Number pad
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean inContent
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                初始化拖放对象的限制，以便控制在某个元的范围内移动 举例：
+ 
+... 
+                            </div>
+                            <div class="long">
+                                初始化拖放对象的限制，以便控制在某个元的范围内移动 举例：
+ <pre><code>
+ var dd = new Ext.dd.DDProxy("dragDiv1", "proxytest",
+                { dragElId: "existingProxyDiv" });
+ dd.startDrag = function(){
+     this.constrainTo("parent-id");
+ };
+ </code></pre>或者你可以使用 <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a>对象初始化它：
+ <pre><code>
+ Ext.get("dragDiv1").initDDProxy("proxytest", {dragElId: "existingProxyDiv"}, {
+     startDrag : function(){
+         this.constrainTo("parent-id");
+     }
+ });
+ </code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    constrainTo
+                                                </code> : String/HTMLElement/Element
+                                                <div class="sub-desc">
+                                                    要限制的元素
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    pad
+                                                </code> : Object/Number
+                                                <div class="sub-desc">
+                                                    (可选的) Pad提供了指定“外补丁”的限制的一种方式。例如 {left:4, right:4, top:4, bottom:4})或{right:10, bottom:10}
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    inContent
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    (可选的) 限制在元素的正文内容内拖动（包含外补丁和边框）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-endDrag"></a>
+                        <!--名称+参数列表-->
+                        <b>endDrag</b>(
+	                        
+                                <code>
+                                    Event e
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当我们完成拖动对象时触发的事件。@method endDrag 
+                            </div>
+                            <div class="long">
+                                当我们完成拖动对象时触发的事件。@method endDrag
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mouseup事件
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-getDragEl"></a>
+                        <!--名称+参数列表-->
+                        <b>getDragEl</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                返回实际拖动元素的引用，默认时和html element一样，不过它可... 
+                            </div>
+                            <div class="long">
+                                返回实际拖动元素的引用，默认时和html element一样，不过它可分配给其他元素，可在这里找到。@method getDragEl
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            html元素
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-getEl"></a>
+                        <!--名称+参数列表-->
+                        <b>getEl</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                返回关联元素的引用 @method getEl 
+                            </div>
+                            <div class="long">
+                                返回关联元素的引用 @method getEl
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            html元素
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-getTick"></a>
+                        <!--名称+参数列表-->
+                        <b>getTick</b>(
+	                        
+                                <code>
+                                    int val
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int[] tickArray
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : int
+                        <div class="mdesc">
+                            <div class="short">
+                                通常情况下拖动元素是逐个像素地移动的。不过我们也可以指定一个移动的数值... 
+                            </div>
+                            <div class="long">
+                                通常情况下拖动元素是逐个像素地移动的。不过我们也可以指定一个移动的数值。@method getTick
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    val
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    打算将对象放到的地方
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    tickArray
+                                                </code> : int[]
+                                                <div class="sub-desc">
+                                                    已排序的有效点
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        int
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            最近的点
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-handleMouseDown"></a>
+                        <!--名称+参数列表-->
+                        <b>handleMouseDown</b>(
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Ext.dd.DragDrop oDD
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当对象单击时触发。@method handleMouseDown 
+                            </div>
+                            <div class="long">
+                                当对象单击时触发。@method handleMouseDown
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    oDD
+                                                </code> : Ext.dd.DragDrop
+                                                <div class="sub-desc">
+                                                    单击的 DD 对象（this DD obj）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-handleOnAvailable"></a>
+                        <!--名称+参数列表-->
+                        <b>handleOnAvailable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当关联元素有效时执行。@method handleOnAvailable 
+                            </div>
+                            <div class="long">
+                                当关联元素有效时执行。@method handleOnAvailable
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-init"></a>
+                        <!--名称+参数列表-->
+                        <b>init</b>(
+	                        
+                                <code>
+                                    String id
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String sGroup
+
+,
+                                </code>
+	                        
+                                <code>
+                                    object config
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                设置拖放对象，须在Ext.dd.DragDrop子类的构造器调用。@m... 
+                            </div>
+                            <div class="long">
+                                设置拖放对象，须在Ext.dd.DragDrop子类的构造器调用。@method init
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    关联元素之id
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    sGroup
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    相关项的组
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : object
+                                                <div class="sub-desc">
+                                                    配置属性
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-initTarget"></a>
+                        <!--名称+参数列表-->
+                        <b>initTarget</b>(
+	                        
+                                <code>
+                                    String id
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String sGroup
+
+,
+                                </code>
+	                        
+                                <code>
+                                    object config
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                只是有针对性的初始化目标...对象获取不了mousedown hand... 
+                            </div>
+                            <div class="long">
+                                只是有针对性的初始化目标...对象获取不了mousedown handler @method initTarget
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    关联元素之id
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    sGroup
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    相关项的组
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : object
+                                                <div class="sub-desc">
+                                                    配置属性
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-isLocked"></a>
+                        <!--名称+参数列表-->
+                        <b>isLocked</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                返回true表示为该实例已被锁定，或者说是拖放控制器（DD Mgr)被... 
+                            </div>
+                            <div class="long">
+                                返回true表示为该实例已被锁定，或者说是拖放控制器（DD Mgr)被锁定。@method isLocked
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            true表示禁止页面上的所有拖放操作,反之为false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-isTarget"></a>
+                        <!--名称+参数列表-->
+                        <b>isTarget</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                默认地，所有实例可以是降落目标。该项可设置isTarget为false... 
+                            </div>
+                            <div class="long">
+                                默认地，所有实例可以是降落目标。该项可设置isTarget为false来禁止。@method isTarget @type boolean
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-isValidHandleChild"></a>
+                        <!--名称+参数列表-->
+                        <b>isValidHandleChild</b>(
+	                        
+                                <code>
+                                    HTMLElement node
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                检查这次单击是否属于在标签排除列表里。@method isValidH... 
+                            </div>
+                            <div class="long">
+                                检查这次单击是否属于在标签排除列表里。@method isValidHandleChild
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    node
+                                                </code> : HTMLElement
+                                                <div class="sub-desc">
+                                                    检测的HTML元素
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            true 表示为这是一个有效的标签类型，反之为false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-lock"></a>
+                        <!--名称+参数列表-->
+                        <b>lock</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                锁定实例 @method lock 
+                            </div>
+                            <div class="long">
+                                锁定实例 @method lock
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-onAvailable"></a>
+                        <!--名称+参数列表-->
+                        <b>onAvailable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                重写onAvailable的方法以便我们在初始化之后做所需要的事情 ... 
+                            </div>
+                            <div class="long">
+                                重写onAvailable的方法以便我们在初始化之后做所需要的事情 position was determined. @method onAvailable
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-onDrag"></a>
+                        <!--名称+参数列表-->
+                        <b>onDrag</b>(
+	                        
+                                <code>
+                                    Event e
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                抽象方法：当拖动某个对象时发生onMouseMove时调用。@meth... 
+                            </div>
+                            <div class="long">
+                                抽象方法：当拖动某个对象时发生onMouseMove时调用。@method onDrag
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mousemove事件
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-onDragDrop"></a>
+                        <!--名称+参数列表-->
+                        <b>onDragDrop</b>(
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String/DragDrops id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                抽象方法：该项在另外一个DD对象上落下的时候调用。@method on... 
+                            </div>
+                            <div class="long">
+                                抽象方法：该项在另外一个DD对象上落下的时候调用。@method onDragDrop
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mouseup事件
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String/DragDrops
+                                                <div class="sub-desc">
+                                                    在POINT模式中, 是悬浮中的元素id；在INTERSECT模式中, 是DD项组成的数组(DragDrop[])
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-onDragEnter"></a>
+                        <!--名称+参数列表-->
+                        <b>onDragEnter</b>(
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String/DragDrops id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                抽象方法：在这个元素刚刚开始悬停在其他DD对象身上时调用。@metho... 
+                            </div>
+                            <div class="long">
+                                抽象方法：在这个元素刚刚开始悬停在其他DD对象身上时调用。@method onDragEnter
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mousemove事件
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String/DragDrops
+                                                <div class="sub-desc">
+                                                    在POINT模式中, 是悬浮中的元素id；在INTERSECT模式中, 是DD项组成的数组(DragDrop[])
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-onDragOut"></a>
+                        <!--名称+参数列表-->
+                        <b>onDragOut</b>(
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String/DragDrops id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                抽象方法：当不再有任何悬停DD对象的时候调用。@method onDr... 
+                            </div>
+                            <div class="long">
+                                抽象方法：当不再有任何悬停DD对象的时候调用。@method onDragOut
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mousemove事件
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String/DragDrops
+                                                <div class="sub-desc">
+                                                    在POINT模式中, 是悬浮中的元素id；在INTERSECT模式中, 是DD项组成的数组(DragDrop[])
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-onDragOver"></a>
+                        <!--名称+参数列表-->
+                        <b>onDragOver</b>(
+	                        
+                                <code>
+                                    Event e
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String/DragDrops id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                抽象方法：在这个元素悬停在其他DD对象范围内的调用。@method o... 
+                            </div>
+                            <div class="long">
+                                抽象方法：在这个元素悬停在其他DD对象范围内的调用。@method onDragOver
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mousemove事件
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String/DragDrops
+                                                <div class="sub-desc">
+                                                    在POINT模式中, 是悬浮中的元素id；在INTERSECT模式中, 是DD项组成的数组(DragDrop[])
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-onInvalidDrop"></a>
+                        <!--名称+参数列表-->
+                        <b>onInvalidDrop</b>(
+	                        
+                                <code>
+                                    Event e
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                抽象方法：当各项在一个没有置下目标的地方置下时调用。@method o... 
+                            </div>
+                            <div class="long">
+                                抽象方法：当各项在一个没有置下目标的地方置下时调用。@method onInvalidDrop
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mouseup事件
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-onMouseDown"></a>
+                        <!--名称+参数列表-->
+                        <b>onMouseDown</b>(
+	                        
+                                <code>
+                                    Event e
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当拖放对象mousedown触发时的事件处理器。@method onM... 
+                            </div>
+                            <div class="long">
+                                当拖放对象mousedown触发时的事件处理器。@method onMouseDown
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mousedown事件
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-onMouseUp"></a>
+                        <!--名称+参数列表-->
+                        <b>onMouseUp</b>(
+	                        
+                                <code>
+                                    Event e
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当DD对象发生mouseup事件时的事件处理器。@method onM... 
+                            </div>
+                            <div class="long">
+                                当DD对象发生mouseup事件时的事件处理器。@method onMouseUp
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : Event
+                                                <div class="sub-desc">
+                                                    mouseup事件
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-padding"></a>
+                        <!--名称+参数列表-->
+                        <b>padding</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当拖放对象与落下区域交互时的外补丁配置。@method padding... 
+                            </div>
+                            <div class="long">
+                                当拖放对象与落下区域交互时的外补丁配置。@method padding @type int[]
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-removeFromGroup"></a>
+                        <!--名称+参数列表-->
+                        <b>removeFromGroup</b>(
+	                        
+                                <code>
+                                    string sGroup
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                传入一个“交互组” interaction group的参数，从中删除... 
+                            </div>
+                            <div class="long">
+                                传入一个“交互组” interaction group的参数，从中删除该实例。@method removeFromGroup
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    sGroup
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    组名称
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-removeInvalidHandleClass"></a>
+                        <!--名称+参数列表-->
+                        <b>removeInvalidHandleClass</b>(
+	                        
+                                <code>
+                                    string cssClass
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除一个无效的css class @method removeInv... 
+                            </div>
+                            <div class="long">
+                                移除一个无效的css class @method removeInvalidHandleClass
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    cssClass
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    你希望要再“激活”的元素id re-enable
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-removeInvalidHandleId"></a>
+                        <!--名称+参数列表-->
+                        <b>removeInvalidHandleId</b>(
+	                        
+                                <code>
+                                    string id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除一个无效的handle id @method removeInv... 
+                            </div>
+                            <div class="long">
+                                移除一个无效的handle id @method removeInvalidHandleId
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    要再“激活”的元素id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-removeInvalidHandleType"></a>
+                        <!--名称+参数列表-->
+                        <b>removeInvalidHandleType</b>(
+	                        
+                                <code>
+                                    string tagName
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除由addInvalidHandleType方法所执行的标签名称。@... 
+                            </div>
+                            <div class="long">
+                                移除由addInvalidHandleType方法所执行的标签名称。@method removeInvalidHandleType
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    tagName
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    元素类型
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-resetConstraints"></a>
+                        <!--名称+参数列表-->
+                        <b>resetConstraints</b>(
+	                        
+                                <code>
+                                    boolean maintainOffset
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                坐标复位需在你手动重新定位一个DD元素是调用。@method rese... 
+                            </div>
+                            <div class="long">
+                                坐标复位需在你手动重新定位一个DD元素是调用。@method resetConstraints
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    maintainOffset
+                                                </code> : boolean
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setDragElId"></a>
+                        <!--名称+参数列表-->
+                        <b>setDragElId</b>(
+	                        
+                                <code>
+                                    string id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                允许你指定一个不是被移动的关联元素的元素作为拖动处理。@method ... 
+                            </div>
+                            <div class="long">
+                                允许你指定一个不是被移动的关联元素的元素作为拖动处理。@method setDragElId
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    将会用于初始拖动的元素id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setHandleElId"></a>
+                        <!--名称+参数列表-->
+                        <b>setHandleElId</b>(
+	                        
+                                <code>
+                                    string id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                允许你指定一个关联元素下面的子元素以初始化拖动操作。一个例子就是假设你... 
+                            </div>
+                            <div class="long">
+                                允许你指定一个关联元素下面的子元素以初始化拖动操作。一个例子就是假设你有一段套着div文本和若干连接，点击正文的区域便引发拖动的操作。使用这个方法来指定正文内的div元素，然后拖动操作就会从这个元素开始了。@method setHandleElId
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    将会用于初始拖动的元素id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setInitPosition"></a>
+                        <!--名称+参数列表-->
+                        <b>setInitPosition</b>(
+	                        
+                                <code>
+                                    int diffX
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int diffY
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                储存关联元素的初始位置。@method setInitialPosition 
+                            </div>
+                            <div class="long">
+                                储存关联元素的初始位置。@method setInitialPosition
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    diffX
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    X偏移，默认为0
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    diffY
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    Y偏移，默认为0
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setOuterHandleElId"></a>
+                        <!--名称+参数列表-->
+                        <b>setOuterHandleElId</b>(
+	                        
+                                <code>
+                                    string id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                允许你在关联元素之外设置一个元素作为拖动处理。@method setO... 
+                            </div>
+                            <div class="long">
+                                允许你在关联元素之外设置一个元素作为拖动处理。@method setOuterHandleElId
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : string
+                                                <div class="sub-desc">
+                                                    将会用于初始拖动的元素id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setPadding"></a>
+                        <!--名称+参数列表-->
+                        <b>setPadding</b>(
+	                        
+                                <code>
+                                    int iTop
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int iRight
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int iBot
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int iLeft
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                配置目标区域的外补丁（px）。@method setPadding 
+                            </div>
+                            <div class="long">
+                                配置目标区域的外补丁（px）。@method setPadding
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    iTop
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    Top pad
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    iRight
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    Right pad
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    iBot
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    Bot pad
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    iLeft
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    Left pad
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setStartPosition"></a>
+                        <!--名称+参数列表-->
+                        <b>setStartPosition</b>(
+	                        
+                                <code>
+                                    Array pos
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                设置元素的开始位置。对象初始化时便设置，拖动开始时复位。@method... 
+                            </div>
+                            <div class="long">
+                                设置元素的开始位置。对象初始化时便设置，拖动开始时复位。@method setStartPosition
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    pos
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    当前位置（利用刚才的lookup）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setXConstraint"></a>
+                        <!--名称+参数列表-->
+                        <b>setXConstraint</b>(
+	                        
+                                <code>
+                                    int iLeft
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int iRight
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int iTickSize
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                默认情况下，元素可被拖动到屏幕的任何一个位置。使用该方法能限制元素的水... 
+                            </div>
+                            <div class="long">
+                                默认情况下，元素可被拖动到屏幕的任何一个位置。使用该方法能限制元素的水平方向上的摇动。如果打算只限制在Y轴的拖动，可传入0,0的参数。@method setXConstraint
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    iLeft
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    元素向左移动的像素值
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    iRight
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    元素向右移动的像素值
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    iTickSize
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    可选项）指定每次元素移动的步幅。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setXTicks"></a>
+                        <!--名称+参数列表-->
+                        <b>setXTicks</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                若指定了间隔（interval），将会创建水平点击的标记（horizo... 
+                            </div>
+                            <div class="long">
+                                若指定了间隔（interval），将会创建水平点击的标记（horizontal tick marks）的数组。@method setXTicks
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setYConstraint"></a>
+                        <!--名称+参数列表-->
+                        <b>setYConstraint</b>(
+	                        
+                                <code>
+                                    int iUp
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int iDown
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int iTickSize
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                默认情况下，元素可被拖动到屏幕的任何一个位置。使用该方法能限制元素的水... 
+                            </div>
+                            <div class="long">
+                                默认情况下，元素可被拖动到屏幕的任何一个位置。使用该方法能限制元素的水平方向上的摇动。如果打算只限制在X轴的拖动，可传入0,0的参数。@method setYConstraint
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    iUp
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    元素向上移动的像素值
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    iDown
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    元素向下移动的像素值
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    iTickSize
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    可选项）指定每次元素移动的步幅。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-setYTicks"></a>
+                        <!--名称+参数列表-->
+                        <b>setYTicks</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                若指定了间隔（interval），将会创建垂直点击的标记（horizo... 
+                            </div>
+                            <div class="long">
+                                若指定了间隔（interval），将会创建垂直点击的标记（horizontal tick marks）的数组。@method setYTicks
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-startDrag"></a>
+                        <!--名称+参数列表-->
+                        <b>startDrag</b>(
+	                        
+                                <code>
+                                    int X
+
+,
+                                </code>
+	                        
+                                <code>
+                                    int Y
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                抽象方法：在拖放对象被点击后和已跨入拖动或mousedown启动时间的... 
+                            </div>
+                            <div class="long">
+                                抽象方法：在拖放对象被点击后和已跨入拖动或mousedown启动时间的时候调用。@method startDrag
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    X
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    方向点击位置
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    Y
+                                                </code> : int
+                                                <div class="sub-desc">
+                                                    方向点击位置
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-unlock"></a>
+                        <!--名称+参数列表-->
+                        <b>unlock</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                解锁实例 @method unlock 
+                            </div>
+                            <div class="long">
+                                解锁实例 @method unlock
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.dd.DDTarget-unreg"></a>
+                        <!--名称+参数列表-->
+                        <b>unreg</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除所有钩在该元素身上的拖放对象。@method unreg 
+                            </div>
+                            <div class="long">
+                                移除所有钩在该元素身上的拖放对象。@method unreg
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DragDrop
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.dd.DDTarget-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

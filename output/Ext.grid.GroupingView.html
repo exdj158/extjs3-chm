@@ -1,0 +1,3218 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.grid.GroupingView-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.grid.GroupingView-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.grid.GroupingView-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.grid.GroupingView-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.grid.GroupingView" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/GroupingView.html#cls-Ext.grid.GroupingView">Ext.grid.GroupingView</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extgrid
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                GroupingView.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/GroupingView.html#cls-Ext.grid.GroupingView">Ext.grid.GroupingView</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.grid.GridView.html"  ext:cls="Ext.grid.GridView" ext:member="">Ext.grid.GridView</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        Adds the ability for single level grouping to the grid.<pre><code>var grid = new Ext.grid.GridPanel({
+    // A groupingStore is required for a GroupingView
+    store: new Ext.data.GroupingStore({
+        reader: reader,
+        data: xg.dummyData,
+        sortInfo:{field: 'company', direction: "ASC"},
+        groupField:'industry'
+    }),
+
+    columns: [
+        {id:'company',header: "Company", width: 60, sortable: true, dataIndex: 'company'},
+        {header: "Price", width: 20, sortable: true, renderer: Ext.util.Format.usMoney, dataIndex: 'price'},
+        {header: "Change", width: 20, sortable: true, dataIndex: 'change', renderer: Ext.util.Format.usMoney},
+        {header: "Industry", width: 20, sortable: true, dataIndex: 'industry'},
+        {header: "Last Updated", width: 20, sortable: true, renderer: Ext.util.Format.dateRenderer('m/d/Y'), dataIndex: 'lastChange'}
+    ],
+
+    view: new Ext.grid.GroupingView({
+        forceFit:true,
+        // custom grouping text template to display the number of items per group
+        groupTextTpl: '{text} ({[values.rs.length]} {[values.rs.length > 1 ? "Items" : "Item"]})'
+    }),
+
+    frame:true,
+    width: 700,
+    height: 450,
+    collapsible: true,
+    animCollapse: false,
+    title: 'Grouping Example',
+    iconCls: 'icon-grid',
+    renderTo: document.body
+});</code></pre>
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.grid.GroupingView-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="autoFill-header"></a>
+                        <b>autoFill</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为当GRID创建后自动展开各列，自适应整个GRID。Tru...
+                            </div>
+                            <div class="long">
+                                True表示为<b>当GRID创建后</b>自动展开各列，自适应整个GRID。True表示除了auto expand（自动展开）外，还会对超出的部分进行缩减，让每一列的尺寸适应GRID的宽度大小，阻止水平滚动条的出现。True to auto expand the columns to fit the grid <b>when the grid is created</b>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="cellSelector-header"></a>
+                        <b>cellSelector</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                用于内部搜索单元格的选择符。The selector used to ...
+                            </div>
+                            <div class="long">
+                                用于内部搜索单元格的选择符。The selector used to find cells internally
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="cellSelectorDepth-header"></a>
+                        <b>cellSelectorDepth</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                在事件委托中搜索单元格的深度（默认为4）。The number of ...
+                            </div>
+                            <div class="long">
+                                在事件委托中搜索单元格的深度（默认为4）。The number of levels to search for cells in event delegation (defaults to 4)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="deferEmptyText-header"></a>
+                        <b>deferEmptyText</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为emptyText推迟到Store首次加载后才生效。Tr...
+                            </div>
+                            <div class="long">
+                                True表示为emptyText推迟到Store首次加载后才生效。True to defer emptyText being applied until the store's first load
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="emptyGroupText-header"></a>
+                        <b>emptyGroupText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                The text to display when there is a...
+                            </div>
+                            <div class="long">
+                                The text to display when there is an empty group value
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="emptyText-header"></a>
+                        <b>emptyText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当GRID没有一行可供显示时出现在body的提示文本（默认为""）。D...
+                            </div>
+                            <div class="long">
+                                当GRID没有一行可供显示时出现在body的提示文本（默认为""）。Default text to display in the grid body when no rows are available (defaults to '').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableGrouping-header"></a>
+                        <b>enableGrouping</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                False to disable grouping functiona...
+                            </div>
+                            <div class="long">
+                                False to disable grouping functionality (defaults to true)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableGroupingMenu-header"></a>
+                        <b>enableGroupingMenu</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True to enable the grouping control...
+                            </div>
+                            <div class="long">
+                                True to enable the grouping control in the column menu
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableNoGroups-header"></a>
+                        <b>enableNoGroups</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True to allow the user to turn off ...
+                            </div>
+                            <div class="long">
+                                True to allow the user to turn off grouping
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableRowBody-header"></a>
+                        <b>enableRowBody</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为在每一数据行的下方加入一个TR的元素，为行部分提供位置。...
+                            </div>
+                            <div class="long">
+                                True表示为在每一数据行的下方加入一个TR的元素，为行部分提供位置。应使用<a href="/output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-getRowClass" ext:cls="Ext.grid.GroupingView" ext:member="getRowClass">getRowClass</a>方法的rowParams的配置自定义行部分。True to add a second TR element per row that can be used to provide a row body that spans beneath the data row.  Use the <a href="/output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-getRowClass" ext:cls="Ext.grid.GroupingView" ext:member="getRowClass">getRowClass</a> method's rowParams config to customize the row body.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="forceFit-header"></a>
+                        <b>forceFit</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为自动展开/缩小列的宽度以适应grid的宽度，这样就不会出...
+                            </div>
+                            <div class="long">
+                                True表示为自动展开/缩小列的宽度以适应grid的宽度，这样就不会出现水平的滚动条。ColumnModel中任意的<a href="/output/Ext.grid.ColumnModel.html#Ext.grid.ColumnModel-width" ext:cls="Ext.grid.ColumnModel" ext:member="width">width</a>的设置可覆盖此配置项。True to auto expand/contract the size of the columns to fit the grid width and prevent horizontal scrolling. This option overrides any <a href="/output/Ext.grid.ColumnModel.html#Ext.grid.ColumnModel-width" ext:cls="Ext.grid.ColumnModel" ext:member="width">width</a> settings in the ColumnModel.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="groupByText-header"></a>
+                        <b>groupByText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                Text displayed in the grid header m...
+                            </div>
+                            <div class="long">
+                                Text displayed in the grid header menu for grouping by a column (defaults to 'Group By This Field').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="groupRenderer-header"></a>
+                        <b>groupRenderer</b>
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                The function used to format the gro...
+                            </div>
+                            <div class="long">
+                                The function used to format the grouping field value for display in the group header. Should return a string value. <b>This configuration object is in fact a configuration option of the column definition in the grid's <a href="/output/Ext.grid.ColumnModel.html#Ext.grid.ColumnModel-groupRenderer" ext:cls="Ext.grid.ColumnModel" ext:member="groupRenderer">ColumnModel</a>, it is included here for ease of reference.</b> <p>This takes the following parameters: <div class="mdetail-params"><ul> <li><b>v</b> : Object<p class="sub-desc">The new value of the group field.</p></li> <li><b>unused</b> : undefined<p class="sub-desc">Unused parameter.</p></li> <li><b>r</b> : Ext.data.Record<p class="sub-desc">The Record providing the data for the row which caused group change.</p></li> <li><b>rowIndex</b> : Number<p class="sub-desc">The row index of the Record which caused group change.</p></li> <li><b>colIndex</b> : Number<p class="sub-desc">The column index of the group field.</p></li> <li><b>ds</b> : Ext.data.Store<p class="sub-desc">The Store which is providing the data Model.</p></li> </ul></div></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="groupTextTpl-header"></a>
+                        <b>groupTextTpl</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                The template used to render the gro...
+                            </div>
+                            <div class="long">
+                                The template used to render the group header. This is used to format an object which contains the following properties: <div class="mdetail-params"><ul> <li><b>group</b> : String<p class="sub-desc">The <i>rendered</i> value of the group field. By default this is the unchanged value of the group field. If a <a href="/output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-groupRenderer" ext:cls="Ext.grid.GroupingView" ext:member="groupRenderer">groupRenderer</a> is specified, it is the result of a call to that.</p></li> <li><b>gvalue</b> : Object<p class="sub-desc">The <i>raw</i> value of the group field.</p></li> <li><b>text</b> : String<p class="sub-desc">The configured <a href="/output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-header" ext:cls="Ext.grid.GroupingView" ext:member="header">header</a> (If <a href="/output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-showGroupName" ext:cls="Ext.grid.GroupingView" ext:member="showGroupName">showGroupName</a> is true) plus the <i>rendered</i>group field value.</p></li> <li><b>groupId</b> : String<p class="sub-desc">A unique, generated ID which is applied to the View Element which contains the group.</p></li> <li><b>startRow</b> : Number<p class="sub-desc">The row index of the Record which caused group change.</p></li> <li><b>rs</b> : Array<p class="sub-desc">.Contains a single element: The Record providing the data for the row which caused group change.</p></li> <li><b>cls</b> : String<p class="sub-desc">The generated class name string to apply to the group header Element.</p></li> <li><b>style</b> : String<p class="sub-desc">The inline style rules to apply to the group header Element.</p></li> </ul></div></p> See <a href="/output/Ext.XTemplate.html" ext:cls="Ext.XTemplate">Ext.XTemplate</a> for information on how to format data using a template.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="header-header"></a>
+                        <b>header</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                The text with which to prefix the g...
+                            </div>
+                            <div class="long">
+                                The text with which to prefix the group field value in the group header line.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="hideGroupedColumn-header"></a>
+                        <b>hideGroupedColumn</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True to hide the column that is cur...
+                            </div>
+                            <div class="long">
+                                True to hide the column that is currently grouped
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="ignoreAdd-header"></a>
+                        <b>ignoreAdd</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True to skip refreshing the view wh...
+                            </div>
+                            <div class="long">
+                                True to skip refreshing the view when new rows are added (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="listeners-header"></a>
+                        <b>listeners</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                (optional) A config object containi...
+                            </div>
+                            <div class="long">
+                                (optional) A config object containing one or more event handlers to be added to this object during initialization.  This should be a valid listeners config object as specified in the <a href="/output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-addListener" ext:cls="Ext.grid.GroupingView" ext:member="addListener">addListener</a> example for attaching multiple handlers at once.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Observable</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="rowSelector-header"></a>
+                        <b>rowSelector</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                用于内部搜索行的选择符。The selector used to fi...
+                            </div>
+                            <div class="long">
+                                用于内部搜索行的选择符。The selector used to find rows internally
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="rowSelectorDepth-header"></a>
+                        <b>rowSelectorDepth</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                在事件委托中搜索行的深度（默认为10）。The number of l...
+                            </div>
+                            <div class="long">
+                                在事件委托中搜索行的深度（默认为10）。The number of levels to search for rows in event delegation (defaults to 10)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="showGroupName-header"></a>
+                        <b>showGroupName</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True to display the name for each s...
+                            </div>
+                            <div class="long">
+                                True to display the name for each set of grouped rows (defaults to true)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="showGroupsText-header"></a>
+                        <b>showGroupsText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                Text displayed in the grid header f...
+                            </div>
+                            <div class="long">
+                                Text displayed in the grid header for enabling/disabling grouping (defaults to 'Show in Groups').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="startCollapsed-header"></a>
+                        <b>startCollapsed</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True to start all groups collapsed
+                            </div>
+                            <div class="long">
+                                True to start all groups collapsed
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GroupingView</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.grid.GroupingView-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="columnsText-activeItem"></a>
+                        <b>
+                        columnsText: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                “列”菜单项的提示文字。The text displayed in t...
+                            </div>
+                            <div class="long">
+                                “列”菜单项的提示文字。The text displayed in the "Columns" menu item @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="sortAscText-activeItem"></a>
+                        <b>
+                        sortAscText: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                “升序”菜单项的提示文字。The text displayed in ...
+                            </div>
+                            <div class="long">
+                                “升序”菜单项的提示文字。The text displayed in the "Sort Ascending" menu item @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="sortClasses-activeItem"></a>
+                        <b>
+                        sortClasses: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                排序时头部的CSS样式类（默认为["sort-asc", "sort-...
+                            </div>
+                            <div class="long">
+                                排序时头部的CSS样式类（默认为["sort-asc", "sort-desc"]）。The CSS classes applied to a header when it is sorted. (defaults to ["sort-asc", "sort-desc"]) @type Array
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="sortDescText-activeItem"></a>
+                        <b>
+                        sortDescText: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                “降序”菜单项的提示文字。The text displayed in ...
+                            </div>
+                            <div class="long">
+                                “降序”菜单项的提示文字。The text displayed in the "Sort Descending" menu item @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.grid.GroupingView-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-addEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>addEvents</b>(
+	                        
+                                <code>
+                                    Object o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                定义观察者的事件。Used to define events on t... 
+                            </div>
+                            <div class="long">
+                                定义观察者的事件。Used to define events on this Observable
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    定义的事件对象。object The object with the events defined
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-addListener"></a>
+                        <!--名称+参数列表-->
+                        <b>addListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object options]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                加入一个事件处理函数。on是其简写方式。Appends an even... 
+                            </div>
+                            <div class="long">
+                                加入一个事件处理函数。<a href="output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-on" ext:cls="Ext.grid.GroupingView" ext:member="on">on</a>是其简写方式。Appends an event handler to this element.  The shorthand version <a href="/output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-on" ext:cls="Ext.grid.GroupingView" ext:member="on">on</a> is equivalent.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件处理函数的名称。The type of event to handle
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件处理函数。该函数会送入以下的参数：The handler function the event invokes. This function is passed the following parameters:<ul> <li>evt : EventObject<div class="sub-desc">用于描述这次事件<a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a>的事件对象。The <a href="/output/Ext.EventObject.html" ext:cls="Ext.EventObject">EventObject</a> describing the event.</div></li> <li>t : Element<div class="sub-desc">事件源对象，类型是<a href="output/Ext.Element.html" ext:cls="Ext.Element">Element</a> The <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Element</a> which was the target of the event. 注意该项可能会选项<tt>delegate</tt>筛选而发生变化Note that this may be filtered by using the <tt>delegate</tt> option.</div></li> <li>o : Object<div class="sub-desc">调用addListener时送入的选项对象The options object from the addListener call.</div></li> </ul>
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    事件处理函数执行时所在的作用域。处理函数“this”的上下文。(optional) The scope (The <tt>this</tt> reference) of the handler function. Defaults to this Element.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    包含句柄配置属性的一个对象。该对象可能会下来的属性： (optional) An object containing handler configuration properties. This may contain any of the following properties:<ul> <li>scope {Object} : 事件处理函数执行时所在的作用域。处理函数“this”的上下文环境。The scope in which to execute the handler function. The handler function's "this" context.</li> <li>delegate {String} : 一个简易选择符，用于过滤目标，或是查找目标的子孙。A simple selector to filter the target or look for a descendant of the target</li> <li>stopEvent {Boolean} : true表示为阻止事件。即停止传播、阻止默认动作。True to stop the event. That is stop propagation, and prevent the default action.</li> <li>preventDefault {Boolean} : true表示为阻止默认动作。True to prevent the default action</li> <li>stopPropagation {Boolean} : true表示为阻止事件传播。True to prevent event propagation</li> <li>normalized {Boolean} : false表示对处理函数送入一个原始、未封装过的浏览器对象而非标准的Ext.EventObject。False to pass a browser event to the handler function instead of an Ext.EventObject</li> <li>delay {Number} : 触发事件后处理函数延时执行的时间。The number of milliseconds to delay the invocation of the handler after te event fires.</li> <li>single {Boolean} : true代表为事件触发后加入一个下次移除本身的处理函数。True to add a handler to handle just the next firing of the event, and then remove itself.</li> <li>buffer {Number} : 若指定一个毫秒数会把该处理函数安排到<a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a>延时之后才执行。如果事件在那个事件再次触发，则原处理器句柄将<em>不会</em> 被启用，但是新处理器句柄会安排在其位置。Causes the handler to be scheduled to run in an <a href="/output/Ext.util.DelayedTask.html" ext:cls="Ext.util.DelayedTask">Ext.util.DelayedTask</a> delayed by the specified number of milliseconds. If the event fires again within that time, the original handler is <em>not</em> invoked, but the new handler is scheduled in its place.</li> </ul><br> <p> <b>不同配搭方式的选项 Combining Options</b><br> 下面的例子，使用的是<a href="output/addListener.html#addListener-on" ext:cls="addListener" ext:member="on">on</a>的简写方式。和addListener是等价的。利用参数选项，可以组合成不同类型的侦听器： In the following examples, the shorthand form <a href="output/addListener.html#addListener-on" ext:cls="addListener" ext:member="on">on</a> is used rather than the more verbose addListener.  The two are equivalent.  Using the options argument, it is possible to combine different types of listeners:<br> <br> 这个事件的含义是，已常规化的，延时的，自动停止事件并有传入一个自定义的参数（forumId）的一次性侦听器。这些事件设置在处理函数（也就是第三个的参数）中也可以找到的。A normalized, delayed, one-time listener that auto stops the event and adds a custom argument (forumId) to the options object. The options object is available as the third parameter in the handler function.<div style="margin: 5px 20px 20px;"> 代码：Code:<pre><code>
+el.on('click', this.onClick, this, {
+    single: true,
+    delay: 100,
+    stopEvent : true,
+    forumId: 4
+});</code></pre></p> <p> <b>多个处理函数一次性登记。Attaching multiple handlers in 1 call</b><br> 这样的话，可允许多个事件处理函数都共享一个配置事件的配置项对象。The method also allows for a single argument to be passed which is a config object containing properties which specify multiple handlers.</p> <p> 代码：Code:<pre><code>
+el.on({
+    'click' : {
+        fn: this.onClick,
+        scope: this,
+        delay: 100
+    },
+    'mouseover' : {
+        fn: this.onMouseOver,
+        scope: this
+    },
+    'mouseout' : {
+        fn: this.onMouseOut,
+        scope: this
+    }
+});</code></pre></p> <p> 或者是简写的语法：Or a shorthand syntax:<br> Code:<pre><code>
+el.on({
+    'click' : this.onClick,
+    'mouseover' : this.onMouseOver,
+    'mouseout' : this.onMouseOut,
+    scope: this
+});</code></pre></p>
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-capture"></a>
+                        <!--名称+参数列表-->
+                        <b>capture</b>(
+	                        
+                                <code>
+                                    Observable o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                开始捕捉特定的观察者。在事件触发之前，所有的事件会以“事件名称+标准签... 
+                            </div>
+                            <div class="long">
+                                开始捕捉特定的观察者。在事件触发<b>之前</b>，所有的事件会以“事件名称+标准签名”的形式传入到函数（传入的参数是function类型）。如果传入的函数执行后返回false，则接下的事件将不会触发。Starts capture on the specified Observable. All events will be passed to the supplied function with the event name + standard signature of the event <b>before</b> the event is fired. If the supplied function returns false, the event will not fire.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Observable
+                                                <div class="sub-desc">
+                                                    要捕捉的观察者The Observable to capture
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    要调用的函数The function to call
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数作用域(optional) The scope (this object) for the fn
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-collapseAllGroups"></a>
+                        <!--名称+参数列表-->
+                        <b>collapseAllGroups</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Collapses all grouped rows. 
+                            </div>
+                            <div class="long">
+                                Collapses all grouped rows.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GroupingView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-deferEmptyText"></a>
+                        <!--名称+参数列表-->
+                        <b>deferEmptyText</b>(
+	                        
+                                <code>
+                                    Record record
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number index
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object rowParams
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Store store
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                重写该函数就会在渲染过程中修改每一行的CSS样式类。同样地，你也可以通... 
+                            </div>
+                            <div class="long">
+                                重写该函数就会在渲染过程中修改每一行的CSS样式类。同样地，你也可以通过制定行模板（row template）的参数修改当前行样式，达到控制行渲染的目的，这个参数是<b>rowParams</b>。该函数应该返回一个CSS样式类的名称（如没有就空白字符串''），应用当行所在的div元素上。可支持定义多个样式类的名称，用空白字符分割开即可。如（'my-class another-class'）
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    record
+                                                </code> : Record
+                                                <div class="sub-desc">
+                                                    当然行所关联的<a href="output/Ext.data.Record.html" ext:cls="Ext.data.Record">Ext.data.Record</a>对象。The <a href="/output/Ext.data.Record.html" ext:cls="Ext.data.Record">Ext.data.Record</a> corresponding to the current row.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    行索引。The row index
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    rowParams
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    传入到行模板（row template）的配置项对象，以便渲染过程中可控制每行的部分是怎么显示的（可选的）。注意该对象只会在<a href="output/deferEmptyText.html#deferEmptyText-enableRowBody" ext:cls="deferEmptyText" ext:member="enableRowBody">enableRowBody</a> = true时有效，不然的话会被忽略。对象可以包含下例的属性： A config object that is passed to the row template during rendering that allows customization of various aspects of a body row, if applicable.  Note that this object will only be applied if <a href="output/deferEmptyText.html#deferEmptyText-enableRowBody" ext:cls="deferEmptyText" ext:member="enableRowBody">enableRowBody</a> = true, otherwise it will be ignored. The object may contain any of these properties: <ul> <li><code>body</code> : String <div class="sub-desc">渲染成为单元格主体部分内容的HTML片断（默认为''）。An HTML fragment to be rendered as the cell's body content (defaults to ''). </div></li> <li><code>bodyStyle</code> : String <div class="sub-desc">加入到行所在TR元素的CSS样式（默认为''）。A CSS style string that will be applied to the row's TR style attribute (defaults to ''). </div></li> <li><code>cols</code> : Number <div class="sub-desc"> 列的数量，与body 行的TDcolspan属性紧密联系（默认为当前grid的列数）。The column count to apply to the body row's TD colspan attribute (defaults to the current column count of the grid). </div> </li> </ul>
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    store
+                                                </code> : Store
+                                                <div class="sub-desc">
+                                                    与此GRID所绑定的<a href="output/Ext.data.Store.html" ext:cls="Ext.data.Store">Ext.data.Store</a>对象。The <a href="/output/Ext.data.Store.html" ext:cls="Ext.data.Store">Ext.data.Store</a> this grid is bound to  @method getRowClass
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            行新加入的样式类。a CSS class name to add to the row.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-expandAllGroups"></a>
+                        <!--名称+参数列表-->
+                        <b>expandAllGroups</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Expands all grouped rows. 
+                            </div>
+                            <div class="long">
+                                Expands all grouped rows.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GroupingView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-findRow"></a>
+                        <!--名称+参数列表-->
+                        <b>findRow</b>(
+	                        
+                                <code>
+                                    Element el
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : null
+                        <div class="mdesc">
+                            <div class="short">
+                                传入一个元素，返回该元素所在行的HtmlElement元素。Retur... 
+                            </div>
+                            <div class="long">
+                                传入一个元素，返回该元素所在行的HtmlElement元素。Return the HtmlElement representing the grid row which contains the passed element.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Element
+                                                <div class="sub-desc">
+                                                    目标元素。The target element
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        null
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            行索引，或null就表示目标元素不在此GridView的某行中。The row element, or null if the target element is not within a row of this GridView.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-findRowIndex"></a>
+                        <!--名称+参数列表-->
+                        <b>findRowIndex</b>(
+	                        
+                                <code>
+                                    Element el
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : b
+                        <div class="mdesc">
+                            <div class="short">
+                                传入一个元素，返回该元素所在的行索引。Return the index... 
+                            </div>
+                            <div class="long">
+                                传入一个元素，返回该元素所在的行索引。Return the index of the grid row which contains the passed element.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Element
+                                                <div class="sub-desc">
+                                                    目标元素。The target element
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        b
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            行索引，或<b>false</b>就表示目标元素不在此GridView的某行中。The row index, or <b>false</b> if the target element is not within a row of this GridView.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-fireEvent"></a>
+                        <!--名称+参数列表-->
+                        <b>fireEvent</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object... args
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                触发指定的事件,并在这里把处理函数的参数传入（应该至少要有事件的名称）... 
+                            </div>
+                            <div class="long">
+                                触发指定的事件,并在这里把处理函数的参数传入（应该至少要有事件的名称）。Fires the specified event with the passed parameters (minus the event name).
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件名称The name of the event to fire. If the event is to bubble up an Observable parent hierarchy (See <a href="output/fireEvent.html#fireEvent-Ext.ComponentgetBubbleTarget" ext:cls="fireEvent" ext:member="Ext.ComponentgetBubbleTarget">Ext.ComponentgetBubbleTarget</a>) then the first argument must be passed as <tt>true</tt>, and the event name is passed as the second argument. 如果这个事件是要在Observable父类上逐层上报（参阅<a href="output/fireEvent.html#fireEvent-Ext.ComponentgetBubbleTarget" ext:cls="fireEvent" ext:member="Ext.ComponentgetBubbleTarget">Ext.ComponentgetBubbleTarget</a>），那么第一个参数一定是<tt>true</tt>，然后第二个参数是事件名称。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    args
+                                                </code> : Object...
+                                                <div class="sub-desc">
+                                                    传入事件处理函数的参数Variable number of parameters are passed to handlers
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            从处理函数返回true或者false returns false if any of the handlers return false otherwise it returns true
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-focusCell"></a>
+                        <!--名称+参数列表-->
+                        <b>focusCell</b>(
+	                        
+                                <code>
+                                    Number row
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number col
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                让指定的单元格获得焦点。Focuses the specified c... 
+                            </div>
+                            <div class="long">
+                                让指定的单元格获得焦点。Focuses the specified cell.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    row
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    行索引。The row index
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    col
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    列索引。The column index
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-focusRow"></a>
+                        <!--名称+参数列表-->
+                        <b>focusRow</b>(
+	                        
+                                <code>
+                                    Number row
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                让指定的行获得焦点。Focuses the specified row. 
+                            </div>
+                            <div class="long">
+                                让指定的行获得焦点。Focuses the specified row.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    row
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    行索引。The row index
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-getCell"></a>
+                        <!--名称+参数列表-->
+                        <b>getCell</b>(
+	                        
+                                <code>
+                                    Number row
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number col
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HtmlElement
+                        <div class="mdesc">
+                            <div class="short">
+                                指定一个单元格的坐标，返回该单元格的&lt;TD> HtmlEleme... 
+                            </div>
+                            <div class="long">
+                                指定一个单元格的坐标，返回该单元格的&lt;TD> HtmlElement。Returns the grid's &lt;TD> HtmlElement at the specified coordinates.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    row
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    定位单元格的行索引。The row index in which to find the cell.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    col
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    单元格的列索引。The column index of the cell.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HtmlElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            坐标所在的&lt;TD>元素。The &lt;TD> at the specified coordinates.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-getGroupId"></a>
+                        <!--名称+参数列表-->
+                        <b>getGroupId</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                Dynamically tries to determine the ... 
+                            </div>
+                            <div class="long">
+                                Dynamically tries to determine the groupId of a specific value
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            The group id
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GroupingView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-getHeaderCell"></a>
+                        <!--名称+参数列表-->
+                        <b>getHeaderCell</b>(
+	                        
+                                <code>
+                                    Number index
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HtmlElement
+                        <div class="mdesc">
+                            <div class="short">
+                                指定一个列索引，返回该列头部的单元格的&lt;TD> HtmlElem... 
+                            </div>
+                            <div class="long">
+                                指定一个列索引，返回该列头部的单元格的&lt;TD> HtmlElement。Return the &lt;TD> HtmlElement which represents the Grid's header cell for the specified column index.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    列索引。The column index
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HtmlElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            The &lt;TD>。元素 element.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-getRow"></a>
+                        <!--名称+参数列表-->
+                        <b>getRow</b>(
+	                        
+                                <code>
+                                    Number index
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HtmlElement
+                        <div class="mdesc">
+                            <div class="short">
+                                指定一个行索引，返回该行的&lt;TR> HtmlElement。Re... 
+                            </div>
+                            <div class="long">
+                                指定一个行索引，返回该行的&lt;TR> HtmlElement。Return the &lt;TR> HtmlElement which represents a Grid row for the specified index.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    行索引。The row index
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HtmlElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            The &lt;TR>元素。lement.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-hasListener"></a>
+                        <!--名称+参数列表-->
+                        <b>hasListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                检测当前对象是否有指定的事件。Checks to see if thi... 
+                            </div>
+                            <div class="long">
+                                检测当前对象是否有指定的事件。Checks to see if this object has any listeners for a specified event
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要检查的事件名称。The name of the event to check for
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            True表示有事件正在被监听，否则为false。True if the event is being listened for, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-on"></a>
+                        <!--名称+参数列表-->
+                        <b>on</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                为该元素添加事件处理函数（addListener的简写方式）。Appe... 
+                            </div>
+                            <div class="long">
+                                为该元素添加事件处理函数（addListener的简写方式）。Appends an event handler to this element (shorthand for addListener)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    事件名称The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    处理函数The method the event invokes
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    执行处理函数的作用域。“this”对象指针(optional) The scope in which to execute the handler function. The handler function's "this" context.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的）(optional) @method
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-purgeListeners"></a>
+                        <!--名称+参数列表-->
+                        <b>purgeListeners</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                从这个对象身上移除所有的侦听器。Removes all listene... 
+                            </div>
+                            <div class="long">
+                                从这个对象身上移除所有的侦听器。Removes all listeners for this object
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-refresh"></a>
+                        <!--名称+参数列表-->
+                        <b>refresh</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean headersToo]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                刷新grid UI Refreshs the grid UI 
+                            </div>
+                            <div class="long">
+                                刷新grid UI Refreshs the grid UI
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    headersToo
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    True表示为也刷新头部 (optional) True to also refresh the headers
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-relayEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>relayEvents</b>(
+	                        
+                                <code>
+                                    Object o
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Array events
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Relays selected events from the spe... 
+                            </div>
+                            <div class="long">
+                                Relays selected events from the specified Observable as if the events were fired by <tt><b>this</b></tt>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    The Observable whose events this object is to relay.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    events
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    Array of event names to relay.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-releaseCapture"></a>
+                        <!--名称+参数列表-->
+                        <b>releaseCapture</b>(
+	                        
+                                <code>
+                                    Observable o
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                从Observable身上移除所有已加入的捕捉captures。Rem... 
+                            </div>
+                            <div class="long">
+                                从Observable身上移除<b>所有</b>已加入的捕捉captures。Removes <b>all</b> added captures from the Observable.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    o
+                                                </code> : Observable
+                                                <div class="sub-desc">
+                                                    要释放的观察者The Observable to release
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-removeListener"></a>
+                        <!--名称+参数列表-->
+                        <b>removeListener</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除侦听器Removes a listener 
+                            </div>
+                            <div class="long">
+                                移除侦听器Removes a listener
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    侦听事件的类型The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    移除的处理函数The handler to remove
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的） 处理函数之作用域(optional) The scope (this object) for the handler
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-resumeEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>resumeEvents</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                重新触发事件（参阅suspendEvents）。Resume firi... 
+                            </div>
+                            <div class="long">
+                                重新触发事件（参阅<a href="output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-suspendEvents" ext:cls="Ext.grid.GroupingView" ext:member="suspendEvents">suspendEvents</a>）。Resume firing events. (see <a href="/output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-suspendEvents" ext:cls="Ext.grid.GroupingView" ext:member="suspendEvents">suspendEvents</a>) If events were suspended using the <tt><b>queueSuspended</b></tt> parameter, then all events fired during event suspension will be sent to any listeners now.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-scrollToTop"></a>
+                        <!--名称+参数列表-->
+                        <b>scrollToTop</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                滚动grid到顶部。Scrolls the grid to the top 
+                            </div>
+                            <div class="long">
+                                滚动grid到顶部。Scrolls the grid to the top
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GridView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-suspendEvents"></a>
+                        <!--名称+参数列表-->
+                        <b>suspendEvents</b>(
+	                        
+                                <code>
+                                    Boolean queueSuspended
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                暂停触发所有的事件（参阅resumeEvents）。Suspend t... 
+                            </div>
+                            <div class="long">
+                                暂停触发所有的事件（参阅<a href="output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-resumeEvents" ext:cls="Ext.grid.GroupingView" ext:member="resumeEvents">resumeEvents</a>）。Suspend the firing of all events. (see <a href="/output/Ext.grid.GroupingView.html#Ext.grid.GroupingView-resumeEvents" ext:cls="Ext.grid.GroupingView" ext:member="resumeEvents">resumeEvents</a>)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    queueSuspended
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    Pass as true to queue up suspended events to be fired after the <a href="output/suspendEvents.html#suspendEvents-resumeEvents" ext:cls="suspendEvents" ext:member="resumeEvents">resumeEvents</a> call instead of discarding all suspended events;
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-toggleAllGroups"></a>
+                        <!--名称+参数列表-->
+                        <b>toggleAllGroups</b>(
+	                        
+                                <code>
+                                    Boolean expanded
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Toggles all groups if no value is p... 
+                            </div>
+                            <div class="long">
+                                Toggles all groups if no value is passed, otherwise sets the expanded state of all groups to the value passed.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    expanded
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    (optional)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GroupingView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-toggleGroup"></a>
+                        <!--名称+参数列表-->
+                        <b>toggleGroup</b>(
+	                        
+                                <code>
+                                    String groupId
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean expanded
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Toggles the specified group if no v... 
+                            </div>
+                            <div class="long">
+                                Toggles the specified group if no value is passed, otherwise sets the expanded state of the group to the value passed.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    groupId
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    The groupId assigned to the group (see getGroupId)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    expanded
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    (optional)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        GroupingView
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.grid.GroupingView-un"></a>
+                        <!--名称+参数列表-->
+                        <b>un</b>(
+	                        
+                                <code>
+                                    String eventName
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function handler
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                移除侦听器（removeListener的快捷方式）Removes a... 
+                            </div>
+                            <div class="long">
+                                移除侦听器（removeListener的快捷方式）Removes a listener (shorthand for removeListener)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    eventName
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    侦听事件的类型The type of event to listen for
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    handler
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    事件涉及的方法 The handler to remove
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选的） 处理函数的作用域(optional) The scope (this object) for the handler @method
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Observable
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.grid.GroupingView-events"></a>
+    <h2>公共事件</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    事件
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="beforerefresh-beforerefresh"></a>
+                        <!--名称+参数列表-->
+                        <b>beforerefresh</b>(
+	                        
+                                <code>
+                                    Ext.grid.GridView view
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                在视图刷新之前触发。Internal UI Event. Fired ... 
+                            </div>
+                            <div class="long">
+                                在视图刷新之前触发。Internal UI Event. Fired before the view is refreshed.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    view
+                                                </code>Ext.grid.GridView
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="beforerowremoved-beforerowremoved"></a>
+                        <!--名称+参数列表-->
+                        <b>beforerowremoved</b>(
+	                        
+                                <code>
+                                    Ext.grid.GridView view,
+                                </code>
+	                        
+                                <code>
+                                    Number rowIndex,
+                                </code>
+	                        
+                                <code>
+                                    Ext.data.Record record
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当行被移除之前触发。Internal UI Event. Fired ... 
+                            </div>
+                            <div class="long">
+                                当行被移除之前触发。Internal UI Event. Fired before a row is removed.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    view
+                                                </code>Ext.grid.GridView
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    rowIndex
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    要移除行的索引。The index of the row to be removed.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    record
+                                                </code>Ext.data.Record
+                                                <div class="sub-desc">
+                                                    已移除的记录。The Record to be removed
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="beforerowsinserted-beforerowsinserted"></a>
+                        <!--名称+参数列表-->
+                        <b>beforerowsinserted</b>(
+	                        
+                                <code>
+                                    Ext.grid.GridView view,
+                                </code>
+	                        
+                                <code>
+                                    Number firstRow,
+                                </code>
+	                        
+                                <code>
+                                    Number lastRow
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                插入行之前触发。Internal UI Event. Fired be... 
+                            </div>
+                            <div class="long">
+                                插入行之前触发。Internal UI Event. Fired before rows are inserted.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    view
+                                                </code>Ext.grid.GridView
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    firstRow
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    被插入第一行的索引。The index of the first row to be inserted.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    lastRow
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    被最后一行的索引。The index of the last row to be inserted.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="refresh-refresh"></a>
+                        <!--名称+参数列表-->
+                        <b>refresh</b>(
+	                        
+                                <code>
+                                    Ext.grid.GridView view
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当GridView主体刷新完毕后触发。Internal UI Even... 
+                            </div>
+                            <div class="long">
+                                当GridView主体刷新完毕后触发。Internal UI Event. Fired after the GridView's body has been refreshed.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    view
+                                                </code>Ext.grid.GridView
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="rowremoved-rowremoved"></a>
+                        <!--名称+参数列表-->
+                        <b>rowremoved</b>(
+	                        
+                                <code>
+                                    Ext.grid.GridView view,
+                                </code>
+	                        
+                                <code>
+                                    Number rowIndex,
+                                </code>
+	                        
+                                <code>
+                                    Ext.data.Record record
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当有行被移除时触发。Internal UI Event. Fired ... 
+                            </div>
+                            <div class="long">
+                                当有行被移除时触发。Internal UI Event. Fired after a row is removed.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    view
+                                                </code>Ext.grid.GridView
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    rowIndex
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    被移除行的索引。The index of the row that was removed.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    record
+                                                </code>Ext.data.Record
+                                                <div class="sub-desc">
+                                                    被移除的Record对象。The Record that was removed
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="rowsinserted-rowsinserted"></a>
+                        <!--名称+参数列表-->
+                        <b>rowsinserted</b>(
+	                        
+                                <code>
+                                    Ext.grid.GridView view,
+                                </code>
+	                        
+                                <code>
+                                    Number firstRow,
+                                </code>
+	                        
+                                <code>
+                                    Number lastRow
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当有行被插入时触发。Internal UI Event. Fired ... 
+                            </div>
+                            <div class="long">
+                                当有行被插入时触发。Internal UI Event. Fired after rows are inserted.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    view
+                                                </code>Ext.grid.GridView
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    firstRow
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    插入所在位置的索引。The index of the first inserted.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    lastRow
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    插入位置上一行的索引。The index of the last row inserted.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="rowupdated-rowupdated"></a>
+                        <!--名称+参数列表-->
+                        <b>rowupdated</b>(
+	                        
+                                <code>
+                                    Ext.grid.GridView view,
+                                </code>
+	                        
+                                <code>
+                                    Number firstRow,
+                                </code>
+	                        
+                                <code>
+                                    Ext.data.record record
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当有一行的内容被更新后触发。Internal UI Event. Fi... 
+                            </div>
+                            <div class="long">
+                                当有一行的内容被更新后触发。Internal UI Event. Fired after a row has been updated.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    view
+                                                </code>Ext.grid.GridView
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    firstRow
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    更新行的索引。The index of the row updated.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    record
+                                                </code>Ext.data.record
+                                                <div class="sub-desc">
+                                                    更新后行的Record对象。The Record backing the row updated.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">GridView</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束事件------>	
+</div>

@@ -1,0 +1,308 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.data.Field-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.data.Field-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.data.Field-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.data.Field-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.data.Field" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/DataField.html#cls-Ext.data.Field">Ext.data.Field</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extdata
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                DataField.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/DataField.html#cls-Ext.data.Field">Ext.data.Field</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+          <p> 该类封装了<a href="output/Ext.data.Field.html#Ext.data.Field-Ext.data.Recordcreate" ext:cls="Ext.data.Field" ext:member="Ext.data.Recordcreate">Ext.data.Recordcreate</a>所传入字段定义对象的信息。<br /> This class encpasulates the field definition information specified in the field definition objects passed to <a href="/output/Ext.data.Field.html#Ext.data.Field-Ext.data.Recordcreate" ext:cls="Ext.data.Field" ext:member="Ext.data.Recordcreate">Ext.data.Recordcreate</a>. </p> <p> 开发者一般不需要实例化该类。方法执行过程中创建该实例，并且在Record构造器的<b>原型prototype中</b>的<a href="output/Ext.data.Record.html#Ext.data.Record-fields" ext:cls="Ext.data.Record" ext:member="fields">fields</a>属性就是该实例。<br /> Developers do not need to instantiate this class. Instances are created by <a href="output/Ext.data.Record.create.html" ext:cls="Ext.data.Record.create">Ext.data.Record.create</a> and cached in the <a href="/output/Ext.data.Record.html#Ext.data.Record-fields" ext:cls="Ext.data.Record" ext:member="fields">fields</a> property of the created Record constructor's <b>prototype.</b></p>
+
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.data.Field-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="convert-header"></a>
+                        <b>convert</b>
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                (Optional) A function which convert...
+                            </div>
+                            <div class="long">
+                                (Optional) A function which converts the value provided by the Reader into an object that will be stored in the Record. It is passed the following parameters:<ul> <li><b>v</b> : Mixed<div class="sub-desc">The data value as read by the Reader.</div></li> <li><b>rec</b> : Mixed<div class="sub-desc">The data object containing the row as read by the Reader. Depending on Reader type, this could be an Array, an object, or an XML element.</div></li> </ul>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Field</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="dateFormat-header"></a>
+                        <b>dateFormat</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                (Optional) A format string for the ...
+                            </div>
+                            <div class="long">
+                                (Optional) A format string for the <a href="/output/Date.html#Date-parseDate" ext:cls="Date" ext:member="parseDate">Date.parseDate</a> function, or "timestamp" if the value provided by the Reader is a UNIX timestamp, or "time" if the value provided by the Reader is a  javascript millisecond timestamp.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Field</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="defaultValue-header"></a>
+                        <b>defaultValue</b>
+                        : Mixed
+                        <div class="mdesc">
+                            <div class="short">
+                                (Optional) The default value used w...
+                            </div>
+                            <div class="long">
+                                (Optional) The default value used <b>when a Record is being created by a <a href="output/Ext.data.Reader.html" ext:cls="Ext.data.Reader">Reader</a></b> when the item referenced by the <b><tt>mapping</tt></b> does not exist in the data object (i.e. undefined). (defaults to "")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Field</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="mapping-header"></a>
+                        <b>mapping</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                (Optional) A path specification for...
+                            </div>
+                            <div class="long">
+                                (Optional) A path specification for use by the <a href="output/Ext.data.Reader.html" ext:cls="Ext.data.Reader">Ext.data.Reader</a> implementation that is creating the Record to access the data value from the data object. If an <a href="/output/Ext.data.JsonReader.html" ext:cls="Ext.data.JsonReader">Ext.data.JsonReader</a> is being used, then this is a string containing the javascript expression to reference the data relative to the Record item's root. If an <a href="/output/Ext.data.XmlReader.html" ext:cls="Ext.data.XmlReader">Ext.data.XmlReader</a> is being used, this is an <a href="/output/Ext.DomQuery.html" ext:cls="Ext.DomQuery">Ext.DomQuery</a> path to the data item relative to the Record element. If the mapping expression is the same as the field name, this may be omitted.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Field</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="name-header"></a>
+                        <b>name</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                The name by which the field is refe...
+                            </div>
+                            <div class="long">
+                                The name by which the field is referenced within the Record. This is referenced by, for example, the <em>dataIndex</em> property in column definition objects passed to <a href="/output/Ext.grid.ColumnModel.html" ext:cls="Ext.grid.ColumnModel">Ext.grid.ColumnModel</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Field</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="sortDir-header"></a>
+                        <b>sortDir</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                (Optional) Initial direction to sor...
+                            </div>
+                            <div class="long">
+                                (Optional) Initial direction to sort. "ASC" or "DESC"
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Field</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="sortType-header"></a>
+                        <b>sortType</b>
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                (Optional) A function which convert...
+                            </div>
+                            <div class="long">
+                                (Optional) A function which converts a Field's value to a comparable value in order to ensure correct sort ordering. Predefined functions are provided in <a href="/output/Ext.data.SortTypes.html" ext:cls="Ext.data.SortTypes">Ext.data.SortTypes</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Field</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="type-header"></a>
+                        <b>type</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                (Optional) The data type for conver...
+                            </div>
+                            <div class="long">
+                                (Optional) The data type for conversion to displayable value. Possible values are <ul><li>auto (Default, implies no conversion)</li> <li>string</li> <li>int</li> <li>float</li> <li>boolean</li> <li>date</li></ul>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Field</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.data.Field-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.data.Field-methods"></a>
+    <h2>公共方法</h2>
+    
+    
+        这个类没有公告方法。
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.data.Field-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

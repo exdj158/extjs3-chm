@@ -1,0 +1,1655 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.Fx-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.Fx-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.Fx-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.Fx-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.Fx" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/Fx.html#cls-Ext.Fx">Ext.Fx</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                Fx.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/Fx.html#cls-Ext.Fx">Ext.Fx</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         <p>这是一个提供基础动画和视觉效果支持的类。<b>注意：</b>此类被引用后会自动应用于 <a href="/output/Ext.Element.html" ext:cls="Ext.Element">Ext.Element</a> 的接口， 因此所有的效果必须通过 Element 对象来实现。反过来说，既然 Element 对象实际上并没有定义这些效果， Ext.Fx 类<b>必须</b>被 Element 对象引用后才能使那些效果生效。</p><br/> <p>值得注意的是，虽然 Fx 的方法和许多非 Fx Element 对象的方法支持“方法链”，即他们返回 Element 对象本身作为方法的返回值， 但是并非每次都能将两个对象混合在一个方法链中。Fx 的方法使用一个内部的效果队列以使每个效果能够在适当的时候按次序展现。另一方面，对于非 Fx 的方法则没有这样的一个内部队列，它们总是立即生效。正因为如此，虽然可以在一个单链中混合调用 Fx 和非 Fx 的方法， 但是并非总能得到预期的结果，而且必须小心处理类似的情况。</p><br/> <p>移动类的效果支持8个方向的定位锚，这意味着你可以选择 Element 对象所有8个不同的锚点中的任意一个来作为动画的起点或终点。下面是所有支持的定位锚点位置：</p>
+<pre>
+值     说明
+-----  -----------------------------
+tl     左上角
+t      顶部中央
+tr     右上角
+l      左边中央
+r      右边中央
+bl     左下角
+b      底部中央
+br     右下角
+</pre> <b>尽管某些 Fx 方法可以接受特殊的自定义配置参数，然而下面的配置选项区域内显示了可供所有 Fx 方法使用的公共选项。</b>
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.Fx-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="afterCls-header"></a>
+                        <b>afterCls</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                特效完成后应用的CSS样式类
+                            </div>
+                            <div class="long">
+                                特效完成后应用的CSS样式类
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="afterStyle-header"></a>
+                        <b>afterStyle</b>
+                        : String/Object/Function
+                        <div class="mdesc">
+                            <div class="short">
+                                特效完成后应用于 Element 对象的指定样式的字符串，例如："wi...
+                            </div>
+                            <div class="long">
+                                特效完成后应用于 Element 对象的指定样式的字符串，例如："width:100px"，或者形如 {width:"100px"} 的对象，或者返回值为类似形式的函数
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="block-header"></a>
+                        <b>block</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                当特效生效时是否阻塞队列中的其他特效
+                            </div>
+                            <div class="long">
+                                当特效生效时是否阻塞队列中的其他特效
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="callback-header"></a>
+                        <b>callback</b>
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                指定当效果完成时调用的函数
+                            </div>
+                            <div class="long">
+                                指定当效果完成时调用的函数
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="concurrent-header"></a>
+                        <b>concurrent</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                是否允许特效与队列中的下一个特效并行生效，或者确保他们在运行队列中
+                            </div>
+                            <div class="long">
+                                是否允许特效与队列中的下一个特效并行生效，或者确保他们在运行队列中
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="duration-header"></a>
+                        <b>duration</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                以秒为单位设置的特效持续时间
+                            </div>
+                            <div class="long">
+                                以秒为单位设置的特效持续时间
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="easing-header"></a>
+                        <b>easing</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                指定特效函数使用的合法的 Easing 值
+                            </div>
+                            <div class="long">
+                                指定特效函数使用的合法的 Easing 值
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="remove-header"></a>
+                        <b>remove</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                特效完成后是否从 DOM 树中完全删除 Element 对象
+                            </div>
+                            <div class="long">
+                                特效完成后是否从 DOM 树中完全删除 Element 对象
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="scope-header"></a>
+                        <b>scope</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                特效函数的作用域
+                            </div>
+                            <div class="long">
+                                特效函数的作用域
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="stopFx-header"></a>
+                        <b>stopFx</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                是否在当前特效完成后停止并删除先前（并发）的特效
+                            </div>
+                            <div class="long">
+                                是否在当前特效完成后停止并删除先前（并发）的特效
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="useDisplay-header"></a>
+                        <b>useDisplay</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                隐藏 Element 对象时是否使用 display CSS样式属性替...
+                            </div>
+                            <div class="long">
+                                隐藏 Element 对象时是否使用 <i>display</i> CSS样式属性替代 <i>visibility</i>属性（仅仅应用于那些结束后隐藏 Element 对象的等效，其他的等效无效）
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Fx</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.Fx-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.Fx-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-fadeIn"></a>
+                        <!--名称+参数列表-->
+                        <b>fadeIn</b>(
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                将元素从透明渐变为不透明。结束时的透明度可以根据"endOpacity... 
+                            </div>
+                            <div class="long">
+                                将元素从透明渐变为不透明。结束时的透明度可以根据"endOpacity"选项来指定。用法：
+<pre><code>
+// 默认情况：将可见度由 0 渐变到 100%
+el.fadeIn();
+
+// 自定义：在2秒钟之内将可见度由 0 渐变到 75%
+el.fadeIn({ endOpacity: .75, duration: 2});
+
+// 常见的配置选项及默认值
+el.fadeIn({
+    endOpacity: 1, //可以是 0 到 1 之前的任意值（例如：.5）
+    easing: 'easeOut',
+    duration: .5
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-fadeOut"></a>
+                        <!--名称+参数列表-->
+                        <b>fadeOut</b>(
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                将元素从不透明渐变为透明。结束时的透明度可以根据"endOpacity... 
+                            </div>
+                            <div class="long">
+                                将元素从不透明渐变为透明。结束时的透明度可以根据"endOpacity"选项来指定。用法：
+<pre><code>
+// 默认情况：将元素的可见度由当前值渐变到 0
+el.fadeOut();
+
+// 自定义：在2秒钟内将元素的可见度由当前值渐变到 25%
+el.fadeOut({ endOpacity: .25, duration: 2});
+
+// 常见的配置选项及默认值
+el.fadeOut({
+    endOpacity: 0, 可以是 0 到 1 之前的任意值（例如：.5）
+    easing: 'easeOut',
+    duration: .5
+    remove: false,
+    useDisplay: false
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-frame"></a>
+                        <!--名称+参数列表-->
+                        <b>frame</b>(
+	                        
+                                <code>
+                                    String color
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number count
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                展示一个展开的波纹，伴随着渐隐的边框以突出显示 Element 对象。... 
+                            </div>
+                            <div class="long">
+                                展示一个展开的波纹，伴随着渐隐的边框以突出显示 Element 对象。用法：
+<pre><code>
+// 默认情况：一个淡蓝色的波纹
+el.frame();
+
+// 自定义：三个红色的波纹并持续3秒
+el.frame("ff0000", 3, { duration: 3 });
+
+// 常见的配置选项及默认值
+el.frame("C3DAF9", 1, {
+    duration: 1 //每个波纹持续的时间duration of each individual ripple.
+    // 注意：这里不能使用 Easing 选项在，即使被包含了也会被忽略
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    color
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    （可选）边框的颜色。必须为不以 # 开头的6位16进制字符（默认为淡蓝色色：'C3DAF9'）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    count
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    （可选）要显示的波纹的个数（默认为1）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-ghost"></a>
+                        <!--名称+参数列表-->
+                        <b>ghost</b>(
+	                        
+                                <code>
+                                    String anchor
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                将元素从视图滑出并伴随着渐隐。作为可选参数传入的定位锚点将被设置为滑出... 
+                            </div>
+                            <div class="long">
+                                将元素从视图滑出并伴随着渐隐。作为可选参数传入的定位锚点将被设置为滑出特效的结束点。用法：<pre><code>
+// 默认情况：将元素向下方滑出并渐隐
+el.ghost();
+
+// 自定义：在2秒钟内将元素向右边滑出并渐隐
+el.ghost('r', { duration: 2 });
+
+// 常见的配置选项及默认值。el.ghost('b', {
+    easing: 'easeOut',
+    duration: .5
+    remove: false,
+    useDisplay: false
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    anchor
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    （可选）有效的 Fx 定位锚点之一（默认为底部：'b'）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-hasActiveFx"></a>
+                        <!--名称+参数列表-->
+                        <b>hasActiveFx</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                当元素拥有任何活动的或队列中的特效时返回 true，否则返回 false。 
+                            </div>
+                            <div class="long">
+                                当元素拥有任何活动的或队列中的特效时返回 true，否则返回 false。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            如果元素拥有特效为 true，否则为 false。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-hasFxBlock"></a>
+                        <!--名称+参数列表-->
+                        <b>hasFxBlock</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                如果元素的当前特效阻塞了特效队列以致于在当前特效完成前其他特效无法排队... 
+                            </div>
+                            <div class="long">
+                                如果元素的当前特效阻塞了特效队列以致于在当前特效完成前其他特效无法排队，则返回 true。如果元素没有阻塞队列则返回 false。此方法一般用于保证由用户动作启动的特效在相同的特效重新启动之前能够顺利完成（例如：即使用户点击了很多次也只触发一个效果）。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            如果阻塞返回 true，否则返回 false。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-highlight"></a>
+                        <!--名称+参数列表-->
+                        <b>highlight</b>(
+	                        
+                                <code>
+                                    String color
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                根据设置的颜色高亮显示 Element 对象（默认情况下应用于 bac... 
+                            </div>
+                            <div class="long">
+                                根据设置的颜色高亮显示 Element 对象（默认情况下应用于 background-color 属性，但是也可以通过"attr"配置选项来改变）， 然后渐隐为原始颜色。如果原始颜色不可用，你应该设置"endColor"配置选项以免动画结束后被清除。用法：
+<pre><code>
+// 默认情况：高亮显示的背景颜色为黄色
+el.highlight();
+
+// 自定义：高亮显示前景字符颜色为蓝色并持续2秒
+el.highlight("0000ff", { attr: 'color', duration: 2 });
+
+// 常见的配置选项及默认值
+el.highlight("ffff9c", {
+    attr: "background-color", //可以是任何能够把值设置成颜色代码的 CSS 属性
+    endColor: (current color) or "ffffff",
+    easing: 'easeIn',
+    duration: 1
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    color
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    （可选）高亮颜色。必须为不以 # 开头的6位16进制字符（默认为黄色：'ffff9c'）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-pause"></a>
+                        <!--名称+参数列表-->
+                        <b>pause</b>(
+	                        
+                                <code>
+                                    Number seconds
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                在任何后续的等效开始之前创建一次暂停。如果队列中没有后续特效则没有效果... 
+                            </div>
+                            <div class="long">
+                                在任何后续的等效开始之前创建一次暂停。如果队列中没有后续特效则没有效果。用法：
+<pre><code>
+el.pause(1);
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    seconds
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    以秒为单位的暂停时间
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-puff"></a>
+                        <!--名称+参数列表-->
+                        <b>puff</b>(
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                渐隐元素的同时还伴随着向各个方向缓慢地展开。特效结束后，元素会被隐藏（... 
+                            </div>
+                            <div class="long">
+                                渐隐元素的同时还伴随着向各个方向缓慢地展开。特效结束后，元素会被隐藏（visibility = 'hidden'）， 但是块元素仍然会在 document 对象中占据空间。如果需要将元素从 DOM 树删除，则使用'remove'配置选项。用法：<pre><code>
+// 默认
+el.puff();
+
+// 常见的配置选项及默认值
+el.puff({
+    easing: 'easeOut',
+    duration: .5,
+    remove: false,
+    useDisplay: false
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-scale"></a>
+                        <!--名称+参数列表-->
+                        <b>scale</b>(
+	                        
+                                <code>
+                                    Number width
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number height
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                以动画展示元素从开始的高度/宽度转换到结束的高度/宽度。用法：
+
+//... 
+                            </div>
+                            <div class="long">
+                                以动画展示元素从开始的高度/宽度转换到结束的高度/宽度。用法：
+<pre><code>
+// 将宽度和高度设置为 100x100 象素
+el.scale(100, 100);
+
+// 常见的配置选项及默认值。如果给定值为 null，则高度和宽度默认被设置为元素已有的值。el.scale(
+    [element's width],
+    [element's height], {
+    easing: 'easeOut',
+    duration: .35
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    width
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    新的宽度（传递 undefined 则保持原始宽度）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    height
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    新的高度（传递 undefined 则保持原始高度）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-sequenceFx"></a>
+                        <!--名称+参数列表-->
+                        <b>sequenceFx</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                确保元素调用 sequenceFx 方法之后所有队列中的特效依次运行。... 
+                            </div>
+                            <div class="long">
+                                确保元素调用 sequenceFx 方法之后所有队列中的特效依次运行。它与 <a href="/output/Ext.Fx.html#Ext.Fx-syncFx" ext:cls="Ext.Fx" ext:member="syncFx">syncFx</a> 的作用是相反的。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-shift"></a>
+                        <!--名称+参数列表-->
+                        <b>shift</b>(
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                以动画展示元素任意组合属性的改变，如元素的尺寸、位置坐标和（或）透明度... 
+                            </div>
+                            <div class="long">
+                                以动画展示元素任意组合属性的改变，如元素的尺寸、位置坐标和（或）透明度。如果以上属性中的任意一个没有在配置选项对象中指定则该属性不会发生改变。为了使该特效生效，则必须在配置选项对象中设置至少一个新的尺寸、位置坐标或透明度属性。用法：
+<pre><code>
+// 将元素水平地滑动到X坐标值为200的位置，同时还伴随着高度和透明度的改变
+el.shift({ x: 200, height: 50, opacity: .8 });
+
+// 常见的配置选项及默认值。el.shift({
+    width: [element's width],
+    height: [element's height],
+    x: [element's x position],
+    y: [element's y position],
+    opacity: [element's opacity],
+    easing: 'easeOut',
+    duration: .35
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-slideIn"></a>
+                        <!--名称+参数列表-->
+                        <b>slideIn</b>(
+	                        
+                                <code>
+                                    String anchor
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                将元素滑入到视图中。作为可选参数传入的定位锚点将被设置为滑入特效的起始... 
+                            </div>
+                            <div class="long">
+                                将元素滑入到视图中。作为可选参数传入的定位锚点将被设置为滑入特效的起始点。该函数会在需要的时候自动将元素与一个固定尺寸的容器封装起来。有效的定位锚点可以参见 Fx 类的概述。用法：<pre><code>
+// 默认情况：将元素从顶部滑入
+el.slideIn();
+
+// 自定义：在2秒钟内将元素从右边滑入
+el.slideIn('r', { duration: 2 });
+
+// 常见的配置选项及默认值
+el.slideIn('t', {
+    easing: 'easeOut',
+    duration: .5
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    anchor
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    （可选）有效的 Fx 定位锚点之一（默认为顶部：'t'）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-slideOut"></a>
+                        <!--名称+参数列表-->
+                        <b>slideOut</b>(
+	                        
+                                <code>
+                                    String anchor
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                将元素从视图中滑出。作为可选参数传入的定位锚点将被设置为滑出特效的结束... 
+                            </div>
+                            <div class="long">
+                                将元素从视图中滑出。作为可选参数传入的定位锚点将被设置为滑出特效的结束点。特效结束后，元素会被隐藏（visibility = 'hidden'）， 但是块元素仍然会在 document 对象中占据空间。如果需要将元素从 DOM 树删除，则使用'remove'配置选项。该函数会在需要的时候自动将元素与一个固定尺寸的容器封装起来。有效的定位锚点可以参见 Fx 类的概述。用法：<pre><code>
+// 默认情况：将元素从顶部滑出
+el.slideOut();
+
+// 自定义：在2秒钟内将元素从右边滑出
+el.slideOut('r', { duration: 2 });
+
+// 常见的配置选项及默认值
+el.slideOut('t', {
+    easing: 'easeOut',
+    duration: .5,
+    remove: false,
+    useDisplay: false
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    anchor
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    （可选）有效的 Fx 定位锚点之一（默认为顶部：'t'）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-stopFx"></a>
+                        <!--名称+参数列表-->
+                        <b>stopFx</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                停止运行中的任何特效，如果元素的内部特效队列中还包含其他尚未开始的特效... 
+                            </div>
+                            <div class="long">
+                                停止运行中的任何特效，如果元素的内部特效队列中还包含其他尚未开始的特效也一并清除。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-switchOff"></a>
+                        <!--名称+参数列表-->
+                        <b>switchOff</b>(
+	                        
+                                <code>
+                                    Object options
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                类似单击过后般地闪烁一下元素，然后从元素的中间开始收缩（类似于关闭电视... 
+                            </div>
+                            <div class="long">
+                                类似单击过后般地闪烁一下元素，然后从元素的中间开始收缩（类似于关闭电视机时的效果）。特效结束后，元素会被隐藏（visibility = 'hidden'），但是块元素仍然会在 document 对象中占据空间。如果需要将元素从 DOM 树删除，则使用'remove'配置选项。用法：<pre><code>
+// 默认
+el.switchOff();
+
+// 所有的配置选项及默认值
+el.switchOff({
+    easing: 'easeIn',
+    duration: .3,
+    remove: false,
+    useDisplay: false
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    options
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    （可选）由任何 Fx 的配置选项构成的对象
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Fx-syncFx"></a>
+                        <!--名称+参数列表-->
+                        <b>syncFx</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Element
+                        <div class="mdesc">
+                            <div class="short">
+                                确保元素调用 syncFx 方法之后所有队列中的特效并发运行。它与 s... 
+                            </div>
+                            <div class="long">
+                                确保元素调用 syncFx 方法之后所有队列中的特效并发运行。它与 <a href="/output/Ext.Fx.html#Ext.Fx-sequenceFx" ext:cls="Ext.Fx" ext:member="sequenceFx">sequenceFx</a> 的作用是相反的。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Element 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Fx
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.Fx-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

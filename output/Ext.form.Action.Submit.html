@@ -1,0 +1,528 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.form.Action.Submit-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.form.Action.Submit-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.form.Action.Submit-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.form.Action.Submit-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.form.Action.Submit" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/Action.html#cls-Ext.form.Action.Submit">Ext.form.Action.Submit</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			ExtformAction
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                Action.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/Action.html#cls-Ext.form.Action.Submit">Ext.form.Action.Submit</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.form.Action.html"  ext:cls="Ext.form.Action" ext:member="">Ext.form.Action</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        <p> 处理表单<a href="/output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Form</a>数据和返回的response对象的类。A class which handles submission of data from <a href="/output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Form</a>s and processes the returned response.</p> <p> 该类的实例仅在表单<a href="output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Form</a>{@link Ext.form.BasicForm#submit 提交}的时候创建。Instances of this class are only created by a <a href="/output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Form</a> when <a href="/output/Ext.form.BasicForm.html#Ext.form.BasicForm-submit" ext:cls="Ext.form.BasicForm" ext:member="submit">submit</a>ting.</p> <p> 返回的数据包必须包含一个 boolean 类型的<tt style="font-weight:bold">success</tt>属性，还有可选地，一个含有无效字段的<tt style="font-weight:bold">错误信息</tt>的属性。A response packet must contain a boolean <tt style="font-weight:bold">success</tt> property, and, optionally an <tt style="font-weight:bold">errors</tt> property. The <tt style="font-weight:bold">errors</tt> property contains error messages for invalid fields.</p> <p> 默认情况下，response数据包被认为是一个JSON对象，所以典型的response数据包看起来像是这样的： By default, response packets are assumed to be JSON, so a typical response packet may look like this:</p><pre><code>
+{
+    success: false,
+    errors: {
+        clientCode: "Client not found",
+        portOfLoading: "This field must not be null"
+    }
+}</code></pre> <p><a href="/output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Ext.form.BasicForm</a>的回调函数或其它处理函数的方法可能会处理其他的数据，放置在响应中。JSON解码后的数据可在<a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-result" ext:cls="Ext.form.Action.Submit" ext:member="result">result</a>找到。Other data may be placed into the response for processing by the <a href="/output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Ext.form.BasicForm</a> 's callback or event handler methods. The object decoded from this JSON is available in the <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-result" ext:cls="Ext.form.Action.Submit" ext:member="result">result</a> property.</p> <p> 另外，如果一个<a href="output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-errorReader" ext:cls="Ext.form.Action.Submit" ext:member="errorReader">errorReader</a>指定为<a href="output/Ext.data.XmlReader.html" ext:cls="Ext.data.XmlReader">XmlReader</a>： Alternatively, if an <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-errorReader" ext:cls="Ext.form.Action.Submit" ext:member="errorReader">errorReader</a> is specified as an <a href="/output/Ext.data.XmlReader.html" ext:cls="Ext.data.XmlReader">XmlReader</a>:</p><pre><code>
+    errorReader: new Ext.data.XmlReader({
+            record : 'field',
+            success: '@success'
+        }, [
+            'id', 'msg'
+        ]
+    )
+</code></pre> <p>那么结果集将会以XML形式返回。then the results may be sent back in XML format:</p><pre><code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;message success="false"&gt;
+&lt;errors&gt;
+    &lt;field&gt;
+        &lt;id&gt;clientCode&lt;/id&gt;
+        &lt;msg&gt;&lt;![CDATA[Code not found. &lt;br /&gt;&lt;i&gt;This is a test validation message from the server &lt;/i&gt;]]&gt;&lt;/msg&gt;
+    &lt;/field&gt;
+    &lt;field&gt;
+        &lt;id&gt;portOfLoading&lt;/id&gt;
+        &lt;msg&gt;&lt;![CDATA[Port not found. &lt;br /&gt;&lt;i&gt;This is a test validation message from the server &lt;/i&gt;]]&gt;&lt;/msg&gt;
+    &lt;/field&gt;
+&lt;/errors&gt;
+&lt;/message&gt;
+</code></pre> <p>表单的回调函数或者时间处理函数可以向相应的XML里置入其他的元素。XML文档在<a href="output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-errorReader" ext:cls="Ext.form.Action.Submit" ext:member="errorReader">errorReader</a>的<a href="output/Ext.data.XmlReader.html#Ext.data.XmlReader-xmlData" ext:cls="Ext.data.XmlReader" ext:member="xmlData">xmlData</a>属性。Other elements may be placed into the response XML for processing by the <a href="/output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Ext.form.BasicForm</a>'s callback or event handler methods. The XML document is available in the <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-errorReader" ext:cls="Ext.form.Action.Submit" ext:member="errorReader">errorReader</a>'s <a href="/output/Ext.data.XmlReader.html#Ext.data.XmlReader-xmlData" ext:cls="Ext.data.XmlReader" ext:member="xmlData">xmlData</a> property.</p>
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.form.Action.Submit-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="clientValidation-header"></a>
+                        <b>clientValidation</b>
+                        : boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                表明一个表单的字段是否都合法。在表单最终提交前调用。可以在表单的提交选...
+                            </div>
+                            <div class="long">
+                                表明一个表单的字段是否都合法。在表单最终提交前调用。可以在表单的提交选项中选择避免执行该操作。如果没有定义改属性，执行提交前的表单验证。Determines whether a Form's fields are validated in a final call to <a href="/output/Ext.form.BasicForm.html#Ext.form.BasicForm-isValid" ext:cls="Ext.form.BasicForm" ext:member="isValid">isValid</a> prior to submission. Pass <tt>false</tt> in the Form's submit options to prevent this. If not defined, pre-submission field validation is performed.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Submit</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="errorReader-header"></a>
+                        <b>errorReader</b>
+                        : Ext.data.DataReader
+                        <div class="mdesc">
+                            <div class="short">
+                                可选的。解读JSON对象不需要errorReader。Optional...
+                            </div>
+                            <div class="long">
+                                <b>可选的。解读JSON对象不需要errorReader。Optional. JSON is interpreted with no need for an errorReader.</b> <p> 从返回结果中读取一条记录的Reader。DataReader的<b>success</b>属性指明决定是否提交成功。Record对象的数据提供了任何未通过验证(非法)的表单字段的错误信息。A Reader which reads a single record from the returned data.  The DataReader's <b>success</b> property specifies how submission success is determined. The Record's data provides the error messages to apply to any invalid form Fields.</p>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Submit</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="failure-header"></a>
+                        <b>failure</b>
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                当接收到一个返回失败的数据包或者在Ajax通信时发生错误调用的回调函数...
+                            </div>
+                            <div class="long">
+                                当接收到一个返回失败的数据包或者在Ajax通信时发生错误调用的回调函数。这个函数传递以下的参数:  The function to call when a failure packet was recieved, or when an error ocurred in the Ajax communication. The function is passed the following parameters:<ul class="mdetail-params"> <li><b>form</b> : Ext.form.BasicForm<div class="sub-desc">作出请求动作的表单。The form that requested the action</div></li> <li><b>action</b> : Ext.form.Action<div class="sub-desc">Action类。如果发生了Ajax异常，错误类型会在<a href="output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-failureType" ext:cls="Ext.form.Action.Submit" ext:member="failureType">failureType</a>里。该对象的<a href="output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-result" ext:cls="Ext.form.Action.Submit" ext:member="result">result</a>属性可能被检查，用来执行自定义的后期处理。The Action class. If an Ajax error ocurred, the failure type will be in <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-failureType" ext:cls="Ext.form.Action.Submit" ext:member="failureType">failureType</a>. The <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-result" ext:cls="Ext.form.Action.Submit" ext:member="result">result</a> property of this object may be examined to perform custom postprocessing.</div></li> </ul>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="method-header"></a>
+                        <b>method</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                获取请求的URL的HTTP方法。默认为Ext.form.BasicFo...
+                            </div>
+                            <div class="long">
+                                获取请求的URL的HTTP方法。默认为<a href="/output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Ext.form.BasicForm</a>的方法。如果没有指定，使用DOM表单的方法。The HTTP method to use to access the requested URL. Defaults to the <a href="/output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Ext.form.BasicForm</a>'s method, or if that is not specified, the underlying DOM form's method.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="params-header"></a>
+                        <b>params</b>
+                        : Mixed
+                        <div class="mdesc">
+                            <div class="short">
+                                传递到额外值。它们添加到表单的Ext.form.BasicFormba...
+                            </div>
+                            <div class="long">
+                                传递到额外值。它们添加到表单的<a href="output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-Ext.form.BasicFormbaseParams" ext:cls="Ext.form.Action.Submit" ext:member="Ext.form.BasicFormbaseParams">Ext.form.BasicFormbaseParams</a>由表单的输入字段传递到指定的URL。Extra parameter values to pass. These are added to the Form's <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-Ext.form.BasicFormbaseParams" ext:cls="Ext.form.Action.Submit" ext:member="Ext.form.BasicFormbaseParams">Ext.form.BasicFormbaseParams</a> and passed to the specified URL along with the Form's input fields.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="reset-header"></a>
+                        <b>reset</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                当设置为true的时候，导致表单重置reset  如果指定了该值，re...
+                            </div>
+                            <div class="long">
+                                当设置为<tt><b>true</b></tt>的时候，导致表单重置<a href="output/Ext.form.BasicForm.reset.html" ext:cls="Ext.form.BasicForm.reset">reset</a>  如果指定了该值，reset将在表单的<a href="output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-success" ext:cls="Ext.form.Action.Submit" ext:member="success">success</a> 回调函数<b>前</b>和<a href="output/Ext.form.BasicForm.actioncomplete.html" ext:cls="Ext.form.BasicForm.actioncomplete">actioncomplete</a>事件被激发前执行。When set to <tt><b>true</b></tt>, causes the Form to be <a href="output/Ext.form.BasicForm.reset.html" ext:cls="Ext.form.BasicForm.reset">reset</a> on Action success. If specified, this happens <b>before</b> the <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-success" ext:cls="Ext.form.Action.Submit" ext:member="success">success</a> callback is called and before the Form's <a href="output/Ext.form.BasicForm.actioncomplete.html" ext:cls="Ext.form.BasicForm.actioncomplete">actioncomplete</a> event fires.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="scope-header"></a>
+                        <b>scope</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                回调函数执行的范围。指改回调函数的this。The scope in ...
+                            </div>
+                            <div class="long">
+                                回调函数执行的范围。指改回调函数的<tt>this</tt>。The scope in which to call the callback functions (The <tt>this</tt> reference for the callback functions).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="success-header"></a>
+                        <b>success</b>
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                当接收到一个有效的成功返回的数据包的时候调用的回调函数。这个函数传递以...
+                            </div>
+                            <div class="long">
+                                当接收到一个有效的成功返回的数据包的时候调用的回调函数。这个函数传递以下的参数:   The function to call when a valid success return packet is recieved. The function is passed the following parameters:<ul class="mdetail-params"> <li><b>form</b> : Ext.form.BasicForm<div class="sub-desc">作出请求动作的表单。The form that requested the action</div></li> <li><b>action</b> : Ext.form.Action<div class="sub-desc">Action类。该对象的<a href="output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-result" ext:cls="Ext.form.Action.Submit" ext:member="result">result</a>属性可能被检查，用来执行自定义的后期处理。The Action class. The <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-result" ext:cls="Ext.form.Action.Submit" ext:member="result">result</a> property of this object may be examined to perform custom postprocessing.</div></li> </ul>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="timeout-header"></a>
+                        <b>timeout</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                在服务端返回CONNECT_FAILURE这样的failureType...
+                            </div>
+                            <div class="long">
+                                在服务端返回<a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-CONNECT_FAILURE" ext:cls="Ext.form.Action.Submit" ext:member="CONNECT_FAILURE">CONNECT_FAILURE</a>这样的<a href="output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-failureType" ext:cls="Ext.form.Action.Submit" ext:member="failureType">failureType</a>之前等待的毫秒数。The number of milliseconds to wait for a server response before failing with the <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-failureType" ext:cls="Ext.form.Action.Submit" ext:member="failureType">failureType</a> as <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-Action.CONNECT_FAILURE" ext:cls="Ext.form.Action.Submit" ext:member="Action.CONNECT_FAILURE">Action.CONNECT_FAILURE</a>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="url-header"></a>
+                        <b>url</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                调用的URL资源。The URL that the Action is...
+                            </div>
+                            <div class="long">
+                                调用的URL资源。The URL that the Action is to invoke.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="waitMsg-header"></a>
+                        <b>waitMsg</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                在调用一个action的处理过程中调用Ext.MessageBoxwa...
+                            </div>
+                            <div class="long">
+                                在调用一个action的处理过程中调用<a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-Ext.MessageBoxwait" ext:cls="Ext.form.Action.Submit" ext:member="Ext.MessageBoxwait">Ext.MessageBoxwait</a>显示的内容。The message to be displayed by a call to <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-Ext.MessageBoxwait" ext:cls="Ext.form.Action.Submit" ext:member="Ext.MessageBoxwait">Ext.MessageBoxwait</a> during the time the action is being processed.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="waitTitle-header"></a>
+                        <b>waitTitle</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                在调用一个action的处理过程中调用Ext.MessageBoxwa...
+                            </div>
+                            <div class="long">
+                                在调用一个action的处理过程中调用<a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-Ext.MessageBoxwait" ext:cls="Ext.form.Action.Submit" ext:member="Ext.MessageBoxwait">Ext.MessageBoxwait</a>显示的标题。The title to be displayed by a call to <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-Ext.MessageBoxwait" ext:cls="Ext.form.Action.Submit" ext:member="Ext.MessageBoxwait">Ext.MessageBoxwait</a> during the time the action is being processed.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.form.Action.Submit-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="CLIENT_INVALID-activeItem"></a>
+                        <b>
+                        CLIENT_INVALID: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                当客户端的表单验证出现错误而中断提交动作的时候返回false的错误类型...
+                            </div>
+                            <div class="long">
+                                当客户端的表单验证出现错误而中断提交动作的时候返回<tt>false</tt>的错误类型。Failure type returned when client side validation of the Form fails thus aborting a submit action. Client side validation is performed unless <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-clientValidation" ext:cls="Ext.form.Action.Submit" ext:member="clientValidation">clientValidation</a> is explicitly set to <tt>false</tt>. @type {String}
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="CONNECT_FAILURE-activeItem"></a>
+                        <b>
+                        CONNECT_FAILURE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                尝试向远程服务器发送请求遇到通信错误返回的错误类型。可用respons...
+                            </div>
+                            <div class="long">
+                                尝试向远程服务器发送请求遇到通信错误返回的错误类型。可用<a href="output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-response" ext:cls="Ext.form.Action.Submit" ext:member="response">response</a>提取更多信息。Failure type returned when a communication error happens when attempting to send a request to the remote server. The <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-response" ext:cls="Ext.form.Action.Submit" ext:member="response">response</a> may be examined to provide further information. @type {String}
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="LOAD_FAILURE-activeItem"></a>
+                        <b>
+                        LOAD_FAILURE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                服务端response的data属性没有返回任何字段的值得时候返回的错...
+                            </div>
+                            <div class="long">
+                                服务端response的<tt style="font-weight:bold">data</tt>属性没有返回任何字段的值得时候返回的错误类型。Failure type returned when the response's <tt style="font-weight:bold">success</tt> property is set to <tt>false</tt>, or no field values are returned in the response's <tt style="font-weight:bold">data</tt> property. @type {String}
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="SERVER_INVALID-activeItem"></a>
+                        <b>
+                        SERVER_INVALID: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                 服务端验证表单出错时返回的错误类型，在response的errors...
+                            </div>
+                            <div class="long">
+                                <p> 服务端验证表单出错时返回的错误类型，在response的<tt style="font-weight:bold">errors</tt>属性里指明具体的字段错误信息。Failure type returned when server side processing fails and the <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-result" ext:cls="Ext.form.Action.Submit" ext:member="result">result</a>'s <tt style="font-weight:bold">success</tt> property is set to <tt>false</tt>.</p> <p>In the case of a form submission, field-specific error messages may be returned in the <a href="/output/Ext.form.Action.Submit.html#Ext.form.Action.Submit-result" ext:cls="Ext.form.Action.Submit" ext:member="result">result</a>'s <tt style="font-weight:bold">errors</tt> property.</p> @type {String}
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="type-activeItem"></a>
+                        <b>
+                        type: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                改Action的实例执行的action类型。目前仅支持“提交”和“加载...
+                            </div>
+                            <div class="long">
+                                改Action的实例执行的action类型。目前仅支持“提交”和“加载”。The type of action this Action instance performs.Currently only "submit" and "load" are supported. @type {String}
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.form.Action.Submit-methods"></a>
+    <h2>公共方法</h2>
+    
+    
+        这个类没有公告方法。
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.form.Action.Submit-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

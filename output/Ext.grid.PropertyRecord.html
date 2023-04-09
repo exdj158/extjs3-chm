@@ -1,0 +1,144 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.grid.PropertyRecord-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.grid.PropertyRecord-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.grid.PropertyRecord-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.grid.PropertyRecord-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.grid.PropertyRecord" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/PropertyGrid.html#cls-Ext.grid.PropertyRecord">Ext.grid.PropertyRecord</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extgrid
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                PropertyGrid.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/PropertyGrid.html#cls-Ext.grid.PropertyRecord">Ext.grid.PropertyRecord</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+          <a href="/output/Ext.grid.PropertyGrid.html" ext:cls="Ext.grid.PropertyGrid">Ext.grid.PropertyGrid</a>的一种特定类型，用于表示一对“名称/值”的数据。数据的格式必须是<a href="output/Ext.data.Record.html" ext:cls="Ext.data.Record">Ext.data.Record</a>类型。典型状态下，属性记录（PropertyRecords）由于能够隐式生成而不需要直接创建， 只需要配置适当的数据配置，即通过 <a href="/output/Ext.grid.PropertyRecord.html#Ext.grid.PropertyRecord-Ext.grid.PropertyGridsource" ext:cls="Ext.grid.PropertyRecord" ext:member="Ext.grid.PropertyGridsource">Ext.grid.PropertyGridsource</a>的配置属性或是调用<a href="output/Ext.grid.PropertyRecord.html#Ext.grid.PropertyRecord-Ext.grid.PropertyGridsetSource" ext:cls="Ext.grid.PropertyRecord" ext:member="Ext.grid.PropertyGridsetSource">Ext.grid.PropertyGridsetSource</a>的方法。然而在如需要的情况下，这些记录也可以显式创建起来，例子如下：<br /> A specific <a href="/output/Ext.data.Record.html" ext:cls="Ext.data.Record">Ext.data.Record</a> type that represents a name/value pair and is made to work with the <a href="/output/Ext.grid.PropertyGrid.html" ext:cls="Ext.grid.PropertyGrid">Ext.grid.PropertyGrid</a>.  Typically, PropertyRecords do not need to be created directly as they can be created implicitly by simply using the appropriate data configs either via the <a href="/output/Ext.grid.PropertyRecord.html#Ext.grid.PropertyRecord-Ext.grid.PropertyGridsource" ext:cls="Ext.grid.PropertyRecord" ext:member="Ext.grid.PropertyGridsource">Ext.grid.PropertyGridsource</a> config property or by calling <a href="/output/Ext.grid.PropertyRecord.html#Ext.grid.PropertyRecord-Ext.grid.PropertyGridsetSource" ext:cls="Ext.grid.PropertyRecord" ext:member="Ext.grid.PropertyGridsetSource">Ext.grid.PropertyGridsetSource</a>.  However, if the need arises, these records can also be created explicitly as shwon below.  Example usage: <pre><code>
+var rec = new Ext.grid.PropertyRecord({
+    name: 'Birthday',
+    value: new Date(Date.parse('05/26/1972'))
+});
+// 对当前的grid加入记录 Add record to an already populated grid
+grid.store.addSorted(rec);
+</code></pre> 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.grid.PropertyRecord-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.grid.PropertyRecord-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.grid.PropertyRecord-methods"></a>
+    <h2>公共方法</h2>
+    
+    
+        这个类没有公告方法。
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.grid.PropertyRecord-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

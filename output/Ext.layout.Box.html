@@ -1,0 +1,302 @@
+﻿<!--
+Mock
+<link rel="stylesheet" type="text/css" href="http://localhost/ext/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="http://localhost/ext/doc/resources/docs.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost/ext/doc/resources/style.css"/>
+-->
+<style type="text/css">
+    body {
+        overflow: scroll;
+    }
+    /**
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.layout.Box-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.layout.Box-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.layout.Box-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.layout.Box-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.layout.Box" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+	</div>
+	<h1>
+		类<a href="source/BoxLayout.html#cls-Ext.layout.Box">Ext.layout.Box</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extlayout
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                BoxLayout.js
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/BoxLayout.html#cls-Ext.layout.Box">Ext.layout.Box</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+                <a href="/output/Ext.layout.ContainerLayout.html"  ext:cls="Ext.layout.ContainerLayout" ext:member="">Ext.layout.ContainerLayout</a>
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        Ext.layout.Box类
+	</div>
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.layout.Box-configs"></a>
+	<h2>配置项</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="extraCls-header"></a>
+                        <b>extraCls</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                一个可选添加的CSS样式类，加入到组件的容器上（默认为''）。这为容器...
+                            </div>
+                            <div class="long">
+                                一个可选添加的CSS样式类，加入到组件的容器上（默认为''）。这为容器或容器的子节点加入标准CSS规则提供了方便。 An optional extra CSS class that will be added to the container (defaults to '').  This can be useful for adding customized styles to the container or any of its children using standard CSS rules. 
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="renderHidden-header"></a>
+                        <b>renderHidden</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为在渲染时隐藏包含的每一项（缺省为false）。 True...
+                            </div>
+                            <div class="long">
+                                True表示为在渲染时隐藏包含的每一项（缺省为false）。 True to hide each contained item on render (defaults to false). 
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.layout.Box-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row inherited expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="activeItem-activeItem"></a>
+                        <b>
+                        activeItem: {Ext.Component}</b>
+                        <div class="mdesc">
+                            <div class="short">
+                                 与Ext.Container#activeItem关联。 一个已激活...
+                            </div>
+                            <div class="long">
+                                 与<a href="###" onClick="alert('Ext.Container#activeItem');">Ext.Container#activeItem</a>关联。 一个已激活<a href="###" onClick="alert('Ext.Component');">Ext.Component</a>的引用。 例如，if(myPanel.layout.activeItem.id == 'item-1') { ... }。 activeItem只会作用在布局样式上。（像<a href="###" onClick="alert('Ext.layout.Accordion');">Ext.layout.Accordion</a>，<a href="###" onClick="alert('Ext.layout.CardLayout');">Ext.layout.CardLayout</a>和<a href="###" onClick="alert('Ext.layout.FitLayout');">Ext.layout.FitLayout</a>）。只读的。  Related to <a href="###" onClick="alert('Ext.Container#activeItem');">Ext.Container#activeItem</a>. A reference to the <a href="###" onClick="alert('Ext.Component');">Ext.Component</a> that is active.For example, if(myPanel.layout.activeItem.id == 'item-1') { ... }.  activeItem only applies to layout styles that can display items one at a time (like <a href="###" onClick="alert('Ext.layout.Accordion');">Ext.layout.Accordion</a>, <a href="###" onClick="alert('Ext.layout.CardLayout');">Ext.layout.CardLayout</a> and <a href="###" onClick="alert('Ext.layout.FitLayout');">Ext.layout.FitLayout</a>).  Read-only.  Related to <a href="###" onClick="alert('Ext.Container#activeItem');">Ext.Container#activeItem</a>. 
+      
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                    
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.layout.Box-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Box-Box"></a>
+                        <!--名称+参数列表-->
+                        <b>Box</b>()
+                        
+                        <!--返回类型，跟在方法后面的提示-->
+                        
+                        <div class="mdesc">
+                            <div class="short">
+                                 
+                            </div>
+                            <div class="long">
+                                
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                    	
+                                    		<li>None.</li>
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="monitorResize-monitorResize"></a>
+                        <!--名称+参数列表-->
+                        <b>monitorResize</b>()
+                        
+                        <!--返回类型，跟在方法后面的提示-->
+                        
+                        <div class="mdesc">
+                            <div class="short">
+                                与Ext.Container#activeItem关联。 一个已激活E... 
+                            </div>
+                            <div class="long">
+                                与<a href="###" onClick="alert('Ext.Container#activeItem');">Ext.Container#activeItem</a>关联。 一个已激活<a href="###" onClick="alert('Ext.Component');">Ext.Component</a>的引用。 例如，if(myPanel.layout.activeItem.id == 'item-1') { ... }。 activeItem只会作用在布局样式上。（像<a href="###" onClick="alert('Ext.layout.Accordion');">Ext.layout.Accordion</a>，<a href="###" onClick="alert('Ext.layout.CardLayout');">Ext.layout.CardLayout</a>和<a href="###" onClick="alert('Ext.layout.FitLayout');">Ext.layout.FitLayout</a>）。只读的。  Related to <a href="###" onClick="alert('Ext.Container#activeItem');">Ext.Container#activeItem</a>. A reference to the <a href="###" onClick="alert('Ext.Component');">Ext.Component</a> that is active.For example, if(myPanel.layout.activeItem.id == 'item-1') { ... }.  activeItem only applies to layout styles that can display items one at a time (like <a href="###" onClick="alert('Ext.layout.Accordion');">Ext.layout.Accordion</a>, <a href="###" onClick="alert('Ext.layout.CardLayout');">Ext.layout.CardLayout</a> and <a href="###" onClick="alert('Ext.layout.FitLayout');">Ext.layout.FitLayout</a>).  Read-only.  Related to <a href="###" onClick="alert('Ext.Container#activeItem');">Ext.Container#activeItem</a>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                    	
+                                    		<li>None.</li>
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.layout.Box-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

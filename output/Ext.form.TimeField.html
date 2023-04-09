@@ -1,0 +1,3011 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.form.TimeField-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.form.TimeField-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.form.TimeField-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.form.TimeField-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.form.TimeField" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/TimeField.html#cls-Ext.form.TimeField">Ext.form.TimeField</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extform
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                TimeField.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/TimeField.html#cls-Ext.form.TimeField">Ext.form.TimeField</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                
+                
+                    <a href="/output/Ext.form.ComboBox.html"  ext:cls="Ext.form.ComboBox" ext:member="">Ext.form.ComboBox</a>
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+        提供一个带有下拉框和自动时间验证的时间输入框。<br /> Provides a time input field with a time dropdown and automatic time validation.  Example usage: <pre><code>
+new Ext.form.TimeField({
+    minValue: '9:00 AM',
+    maxValue: '6:00 PM',
+    increment: 30
+});
+</code></pre>
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.form.TimeField-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="allQuery-header"></a>
+                        <b>allQuery</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                发送到服务器用以返回不经过滤的所有记录的文本（默认为 ''）。The ...
+                            </div>
+                            <div class="long">
+                                发送到服务器用以返回不经过滤的所有记录的文本（默认为 ''）。The text query to send to the server to return all records for the list with no filtering (defaults to '')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="allowBlank-header"></a>
+                        <b>allowBlank</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为 false 时将效验输入字符个数大于0(默认为 true)  F...
+                            </div>
+                            <div class="long">
+                                值为 false 时将效验输入字符个数大于0(默认为 true)  False to validate that the value length > 0 (defaults to true)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="altFormats-header"></a>
+                        <b>altFormats</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当用户输入数值时对输入数值解析的每一个“段落”，每个“段落”就用这个“...
+                            </div>
+                            <div class="long">
+                                当用户输入数值时对输入数值解析的每一个“段落”，每个“段落”就用这个“|”符号分隔。（默认为'g:ia|g:iA|g:i a|g:i A|h:i|g:i|H:i|ga|ha|gA|h a|g a|g A|gi|hi|gia|hia|g|H'） Multiple date formats separated by "|" to try when parsing a user input value and it doesn't match the defined format (defaults to 'g:ia|g:iA|g:i a|g:i A|h:i|g:i|H:i|ga|ha|gA|h a|g a|g A|gi|hi|gia|hia|g|H').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TimeField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="autoCreate-header"></a>
+                        <b>autoCreate</b>
+                        : String/Object
+                        <div class="mdesc">
+                            <div class="short">
+                                一个DomHelper创建元素的对象，或者为true，表示采用默认的方...
+                            </div>
+                            <div class="long">
+                                一个DomHelper创建元素的对象，或者为true，表示采用默认的方式创建元素。（默认为{tag: "input", type: "text", size: "16", autocomplete: "off"}） A DomHelper element spec, or true for a default element spec (defaults to {tag: "input", type: "text", size: "16", autocomplete: "off"})
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TriggerField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="blankText-header"></a>
+                        <b>blankText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当允许为空效验失败时显示的错误文本（默认为 "This field i...
+                            </div>
+                            <div class="long">
+                                当允许为空效验失败时显示的错误文本（默认为 "This field is required"）。Error text to display if the allow blank validation fails (defaults to "This field is required")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disableKeyFilter-header"></a>
+                        <b>disableKeyFilter</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为 true 时禁用输入按键过滤(默认为 false)  True ...
+                            </div>
+                            <div class="long">
+                                值为 true 时禁用输入按键过滤(默认为 false)  True to disable input keystroke filtering (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="displayField-header"></a>
+                        <b>displayField</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                组合框用以展示的数据的字段名（如果mode='remote'则默认为 ...
+                            </div>
+                            <div class="long">
+                                组合框用以展示的数据的字段名（如果mode='remote'则默认为 undefined，如果mode = 'local' 则默认为 'text'）。The underlying data field name to bind to this ComboBox (defaults to undefined if mode = 'remote' or 'text' if transforming a select)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="editable-header"></a>
+                        <b>editable</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为false时防止用户直接在输入框内输入文本，就像传统的选择框一样（...
+                            </div>
+                            <div class="long">
+                                值为false时防止用户直接在输入框内输入文本，就像传统的选择框一样（默认为 true）。False to prevent the user from typing text directly into the field, just like a traditional select (defaults to true)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="emptyClass-header"></a>
+                        <b>emptyClass</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                emptyText使用的CSS样式类名(默认为 'x-form-emp...
+                            </div>
+                            <div class="long">
+                                <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-emptyText" ext:cls="Ext.form.TimeField" ext:member="emptyText">emptyText</a>使用的CSS样式类名(默认为 'x-form-empty-field')。此类的添加与移除均由当前字段是否有值来自动处理。The CSS class to apply to an empty field to style the <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-emptyText" ext:cls="Ext.form.TimeField" ext:member="emptyText">emptyText</a> (defaults to 'x-form-empty-field').  This class is automatically added and removed as needed depending on the current field value.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="emptyText-header"></a>
+                        <b>emptyText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                空字段中显示的文本(默认为 null)。注意，只要这个字段是被激活的而...
+                            </div>
+                            <div class="long">
+                                空字段中显示的文本(默认为 null)。注意，只要这个字段是被激活的而且name属性是有被指定的，那么也会发送到服务端。The default text to place into an empty field (defaults to null). Note that this value will be submitted to the server if this field is enabled and configured with a <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-name" ext:cls="Ext.form.TimeField" ext:member="name">name</a>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="enableKeyEvents-header"></a>
+                        <b>enableKeyEvents</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示，为HTML的input输入字段激活键盘事件的代理（默认为...
+                            </div>
+                            <div class="long">
+                                True表示，为HTML的input输入字段激活键盘事件的代理（默认为false）  True to enable the proxying of key events for the HTML input field (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="forceSelection-header"></a>
+                        <b>forceSelection</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为true时将限定选中的值为列表中的值，值为false则允许用户将任...
+                            </div>
+                            <div class="long">
+                                值为true时将限定选中的值为列表中的值，值为false则允许用户将任意文本设置到字段（默认为 false）。True to restrict the selected value to one of the values in the list, false to allow the user to set arbitrary text into the field (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="format-header"></a>
+                        <b>format</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                默认的字符串时间的格式，可以被覆盖以支持本地化。表示此格式的该字符串必...
+                            </div>
+                            <div class="long">
+                                默认的字符串时间的格式，可以被覆盖以支持本地化。表示此格式的该字符串必须符合<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-DateparseDate" ext:cls="Ext.form.TimeField" ext:member="DateparseDate">DateparseDate</a>（默认为'g:i A', e.g., '3:15 PM'）。The default time format string which can be overriden for localization support.  The format must be valid according to <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-DateparseDate" ext:cls="Ext.form.TimeField" ext:member="DateparseDate">DateparseDate</a> (defaults to 'g:i A', e.g., '3:15 PM').  For 24-hour time format try 'H:i' instead.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TimeField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="grow-header"></a>
+                        <b>grow</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                当值为 true 时表示字段可以根据内容自动伸缩。True if th...
+                            </div>
+                            <div class="long">
+                                当值为 true 时表示字段可以根据内容自动伸缩。True if this field should automatically grow and shrink to its content
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="growMax-header"></a>
+                        <b>growMax</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                当 grow = true 时允许的字段最大宽度(默认为 800)  ...
+                            </div>
+                            <div class="long">
+                                当 grow = true 时允许的字段最大宽度(默认为 800)  The maximum width to allow when grow = true (defaults to 800)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="growMin-header"></a>
+                        <b>growMin</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                当 grow = true 时允许的字段最小宽度（默认为 30） Th...
+                            </div>
+                            <div class="long">
+                                当 grow = true 时允许的字段最小宽度（默认为 30） The minimum width to allow when grow = true (defaults to 30)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="handleHeight-header"></a>
+                        <b>handleHeight</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                以像素表示的下拉列表的缩放柄的高度，仅当resizable = tru...
+                            </div>
+                            <div class="long">
+                                以像素表示的下拉列表的缩放柄的高度，仅当resizable = true 时可用（默认为 8）。The height in pixels of the dropdown list resize handle if resizable = true (defaults to 8)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="hiddenId-header"></a>
+                        <b>hiddenId</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                If hiddenName is specified, hiddenI...
+                            </div>
+                            <div class="long">
+                                If <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-hiddenName" ext:cls="Ext.form.TimeField" ext:member="hiddenName">hiddenName</a> is specified, hiddenId can also be provided to give the hidden field a unique id (defaults to the hiddenName).  The hiddenId and combo <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-id" ext:cls="Ext.form.TimeField" ext:member="id">id</a> should be different, since no two DOM nodes should share the same id.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="hiddenName-header"></a>
+                        <b>hiddenName</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                如果指定了, 则会动态生成一个以指定名称命名的隐藏域用来存放值数据(默...
+                            </div>
+                            <div class="long">
+                                如果指定了, 则会动态生成一个以指定名称命名的隐藏域用来存放值数据(默认为)。If specified, a hidden form field with this name is dynamically generated to store the field's data value (defaults to the underlying DOM element's name). Required for the combo's value to automatically post during a form submission.  Note that the hidden field's id will also default to this name if <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-hiddenId" ext:cls="Ext.form.TimeField" ext:member="hiddenId">hiddenId</a> is not specified.  The combo's id and the hidden field's ids should be different, since no two DOM nodes should share the same id, so if the combo and hidden names are the same, you should specify a unique hiddenId.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="hiddenValue-header"></a>
+                        <b>hiddenValue</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                Sets the initial value of the hidde...
+                            </div>
+                            <div class="long">
+                                Sets the initial value of the hidden field if <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-hiddenName" ext:cls="Ext.form.TimeField" ext:member="hiddenName">hiddenName</a> is specified to contain the selected <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-valueField" ext:cls="Ext.form.TimeField" ext:member="valueField">valueField</a>, from the Store. <b>Defaults to the configured <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-value" ext:cls="Ext.form.TimeField" ext:member="value">value</a></b>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="hideTrigger-header"></a>
+                        <b>hideTrigger</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                为true时隐藏触发元素，只显示基本文本域（默认为false）。Tru...
+                            </div>
+                            <div class="long">
+                                为true时隐藏触发元素，只显示基本文本域（默认为false）。True to hide the trigger element and display only the base text field (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TriggerField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="increment-header"></a>
+                        <b>increment</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                下拉框里显示时间的步长（默认为15分钟）。PS:数字的单位是分钟。Th...
+                            </div>
+                            <div class="long">
+                                下拉框里显示时间的步长（默认为15分钟）。PS:数字的单位是分钟。The number of minutes between each time value in the list (defaults to 15).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TimeField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="invalidText-header"></a>
+                        <b>invalidText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                单元格里的时间不符合格式的错误信息（默认：'m/d/y'的格式）。默认...
+                            </div>
+                            <div class="long">
+                                单元格里的时间不符合格式的错误信息（默认：'m/d/y'的格式）。默认为： The error text to display when the time in the field is invalid (defaults to'{value} is not a valid time').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TimeField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="itemSelector-header"></a>
+                        <b>itemSelector</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                This setting is required if a custo...
+                            </div>
+                            <div class="long">
+                                <b>This setting is required if a custom XTemplate has been specified in <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-tpl" ext:cls="Ext.form.TimeField" ext:member="tpl">tpl</a> which assigns a class other than <pre>'x-combo-list-item'</pre> to dropdown list items</b>. A simple CSS selector (e.g. div.some-class or span:first-child) that will be used to determine what nodes the DataView which handles the dropdown display will be working with.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="lazyInit-header"></a>
+                        <b>lazyInit</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True to not initialize the list for...
+                            </div>
+                            <div class="long">
+                                True to not initialize the list for this combo until the field is focused (defaults to true)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="lazyRender-header"></a>
+                        <b>lazyRender</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为true时阻止ComboBox渲染直到该对象被请求（被渲染到Ext...
+                            </div>
+                            <div class="long">
+                                值为true时阻止ComboBox渲染直到该对象被请求（被渲染到Ext.Editor 组件的时候应该使用这个参数，默认为 false）。True to prevent the ComboBox from rendering until requested (should always be used when rendering into an Ext.Editor, defaults to false).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="listAlign-header"></a>
+                        <b>listAlign</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                一个有效的方位锚点值。点击Ext.ElementalignTo查看支持...
+                            </div>
+                            <div class="long">
+                                一个有效的方位锚点值。点击<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-Ext.ElementalignTo" ext:cls="Ext.form.TimeField" ext:member="Ext.ElementalignTo">Ext.ElementalignTo</a>查看支持的方向锚点(默认为 'tl-bl')。A valid anchor position value. See <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-Ext.ElementalignTo" ext:cls="Ext.form.TimeField" ext:member="Ext.ElementalignTo">Ext.ElementalignTo</a> for details on supported anchor positions (defaults to 'tl-bl')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="listClass-header"></a>
+                        <b>listClass</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                下拉列表元素应用的CSS类（默认为''）。CSS class to a...
+                            </div>
+                            <div class="long">
+                                下拉列表元素应用的CSS类（默认为''）。CSS class to apply to the dropdown list element (defaults to '')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="listWidth-header"></a>
+                        <b>listWidth</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                以象素表示的下拉列表的宽度（默认的宽度与ComboBox的width属...
+                            </div>
+                            <div class="long">
+                                以象素表示的下拉列表的宽度（默认的宽度与ComboBox的width属性一致）。The width in pixels of the dropdown list (defaults to the width of the ComboBox field)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="loadingText-header"></a>
+                        <b>loadingText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当读取数据时在下拉列表显示的文本。仅当mode = 'remote'时...
+                            </div>
+                            <div class="long">
+                                当读取数据时在下拉列表显示的文本。仅当mode = 'remote'时可用（默认为 'Loading...'）。The text to display in the dropdown list while data is loading.  Only applies when mode = 'remote' (defaults to 'Loading...')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maskRe-header"></a>
+                        <b>maskRe</b>
+                        : RegExp
+                        <div class="mdesc">
+                            <div class="short">
+                                一个用来过滤无效按键的正则表达式(默认为 null)  An inpu...
+                            </div>
+                            <div class="long">
+                                一个用来过滤无效按键的正则表达式(默认为 null)  An input mask regular expression that will be used to filter keystrokes that don't match (defaults to null)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxHeight-header"></a>
+                        <b>maxHeight</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                以象素表示的下拉列表最大高度（默认为 300）。The maximum...
+                            </div>
+                            <div class="long">
+                                以象素表示的下拉列表最大高度（默认为 300）。The maximum height in pixels of the dropdown list before scrollbars are shown (defaults to 300)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxLength-header"></a>
+                        <b>maxLength</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段允许的最大字符数(默认为 Number.MAX_VALUE) ...
+                            </div>
+                            <div class="long">
+                                输入字段允许的最大字符数(默认为 Number.MAX_VALUE)  Maximum input field length allowed (defaults to Number.MAX_VALUE)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxLengthText-header"></a>
+                        <b>maxLengthText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字符数小于最小字符数时显示的文本（默认为"The maximum ...
+                            </div>
+                            <div class="long">
+                                输入字符数小于最小字符数时显示的文本（默认为"The maximum length for this field is {maxLength}"） Error text to display if the maximum length validation fails (defaults to "The maximum length for this field is {maxLength}")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxText-header"></a>
+                        <b>maxText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                单元格里的时间晚于限定的最早时间的错误信息（默认为:'The time...
+                            </div>
+                            <div class="long">
+                                单元格里的时间晚于限定的最早时间的错误信息（默认为:'The time in this field must be equal to or before {0}'）。The error text to display when the time is after maxValue (defaults to 'The time in this field must be equal to or before {0}').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TimeField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxValue-header"></a>
+                        <b>maxValue</b>
+                        : Date/String
+                        <div class="mdesc">
+                            <div class="short">
+                                允许输入的最晚时间。可以是JavaScriptDate对象，也可以是一...
+                            </div>
+                            <div class="long">
+                                允许输入的最晚时间。可以是JavaScriptDate对象，也可以是一个格式正确的字符串，请参阅<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-format" ext:cls="Ext.form.TimeField" ext:member="format">format</a>和<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-altFormats" ext:cls="Ext.form.TimeField" ext:member="altFormats">altFormats</a>（默认为null）。The maximum allowed time. Can be either a Javascript date object with a valid time value or a string  time in a valid format -- see <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-format" ext:cls="Ext.form.TimeField" ext:member="format">format</a> and <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-altFormats" ext:cls="Ext.form.TimeField" ext:member="altFormats">altFormats</a> (defaults to null).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TimeField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minChars-header"></a>
+                        <b>minChars</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                在autocomplete和typeahead 被激活之前用户必须输入...
+                            </div>
+                            <div class="long">
+                                在autocomplete和typeahead 被激活之前用户必须输入的字符数（默认为4，如果editable = false则此属性无效）。The minimum number of characters the user must type before autocomplete and typeahead activate (defaults to 4 if remote or 0 if local, does not apply if editable = false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minHeight-header"></a>
+                        <b>minHeight</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                The minimum height in pixels of the...
+                            </div>
+                            <div class="long">
+                                The minimum height in pixels of the dropdown list when the list is constrained by its distance to the viewport edges (defaults to 90)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minLength-header"></a>
+                        <b>minLength</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段所需的最小字符数(默认为 0)  Minimum input ...
+                            </div>
+                            <div class="long">
+                                输入字段所需的最小字符数(默认为 0)  Minimum input field length required (defaults to 0)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minLengthText-header"></a>
+                        <b>minLengthText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字符数小于最小字符数时显示的文本（默认为"The minimum ...
+                            </div>
+                            <div class="long">
+                                输入字符数小于最小字符数时显示的文本（默认为"The minimum length for this field is {minLength}"） Error text to display if the minimum length validation fails (defaults to "The minimum length for this field is {minLength}")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minListWidth-header"></a>
+                        <b>minListWidth</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                以像素表示的下拉列表的最小宽度（默认为70， 如果listWidth的...
+                            </div>
+                            <div class="long">
+                                以像素表示的下拉列表的最小宽度（默认为70， 如果listWidth的指定值更高则自动忽略该参数）。The minimum width of the dropdown list in pixels (defaults to 70, will be ignored if listWidth has a higher value)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minText-header"></a>
+                        <b>minText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                单元格里的时间早于限定的最早时间的错误信息（默认为:'The time...
+                            </div>
+                            <div class="long">
+                                单元格里的时间早于限定的最早时间的错误信息（默认为:'The time in this field must be equal to or after {0}'）。The error text to display when the date in the cell is before minValue (defaults to 'The time in this field must be equal to or after {0}').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TimeField</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minValue-header"></a>
+                        <b>minValue</b>
+                        : Date/String
+                        <div class="mdesc">
+                            <div class="short">
+                                允许输入的最早的时间。可以是JavaScript Date对象，也可以...
+                            </div>
+                            <div class="long">
+                                允许输入的最早的时间。可以是JavaScript Date对象，也可以是一个格式正确的字符串，请参阅<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-format" ext:cls="Ext.form.TimeField" ext:member="format">format</a>和<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-altFormats" ext:cls="Ext.form.TimeField" ext:member="altFormats">altFormats</a>（默认为null）。The minimum allowed time. Can be either a Javascript date object with a valid time value or a string  time in a valid format -- see <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-format" ext:cls="Ext.form.TimeField" ext:member="format">format</a> and <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-altFormats" ext:cls="Ext.form.TimeField" ext:member="altFormats">altFormats</a> (defaults to null).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TimeField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="mode-header"></a>
+                        <b>mode</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                如果ComboBox读取本地数据则将值设为'local'（默认为 'r...
+                            </div>
+                            <div class="long">
+                                如果ComboBox读取本地数据则将值设为'local'（默认为 'remote' 表示从服务器读取数据）。Set to 'local' if the ComboBox loads local data (defaults to 'remote' which loads from the server)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="pageSize-header"></a>
+                        <b>pageSize</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                如果值大于0，则在下拉列表的底部显示一个分页工具条，并且在执行过滤查询...
+                            </div>
+                            <div class="long">
+                                如果值大于0，则在下拉列表的底部显示一个分页工具条，并且在执行过滤查询时将传递起始页和限制参数。只在 mode = 'remote'时生效（默认为 0）。If greater than 0, a paging toolbar is displayed in the footer of the dropdown list and the filter queries will execute with page start and limit parameters.  Only applies when mode = 'remote' (defaults to 0)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="queryDelay-header"></a>
+                        <b>queryDelay</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                以毫秒表示的从开始输入到发出查询语句过滤下拉列表的时长（如果mode=...
+                            </div>
+                            <div class="long">
+                                以毫秒表示的从开始输入到发出查询语句过滤下拉列表的时长（如果mode='remote'则默认为500，如果mode = 'local' 则默认为10）。The length of time in milliseconds to delay between the start of typing and sending the query to filter the dropdown list (defaults to 500 if mode = 'remote' or 10 if mode = 'local')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="queryParam-header"></a>
+                        <b>queryParam</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                供querystring查询时传递的名字（默认为 'query'）。N...
+                            </div>
+                            <div class="long">
+                                供querystring查询时传递的名字（默认为 'query'）。Name of the query as it will be passed on the querystring (defaults to 'query')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="regex-header"></a>
+                        <b>regex</b>
+                        : RegExp
+                        <div class="mdesc">
+                            <div class="short">
+                                一个用以在效验时使用的 JavaScript 正则表达式对象(默认为 ...
+                            </div>
+                            <div class="long">
+                                一个用以在效验时使用的 JavaScript 正则表达式对象(默认为 null)。如果启用此项，则此正则表达式将在所有基础效验成功之后被执行，执行此正则表达式时传递的参数为该字段的值。如果效验失败，则根据<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-regexText" ext:cls="Ext.form.TimeField" ext:member="regexText">regexText</a>的设置将字段标记为无效。A JavaScript RegExp object to be tested against the field value during validation (defaults to null). If available, this regex will be evaluated only after the basic validators all return true, and will be passed the current field value.  If the test fails, the field will be marked invalid using <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-regexText" ext:cls="Ext.form.TimeField" ext:member="regexText">regexText</a>.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="regexText-header"></a>
+                        <b>regexText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当regex被设置且效验失败时显示的错误文本(默认为 "")。The ...
+                            </div>
+                            <div class="long">
+                                当<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-regex" ext:cls="Ext.form.TimeField" ext:member="regex">regex</a>被设置且效验失败时显示的错误文本(默认为 "")。The error text to display if <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-regex" ext:cls="Ext.form.TimeField" ext:member="regex">regex</a> is used and the test fails during validation (defaults to "")
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="resizable-header"></a>
+                        <b>resizable</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为true时则在下拉列表的底部添加缩放柄（默认为false）。Tru...
+                            </div>
+                            <div class="long">
+                                值为true时则在下拉列表的底部添加缩放柄（默认为false）。True to add a resize handle to the bottom of the dropdown list (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="selectOnFocus-header"></a>
+                        <b>selectOnFocus</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为 ture 时表示字段获取焦点时自动选择字段既有文本(默认为 fa...
+                            </div>
+                            <div class="long">
+                                值为 ture 时表示字段获取焦点时自动选择字段既有文本(默认为 false)。True to automatically select any existing field text when the field receives input focus (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="selectedClass-header"></a>
+                        <b>selectedClass</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                下拉列表中选中项应用的CSS类（默认为 'x-combo-select...
+                            </div>
+                            <div class="long">
+                                下拉列表中选中项应用的CSS类（默认为 'x-combo-selected'）。CSS class to apply to the selected item in the dropdown list (defaults to 'x-combo-selected')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="shadow-header"></a>
+                        <b>shadow</b>
+                        : Boolean/String
+                        <div class="mdesc">
+                            <div class="short">
+                                值为true或者"sides"为默认效果，"frame"为四方向阴影，...
+                            </div>
+                            <div class="long">
+                                值为true或者"sides"为默认效果，"frame"为四方向阴影，"drop" 为右下角方向阴影。True or "sides" for the default effect, "frame" for 4-way shadow, and "drop" for bottom-right
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="store-header"></a>
+                        <b>store</b>
+                        : Ext.data.Store/Array
+                        <div class="mdesc">
+                            <div class="short">
+                                该组合框绑定的数据仓库（默认为 undefined）。The data...
+                            </div>
+                            <div class="long">
+                                该组合框绑定的数据仓库（默认为 undefined）。The data source to which this combo is bound (defaults to undefined).  This can be any <a href="/output/Ext.data.Store.html" ext:cls="Ext.data.Store">Ext.data.Store</a> subclass, a 1-dimensional array (e.g., ['Foo','Bar']) or a 2-dimensional array (e.g., [['f','Foo'],['b','Bar']]).  Arrays will be converted to a <a href="/output/Ext.data.ArrayStore.html" ext:cls="Ext.data.ArrayStore">Ext.data.ArrayStore</a> internally. 1-dimensional arrays will automatically be expanded (each array item will be the combo value and text) and for multi-dimensional arrays, the value in index 0 of each item will be assumed to be the combo value, while the value at index 1 is assumed to be the combo text.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="stripCharsRe-header"></a>
+                        <b>stripCharsRe</b>
+                        : RegExp
+                        <div class="mdesc">
+                            <div class="short">
+                                一个JavaScript正则表达式，用于在进行验证该动作之前抽离不需要...
+                            </div>
+                            <div class="long">
+                                一个JavaScript正则表达式，用于在进行验证该动作之前抽离不需要的内容（默认为null）。A JavaScript RegExp object used to strip unwanted content from the value before validation (defaults to null).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="title-header"></a>
+                        <b>title</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                如果提供了，则会创建一个包含此文本的元素并被添加到下拉列表的顶部（默认...
+                            </div>
+                            <div class="long">
+                                如果提供了，则会创建一个包含此文本的元素并被添加到下拉列表的顶部（默认为 undefined，表示没有头部元素）。If supplied, a header element is created containing this text and added into the top of the dropdown list (defaults to undefined, with no header element)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="tpl-header"></a>
+                        <b>tpl</b>
+                        : String/Ext.XTemplate
+                        <div class="mdesc">
+                            <div class="short">
+                                要转换为组合框的 id, DOM 节点 或者已有的 select 元素...
+                            </div>
+                            <div class="long">
+                                要转换为组合框的 id, DOM 节点 或者已有的 select 元素 The template string, or <a href="/output/Ext.XTemplate.html" ext:cls="Ext.XTemplate">Ext.XTemplate</a> instance to use to display each item in the dropdown list. Use this to create custom UI layouts for items in the list. <p> If you wish to preserve the default visual look of list items, add the CSS class name <pre>x-combo-list-item</pre> to the template's container element. <p> <b>The template must contain one or more substitution parameters using field names from the Combo's</b> <a href="output/.html#-store" ext:cls="" ext:member="store">Store</a>. An example of a custom template would be adding an <pre>ext:qtip</pre> attribute which might display other fields from the Store. <p> The dropdown list is displayed in a DataView. See <a href="/output/Ext.DataView.html" ext:cls="Ext.DataView">Ext.DataView</a> for details.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="transform-header"></a>
+                        <b>transform</b>
+                        : Mixed
+                        <div class="mdesc">
+                            <div class="short">
+                                要转换为组合框的id，DOM节点或者已有的select元素。The i...
+                            </div>
+                            <div class="long">
+                                要转换为组合框的id，DOM节点或者已有的select元素。The id, DOM node or element of an existing HTML SELECT to convert to a ComboBox. Note that if you specify this and the combo is going to be in a <a href="/output/Ext.form.BasicForm.html" ext:cls="Ext.form.BasicForm">Ext.form.BasicForm</a> or <a href="/output/Ext.form.FormPanel.html" ext:cls="Ext.form.FormPanel">Ext.form.FormPanel</a>, you must also set <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-lazyRender" ext:cls="Ext.form.TimeField" ext:member="lazyRender">lazyRender</a> = true.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="triggerAction-header"></a>
+                        <b>triggerAction</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                触发器被激活时执行的动作。使用'all'来运行由allQuery属性指...
+                            </div>
+                            <div class="long">
+                                触发器被激活时执行的动作。使用'all'来运行由allQuery属性指定的查询（默认为'query'）。The action to execute when the trigger is clicked.  Use 'all' to run the query specified by the allQuery config option (defaults to 'query')
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="triggerClass-header"></a>
+                        <b>triggerClass</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                应用到触发器身上的CSS样式类。A CSS class to appl...
+                            </div>
+                            <div class="long">
+                                应用到触发器身上的CSS样式类。A CSS class to apply to the trigger
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TriggerField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="typeAhead-header"></a>
+                        <b>typeAhead</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                值为true时在经过指定延迟（typeAheadDelay）后弹出并自...
+                            </div>
+                            <div class="long">
+                                值为true时在经过指定延迟（typeAheadDelay）后弹出并自动选择输入的文本，如果该文本与已知的值相匹配（默认为false）。True to populate and autoselect the remainder of the text being typed after a configurable delay (<a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-typeAheadDelay" ext:cls="Ext.form.TimeField" ext:member="typeAheadDelay">typeAheadDelay</a>) if it matches a known value (defaults to false)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="typeAheadDelay-header"></a>
+                        <b>typeAheadDelay</b>
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                以毫秒表示的 typeahead 文本延迟显示量，仅当 typeAhe...
+                            </div>
+                            <div class="long">
+                                以毫秒表示的 typeahead 文本延迟显示量，仅当 typeAhead = true 时生效（默认为 250）。The length of time in milliseconds to wait until the typeahead text is displayed if typeAhead = true (defaults to 250)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="validator-header"></a>
+                        <b>validator</b>
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                字段效验时调用的自定义的效验函数(默认为 null)。如果启用此项，则...
+                            </div>
+                            <div class="long">
+                                字段效验时调用的自定义的效验函数(默认为 null)。如果启用此项，则此函数将在所有基础效验（<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-allowBlank" ext:cls="Ext.form.TimeField" ext:member="allowBlank">allowBlank</a>、<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-minLength" ext:cls="Ext.form.TimeField" ext:member="minLength">minLength</a>、<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-maxLength" ext:cls="Ext.form.TimeField" ext:member="maxLength">maxLength</a>和任意的<a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-vtype" ext:cls="Ext.form.TimeField" ext:member="vtype">vtype</a>）成功之后被调用，调用函数时传递的参数为该字段的值。且此函数的有效返回应为成功时返回 true，失败时返回错误文本。A custom validation function to be called during field validation (defaults to null). If specified, this function will be called only after the built-in validations (<a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-allowBlank" ext:cls="Ext.form.TimeField" ext:member="allowBlank">allowBlank</a>, <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-minLength" ext:cls="Ext.form.TimeField" ext:member="minLength">minLength</a>, <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-maxLength" ext:cls="Ext.form.TimeField" ext:member="maxLength">maxLength</a>) and any configured <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-vtype" ext:cls="Ext.form.TimeField" ext:member="vtype">vtype</a> all return true. This function will be passed the current field value and expected to return boolean true if the value is valid or a string error message if invalid.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="valueField-header"></a>
+                        <b>valueField</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                组合框用以取值的数据的字段名（如果mode='remote'则默认为 ...
+                            </div>
+                            <div class="long">
+                                组合框用以取值的数据的字段名（如果mode='remote'则默认为 undefined，如果mode = 'local' 则默认为 'value'）。The underlying data value name to bind to this ComboBox (defaults to undefined if mode = 'remote' or 'value' if transforming a select) Note: use of a valueField requires the user to make a selection in order for a value to be mapped.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="valueNotFoundText-header"></a>
+                        <b>valueNotFoundText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当使用 name/value 组合框时，如果调用setValue方法时...
+                            </div>
+                            <div class="long">
+                                当使用 name/value 组合框时，如果调用setValue方法时传递的值没有在仓库中找到，且定义了valueNotFoundText则在字段中显示该值（默认为 undefined）。When using a name/value combo, if the value passed to setValue is not found in the store, valueNotFoundText will be displayed as the field text if defined (defaults to undefined). If this defaut text is used, it means there is no value set and no validation will occur on this field.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="vtype-header"></a>
+                        <b>vtype</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                中定义的效验类型名(默认为 null)  A validation t...
+                            </div>
+                            <div class="long">
+                                中定义的效验类型名(默认为 null)  A validation type name as defined in <a href="/output/Ext.form.VTypes.html" ext:cls="Ext.form.VTypes">Ext.form.VTypes</a> (defaults to null)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="config-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="vtypeText-header"></a>
+                        <b>vtypeText</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                在当前字段的vtype中，制定一个错误信息代替默认的（默认为null）...
+                            </div>
+                            <div class="long">
+                                在当前字段的<a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-vtype" ext:cls="Ext.form.TimeField" ext:member="vtype">vtype</a>中，制定一个错误信息代替默认的（默认为null）。如vtype不设置该项就无效。A custom error message to display in place of the default message provided for the <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-vtype" ext:cls="Ext.form.TimeField" ext:member="vtype">vtype</a> currently set for this field (defaults to '').  Only applies if vtype is set, else ignored.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.form.TimeField-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="view-activeItem"></a>
+                        <b>
+                        view: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                显示CoboBox选择所使用的DataView。The DataVie...
+                            </div>
+                            <div class="long">
+                                显示CoboBox选择所使用的<a href="output/Ext.DataView.html" ext:cls="Ext.DataView">DataView</a>。The <a href="/output/Ext.DataView.html" ext:cls="Ext.DataView">DataView</a> used to display the ComboBox's options. @type Ext.DataView
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.form.TimeField-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-autoSize"></a>
+                        <!--名称+参数列表-->
+                        <b>autoSize</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                自动增长字段宽度以便容纳字段所允许的最大文本。仅在 grow = tr... 
+                            </div>
+                            <div class="long">
+                                自动增长字段宽度以便容纳字段所允许的最大文本。仅在 grow = true 时有效，并触发<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-autosize" ext:cls="Ext.form.TimeField" ext:member="autosize">autosize</a>事件。Automatically grows the field to accomodate the width of the text up to the maximum field width allowed. This only takes effect if grow = true, and fires the <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-autosize" ext:cls="Ext.form.TimeField" ext:member="autosize">autosize</a> event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TextField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-clearValue"></a>
+                        <!--名称+参数列表-->
+                        <b>clearValue</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                清除所有当前字段中设定的。Clears any text/value ... 
+                            </div>
+                            <div class="long">
+                                清除所有当前字段中设定的。Clears any text/value currently set in the field
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-collapse"></a>
+                        <!--名称+参数列表-->
+                        <b>collapse</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                如果下拉列表当前是展开状态则隐藏它。并在完成的时候触发collapse... 
+                            </div>
+                            <div class="long">
+                                如果下拉列表当前是展开状态则隐藏它。并在完成的时候触发<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-collapse" ext:cls="Ext.form.TimeField" ext:member="collapse">collapse</a>事件。Hides the dropdown list if it is currently expanded. Fires the <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-collapse" ext:cls="Ext.form.TimeField" ext:member="collapse">collapse</a> event on completion.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-doQuery"></a>
+                        <!--名称+参数列表-->
+                        <b>doQuery</b>(
+	                        
+                                <code>
+                                    String query
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean forceAll
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                执行一个查询语句用以过滤下拉列表。在查询之前触发beforequery... 
+                            </div>
+                            <div class="long">
+                                执行一个查询语句用以过滤下拉列表。在查询之前触发<a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-beforequery" ext:cls="Ext.form.TimeField" ext:member="beforequery">beforequery</a>事件，以便可以在需要的时候取消查询动作。Execute a query to filter the dropdown list.  Fires the <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-beforequery" ext:cls="Ext.form.TimeField" ext:member="beforequery">beforequery</a> event prior to performing the query allowing the query action to be canceled if needed.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    query
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要执行的查询语句。The SQL query to execute
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    forceAll
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    值为true时强制执行查询即使当前输入的字符少于 minChars 设置项指定的值。同时还会清除当前数据仓库中保存的前一次结果（默认为false）。True to force the query to execute even if there are currently fewer characters in the field than the minimum specified by the minChars config option.  It also clears any filter previously saved in the current store (defaults to false)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-expand"></a>
+                        <!--名称+参数列表-->
+                        <b>expand</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                如果下拉列表当前是隐藏状态则展开它。并在完成的时候触发expand事件... 
+                            </div>
+                            <div class="long">
+                                如果下拉列表当前是隐藏状态则展开它。并在完成的时候触发<a href="output/Ext.form.TimeField.html#Ext.form.TimeField-expand" ext:cls="Ext.form.TimeField" ext:member="expand">expand</a>事件。Expands the dropdown list if it is currently hidden. Fires the <a href="/output/Ext.form.TimeField.html#Ext.form.TimeField-expand" ext:cls="Ext.form.TimeField" ext:member="expand">expand</a> event on completion.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-getStore"></a>
+                        <!--名称+参数列表-->
+                        <b>getStore</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.data.Store
+                        <div class="mdesc">
+                            <div class="short">
+                                返回Combo关联的Store对象。Returns the store... 
+                            </div>
+                            <div class="long">
+                                返回Combo关联的Store对象。Returns the store associated with this combo.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.data.Store
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Store对象。The store
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-getValue"></a>
+                        <!--名称+参数列表-->
+                        <b>getValue</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                返回当前选定项的值或在没有选定项时返回空字串。Returns the ... 
+                            </div>
+                            <div class="long">
+                                返回当前选定项的值或在没有选定项时返回空字串。Returns the currently selected field value or empty string if no value is set.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        String
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            value 选中的值。The selected value
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-isExpanded"></a>
+                        <!--名称+参数列表-->
+                        <b>isExpanded</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                如果下拉列表已经展开则返回true，否则返回false。Returns... 
+                            </div>
+                            <div class="long">
+                                如果下拉列表已经展开则返回true，否则返回false。Returns true if the dropdown list is expanded, else false.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-onTriggerClick"></a>
+                        <!--名称+参数列表-->
+                        <b>onTriggerClick</b>(
+	                        
+                                <code>
+                                    EventObject e
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                该方法应该用于处理触发器的click事件。默认为空方法，要被某个实现的... 
+                            </div>
+                            <div class="long">
+                                该方法应该用于处理触发器的click事件。默认为空方法，要被某个实现的方法重写后才会有效。The function that should handle the trigger's click event.  This method does nothing by default until overridden by an implementing function. @method
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code> : EventObject
+                                                <div class="sub-desc">
+                                                    参数e是（{EventObject}类型）
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TriggerField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-reset"></a>
+                        <!--名称+参数列表-->
+                        <b>reset</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                将字段值重置为原始值，并清除所有效验信息。如果原始值为空时还将使 em... 
+                            </div>
+                            <div class="long">
+                                将字段值重置为原始值，并清除所有效验信息。如果原始值为空时还将使 emptyText 和 emptyClass 属性生效。Resets the current field value to the originally-loaded value and clears any validation messages. Also adds emptyText and emptyClass if the original value was blank.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TextField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-select"></a>
+                        <!--名称+参数列表-->
+                        <b>select</b>(
+	                        
+                                <code>
+                                    Number index
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean scrollIntoView
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                根据列表的索引数选择下拉列表中的一项。本函数不会触发 'select'... 
+                            </div>
+                            <div class="long">
+                                根据列表的索引数选择下拉列表中的一项。本函数不会触发 'select' 事件。使用此函数必须在数据已经被读取且列表已经展开，否则请使用setValue方法。Select an item in the dropdown list by its numeric index in the list. This function does NOT cause the select event to fire. The store must be loaded and the list expanded for this function to work, otherwise use setValue.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    选中项在列表中以0开始的索引数。The zero-based index of the list item to select
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scrollIntoView
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    值为false时阻止下拉列表自动滚动到选中项位置（默认为 true）。False to prevent the dropdown list from autoscrolling to display the selected item if it is not currently in view (defaults to true)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-selectByValue"></a>
+                        <!--名称+参数列表-->
+                        <b>selectByValue</b>(
+	                        
+                                <code>
+                                    String value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean scrollIntoView
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                根据数据的值选择下拉列表中的选项。本函数不会触发'select'事件。... 
+                            </div>
+                            <div class="long">
+                                根据数据的值选择下拉列表中的选项。本函数不会触发'select'事件。使用此函数必须在数据已经被读取且列表已经展开，否则请使用setValue方法。Select an item in the dropdown list by its data value. This function does NOT cause the select event to fire. The store must be loaded and the list expanded for this function to work, otherwise use setValue.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    要选择的项的值。The data value of the item to select
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scrollIntoView
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    值为false时阻止下拉列表自动滚动到选中项位置（默认为 true）。False to prevent the dropdown list from autoscrolling to display the selected item if it is not currently in view (defaults to true)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            如果给定值在列表中则返回true，否则返回。falseTrue if the value matched an item in the list, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-selectText"></a>
+                        <!--名称+参数列表-->
+                        <b>selectText</b>(
+	                        
+                                <code>
+                                    Number start
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number end
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选择此字段中的文本。Selects text in this field 
+                            </div>
+                            <div class="long">
+                                选择此字段中的文本。Selects text in this field
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    start
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    可选项） 选择区域的索引起点(默认为 0) (optional)The index where the selection should start (defaults to 0)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    end
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    可选项） 选择区域的索引终点(默认为文本长度) (optional)The index where the selection should end (defaults to the text length)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TextField
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-setEditable"></a>
+                        <!--名称+参数列表-->
+                        <b>setEditable</b>(
+	                        
+                                <code>
+                                    Boolean value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                允许或防止用户直接编辑字段文本。如果传递值为false，用户将只能选择... 
+                            </div>
+                            <div class="long">
+                                允许或防止用户直接编辑字段文本。如果传递值为false，用户将只能选择下拉列表中已经定义的选项。此方法相当于在配置时设置'editable'属性。Allow or prevent the user from directly editing the field text.  If false is passed, the user will only be able to select from the items defined in the dropdown list.  This method is the runtime equivalent of setting the 'editable' config option at config time.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    值为true时允许用户直接编辑字段文本。True to allow the user to directly edit the field text
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-setValue"></a>
+                        <!--名称+参数列表-->
+                        <b>setValue</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                将指定的值设定到字段。如果找到匹配的值，字段中将显示相应的记录。如果在... 
+                            </div>
+                            <div class="long">
+                                将指定的值设定到字段。如果找到匹配的值，字段中将显示相应的记录。如果在已有的选项中没有找到匹配的值，则显示valueNotFoundText属性指定的文本。其他情况下显示为空（但仍然将字段的值设置为指定值）。Sets the specified value into the field.  If the value finds a match, the corresponding record text will be displayed in the field.  If the value does not match the data value of an existing item, and the valueNotFoundText config option is defined, it will be displayed as the default field text. Otherwise the field will be blank (although the value will still be set).
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    匹配的值。The value to match
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComboBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.TimeField-validateValue"></a>
+                        <!--名称+参数列表-->
+                        <b>validateValue</b>(
+	                        
+                                <code>
+                                    Mixed value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                根据字段的效验规则效验字段值，并在效验失败时将字段标记为无效。Vali... 
+                            </div>
+                            <div class="long">
+                                根据字段的效验规则效验字段值，并在效验失败时将字段标记为无效。Validates a value according to the field's validation rules and marks the field as invalid if the validation fails
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    要效验的值 The value to validate
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            值有效时返回true，否则返回 false True if the value is valid, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        TextField
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.form.TimeField-events"></a>
+    <h2>公共事件</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    事件
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="autosize-autosize"></a>
+                        <!--名称+参数列表-->
+                        <b>autosize</b>(
+	                        
+                                <code>
+                                    Ext.form.Field this,
+                                </code>
+	                        
+                                <code>
+                                    Number width
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当autosize函数调用时触发。根据缺省的逻辑，字段有可能不会真正地... 
+                            </div>
+                            <div class="long">
+                                当autosize函数调用时触发。根据缺省的逻辑，字段有可能不会真正地改变大小，但该事件的目的在于，允许开发人员在运行时加入额外的逻辑，以备调整输入字段的大小。Fires when the autosize function is triggered.  The field may or may not have actually changed size according to the default logic, but this event provides a hook for the developer to apply additional logic at runtime to resize the field if needed.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>Ext.form.Field
+                                                <div class="sub-desc">
+                                                    文本输入字段。This text field
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    width
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    新宽度。The new field width
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="beforequery-beforequery"></a>
+                        <!--名称+参数列表-->
+                        <b>beforequery</b>(
+	                        
+                                <code>
+                                    Object queryEvent
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                所有的查询被处理前触发。返回 false 或者设置cancel参数为t... 
+                            </div>
+                            <div class="long">
+                                所有的查询被处理前触发。返回 false 或者设置cancel参数为true可以取消查询。Fires before all queries are processed. Return false to cancel the query or set the queryEvent's cancel property to true.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    queryEvent
+                                                </code>Object
+                                                <div class="sub-desc">
+                                                    传递的事件对象包含这些属性：An object that has these properties:<ul> <li><code>combo</code> : Ext.form.ComboBox <div class="sub-desc">组合框本身。This combo box</div></li> <li><code>query</code> : String <div class="sub-desc">查询语句。The query</div></li> <li><code>forceAll</code> : Boolean <div class="sub-desc">值为true时强制为"all"查询。True to force "all" query</div></li> <li><code>cancel</code> : Boolean <div class="sub-desc">值为true时取消查询。Set to true to cancel the query</div></li> </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="beforeselect-beforeselect"></a>
+                        <!--名称+参数列表-->
+                        <b>beforeselect</b>(
+	                        
+                                <code>
+                                    Ext.form.ComboBox combo,
+                                </code>
+	                        
+                                <code>
+                                    Ext.data.Record record,
+                                </code>
+	                        
+                                <code>
+                                    Number index
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                列表项被选中前触发。返回 false 可以取消选择。Fires bef... 
+                            </div>
+                            <div class="long">
+                                列表项被选中前触发。返回 false 可以取消选择。Fires before a list item is selected. Return false to cancel the selection.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    combo
+                                                </code>Ext.form.ComboBox
+                                                <div class="sub-desc">
+                                                    组合框本身。This combo box
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    record
+                                                </code>Ext.data.Record
+                                                <div class="sub-desc">
+                                                    从数据仓库中返回的数据记录。The data record returned from the underlying store
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    选中项在下拉列表中的索引位置。The index of the selected item in the dropdown list
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="collapse-collapse"></a>
+                        <!--名称+参数列表-->
+                        <b>collapse</b>(
+	                        
+                                <code>
+                                    Ext.form.ComboBox combo
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当下拉列表收起的时候触发。Fires when the dropdow... 
+                            </div>
+                            <div class="long">
+                                当下拉列表收起的时候触发。Fires when the dropdown list is collapsed
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    combo
+                                                </code>Ext.form.ComboBox
+                                                <div class="sub-desc">
+                                                    组合框本身。This combo box
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="expand-expand"></a>
+                        <!--名称+参数列表-->
+                        <b>expand</b>(
+	                        
+                                <code>
+                                    Ext.form.ComboBox combo
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当下拉列表展开的时候触发。Fires when the dropdow... 
+                            </div>
+                            <div class="long">
+                                当下拉列表展开的时候触发。Fires when the dropdown list is expanded
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    combo
+                                                </code>Ext.form.ComboBox
+                                                <div class="sub-desc">
+                                                    组合框本身。This combo box
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="keydown-keydown"></a>
+                        <!--名称+参数列表-->
+                        <b>keydown</b>(
+	                        
+                                <code>
+                                    Ext.form.TextField this,
+                                </code>
+	                        
+                                <code>
+                                    Ext.EventObject e
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段键盘下降时的事件。该事件只会在enableKeyEvents为... 
+                            </div>
+                            <div class="long">
+                                输入字段键盘下降时的事件。该事件只会在enableKeyEvents为true时有效。Keydown input field event. This event only fires if enableKeyEvents is set to true.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>Ext.form.TextField
+                                                <div class="sub-desc">
+                                                    文本输入字段。This text field
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code>Ext.EventObject
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="keypress-keypress"></a>
+                        <!--名称+参数列表-->
+                        <b>keypress</b>(
+	                        
+                                <code>
+                                    Ext.form.TextField this,
+                                </code>
+	                        
+                                <code>
+                                    Ext.EventObject e
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段键盘按下时的事件。该事件只会在enableKeyEvents为... 
+                            </div>
+                            <div class="long">
+                                输入字段键盘按下时的事件。该事件只会在enableKeyEvents为true时有效。Keypress input field event. This event only fires if enableKeyEvents is set to true.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>Ext.form.TextField
+                                                <div class="sub-desc">
+                                                    文本输入字段。This text field
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code>Ext.EventObject
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="keyup-keyup"></a>
+                        <!--名称+参数列表-->
+                        <b>keyup</b>(
+	                        
+                                <code>
+                                    Ext.form.TextField this,
+                                </code>
+	                        
+                                <code>
+                                    Ext.EventObject e
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                输入字段键盘升起时的事件。该事件只会在enableKeyEvents为... 
+                            </div>
+                            <div class="long">
+                                输入字段键盘升起时的事件。该事件只会在enableKeyEvents为true时有效。Keyup input field event. This event only fires if enableKeyEvents is set to true.
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    this
+                                                </code>Ext.form.TextField
+                                                <div class="sub-desc">
+                                                    文本输入字段。This text field
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    e
+                                                </code>Ext.EventObject
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">TextField</td>
+                </tr>
+            
+                <tr class="event-row expandable inherited">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="select-select"></a>
+                        <!--名称+参数列表-->
+                        <b>select</b>(
+	                        
+                                <code>
+                                    Ext.form.ComboBox combo,
+                                </code>
+	                        
+                                <code>
+                                    Ext.data.Record record,
+                                </code>
+	                        
+                                <code>
+                                    Number index
+                                </code>
+	                        
+                        )
+                        
+          
+                        <div class="mdesc">
+                            <div class="short">
+                                当列表项被选中时触发。Fires when a list item i... 
+                            </div>
+                            <div class="long">
+                                当列表项被选中时触发。Fires when a list item is selected
+                                <div class="mdetail-params">
+                                    <div>监听器会传入以下的参数：</div>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    combo
+                                                </code>Ext.form.ComboBox
+                                                <div class="sub-desc">
+                                                    组合框本身。This combo box
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    record
+                                                </code>Ext.data.Record
+                                                <div class="sub-desc">
+                                                    从数据仓库中返回的数据记录。The data record returned from the underlying store
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    index
+                                                </code>Number
+                                                <div class="sub-desc">
+                                                    选中项在下拉列表中的索引位置。The index of the selected item in the dropdown list
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">ComboBox</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束事件------>	
+</div>

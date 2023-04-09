@@ -1,0 +1,527 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.Shadow-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.Shadow-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.Shadow-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.Shadow-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.Shadow" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/Shadow.html#cls-Ext.Shadow">Ext.Shadow</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                Shadow.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/Shadow.html#cls-Ext.Shadow">Ext.Shadow</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         为所有元素提供投影效果的一个简易类。注意元素必须为绝对定位，而且投影并没有填充的效果（shimming）。这只是适用简单的场合——如想提供更高阶的投影效果，请参阅<a href="output/Ext.Layer.html" ext:cls="Ext.Layer">Ext.Layer</a>类。<br /> Simple class that can provide a shadow effect for any element.  Note that the element MUST be absolutely positioned, and the shadow does not provide any shimming.  This should be used only in simple cases -- for more advanced functionality that can also provide the same shadow effect, see the <a href="/output/Ext.Layer.html" ext:cls="Ext.Layer">Ext.Layer</a> class. 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.Shadow-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="mode-header"></a>
+                        <b>mode</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                投影显示的模式。有下列选项：The shadow display mo...
+                            </div>
+                            <div class="long">
+                                投影显示的模式。有下列选项：The shadow display mode.  Supports the following options:<br /> sides: 投影限显示在两边和底部。Shadow displays on both sides and bottom only<br /> frame: 投影在四边均匀出现。Shadow displays equally on all four sides<br /> drop: 传统的物理效果的，底部和右边（这是默认值）。Traditional bottom-right drop shadow (default)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Shadow</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="offset-header"></a>
+                        <b>offset</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                元素和投影之间的偏移象素值（默认为4）。The number of p...
+                            </div>
+                            <div class="long">
+                                元素和投影之间的偏移象素值（默认为4）。The number of pixels to offset the shadow from the element (defaults to 4)
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Shadow</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.Shadow-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.Shadow-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Shadow-hide"></a>
+                        <!--名称+参数列表-->
+                        <b>hide</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                隐藏投影。Hides this shadow 
+                            </div>
+                            <div class="long">
+                                隐藏投影。Hides this shadow
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Shadow
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Shadow-isVisible"></a>
+                        <!--名称+参数列表-->
+                        <b>isVisible</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                返回投影是否在显示。Returns true if the shado... 
+                            </div>
+                            <div class="long">
+                                返回投影是否在显示。Returns true if the shadow is visible, else false
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Shadow
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Shadow-realign"></a>
+                        <!--名称+参数列表-->
+                        <b>realign</b>(
+	                        
+                                <code>
+                                    Number left
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number top
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number width
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number height
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当值可用时直接对称位置。Show方法必须至少在调用realign方法之... 
+                            </div>
+                            <div class="long">
+                                当值可用时直接对称位置。Show方法必须至少在调用realign方法之前调用一次，以保证能够初始化。Direct alignment when values are already available. Show must be called at least once before calling this method to ensure it is initialized.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    left
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    目标元素left位置。The target element left position
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    top
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    目标元素top位置。The target element top position
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    width
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    目标元素宽度。The target element width
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    height
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    目标元素高度。The target element height
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Shadow
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Shadow-setZIndex"></a>
+                        <!--名称+参数列表-->
+                        <b>setZIndex</b>(
+	                        
+                                <code>
+                                    Number zindex
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                调整该投影的z-index。Adjust the z-index of... 
+                            </div>
+                            <div class="long">
+                                调整该投影的z-index。Adjust the z-index of this shadow
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    zindex
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    新z-index。The new z-index
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Shadow
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Shadow-show"></a>
+                        <!--名称+参数列表-->
+                        <b>show</b>(
+	                        
+                                <code>
+                                    Mixed targetEl
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                在目标元素上显示投影。Displays the shadow unde... 
+                            </div>
+                            <div class="long">
+                                在目标元素上显示投影。Displays the shadow under the target element
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    targetEl
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    指定要显示投影的那个元素。The id or element under which the shadow should display
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Shadow
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.Shadow-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

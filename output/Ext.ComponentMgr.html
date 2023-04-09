@@ -1,0 +1,664 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.ComponentMgr-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.ComponentMgr-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.ComponentMgr-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.ComponentMgr-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.ComponentMgr" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/ComponentMgr.html#cls-Ext.ComponentMgr">Ext.ComponentMgr</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                ComponentMgr.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/ComponentMgr.html#cls-Ext.ComponentMgr">Ext.ComponentMgr</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         <p>为页面上全体的组件（特指<a href="/output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a>的子类）以便能够可通过组件的id方便地去访问，（参见<a href="output/Ext.getCmp.html" ext:cls="Ext.getCmp">Ext.getCmp</a>方法）。<br /> Provides a registry of all Components (instances of <a href="/output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a> or any subclass thereof) on a page so that they can be easily accessed by component id (see <a href="/output/Ext.ComponentMgr.html#Ext.ComponentMgr-get" ext:cls="Ext.ComponentMgr" ext:member="get">get</a>, or the convenience method <a href="/output/Ext.html#Ext-getCmp" ext:cls="Ext" ext:member="getCmp">Ext.getCmp</a>).</p> <p> 此对象对组件的<i>类classes</i>提供索引检索的功能，这个索引应是如<a href="/output/Ext.ComponentMgr.html#Ext.ComponentMgr-Ext.Componentxtype" ext:cls="Ext.ComponentMgr" ext:member="Ext.Componentxtype">Ext.Componentxtype</a>般的易记标识码。对于由大量复合配置对象构成的Ext页面，使用<tt>xtype</tt>能避免不必要子组件实例化。<br /> This object also provides a registry of available Component <i>classes</i> indexed by a mnemonic code known as the Component's <a href="/output/Ext.Component.html#Ext.Component-xtype" ext:cls="Ext.Component" ext:member="xtype">xtype</a>. The <tt>xtype</tt> provides a way to avoid instantiating child Components when creating a full, nested config object for a complete Ext page.</p> <p> 只要xtype正确声明好，就可利用<i>配置项对象（config object）</i>表示一个子组件。这样如遇到组件真是需要显示的时候，与之适合的类型(xtype)就会匹配对应的组件类，达到延时实例化（lazy instantiation）。<br /> A child Component may be specified simply as a <i>config object</i> as long as the correct xtype is specified so that if and when the Component needs rendering, the correct type can be looked up for lazy instantiation.</p> <p> 全部的xtype列表可参阅<a href="output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a>。<br /> For a list of all available xtypes, see <a href="/output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a>.</p> @singleton
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.ComponentMgr-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.ComponentMgr-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.ComponentMgr-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.ComponentMgr-create"></a>
+                        <!--名称+参数列表-->
+                        <b>create</b>(
+	                        
+                                <code>
+                                    Object config
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Constructor defaultType
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Component
+                        <div class="mdesc">
+                            <div class="short">
+                                告诉需要哪个组建的xtype，添加适合的配置项对象，就创建新的Comp... 
+                            </div>
+                            <div class="long">
+                                告诉需要哪个组建的<a href="/output/Ext.component.html#Ext.component-xtype" ext:cls="Ext.component" ext:member="xtype">xtype</a>，添加适合的配置项对象，就创建新的Component，实际上返回这个类的实例。Creates a new Component from the specified config object using the config object's <a href="/output/Ext.component.html#Ext.component-xtype" ext:cls="Ext.component" ext:member="xtype">xtype</a> to determine the class to instantiate.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    你打算创建组件的配置项对象。A configuration object for the Component you wish to create.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    defaultType
+                                                </code> : Constructor
+                                                <div class="sub-desc">
+                                                    如果第一个参数不包含组件的xtype就在第二个参数中指定，作为默认的组件类型。（如果第一个参数已经有的话这个参数就可选吧）。The constructor to provide the default Component type if the config object does not contain an xtype. (Optional if the config contains an xtype).
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Component
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            刚实例化的组件。The newly instantiated Component.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComponentMgr
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.ComponentMgr-get"></a>
+                        <!--名称+参数列表-->
+                        <b>get</b>(
+	                        
+                                <code>
+                                    String id
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Component
+                        <div class="mdesc">
+                            <div class="short">
+                                由id返回组件。Returns a component by id 
+                            </div>
+                            <div class="long">
+                                由id返回组件。Returns a component by id
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    组件的id。The component id
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Component
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            Ext.Component
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComponentMgr
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.ComponentMgr-onAvailable"></a>
+                        <!--名称+参数列表-->
+                        <b>onAvailable</b>(
+	                        
+                                <code>
+                                    String id
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                当指定组件被加入到ComponentMgr时调用的函数。Registe... 
+                            </div>
+                            <div class="long">
+                                当指定组件被加入到ComponentMgr时调用的函数。Registers a function that will be called when a specified component is added to ComponentMgr
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    id
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    组件Id。The component id
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    回调函数。The callback function
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    回调的作用域。The scope of the callback
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComponentMgr
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.ComponentMgr-reg"></a>
+                        <!--名称+参数列表-->
+                        <b>reg</b>(
+	                        
+                                <code>
+                                    String xtype
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Constructor cls
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Shorthand for Ext.ComponentMgrregis... 
+                            </div>
+                            <div class="long">
+                                Shorthand for <a href="/output/Ext.ComponentMgr.html#Ext.ComponentMgr-Ext.ComponentMgrregisterType" ext:cls="Ext.ComponentMgr" ext:member="Ext.ComponentMgrregisterType">Ext.ComponentMgrregisterType</a>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    xtype
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    The mnemonic string by which the Component class may be looked up.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    cls
+                                                </code> : Constructor
+                                                <div class="sub-desc">
+                                                    The new Component class. @member Ext @method reg
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComponentMgr
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.ComponentMgr-register"></a>
+                        <!--名称+参数列表-->
+                        <b>register</b>(
+	                        
+                                <code>
+                                    Ext.Component c
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                注册一个组件。Registers a component. 
+                            </div>
+                            <div class="long">
+                                注册一个组件。Registers a component.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    c
+                                                </code> : Ext.Component
+                                                <div class="sub-desc">
+                                                    组件对象。The component
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComponentMgr
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.ComponentMgr-registerType"></a>
+                        <!--名称+参数列表-->
+                        <b>registerType</b>(
+	                        
+                                <code>
+                                    String xtype
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Constructor cls
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                 输入新的Ext.Componentxtype，登记一个新组件的构造器... 
+                            </div>
+                            <div class="long">
+                                <p> 输入新的<a href="/output/Ext.ComponentMgr.html#Ext.ComponentMgr-Ext.Componentxtype" ext:cls="Ext.ComponentMgr" ext:member="Ext.Componentxtype">Ext.Componentxtype</a>，登记一个新组件的构造器。Registers a new Component constructor, keyed by a new <a href="/output/Ext.ComponentMgr.html#Ext.ComponentMgr-Ext.Componentxtype" ext:cls="Ext.ComponentMgr" ext:member="Ext.Componentxtype">Ext.Componentxtype</a>.</p> <p>使用该方法登记<a href="output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a>的子类以便当指定子组件的xtype时即可延时加载（lazy instantiation）。请参阅<a href="/output/Ext.ComponentMgr.html#Ext.ComponentMgr-Ext.Containeritems" ext:cls="Ext.ComponentMgr" ext:member="Ext.Containeritems">Ext.Containeritems</a>。Use this method to register new subclasses of <a href="/output/Ext.Component.html" ext:cls="Ext.Component">Ext.Component</a> so that lazy instantiation may be used when specifying child Components. see <a href="/output/Ext.ComponentMgr.html#Ext.ComponentMgr-Ext.Containeritems" ext:cls="Ext.ComponentMgr" ext:member="Ext.Containeritems">Ext.Containeritems</a></p>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    xtype
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    组件类的标识字符串。The mnemonic string by which the Component class may be looked up.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    cls
+                                                </code> : Constructor
+                                                <div class="sub-desc">
+                                                    新的组件类。The new Component class.
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComponentMgr
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.ComponentMgr-unregister"></a>
+                        <!--名称+参数列表-->
+                        <b>unregister</b>(
+	                        
+                                <code>
+                                    Ext.Component c
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                撤消登记一个组件。Unregisters a component. 
+                            </div>
+                            <div class="long">
+                                撤消登记一个组件。Unregisters a component.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    c
+                                                </code> : Ext.Component
+                                                <div class="sub-desc">
+                                                    组件对象。The component
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        ComponentMgr
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.ComponentMgr-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

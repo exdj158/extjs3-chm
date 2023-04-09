@@ -1,0 +1,155 @@
+<html lang="en" xmlns:ext="http://extjs.com/docs">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Ext 3.0 中文文档" />
+    <meta name="keywords" content="Ext 2.0 3.0 中文 文档 中文文档 文档中心" />
+    <title>Ext 3.3 - API 文档中心</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/ext-all.css" />
+    <link rel="stylesheet" type="text/css" href="resources/docs.css"></link>
+    <link rel="stylesheet" type="text/css" href="resources/style.css"></link>
+	<style type="text/css">
+		#header A:visited{color:white}
+    	#header A:link{color:white}
+    	#header A:hover{color:white}
+	</style>
+</head>
+<body scroll="no" id="docs">
+  <div id="loading-mask" style=""></div>
+  <div id="loading">
+    <div class="loading-indicator"><img src="resources/extanim32.gif" width="32" height="32" style="margin-right:8px;" align="absmiddle"/>正在加载……</div>
+  </div>
+    <!-- include everything after the loading indicator -->
+    <script type="text/javascript" src="JS/ext-base.js"></script>
+    <script type="text/javascript" src="JS/ext-all.js"></script>
+	<script type="text/javascript" src="JS/ext-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="resources/TabCloseMenu.js"></script>
+
+    <script type="text/javascript" src="resources/docs.js"></script>
+	<script type="text/javascript" src="output/tree.js"></script>
+
+    <div id="header">
+        <div style="float:right;">         
+            <a href="http://code.google.com/p/chineseext/downloads/list" target="_blank" style="margin-right:10px;vertical-align:middle;line-height:20px;text-decoration :underline;">下载离线版本</a>
+            <a href="http://www.ajaxjs.com" style="margin-right:10px;" target="_blank"><img src="resources/apiLogo.gif" style="margin-top:3px;"/></a> 
+    	</div>
+        <div class="api-title">
+            Ext 3.3 - 中文API文档</div>
+    </div>
+
+  <div id="classes"></div>
+
+  <div id="main"></div>
+  <select id="search-options" style="display:none">
+    <option>Starts with</option>
+    <option>Ends with</option>
+    <option>Any Match</option>
+</select>
+<pre style="display:none;" id="show">
+<div id="welcome">
+    <div class="col">
+        <div id="text" style="line-height:1.5em;">
+                   
+            <div id="search">
+            </div>
+			
+            <!--
+            <h2><b>号外！！《Ext详解与实践》一书上架</b></h2>
+           
+            <p>
+            基于对Ext JS的热情，终于在一年的时间内将书籍集以成册，期间的努力在完成的一刻百感交集，期间有许多贵人相助，仅以谢志方式表达感谢。
+     <br />       
+            <a href="http://jstang.cn/forumdisplay.php?fid=50" target="_blank">? 读者讨论区</a> <a target="_blank" href="http://www.china-pub.com/195140">? 立即预订！</a>09-1-16
+            </p>
+            <br />
+			-->
+            <h1>Ext JS相关资源中文化（2007年初起）</h1>
+            <h2>1. 备忘</h2>
+            <p>
+                1.此版本为Ext JS 3.3正式版API的翻译，大体完成了翻译的工作。我们把当前已完成汉化的公开。另有基于源码的翻译版本，请到项目站点<a href="http://code.google.com/p/chineseext/">下载</a>；<br>
+2.翻译小组的汉化工作业已暂告一段落了，但接受任何提交的BUG或建议以持续改进。请点击<a href="http://code.google.com/p/chineseext/w/list">这里</a>转到Wiki提交BUG或建议。<br>
+3.版权协议为Creative Commons 署名-非商业性使用 2.5。<br>
+<a href="http://jstang.5d6d.com/thread-90-1-2.html" target="_blank"></a></p>
+            <br>
+            <h2>2. 翻译团队</h2>
+            <p>
+                JS堂翻译小组名单：<br />第一期：<a href="http://blog.csdn.net/zhangxin09">Frank</a>、甲壳、Nightmare（健坤）、<br>
+              <a href="http://bubble.javaeye.com" target="_blank">BubbleBeast</a>、虎头虎脑、下一道彩虹（明球）、<br>
+              阿雄、拥抱未来、<a href="http://www.jackytsu.com" target="_blank">小骏</a>、夜色温柔、建峰、<br>
+              skywolf、野鹤、端阳、果连、旺财勇士（按QQ群顺序）。第二期：<a href="http://blog.csdn.net/zhangxin09">Frank</a>、Jacky
+              </p>、<a target="_blank" href="http://www.hahaman.cn/">hahaman</a>、Hibernate
+              
+            <br>
+            <h2>3.当前总体进度</h2>
+            1.x的文档翻译初完成（2007年中）；<br>
+          2.x的文档翻译初完成（2008年10月）；<br>
+          3.x的文档翻译初完成（2009年5月）。<br>
+          希望有兴趣参与文档翻译质量审核的朋友加入我们。<br>
+          EXT API2Chinese相关事宜具体在<a href="http://w45438.s48.mydiscuz.com/redirect.php?tid=90&goto=lastpost#lastpost" target="_blank">论坛帖子</a>。
+		    
+			<div style="color:gray;margin-top:30px;">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/cn/"><img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Ext &#20013;&#25991;&#25991;&#26723;</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/cn/">Creative Commons Attribution-Noncommercial-Share Alike 2.5 China Mainland License</a>.   
+		  </div>
+        </div>
+        <div class="col-last">
+            <div class="res-block">
+                <div class="res-block-inner">
+                    <h3>相关资源</h3>
+                    <ul>
+                        <li>
+                            <a href="http://ajaxjs.com/examples/" target="_blank">Ext 3.x范例&nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="http://ajaxjs.com/" target="_blank">Ext中文站</a>
+                        </li>
+                        <li>
+                            <a href="http://ajaxjs.com" target="_blank">Sencha中文后援会</a>
+                        </li>
+                        <li>
+                            <a href="http://extjs.com/learn/w/index.php?title=Category:Chinese" target="_blank">官方中文教程</a>
+                        </li>
+                        <li>
+                            <a href="http://ajaxjs.com/manual" target="_blank">Ext Core手册</a>
+                        </li>
+                        <li>
+                            <a href="http://bbs.ajaxjs.com/" target="_blank">JS堂社区</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="res-block">
+                <div class="res-block-inner">
+                    <h3>图标含义</h3>
+                    <ul id="legend" style="list-style:none;margin-left:0;">
+                        <li>
+                            <img src="resources/images/default/s.gif" class="item-icon icon-pkg">包Package
+                        </li>
+                        <li>
+                            <img src="resources/images/default/s.gif" class="item-icon icon-cls">类Class
+                        </li>
+                        <li>
+                            <img src="resources/images/default/s.gif" class="item-icon icon-static">单例Singleton
+                        </li>
+                        <li>
+                            <img src="resources/images/default/s.gif" class="item-icon icon-cmp">组件Component
+                        </li>
+                        <li>
+                            <img src="resources/images/default/s.gif" class="item-icon icon-method">方法Method
+                        </li>
+                        <li>
+                            <img src="resources/images/default/s.gif" class="item-icon icon-prop">属性Property
+                        </li>
+                        <li>
+                            <img src="resources/images/default/s.gif" class="item-icon icon-config">配置选项Config Option
+                        </li>
+                        <li>
+                            <img src="resources/images/default/s.gif" class="item-icon icon-event">事件Event
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</pre>
+<iframe id="frm1" width="0" height="0" style='display:"none"'></iframe>
+  </body>
+</html>

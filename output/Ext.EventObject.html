@@ -1,0 +1,3021 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.EventObject-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.EventObject-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.EventObject-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.EventObject-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.EventObject" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/EventManager.html#cls-Ext.EventObject">Ext.EventObject</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                EventManager.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/EventManager.html#cls-Ext.EventObject">Ext.EventObject</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         为方便操作，在你定义的事件句柄上传入事件对象（Event Object），这个对象直接呈现了Yahoo! UI事件功能。同时也解决了自动null检查的不便。<br /> EventObject exposes the Yahoo! UI Event functionality directly on the object passed to your event handler. It exists mostly for convenience. It also fixes the annoying null checks automatically to cleanup your code 举例：Example: <pre><code>
+ function handleClick(e){ // e它不是一个标准的事件对象，而是Ext.EventObject。e is not a standard event object, it is a Ext.EventObject
+    e.preventDefault();
+    var target = e.getTarget();
+    ...
+ }
+ var myDiv = Ext.get("myDiv");
+ myDiv.on("click", handleClick);
+ // 或者or
+ Ext.EventManager.on("myDiv", 'click', handleClick);
+ Ext.EventManager.addListener("myDiv", 'click', handleClick);
+ </code></pre> @singleton
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.EventObject-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.EventObject-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="A-activeItem"></a>
+                        <b>
+                        A: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="ALT-activeItem"></a>
+                        <b>
+                        ALT: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="B-activeItem"></a>
+                        <b>
+                        B: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="BACKSPACE-activeItem"></a>
+                        <b>
+                        BACKSPACE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="C-activeItem"></a>
+                        <b>
+                        C: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="CAPS_LOCK-activeItem"></a>
+                        <b>
+                        CAPS_LOCK: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="CONTEXT_MENU-activeItem"></a>
+                        <b>
+                        CONTEXT_MENU: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="CTRL-activeItem"></a>
+                        <b>
+                        CTRL: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="D-activeItem"></a>
+                        <b>
+                        D: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="DELETE-activeItem"></a>
+                        <b>
+                        DELETE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="DOWN-activeItem"></a>
+                        <b>
+                        DOWN: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="E-activeItem"></a>
+                        <b>
+                        E: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="EIGHT-activeItem"></a>
+                        <b>
+                        EIGHT: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="END-activeItem"></a>
+                        <b>
+                        END: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="ENTER-activeItem"></a>
+                        <b>
+                        ENTER: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="ESC-activeItem"></a>
+                        <b>
+                        ESC: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F-activeItem"></a>
+                        <b>
+                        F: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F1-activeItem"></a>
+                        <b>
+                        F1: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F10-activeItem"></a>
+                        <b>
+                        F10: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F11-activeItem"></a>
+                        <b>
+                        F11: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F12-activeItem"></a>
+                        <b>
+                        F12: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F2-activeItem"></a>
+                        <b>
+                        F2: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F3-activeItem"></a>
+                        <b>
+                        F3: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F4-activeItem"></a>
+                        <b>
+                        F4: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F5-activeItem"></a>
+                        <b>
+                        F5: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F6-activeItem"></a>
+                        <b>
+                        F6: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F7-activeItem"></a>
+                        <b>
+                        F7: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F8-activeItem"></a>
+                        <b>
+                        F8: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="F9-activeItem"></a>
+                        <b>
+                        F9: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="FIVE-activeItem"></a>
+                        <b>
+                        FIVE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="FOUR-activeItem"></a>
+                        <b>
+                        FOUR: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="G-activeItem"></a>
+                        <b>
+                        G: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="H-activeItem"></a>
+                        <b>
+                        H: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="HOME-activeItem"></a>
+                        <b>
+                        HOME: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="I-activeItem"></a>
+                        <b>
+                        I: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="INSERT-activeItem"></a>
+                        <b>
+                        INSERT: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="J-activeItem"></a>
+                        <b>
+                        J: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="K-activeItem"></a>
+                        <b>
+                        K: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="L-activeItem"></a>
+                        <b>
+                        L: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="LEFT-activeItem"></a>
+                        <b>
+                        LEFT: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="M-activeItem"></a>
+                        <b>
+                        M: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="N-activeItem"></a>
+                        <b>
+                        N: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NINE-activeItem"></a>
+                        <b>
+                        NINE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_CENTER-activeItem"></a>
+                        <b>
+                        NUM_CENTER: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_DIVISION-activeItem"></a>
+                        <b>
+                        NUM_DIVISION: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_EIGHT-activeItem"></a>
+                        <b>
+                        NUM_EIGHT: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_FIVE-activeItem"></a>
+                        <b>
+                        NUM_FIVE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_FOUR-activeItem"></a>
+                        <b>
+                        NUM_FOUR: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_MINUS-activeItem"></a>
+                        <b>
+                        NUM_MINUS: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_MULTIPLY-activeItem"></a>
+                        <b>
+                        NUM_MULTIPLY: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_NINE-activeItem"></a>
+                        <b>
+                        NUM_NINE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_ONE-activeItem"></a>
+                        <b>
+                        NUM_ONE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_PERIOD-activeItem"></a>
+                        <b>
+                        NUM_PERIOD: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_PLUS-activeItem"></a>
+                        <b>
+                        NUM_PLUS: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_SEVEN-activeItem"></a>
+                        <b>
+                        NUM_SEVEN: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_SIX-activeItem"></a>
+                        <b>
+                        NUM_SIX: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_THREE-activeItem"></a>
+                        <b>
+                        NUM_THREE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_TWO-activeItem"></a>
+                        <b>
+                        NUM_TWO: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="NUM_ZERO-activeItem"></a>
+                        <b>
+                        NUM_ZERO: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="O-activeItem"></a>
+                        <b>
+                        O: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="ONE-activeItem"></a>
+                        <b>
+                        ONE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="P-activeItem"></a>
+                        <b>
+                        P: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="PAGE_DOWN-activeItem"></a>
+                        <b>
+                        PAGE_DOWN: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="PAGE_UP-activeItem"></a>
+                        <b>
+                        PAGE_UP: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="PAUSE-activeItem"></a>
+                        <b>
+                        PAUSE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="PRINT_SCREEN-activeItem"></a>
+                        <b>
+                        PRINT_SCREEN: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="Q-activeItem"></a>
+                        <b>
+                        Q: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="R-activeItem"></a>
+                        <b>
+                        R: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="RETURN-activeItem"></a>
+                        <b>
+                        RETURN: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="RIGHT-activeItem"></a>
+                        <b>
+                        RIGHT: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="S-activeItem"></a>
+                        <b>
+                        S: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="SEVEN-activeItem"></a>
+                        <b>
+                        SEVEN: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="SHIFT-activeItem"></a>
+                        <b>
+                        SHIFT: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="SIX-activeItem"></a>
+                        <b>
+                        SIX: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="SPACE-activeItem"></a>
+                        <b>
+                        SPACE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="T-activeItem"></a>
+                        <b>
+                        T: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="TAB-activeItem"></a>
+                        <b>
+                        TAB: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="THREE-activeItem"></a>
+                        <b>
+                        THREE: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="TWO-activeItem"></a>
+                        <b>
+                        TWO: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="U-activeItem"></a>
+                        <b>
+                        U: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="UP-activeItem"></a>
+                        <b>
+                        UP: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="V-activeItem"></a>
+                        <b>
+                        V: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="W-activeItem"></a>
+                        <b>
+                        W: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="X-activeItem"></a>
+                        <b>
+                        X: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="Y-activeItem"></a>
+                        <b>
+                        Y: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="Z-activeItem"></a>
+                        <b>
+                        Z: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="ZERO-activeItem"></a>
+                        <b>
+                        ZERO: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                键码常量。Key constant @type Number
+                            </div>
+                            <div class="long">
+                                键码常量。Key constant @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">EventObject</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.EventObject-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-altKey"></a>
+                        <!--名称+参数列表-->
+                        <b>altKey</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示事件触发时是有按下alt键的。True if the al... 
+                            </div>
+                            <div class="long">
+                                True表示事件触发时是有按下alt键的。True if the alt key was down during the event
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-browserEvent"></a>
+                        <!--名称+参数列表-->
+                        <b>browserEvent</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                一般浏览器事件。The normal browser event 
+                            </div>
+                            <div class="long">
+                                一般浏览器事件。The normal browser event
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-button"></a>
+                        <!--名称+参数列表-->
+                        <b>button</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                鼠标世界有按钮按下。The button pressed in a m... 
+                            </div>
+                            <div class="long">
+                                鼠标世界有按钮按下。The button pressed in a mouse event
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-ctrlKey"></a>
+                        <!--名称+参数列表-->
+                        <b>ctrlKey</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示事件触发时是有按下ctrl键的。True if the c... 
+                            </div>
+                            <div class="long">
+                                True表示事件触发时是有按下ctrl键的。True if the control key was down during the event
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-getCharCode"></a>
+                        <!--名称+参数列表-->
+                        <b>getCharCode</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                返回一个常规化的事件键盘代码 Gets the character c... 
+                            </div>
+                            <div class="long">
+                                返回一个常规化的事件键盘代码 Gets the character code for the event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            键盘代码
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-getKey"></a>
+                        <!--名称+参数列表-->
+                        <b>getKey</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                Returns a normalized keyCode for th... 
+                            </div>
+                            <div class="long">
+                                Returns a normalized keyCode for the event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            The key code
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-getPageX"></a>
+                        <!--名称+参数列表-->
+                        <b>getPageX</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                获取事件X坐标。Gets the x coordinate of th... 
+                            </div>
+                            <div class="long">
+                                获取事件X坐标。Gets the x coordinate of the event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-getPageY"></a>
+                        <!--名称+参数列表-->
+                        <b>getPageY</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                获取事件Y坐标。Gets the y coordinate of th... 
+                            </div>
+                            <div class="long">
+                                获取事件Y坐标。Gets the y coordinate of the event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-getRelatedTarget"></a>
+                        <!--名称+参数列表-->
+                        <b>getRelatedTarget</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLElement
+                        <div class="mdesc">
+                            <div class="short">
+                                获取相关的目标对象。Gets the related target. 
+                            </div>
+                            <div class="long">
+                                获取相关的目标对象。Gets the related target.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLElement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-getTarget"></a>
+                        <!--名称+参数列表-->
+                        <b>getTarget</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[String selector]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Number/Mixed maxDepth]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean returnEl]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : HTMLelement
+                        <div class="mdesc">
+                            <div class="short">
+                                获取事件的目标对象。Gets the target for the e... 
+                            </div>
+                            <div class="long">
+                                获取事件的目标对象。Gets the target for the event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    selector
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    一个简易的选择符，用于筛选目标或查找目标的父级元素。(optional) A simple selector to filter the target or look for an ancestor of the target
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    maxDepth
+                                                </code> : Number/Mixed
+                                                <div class="sub-desc">
+                                                    搜索的最大深度（数字或是元素，默认为10||document.body）。(optional) The max depth to search as a number or element (defaults to 10 || document.body)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    returnEl
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    True表示为返回Ext.Element的对象而非DOM节点。(optional) True to return a Ext.Element object instead of DOM node
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        HTMLelement
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-getTime"></a>
+                        <!--名称+参数列表-->
+                        <b>getTime</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                获取事件的时间。Gets the time of the event. 
+                            </div>
+                            <div class="long">
+                                获取事件的时间。Gets the time of the event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-getWheelDelta"></a>
+                        <!--名称+参数列表-->
+                        <b>getWheelDelta</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                常规化鼠标滚轮的有限增量（跨浏览器）。Normalizes mouse... 
+                            </div>
+                            <div class="long">
+                                常规化鼠标滚轮的有限增量（跨浏览器）。Normalizes mouse wheel delta across browsers
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            有限增量。The delta
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-getXY"></a>
+                        <!--名称+参数列表-->
+                        <b>getXY</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Array
+                        <div class="mdesc">
+                            <div class="short">
+                                获取事件的页面坐标。Gets the page coordinates... 
+                            </div>
+                            <div class="long">
+                                获取事件的页面坐标。Gets the page coordinates of the event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Array
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            xy值，格式[x, y]。The xy values like [x, y]
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-hasModifier"></a>
+                        <!--名称+参数列表-->
+                        <b>hasModifier</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                返回一个布尔值，表示当该事件执行的过程中，ctrl、alt、shift... 
+                            </div>
+                            <div class="long">
+                                返回一个布尔值，表示当该事件执行的过程中，ctrl、alt、shift有否被按下。Returns true if the control, meta, shift or alt key was pressed during this event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-isNavKeyPress"></a>
+                        <!--名称+参数列表-->
+                        <b>isNavKeyPress</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                 
+                            </div>
+                            <div class="long">
+                                
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-preventDefault"></a>
+                        <!--名称+参数列表-->
+                        <b>preventDefault</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                阻止浏览器默认行为处理事件。Prevents the browsers... 
+                            </div>
+                            <div class="long">
+                                阻止浏览器默认行为处理事件。Prevents the browsers default handling of the event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-setEvent"></a>
+                        <!--名称+参数列表-->
+                        <b>setEvent</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                 
+                            </div>
+                            <div class="long">
+                                
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-shiftKey"></a>
+                        <!--名称+参数列表-->
+                        <b>shiftKey</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示事件触发时是有按下shift键的。True if the ... 
+                            </div>
+                            <div class="long">
+                                True表示事件触发时是有按下shift键的。True if the shift key was down during the event
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-stopEvent"></a>
+                        <!--名称+参数列表-->
+                        <b>stopEvent</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                停止事件（preventDefault和stopPropagation... 
+                            </div>
+                            <div class="long">
+                                停止事件（preventDefault和stopPropagation）。Stop the event (preventDefault and stopPropagation)
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-stopPropagation"></a>
+                        <!--名称+参数列表-->
+                        <b>stopPropagation</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                获取事件的键盘代码。Cancels bubbling of the e... 
+                            </div>
+                            <div class="long">
+                                获取事件的键盘代码。Cancels bubbling of the event.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.EventObject-within"></a>
+                        <!--名称+参数列表-->
+                        <b>within</b>(
+	                        
+                                <code>
+                                    Mixed el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean related]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean allowEl
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                返回true表示如果该事件的目标对象等于el，或是el的子元素。Ret... 
+                            </div>
+                            <div class="long">
+                                返回true表示如果该事件的目标对象等于el，或是el的子元素。Returns true if the target of this event is a child of el.  Unless the allowEl parameter is set, it will return false if if the target is el. Example usage:<pre><code>
+// Handle click on any child of an element
+Ext.getBody().on('click', function(e){
+    if(e.within('some-el')){
+        alert('Clicked on a child of some-el!');
+    }
+});
+
+// Handle click directly on an element, ignoring clicks on child nodes
+Ext.getBody().on('click', function(e,t){
+    if((t.id == 'some-el') && !e.within(t, true)){
+        alert('Clicked directly on some-el!');
+    }
+});
+</code></pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    The id, DOM element or Ext.Element to check
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    related
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    如果相关的target就是el而非target本身，返回true。(optional) true to test if the related target is within el instead of the target
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    allowEl
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    {optional} true to also check if the passed element is the target or related target
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        EventObject
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.EventObject-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

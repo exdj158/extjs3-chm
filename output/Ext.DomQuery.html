@@ -1,0 +1,1014 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.DomQuery-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.DomQuery-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.DomQuery-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.DomQuery-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.DomQuery" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/DomQuery.html#cls-Ext.DomQuery">Ext.DomQuery</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                DomQuery.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/DomQuery.html#cls-Ext.DomQuery">Ext.DomQuery</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         
+根据编译请求提供高效的将选择符 / xpath 处理为可复用的函数的方法。可以添加新的伪类和匹配器。该类可以运行于 HTML 和 XML 文档之上（如果给出了一个内容节点）。<p>
+DomQuery 提供大多数的<a href="http://www.w3.org/TR/2005/WD-css3-selectors-20051215/">CSS3 选择符</a>，同时也支持某些自定义选择符和基本的 XPath。</p>
+
+<p>
+下列所有的选择符、属性过滤器和伪类可以在任何命令中无限地组合使用。例如：“div.foo:nth-child(odd)[@foo=bar].bar:first”将是一个完全有效的选择符。命令中出现的节点过滤器将可以使你根据自己的文档结构对查询做出优化。</p>
+<h4>元素选择符：</h4>
+<ul class="list"></b> 任意元素</li>
+    <li> <b>E</b> 一个标签为 E 的元素</li>
+    <li> <b>E F</b> 所有 E 元素的分支元素中含有标签为 F 的元素</li>
+    <li> <b>E > F</b> 或 <b>E/F</b> 所有 E 元素的直系子元素中含有标签为 F 的元素</li>
+    <li> <b>E + F</b> 所有标签为 F 并紧随着标签为 E 的元素之后的元素</li>
+    <li> <b>E ~ F</b> 所有标签为 F 并与标签为 E 的元素是侧边的元素</li>
+</ul>
+<h4>属性选择符：</h4>
+<p>@ 与引号的使用是可选的。例如：div[@foo='bar'] 也是一个有效的属性选择符。</p>
+<ul class="list">
+    <li> <b>E[foo]</b> 拥有一个名为 “foo” 的属性</li>
+    <li> <b>E[foo=bar]</b> 拥有一个名为 “foo” 且值为 “bar” 的属性</li>
+    <li> <b>E[foo^=bar]</b> 拥有一个名为 “foo” 且值以 “bar” 开头的属性</li>
+    <li> <b>E[foo$=bar]</b> 拥有一个名为 “foo” 且值以 “bar” 结尾的属性</li>=bar]</b> 拥有一个名为 “foo” 且值包含字串 “bar” 的属性</li>
+    <li> <b>E[foo%=2]</b> 拥有一个名为 “foo” 且值能够被2整除的属性</li>
+    <li> <b>E[foo!=bar]</b> 拥有一个名为 “foo” 且值不为 “bar” 的属性</li>
+</ul>
+<h4>Pseudo Classes:</h4>
+<h4>伪类：</h4>
+<ul class="list">
+    <li> <b>E:first-child</b> E 元素为其父元素的第一个子元素</li>
+    <li> <b>E:last-child</b> E 元素为其父元素的最后一个子元素</li>
+    <li> <b>E:nth-child(<i>n</i>)</b> E 元素为其父元素的第 <i>n</i> 个子元素（由1开始的个数）</li>
+    <li> <b>E:nth-child(odd)</b> E 元素为其父元素的奇数个数的子元素</li>
+    <li> <b>E:nth-child(even)</b> E 元素为其父元素的偶数个数的子元素</li>
+    <li> <b>E:only-child</b> E 元素为其父元素的唯一子元素</li>
+    <li> <b>E:checked</b> E 元素为拥有一个名为“checked”且值为“true”的元素（例如：单选框或复选框）</li>
+    <li> <b>E:first</b> 结果集中第一个 E 元素</li>
+    <li> <b>E:last</b> 结果集中最后一个 E 元素</li>
+    <li> <b>E:nth(<i>n</i>)</b> 结果集中第 <i>n</i> 个 E 元素（由1开始的个数）</li>
+    <li> <b>E:odd</b> :nth-child(odd) 的简写</li>
+    <li> <b>E:even</b> :nth-child(even) 的简写</li>
+    <li> <b>E:contains(foo)</b> E 元素的 innerHTML 属性中包含“foo”字串</li>
+    <li> <b>E:nodeValue(foo)</b> E 元素包含一个 textNode 节点且 nodeValue 等于“foo”</li>
+    <li> <b>E:not(S)</b> 一个与简单选择符 S 不匹配的 E 元素</li>
+    <li> <b>E:has(S)</b> 一个包含与简单选择符 S 相匹配的分支元素的 E 元素</li>
+    <li> <b>E:next(S)</b> 下一个侧边元素为与简单选择符 S 相匹配的 E 元素</li>
+    <li> <b>E:prev(S)</b> 上一个侧边元素为与简单选择符 S 相匹配的 E 元素</li>
+</ul>
+<h4>CSS 值选择符：</h4>
+<ul class="list">
+    <li> <b>E{display=none}</b> css 的“display”属性等于“none”</li>
+    <li> <b>E{display^=none}</b> css 的“display”属性以“none”开始</li>
+    <li> <b>E{display$=none}</b> css 的“display”属性以“none”结尾</li>=none}</b> css 的“display”属性包含字串“none”</li>
+    <li> <b>E{display%=2}</b> css 的“display”属性能够被2整除</li>
+    <li> <b>E{display!=none}</b> css 的“display”属性不等于“none”</li>
+</ul> @singleton
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.DomQuery-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.DomQuery-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.DomQuery-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-compile"></a>
+                        <!--名称+参数列表-->
+                        <b>compile</b>(
+	                        
+                                <code>
+                                    String selector
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String type
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                将一个 选择符 / xpath 查询编译为一个可利用的函数。返回的函数... 
+                            </div>
+                            <div class="long">
+                                将一个 选择符 / xpath 查询编译为一个可利用的函数。返回的函数获得一个“root”参数（可选）作为查询的起点。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    selector
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    选择符 / xpath 查询
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    type
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    可选）可以是“select”（默认）或“simple”以供简单选择符使用
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Function
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-filter"></a>
+                        <!--名称+参数列表-->
+                        <b>filter</b>(
+	                        
+                                <code>
+                                    Array el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String selector
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Boolean nonMatches
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Array
+                        <div class="mdesc">
+                            <div class="short">
+                                将元素数组过滤成只包含匹配简易选择符的元素（例如：div.some-c... 
+                            </div>
+                            <div class="long">
+                                将元素数组过滤成只包含匹配简易选择符的元素（例如：div.some-class 或者 span:first-child）
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    要过滤的元素数组
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    selector
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    测试用的简易选择符
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    nonMatches
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    如果值为 true，将返回与选择符不匹配的元素，而不是匹配的元素
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Array
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            匹配选择符而形成的DOM元素数组，如果没有匹配的结果，返回一个空的数组An Array of DOM elements which match the selector. If there are no matches, and empty Array is returned.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-is"></a>
+                        <!--名称+参数列表-->
+                        <b>is</b>(
+	                        
+                                <code>
+                                    String/HTMLElement/Array el
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String selector
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                如果所给的元素与简易选择符相匹配，则返回 true（例如：div.so... 
+                            </div>
+                            <div class="long">
+                                如果所给的元素与简易选择符相匹配，则返回 true（例如：div.some-class 或者 span:first-child）
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    el
+                                                </code> : String/HTMLElement/Array
+                                                <div class="sub-desc">
+                                                    元素 ID、元素本身、或元素数组
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    selector
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    测试用的简易选择符
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-matchers"></a>
+                        <!--名称+参数列表-->
+                        <b>matchers</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                匹配的正则表达式和代码片断的集合。 
+                            </div>
+                            <div class="long">
+                                匹配的正则表达式和代码片断的集合。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-operators"></a>
+                        <!--名称+参数列表-->
+                        <b>operators</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                = 和 %=。可以添加形如 c= 的运算符。其中 c 可以是除空格、&... 
+                            </div>
+                            <div class="long">
+                                = 和 %=。可以添加形如 <i>c</i>= 的运算符。其中 <i>c</i> 可以是除空格、&gt;和&lt;之外的任意字符。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-pseudos"></a>
+                        <!--名称+参数列表-->
+                        <b>pseudos</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                "pseudo class" 处理器集合。每一个处理器将传递当前节点集... 
+                            </div>
+                            <div class="long">
+                                "pseudo class" 处理器集合。每一个处理器将传递当前节点集（数组形式）和参数（如果有）以供选择符使用。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-query"></a>
+                        <!--名称+参数列表-->
+                        <b>query</b>(
+	                        
+                                <code>
+                                    String path
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Node root
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Array
+                        <div class="mdesc">
+                            <div class="short">
+                                选定一个通过CSS/XPath选择符获取的DOM节点组成的数组。Ext... 
+                            </div>
+                            <div class="long">
+                                选定一个通过CSS/XPath选择符获取的DOM节点组成的数组。<a href="output/Ext.DomQuery.html#Ext.DomQuery-Ext.DomQueryselect" ext:cls="Ext.DomQuery" ext:member="Ext.DomQueryselect">Ext.DomQueryselect</a>的简写方式。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    path
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    查询时使用的 XPath 或选择符
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    root
+                                                </code> : Node
+                                                <div class="sub-desc">
+                                                    可选）查询的起点（默认为 document）。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Array
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            @member Ext @method query
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-select"></a>
+                        <!--名称+参数列表-->
+                        <b>select</b>(
+	                        
+                                <code>
+                                    String selector
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Node root
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Array
+                        <div class="mdesc">
+                            <div class="short">
+                                选择一组元素。 
+                            </div>
+                            <div class="long">
+                                选择一组元素。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    selector
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    选择符 / xpath 查询（可以是以逗号分隔的选择符列表）
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    root
+                                                </code> : Node
+                                                <div class="sub-desc">
+                                                    可选）查询的起点（默认为：document）。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Array
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            匹配选择符而形成的DOM元素数组，如果没有匹配的结果，返回一个空的数组An Array of DOM elements which match the selector. If there are no matches, and empty Array is returned.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-selectNode"></a>
+                        <!--名称+参数列表-->
+                        <b>selectNode</b>(
+	                        
+                                <code>
+                                    String selector
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Node root
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Element
+                        <div class="mdesc">
+                            <div class="short">
+                                选择单个元素。 
+                            </div>
+                            <div class="long">
+                                选择单个元素。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    selector
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    选择符 / xpath 查询
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    root
+                                                </code> : Node
+                                                <div class="sub-desc">
+                                                    可选）查询的起点（默认为：document）。
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Element
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            匹配的选择符的DOM元素The DOM element which matched the selector.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-selectNumber"></a>
+                        <!--名称+参数列表-->
+                        <b>selectNumber</b>(
+	                        
+                                <code>
+                                    String selector
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Node root
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Number defaultValue
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Number
+                        <div class="mdesc">
+                            <div class="short">
+                                取得一个经过处理的整形或浮点型的节点值。 
+                            </div>
+                            <div class="long">
+                                取得一个经过处理的整形或浮点型的节点值。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    selector
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    查询时使用的 XPath 或选择符
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    root
+                                                </code> : Node
+                                                <div class="sub-desc">
+                                                    可选）查询的起点（默认为 document）。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    defaultValue
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Number
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.DomQuery-selectValue"></a>
+                        <!--名称+参数列表-->
+                        <b>selectValue</b>(
+	                        
+                                <code>
+                                    String selector
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Node root
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String defaultValue
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                选择一个节点的值，可选择使用 defaultValue 替换掉 null。 
+                            </div>
+                            <div class="long">
+                                选择一个节点的值，可选择使用 defaultValue 替换掉 null。
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    selector
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    选择符 / xpath 查询
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    root
+                                                </code> : Node
+                                                <div class="sub-desc">
+                                                    可选）查询的起点（默认为：document）。
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    defaultValue
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DomQuery
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.DomQuery-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

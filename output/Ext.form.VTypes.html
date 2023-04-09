@@ -1,0 +1,557 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.form.VTypes-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.form.VTypes-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.form.VTypes-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.form.VTypes-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.form.VTypes" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/VTypes.html#cls-Ext.form.VTypes">Ext.form.VTypes</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extform
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                VTypes.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/VTypes.html#cls-Ext.form.VTypes">Ext.form.VTypes</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         提供一个简单的、易于扩展的、可重写的表单验证功能。<br /> This is a singleton object which contains a set of commonly used field validation functions. The validations provided are basic and intended to be easily customizable and extended. To add your own custom VType:<pre><code>
+Ext.apply(Ext.form.VTypes, {
+    IPAddress:  function(v) {
+        return /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(v);
+    },
+    IPAddressText: 'Must be a numeric IP address'
+});
+</code></pre> @singleton
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.form.VTypes-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.form.VTypes-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="alphaMask-activeItem"></a>
+                        <b>
+                        alphaMask: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                The keystroke filter mask to be app...
+                            </div>
+                            <div class="long">
+                                The keystroke filter mask to be applied on alpha input @type RegExp
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">VTypes</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="alphaText-activeItem"></a>
+                        <b>
+                        alphaText: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                当alpha验证返回值为false到时候显示的错误信息。The err...
+                            </div>
+                            <div class="long">
+                                当alpha验证返回值为false到时候显示的错误信息。The error text to display when the alpha validation function returns false @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">VTypes</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="alphanumMask-activeItem"></a>
+                        <b>
+                        alphanumMask: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                只允文数字（alphanum）的正则表达式。The keystroke...
+                            </div>
+                            <div class="long">
+                                只允文数字（alphanum）的正则表达式。The keystroke filter mask to be applied on alphanumeric input @type RegExp
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">VTypes</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="alphanumText-activeItem"></a>
+                        <b>
+                        alphanumText: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                验证数字返回false时候显示的错误信息。The error text...
+                            </div>
+                            <div class="long">
+                                验证数字返回false时候显示的错误信息。The error text to display when the alphanumeric validation function returns false @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">VTypes</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="emailMask-activeItem"></a>
+                        <b>
+                        emailMask: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                只允许email地址格式的正则表达式。The keystroke fi...
+                            </div>
+                            <div class="long">
+                                只允许email地址格式的正则表达式。The keystroke filter mask to be applied on email input.  See the <a href="/output/Ext.form.VTypes.html#Ext.form.VTypes-email" ext:cls="Ext.form.VTypes" ext:member="email">email</a> method for  information about more complex email validation. @type RegExp
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">VTypes</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="emailText-activeItem"></a>
+                        <b>
+                        emailText: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                当Email验证返回值为false到时候显示的错误信息。The err...
+                            </div>
+                            <div class="long">
+                                当Email验证返回值为false到时候显示的错误信息。The error text to display when the email validation function returns false @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">VTypes</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="urlText-activeItem"></a>
+                        <b>
+                        urlText: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                当URL验证返回值为false到时候显示的错误信息。The error...
+                            </div>
+                            <div class="long">
+                                当URL验证返回值为false到时候显示的错误信息。The error text to display when the url validation function returns false @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">VTypes</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.form.VTypes-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.VTypes-alpha"></a>
+                        <!--名称+参数列表-->
+                        <b>alpha</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                验证alpha到函数。The function used to val... 
+                            </div>
+                            <div class="long">
+                                验证alpha到函数。The function used to validate alpha values
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    The value
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        VTypes
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.VTypes-alphanum"></a>
+                        <!--名称+参数列表-->
+                        <b>alphanum</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                验证数字的函数。The function used to valida... 
+                            </div>
+                            <div class="long">
+                                验证数字的函数。The function used to validate alphanumeric values
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    The value
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        VTypes
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.VTypes-email"></a>
+                        <!--名称+参数列表-->
+                        <b>email</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                用于验证Email地址的函数。The function used to... 
+                            </div>
+                            <div class="long">
+                                用于验证Email地址的函数。The function used to validate email addresses.  Note that this is a very basic validation -- complete validation per the email RFC specifications is very complex and beyond the scope of this class, although this function can be overridden if a more comprehensive validation scheme is desired.  See the validation section of the <a href="http://en.wikipedia.org/wiki/E-mail_address">Wikipedia article on email addresses</a>  for additional information.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    The email address
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        VTypes
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.form.VTypes-url"></a>
+                        <!--名称+参数列表-->
+                        <b>url</b>(
+	                        
+                                <code>
+                                    String value
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                验证URL地址的函数。The function used to val... 
+                            </div>
+                            <div class="long">
+                                验证URL地址的函数。The function used to validate URLs
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    The URL
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        VTypes
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.form.VTypes-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

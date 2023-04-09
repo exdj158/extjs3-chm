@@ -1,0 +1,1111 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.Action-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.Action-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.Action-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.Action-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.Action" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/Action.html#cls-Ext.Action">Ext.Action</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                Action.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/Action.html#cls-Ext.Action">Ext.Action</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+          <p> Action是可复用性中可以抽象出来，被任意特定组件所继承的特性之一。Action使你可以通过所有实现了Actions接口的组件共享处理函数、配置选项对象以及UI的更新（比如<a href="/output/Ext.Toolbar.html" ext:cls="Ext.Toolbar">Ext.Toolbar</a>、<a href="output/Ext.Button.html" ext:cls="Ext.Button">Ext.Button</a>和<a href="output/Ext.menu.Menu.html" ext:cls="Ext.menu.Menu">Ext.menu.Menu</a>组件）。<br /> An Action is a piece of reusable functionality that can be abstracted out of any particular component so that it can be usefully shared among multiple components.  Actions let you share handlers, configuration options and UI updates across any components that support the Action interface (primarily <a href="/output/Ext.Toolbar.html" ext:cls="Ext.Toolbar">Ext.Toolbar</a>, <a href="/output/Ext.Button.html" ext:cls="Ext.Button">Ext.Button</a> and <a href="/output/Ext.menu.Menu.html" ext:cls="Ext.menu.Menu">Ext.menu.Menu</a> components).</p> <p> 除了提供的配置选项对象接口之外，任何想要使用Action的组件必需提供下列方法以便在Action所需时调用： setText(string)、setIconCls(string)、setDisabled(boolean)、setVisible(boolean)和setHandler(function)。<br /> Aside from supporting the config object interface, any component that needs to use Actions must also support the following method list, as these will be called as needed by the Action class: setText(string), setIconCls(string), setDisabled(boolean), setVisible(boolean) and setHandler(function).</p> 使用示例：Example usage:<br> <pre><code>
+// Define the shared action.  Each component below will have the same
+// display text and icon, and will display the same message on click.
+var action = new Ext.Action({
+    text: 'Do something',
+    handler: function(){
+        Ext.Msg.alert('Click', 'You did something.');
+    },
+    iconCls: 'do-something'
+});
+
+var panel = new Ext.Panel({
+    title: 'Actions',
+    width:500,
+    height:300,
+    tbar: [
+        // Add the action directly to a toolbar as a menu button
+        action, {
+            text: 'Action Menu',
+            // Add the action to a menu as a text item
+            menu: [action]
+        }
+    ],
+    items: [
+        // Add the action to the panel body as a standard button
+        new Ext.Button(action)
+    ],
+    renderTo: Ext.getBody()
+});
+
+// Change the text for all components using the action
+action.setText('Something else');
+
+// 通过itemId来获取容器下的action
+// Reference an action through a container using the itemId
+var btn = panel.getComponent('myAction');
+var aRef = btn.baseAction;
+aRef.setText('New text');
+</code></pre> 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.Action-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disabled-header"></a>
+                        <b>disabled</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True 则禁用组件，false 则启用组件（默认为 false）。T...
+                            </div>
+                            <div class="long">
+                                True 则禁用组件，false 则启用组件（默认为 false）。True to disable all components using this action, false to enable them (defaults to false).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="handler-header"></a>
+                        <b>handler</b>
+                        : Function
+                        <div class="mdesc">
+                            <div class="short">
+                                每个使用 action 对象的组件的主要事件触发时调用的处理函数（默认...
+                            </div>
+                            <div class="long">
+                                每个使用 action 对象的组件的主要事件触发时调用的处理函数（默认为 undefined）。The function that will be invoked by each component tied to this action when the component's primary event is triggered (defaults to undefined).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="hidden-header"></a>
+                        <b>hidden</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True 则隐藏组件，false 则显示组件（默认为 false）。T...
+                            </div>
+                            <div class="long">
+                                True 则隐藏组件，false 则显示组件（默认为 false）。True to hide all components using this action, false to show them (defaults to false).
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="iconCls-header"></a>
+                        <b>iconCls</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                使用 action 对象的组件的图标样式表（默认为 ''）。该样式类应...
+                            </div>
+                            <div class="long">
+                                使用 action 对象的组件的图标样式表（默认为 ''）。该样式类应该提供一个显示为图标的背景图片。The CSS class selector that specifies a background image to be used as the header icon for all components using this action (defaults to ''). <p>用css来指定图标的例子会是这样：An example of specifying a custom icon class would be something like: </p><code><pre>
+// iconCls是指定图标的配置项。specify the property in the config for the class:
+     ...
+     iconCls: 'do-something'
+
+// 指定css背景图，作为图标的图片文件。css class that specifies background image to be used as the icon image:
+.do-something { background-image: url(../images/my-icon.gif) 0 6px no-repeat !important; }
+</pre></code>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="scope-header"></a>
+                        <b>scope</b>
+                        : Object
+                        <div class="mdesc">
+                            <div class="short">
+                                handler函数执行的作用域。The scope in which ...
+                            </div>
+                            <div class="long">
+                                <a href="/output/Ext.Action.html#Ext.Action-handler" ext:cls="Ext.Action" ext:member="handler">handler</a>函数执行的作用域。The scope in which the <a href="/output/Ext.Action.html#Ext.Action-handler" ext:cls="Ext.Action" ext:member="handler">handler</a> function will execute.
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="text-header"></a>
+                        <b>text</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                使用 action 对象的所有组件的文本（默认为 ''）。The te...
+                            </div>
+                            <div class="long">
+                                使用 action 对象的所有组件的文本（默认为 ''）。The text to set for all components using this action (defaults to '').
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">Action</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.Action-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.Action-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-disable"></a>
+                        <!--名称+参数列表-->
+                        <b>disable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                禁用所有使用 action 对象的组件。Disables all co... 
+                            </div>
+                            <div class="long">
+                                禁用所有使用 action 对象的组件。Disables all components using this action.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-each"></a>
+                        <!--名称+参数列表-->
+                        <b>each</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                绑定到当前 action 对象上的所有组件都执行一次指定的函数。传入的... 
+                            </div>
+                            <div class="long">
+                                绑定到当前 action 对象上的所有组件都执行一次指定的函数。传入的函数将接受一个由 action 对象所支持的配置选项对象组成的参数。Executes the specified function once for each component currently tied to this action.  The function passed in should accept a single argument that will be an object that supports the basic Action config/method interface.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    每个组件执行的函数。The function to execute for each component
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数运行的作用域。The scope in which the function will execute
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-enable"></a>
+                        <!--名称+参数列表-->
+                        <b>enable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                启用所有使用 action 对象的组件。Enables all com... 
+                            </div>
+                            <div class="long">
+                                启用所有使用 action 对象的组件。Enables all components using this action.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-execute"></a>
+                        <!--名称+参数列表-->
+                        <b>execute</b>(
+	                        
+                                <code>
+                                    <span class='optional'>[Mixed arg1]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Mixed arg2]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Mixed etc
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                手动执行动作，采用的是原配置对象上的默认句柄函数。参数也可以一并传递。... 
+                            </div>
+                            <div class="long">
+                                手动执行动作，采用的是原配置对象上的默认句柄函数。参数也可以一并传递。Executes this action manually using the default handler specified in the original config object.  Any arguments passed to this function will be passed on to the handler function.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    arg1
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    传入到处理器句柄的参数。(optional) Variable number of arguments passed to the handler function
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    arg2
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    (optional)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    etc
+                                                </code> : Mixed
+                                                <div class="sub-desc">
+                                                    ... （可选的）(optional)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-getIconClass"></a>
+                        <!--名称+参数列表-->
+                        <b>getIconClass</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                获取使用 action 对象的组件的图标样式表。Gets the ic... 
+                            </div>
+                            <div class="long">
+                                获取使用 action 对象的组件的图标样式表。Gets the icon CSS class currently used by all components using this action.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-getText"></a>
+                        <!--名称+参数列表-->
+                        <b>getText</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                获取使用 action 对象的组件当前显示的文本。Gets the t... 
+                            </div>
+                            <div class="long">
+                                获取使用 action 对象的组件当前显示的文本。Gets the text currently displayed by all components using this action.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-hide"></a>
+                        <!--名称+参数列表-->
+                        <b>hide</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                隐藏所有使用 action 对象的组件。Hides all compo... 
+                            </div>
+                            <div class="long">
+                                隐藏所有使用 action 对象的组件。Hides all components using this action.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-setDisabled"></a>
+                        <!--名称+参数列表-->
+                        <b>setDisabled</b>(
+	                        
+                                <code>
+                                    Boolean disabled
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                设置所有使用 action 对象的组件的 disabled 状态。en... 
+                            </div>
+                            <div class="long">
+                                设置所有使用 action 对象的组件的 disabled 状态。<a href="output/Ext.Action.html#Ext.Action-enable" ext:cls="Ext.Action" ext:member="enable">enable</a> 和 <a href="/output/Ext.Action.html#Ext.Action-disable" ext:cls="Ext.Action" ext:member="disable">disable</a> 方法的快捷方式。Sets the disabled state of all components using this action.  Shortcut method for <a href="/output/Ext.Action.html#Ext.Action-enable" ext:cls="Ext.Action" ext:member="enable">enable</a> and <a href="/output/Ext.Action.html#Ext.Action-disable" ext:cls="Ext.Action" ext:member="disable">disable</a>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    disabled
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    True 则禁用组件，false 则启用组件。True to disable the component, false to enable it
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-setHandler"></a>
+                        <!--名称+参数列表-->
+                        <b>setHandler</b>(
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                为每个使用 action 对象的组件设置主要事件触发时调用的处理函数。... 
+                            </div>
+                            <div class="long">
+                                为每个使用 action 对象的组件设置主要事件触发时调用的处理函数。Sets the function that will be called by each component using this action when its primary event is triggered.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    对象的组件调用的函数。调用该函数时没有参数。The function that will be invoked by the action's components.  The function will be called with no arguments.
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    函数运行的作用域。The scope in which the function will execute
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-setHidden"></a>
+                        <!--名称+参数列表-->
+                        <b>setHidden</b>(
+	                        
+                                <code>
+                                    Boolean hidden
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                设置所有使用 action 对象的组件的 hidden 状态。hide... 
+                            </div>
+                            <div class="long">
+                                设置所有使用 action 对象的组件的 hidden 状态。<a href="output/Ext.Action.html#Ext.Action-hide" ext:cls="Ext.Action" ext:member="hide">hide</a> 和 <a href="/output/Ext.Action.html#Ext.Action-show" ext:cls="Ext.Action" ext:member="show">show</a> 方法的快捷方式。Sets the hidden state of all components using this action.  Shortcut method for <a href="/output/Ext.Action.html#Ext.Action-hide" ext:cls="Ext.Action" ext:member="hide">hide</a> and <a href="/output/Ext.Action.html#Ext.Action-show" ext:cls="Ext.Action" ext:member="show">show</a>.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    hidden
+                                                </code> : Boolean
+                                                <div class="sub-desc">
+                                                    True 则隐藏组件，false 则显示组件。True to hide the component, false to show it
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-setIconClass"></a>
+                        <!--名称+参数列表-->
+                        <b>setIconClass</b>(
+	                        
+                                <code>
+                                    String cls
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                设置使用 action 对象的组件的图标样式表。该样式类应该提供一个显... 
+                            </div>
+                            <div class="long">
+                                设置使用 action 对象的组件的图标样式表。该样式类应该提供一个显示为图标的背景图片。Sets the icon CSS class for all components using this action. The class should supply a background image that will be used as the icon image.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    cls
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    提供图标图片的 CSS 样式类。The CSS class supplying the icon image
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-setText"></a>
+                        <!--名称+参数列表-->
+                        <b>setText</b>(
+	                        
+                                <code>
+                                    String text
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                设置使用 action 对象的所有组件的文本。Sets the tex... 
+                            </div>
+                            <div class="long">
+                                设置使用 action 对象的所有组件的文本。Sets the text to be displayed by all components using this action.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    text
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    显示的文本。The text to display
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.Action-show"></a>
+                        <!--名称+参数列表-->
+                        <b>show</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                显示所有使用 action 对象的组件。Shows all compo... 
+                            </div>
+                            <div class="long">
+                                显示所有使用 action 对象的组件。Shows all components using this action.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        Action
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.Action-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

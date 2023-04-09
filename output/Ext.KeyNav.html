@@ -1,0 +1,327 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.KeyNav-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.KeyNav-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.KeyNav-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.KeyNav-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.KeyNav" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/KeyNav.html#cls-Ext.KeyNav">Ext.KeyNav</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                KeyNav.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/KeyNav.html#cls-Ext.KeyNav">Ext.KeyNav</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         <p> 为跨浏览器的键盘方向键加上一层快捷的包装器（wrapper）。KeyNav允许你为某个功能绑定方向键，按下的时候即调用该功能。KeyNav允许你对方向键进行函数调用的绑定，即按下相应的键便立即执行函数，轻松实现了对任意UI组件的键盘事件控制</p> <p>下列是全部有可能会出现的键（已实现的）： enter, left, right, up, down, tab, esc, pageUp, pageDown, del, home, end。举例：</p>
+ <pre><code>
+var nav = new Ext.KeyNav("my-element", {
+    "left" : function(e){
+        this.moveLeft(e.ctrlKey);
+    },
+    "right" : function(e){
+        this.moveRight(e.ctrlKey);
+    },
+    "enter" : function(e){
+        this.save();
+    },
+    scope : this
+});
+</code></pre> 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.KeyNav-configs"></a>
+	<h2>配置项</h2>
+
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    配置项
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="defaultEventAction-header"></a>
+                        <b>defaultEventAction</b>
+                        : String
+                        <div class="mdesc">
+                            <div class="short">
+                                当KeyNav拦截某键之后，所调用的Ext.EventObject方法...
+                            </div>
+                            <div class="long">
+                                当KeyNav拦截某键之后，所调用的<a href="output/Ext.EventObject.html" ext:cls="Ext.EventObject">Ext.EventObject</a>方法。该值可以是 <a href="/output/Ext.KeyNav.html#Ext.KeyNav-Ext.EventObjectstopEvent" ext:cls="Ext.KeyNav" ext:member="Ext.EventObjectstopEvent">Ext.EventObjectstopEvent</a>， <a href="/output/Ext.KeyNav.html#Ext.KeyNav-Ext.EventObjectpreventDefault" ext:cls="Ext.KeyNav" ext:member="Ext.EventObjectpreventDefault">Ext.EventObjectpreventDefault</a>与 <a href="/output/Ext.KeyNav.html#Ext.KeyNav-Ext.EventObjectstopPropagation" ext:cls="Ext.KeyNav" ext:member="Ext.EventObjectstopPropagation">Ext.EventObjectstopPropagation</a>（默认为“stopEvent”）
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">KeyNav</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="disabled-header"></a>
+                        <b>disabled</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                True表示为禁止该KeyNav的实例（默认为false）
+                            </div>
+                            <div class="long">
+                                True表示为禁止该KeyNav的实例（默认为false）
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">KeyNav</td>
+                </tr>
+            
+                <tr class="config-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="forceKeyDown-header"></a>
+                        <b>forceKeyDown</b>
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                以keydown事件代替keypress（默认为false）。由于IE...
+                            </div>
+                            <div class="long">
+                                以keydown事件代替keypress（默认为false）。由于IE上按下special键不能有效触发keypress事件，所以IE上会自动设置为true。然而将该项规定为true的话，则表示所以浏览器上都以以keydown事件代替keypress
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">KeyNav</td>
+                </tr>
+            
+        </table>
+    
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.KeyNav-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.KeyNav-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.KeyNav-disable"></a>
+                        <!--名称+参数列表-->
+                        <b>disable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                禁用这个KeyNav 
+                            </div>
+                            <div class="long">
+                                禁用这个KeyNav
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        KeyNav
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.KeyNav-enable"></a>
+                        <!--名称+参数列表-->
+                        <b>enable</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                激活这个KeyNav 
+                            </div>
+                            <div class="long">
+                                激活这个KeyNav
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        KeyNav
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.KeyNav-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

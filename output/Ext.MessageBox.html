@@ -1,0 +1,1487 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.MessageBox-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.MessageBox-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.MessageBox-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.MessageBox-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.MessageBox" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/MessageBox.html#cls-Ext.MessageBox">Ext.MessageBox</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Ext
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                MessageBox.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/MessageBox.html#cls-Ext.MessageBox">Ext.MessageBox</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         <p>用来生成不同样式的消息框的实用类。还可以使用它的别名Ext.Msg。Utility class for generating different styles of message boxes.  The alias Ext.Msg can also be used.<p/> <p>需要注意的是 MessageBox 对象是异步的。不同于 JavaScript中原生的<code>alert</code>（它会暂停浏览器的执行），显示 MessageBox 不会中断代码的运行。由于这个原因，如果你的代码需要在用户对 MessageBox 做出反馈<em>之后</em>执行，则必须用到回调函数（详情可见<a href="output/Ext.MessageBox.html#Ext.MessageBox-show" ext:cls="Ext.MessageBox" ext:member="show">show</a>方法中的<code>function</code>参数）。Note that the MessageBox is asynchronous.  Unlike a regular JavaScript <code>alert</code> (which will halt browser execution), showing a MessageBox will not cause the code to stop.  For this reason, if you have code that should only run <em>after</em> some user feedback from the MessageBox, you must use a callback function (see the <code>function</code> parameter for <a href="/output/Ext.MessageBox.html#Ext.MessageBox-show" ext:cls="Ext.MessageBox" ext:member="show">show</a> for more details).</p> <p>用法示例：Example usage:</p><pre><code>
+// 基本的通知： Basic alert:
+Ext.Msg.alert('Status', 'Changes saved successfully.');
+
+// 提示用户输入数据并使用回调方法进得处理： Prompt for user data and process the result using a callback:
+Ext.Msg.prompt('Name', 'Please enter your name:', function(btn, text){
+    if (btn == 'ok'){
+        // process text value and close...
+    }
+});
+
+// 显示一个使用配置选项的对话框： Show a dialog using config options:
+Ext.Msg.show({
+   title:'Save Changes?',
+   msg: 'You are closing a tab that has unsaved changes. Would you like to save your changes?',
+   buttons: Ext.Msg.YESNOCANCEL,
+   fn: processResult,
+   animEl: 'elId',
+   icon: Ext.MessageBox.QUESTION
+});
+</code></pre> @singleton
+ 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.MessageBox-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.MessageBox-props"></a>
+    <h2>公告属性</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th colspan="2">
+                    属性
+                </th>
+                <th>
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="CANCEL-activeItem"></a>
+                        <b>
+                        CANCEL: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                只显示一个取消按钮的Button配置项。Button config t...
+                            </div>
+                            <div class="long">
+                                只显示一个取消按钮的Button配置项。Button config that displays a single Cancel button @type Object
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="ERROR-activeItem"></a>
+                        <b>
+                        ERROR: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                显示ERROR图标的CSS类。The CSS class that p...
+                            </div>
+                            <div class="long">
+                                显示ERROR图标的CSS类。The CSS class that provides the ERROR icon image @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="INFO-activeItem"></a>
+                        <b>
+                        INFO: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                显示INFO图标的CSS类。The CSS class that pr...
+                            </div>
+                            <div class="long">
+                                显示INFO图标的CSS类。The CSS class that provides the INFO icon image @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="OK-activeItem"></a>
+                        <b>
+                        OK: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                只显示一个确认按钮的Button配置项。Button config t...
+                            </div>
+                            <div class="long">
+                                只显示一个确认按钮的Button配置项。Button config that displays a single OK button @type Object
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="OKCANCEL-activeItem"></a>
+                        <b>
+                        OKCANCEL: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                显示确认和取消按钮的Button配置项。Button config t...
+                            </div>
+                            <div class="long">
+                                显示确认和取消按钮的Button配置项。Button config that displays OK and Cancel buttons @type Object
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="QUESTION-activeItem"></a>
+                        <b>
+                        QUESTION: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                显示QUESTION图标的CSS类。The CSS class tha...
+                            </div>
+                            <div class="long">
+                                显示QUESTION图标的CSS类。The CSS class that provides the QUESTION icon image @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="WARNING-activeItem"></a>
+                        <b>
+                        WARNING: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                显示WARNING图标的CSS类。The CSS class that...
+                            </div>
+                            <div class="long">
+                                显示WARNING图标的CSS类。The CSS class that provides the WARNING icon image @type String
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="YESNO-activeItem"></a>
+                        <b>
+                        YESNO: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                显示是和否按钮的Button配置项。Button config tha...
+                            </div>
+                            <div class="long">
+                                显示是和否按钮的Button配置项。Button config that displays Yes and No buttons @type Object
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="YESNOCANCEL-activeItem"></a>
+                        <b>
+                        YESNOCANCEL: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                显示是、否和取消按钮的Button配置项。Button config ...
+                            </div>
+                            <div class="long">
+                                显示是、否和取消按钮的Button配置项。Button config that displays Yes, No and Cancel buttons @type Object
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="buttonText-activeItem"></a>
+                        <b>
+                        buttonText: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                一个包含默认的按钮文本字串的对象，为本地化支持时可以被覆写。可用的属性...
+                            </div>
+                            <div class="long">
+                                一个包含默认的按钮文本字串的对象，为本地化支持时可以被覆写。可用的属性有：ok、cancel、yes 和 no。通常情况下你可以通过包含一个本地资源文件来实现整个框架的本地化。像这样就可以定制默认的文本：Ext.MessageBox.buttonText.yes = "是"; //中文 An object containing the default button text strings that can be overriden for localized language support. Supported properties are: ok, cancel, yes and no.  Generally you should include a locale-specific resource file for handling language support across the framework. Customize the default text like so: Ext.MessageBox.buttonText.yes = "oui"; //french @type Object
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="defaultTextHeight-activeItem"></a>
+                        <b>
+                        defaultTextHeight: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                以像素为单位表示的消息框中文本域的默认高度（默认为 75）。The d...
+                            </div>
+                            <div class="long">
+                                以像素为单位表示的消息框中文本域的默认高度（默认为 75）。The default height in pixels of the message box's multiline textarea if displayed (defaults to 75) @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="maxWidth-activeItem"></a>
+                        <b>
+                        maxWidth: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                以像素为单位表示的消息框的最大宽度（默认为 600）。The maxi...
+                            </div>
+                            <div class="long">
+                                以像素为单位表示的消息框的最大宽度（默认为 600）。The maximum width in pixels of the message box (defaults to 600) @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minProgressWidth-activeItem"></a>
+                        <b>
+                        minProgressWidth: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                带有进度条的对话框的以像素为单位表示的最小宽度。在与纯文本对话框设置不...
+                            </div>
+                            <div class="long">
+                                带有进度条的对话框的以像素为单位表示的最小宽度。在与纯文本对话框设置不同的最小宽度时会用到（默认为 250）。The minimum width in pixels of the message box if it is a progress-style dialog.  This is useful for setting a different minimum width than text-only dialogs may need (defaults to 250) @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+                <tr class="property-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <a id="minWidth-activeItem"></a>
+                        <b>
+                        minWidth: </b>
+                        <div class="mdesc">
+                            <div class="short">
+                                以像素为单位表示的消息框的最小宽度（默认为 100）。The mini...
+                            </div>
+                            <div class="long">
+                                以像素为单位表示的消息框的最小宽度（默认为 100）。The minimum width in pixels of the message box (defaults to 100) @type Number
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">MessageBox</td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.MessageBox-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-Msg"></a>
+                        <!--名称+参数列表-->
+                        <b>Msg</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                Ext.MessageBox 的缩写。Shorthand for Ex... 
+                            </div>
+                            <div class="long">
+                                <a href="/output/Ext.MessageBox.html" ext:cls="Ext.MessageBox">Ext.MessageBox</a> 的缩写。Shorthand for <a href="/output/Ext.MessageBox.html" ext:cls="Ext.MessageBox">Ext.MessageBox</a>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-alert"></a>
+                        <!--名称+参数列表-->
+                        <b>alert</b>(
+	                        
+                                <code>
+                                    String title
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String msg
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                显示一个标准的带有确认按钮的只读消息框（类似于 JavaScript原... 
+                            </div>
+                            <div class="long">
+                                显示一个标准的带有确认按钮的只读消息框（类似于 JavaScript原生的 alert函数、prompt函数）。如果给定了回调函数，则会在用户点击按钮后执行，并且被点击的按钮的 ID 会当做唯一的参数传入到回调函数中（也有可能是右上角的关闭按钮）。Displays a standard read-only message box with an OK button (comparable to the basic JavaScript alert prompt). If a callback function is passed it will be called after the user clicks the button, and the id of the button that was clicked will be passed as the only parameter to the callback (could also be the top-right close button).
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    title
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    标题文本。The title bar text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    msg
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    消息框body文本。The message box body text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    可选）消息框被关闭后调用的回调函数。(optional) The callback function invoked after the message box is closed
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    可选）回调函数的作用域。(optional)The scope of the callback function
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-confirm"></a>
+                        <!--名称+参数列表-->
+                        <b>confirm</b>(
+	                        
+                                <code>
+                                    String title
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String msg
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Function fn
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object scope
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                显示一个带有是和否按钮的确认消息框（等同与JavaScript 原生的... 
+                            </div>
+                            <div class="long">
+                                显示一个带有是和否按钮的确认消息框（等同与JavaScript 原生的confirm函数）。如果给定了回调函数，则会在用户点击按钮后执行，并且被点击的按钮的ID会当做唯一的参数传入到回调函数中（也有可能是右上角的关闭按钮）。Displays a confirmation message box with Yes and No buttons (comparable to JavaScript's confirm). If a callback function is passed it will be called after the user clicks either button, and the id of the button that was clicked will be passed as the only parameter to the callback (could also be the top-right close button).
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    title
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    标题文本。The title bar text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    msg
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    消息框body文本。The message box body text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    可选）消息框被关闭后调用的回调函数。(optional) The callback function invoked after the message box is closed
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    可选）回调函数的作用域。(optional)The scope of the callback function
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-getDialog"></a>
+                        <!--名称+参数列表-->
+                        <b>getDialog</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.Window
+                        <div class="mdesc">
+                            <div class="short">
+                                返回Ext.Window对象的元素的引用。Returns a refe... 
+                            </div>
+                            <div class="long">
+                                返回<a href="/output/Ext.Window.html" ext:cls="Ext.Window">Ext.Window</a>对象的元素的引用。Returns a reference to the underlying <a href="/output/Ext.Window.html" ext:cls="Ext.Window">Ext.Window</a> element
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.Window
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            The window 对象
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-hide"></a>
+                        <!--名称+参数列表-->
+                        <b>hide</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                如果消息框当前可见则返回true，否则返回false。Hides th... 
+                            </div>
+                            <div class="long">
+                                如果消息框当前可见则返回true，否则返回false。Hides the message box if it is displayed
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-isVisible"></a>
+                        <!--名称+参数列表-->
+                        <b>isVisible</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Boolean
+                        <div class="mdesc">
+                            <div class="short">
+                                如果消息框当前可见则返回true。Returns true if th... 
+                            </div>
+                            <div class="long">
+                                如果消息框当前可见则返回true。Returns true if the message box is currently displayed
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Boolean
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            如果消息框当前可见则返回 true，否则返回 false。True if the message box is visible, else false
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-progress"></a>
+                        <!--名称+参数列表-->
+                        <b>progress</b>(
+	                        
+                                <code>
+                                    String title
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String msg
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String progressText
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                显示一个带有进度条的消息框。此消息框没有按钮并且无法被用户关闭。你必须... 
+                            </div>
+                            <div class="long">
+                                显示一个带有进度条的消息框。此消息框没有按钮并且无法被用户关闭。你必须通过<a href="/output/Ext.MessageBox.html#Ext.MessageBox-Ext.MessageBoxupdateProgress" ext:cls="Ext.MessageBox" ext:member="Ext.MessageBoxupdateProgress">Ext.MessageBoxupdateProgress</a>方法更新进度条，并当进度完成时关闭消息框。Displays a message box with a progress bar.  This message box has no buttons and is not closeable by the user.  You are responsible for updating the progress bar as needed via <a href="/output/Ext.MessageBox.html#Ext.MessageBox-Ext.MessageBoxupdateProgress" ext:cls="Ext.MessageBox" ext:member="Ext.MessageBoxupdateProgress">Ext.MessageBoxupdateProgress</a> and closing the message box when the process is complete.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    title
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    标题文本。The title bar text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    msg
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    消息框body文本。The message box body text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    progressText
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    进度条显示的文本（默认为 ''）。(optional) The text to display inside the progress bar (defaults to '')
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-prompt"></a>
+                        <!--名称+参数列表-->
+                        <b>prompt</b>(
+	                        
+                                <code>
+                                    String title
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String msg
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Function fn]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object scope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Boolean/Number multiline]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[String value]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                显示一个带有确认和取消按钮的提示框，并接受用户输入文本（等同与Java... 
+                            </div>
+                            <div class="long">
+                                显示一个带有确认和取消按钮的提示框，并接受用户输入文本（等同与JavaScript原生的prompt函数）。提示框可以是一个单行或多行文本框。如果给定了回调函数，则在用户点击任意一个按钮后执行回调函数， 并且被点击的按钮的ID（有可能是右上角的关闭按钮）和用户输入的文本都将被当做参数传给回调函数。Displays a message box with OK and Cancel buttons prompting the user to enter some text (comparable to JavaScript's prompt). The prompt can be a single-line or multi-line textbox.  If a callback function is passed it will be called after the user clicks either button, and the id of the button that was clicked (could also be the top-right close button) and the text that was entered will be passed as the two parameters to the callback.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    title
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    标题文本。The title bar text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    msg
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    消息框body文本。The message box body text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    fn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    消息框被关闭后调用的回调函数。(optional)The callback function invoked after the message box is closed
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    scope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    回调函数的作用域。(optional)The scope of the callback function
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    multiline
+                                                </code> : Boolean/Number
+                                                <div class="sub-desc">
+                                                    值为true时则创建一个defaultTextHeight值指定行数的文本域，或者一个以像素为单位表示的高度（默认为 false，表示单行）。(optional)True to create a multiline textbox using the defaultTextHeight property, or the height in pixels to create the textbox (defaults to false / single-line)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    text输入元素的默认值（默认为''）。(optional) Default value of the text input element (defaults to '')
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-setIcon"></a>
+                        <!--名称+参数列表-->
+                        <b>setIcon</b>(
+	                        
+                                <code>
+                                    String icon
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                添加指定的图标到对话框中。默认情况下，'ext-mb-icon' 被应... 
+                            </div>
+                            <div class="long">
+                                添加指定的图标到对话框中。默认情况下，'ext-mb-icon' 被应用于默认的样式，给定的样式类需要指定背景图片地址。如果要清除图标则给定一个空字串（''）。下面是提供的内建图标样式类，当然你也可以给定一个自定义的类： Adds the specified icon to the dialog.  By default, the class 'ext-mb-icon' is applied for default styling, and the class passed in is expected to supply the background image url. Pass in empty string ('') to clear any existing icon.  The following built-in icon classes are supported, but you can also pass in a custom class name: <pre>
+Ext.MessageBox.INFO
+Ext.MessageBox.WARNING
+Ext.MessageBox.QUESTION
+Ext.MessageBox.ERROR</pre>
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    icon
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    一个指定了背景图片地址的 CSS 类名，或者一个空字串表示清除图标。A CSS classname specifying the icon's background image url, or empty string to clear the icon
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-show"></a>
+                        <!--名称+参数列表-->
+                        <b>show</b>(
+	                        
+                                <code>
+                                    Object config
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                基于给定的配置选项显示一个消息框，或者重新初始一个现存的消息框。Mes... 
+                            </div>
+                            <div class="long">
+                                基于给定的配置选项显示一个消息框，或者重新初始一个现存的消息框。MessageBox 对象的所有显示函数（例如：prompt、alert、等等）均为内部调用此函数， 虽然这些调用均为此方法的简单的快捷方式并且不提供所有的下列配置选项。Displays a new message box, or reinitializes an existing message box, based on the config options passed in. All display functions (e.g. prompt, alert, etc.) on MessageBox call this function internally, although those calls are basic shortcuts and do not support all of the config options allowed here.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    可支持的配置项参数：The following config options are supported: <ul> <li><b>animEl</b> : String/Element<div class="sub-desc">消息框显示和关闭时动画展现的目标元素，或它的 ID（默认为 undefined）。An id or Element from which the message box should animate as it opens and closes (defaults to undefined)</div></li> <li><b>buttons</b> : Object/Boolean<div class="sub-desc">Button 配置对象（例如：Ext.MessageBox.OKCANCEL 或者 {ok:'Foo',cancel:'Bar'}），或者 false 表示不显示任何按钮（默认为 false）。A button config object (e.g., Ext.MessageBox.OKCANCEL or {ok:'Foo', cancel:'Bar'}), or false to not show any buttons (defaults to false)</div></li> <li><b>closable</b> : Boolean<div class="sub-desc">值为 false 则隐藏右上角的关闭按钮（默认为 true）。注意由于 progress 和 wait 对话框只能通过程序关闭，因此它们将忽略此参数并总是隐藏关闭按钮。False to hide the top-right close button (defaults to true). Note that progress and wait dialogs will ignore this property and always hide the close button as they can only be closed programmatically.</div></li> <li><b>cls</b> : String<div class="sub-desc">应用到消息框容器元素中的自定义 CSS 类。A custom CSS class to apply to the message box's container element</div></li> <li><b>defaultTextHeight</b> : Number<div class="sub-desc">以像素为单位表示的默认消息框的文本域高度，如果有的话（默认为 75）。The default height in pixels of the message box's multiline textarea if displayed (defaults to 75)</div></li> <li><b>fn</b> : Function<div class="sub-desc">当对话框关闭后执行的回调函数。参数包括按钮（被点击的按钮的名字，如果可用，如："ok"），文本（活动的文本框的值，如果可用）。A callback function which is called when the dialog is dismissed either by clicking on the configured buttons, or on the dialog close button, or by pressing the return button to enter input. <p> Progress 和 wait 对话框将忽略此选项，因为它们不会回应使用者的动作，并且只能在程序中被关闭，所以任何必须的函数都可以放在关闭对话框的代码中调用。以下是送入的参数： Progress and wait dialogs will ignore this option since they do not respond to user actions and can only be closed programmatically, so any required function should be called by the same code after it closes the dialog. Parameters passed:<ul> <li><b>buttonId</b> : String<div class="sub-desc"> 按下按钮的id，可以是：The ID of the button pressed, one of:<div class="sub-desc"><ul> <li><tt>ok</tt></li> <li><tt>yes</tt></li> <li><tt>no</tt></li> <li><tt>cancel</tt></li> </ul></div></div></li> <li><b>text</b> : String<div class="sub-desc">输入文本字段的值可以是Value of the input field if either <tt><a href="#show-option-prompt" ext:member="show-option-prompt" ext:cls="Ext.MessageBox">prompt</a></tt> or <tt><a href="#show-option-multiline" ext:member="show-option-multiline" ext:cls="Ext.MessageBox">multiline</a></tt> is true</div></li> <li><b>opt</b> : Object<div class="sub-desc">进行显示的配置对象。The config object passed to show.</div></li> </ul></p></div></li> <li><b>scope</b> : Object<div class="sub-desc">回调函数的作用域。The scope of the callback function</div></li> <li><b>icon</b> : String<div class="sub-desc">一个指定了背景图片地址的 CSS 类名用于对话框显示图标（例如：Ext.MessageBox.WARNING 或者 'custom-class'，默认这 ''）。A CSS class that provides a background image to be used as the body icon for the dialog (e.g. Ext.MessageBox.WARNING or 'custom-class') (defaults to '')</div></li> <li><b>iconCls</b> : String<div class="sub-desc">作用在头版图标的标准<a href="output/show.html#show-Ext.WindowiconCls" ext:cls="show" ext:member="Ext.WindowiconCls">Ext.WindowiconCls</a>（默认为''）。The standard <a href="output/show.html#show-Ext.WindowiconCls" ext:cls="show" ext:member="Ext.WindowiconCls">Ext.WindowiconCls</a> to add an optional header icon (defaults to '')</div></li> <li><b>maxWidth</b> : Number<div class="sub-desc">以像素为单位表示的消息框的最大宽度（默认为 600）。The maximum width in pixels of the message box (defaults to 600)</div></li> <li><b>minWidth</b> : Number<div class="sub-desc">以像素为单位表示的消息框的最小宽度（默认为 100）。The minimum width in pixels of the message box (defaults to 100)</div></li> <li><b>modal</b> : Boolean<div class="sub-desc">值为 false 时允许用户在消息框在显示时交互（默认为 true） False to allow user interaction with the page while the message box is displayed (defaults to true)</div></li> <li><b>msg</b> : String<div class="sub-desc">使用指定的文本替换消息框中元素的 innerHTML （默认为XHTML兼容的非换行空格字符 '&amp;#160;'） A string that will replace the existing message box body text (defaults to the XHTML-compliant non-breaking space character '&amp;#160;')</div></li> <li><a id="show-option-multiline"></a><b>multiline</b> : Boolean<div class="sub-desc"> 值为 true 时显示一个提示用户输入多行文本的对话框（默认为 false）。True to prompt the user to enter multi-line text (defaults to false)</div></li> <li><b>progress</b> : Boolean<div class="sub-desc">值为 true 时显示一个进度条（默认为 false）。True to display a progress bar (defaults to false)</div></li> <li><b>progressText</b> : String<div class="sub-desc">当 progress = true 时进度条内显示的文本（默认为 ''）。The text to display inside the progress bar if progress = true (defaults to '')</div></li> <li><a id="show-option-prompt"></a><b>prompt</b> : Boolean<div class="sub-desc">值为 true 时显示一个提示用户输入单行文本的对话框（默认为 false）。True to prompt the user to enter single-line text (defaults to false)</div></li> <li><b>proxyDrag</b> : Boolean<div class="sub-desc">值为 true 则在拖拽的时候显示一个轻量级的代理（默认为 false）。True to display a lightweight proxy while dragging (defaults to false)</div></li> <li><b>title</b> : String<div class="sub-desc">标题文本。The title text</div></li> <li><b>value</b> : String<div class="sub-desc">设置到活动文本框中的文本。The string value to set into the active textbox element if displayed</div></li> <li><b>wait</b> : Boolean<div class="sub-desc">值为true时显示一个进度条（默认为 false）。True to display a progress bar (defaults to false)</div></li> <li><b>waitConfig</b> : Object<div class="sub-desc"><a href="output/show.html#show-Ext.ProgressBarwaitConfig" ext:cls="show" ext:member="Ext.ProgressBarwaitConfig">Ext.ProgressBarwaitConfig</a>对象（仅在 wait = true 时可用）。A <a href="output/show.html#show-Ext.ProgressBarwaitConfig" ext:cls="show" ext:member="Ext.ProgressBarwaitConfig">Ext.ProgressBarwaitConfig</a> object (applies only if wait = true)</div></li> <li><b>width</b> : Number<div class="sub-desc">以像素为单位表示的对话框的宽度。The width of the dialog in pixels</div></li> </ul> 用法示例： Example usage: <pre><code>
+Ext.Msg.show({
+   title: 'Address',
+   msg: 'Please enter your address:',
+   width: 300,
+   buttons: Ext.MessageBox.OKCANCEL,
+   multiline: true,
+   fn: saveAddress,
+   animEl: 'addAddressBtn',
+   icon: Ext.MessageBox.INFO
+});
+</code></pre>
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-updateProgress"></a>
+                        <!--名称+参数列表-->
+                        <b>updateProgress</b>(
+	                        
+                                <code>
+                                    Number value
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String progressText
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String msg
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                更新带有进度条的消息框中的文本和进度条。仅仅是由通过 Ext.Mess... 
+                            </div>
+                            <div class="long">
+                                更新带有进度条的消息框中的文本和进度条。仅仅是由通过 <a href="/output/Ext.MessageBox.html#Ext.MessageBox-Ext.MessageBoxprogress" ext:cls="Ext.MessageBox" ext:member="Ext.MessageBoxprogress">Ext.MessageBoxprogress</a>方法或者是在调用<a href="output/Ext.MessageBox.html#Ext.MessageBox-Ext.MessageBoxshow" ext:cls="Ext.MessageBox" ext:member="Ext.MessageBoxshow">Ext.MessageBoxshow</a>方法时使用参数progress: true显示的消息框中可用。Updates a progress-style message box's text and progress bar. Only relevant on message boxes initiated via <a href="/output/Ext.MessageBox.html#Ext.MessageBox-Ext.MessageBoxprogress" ext:cls="Ext.MessageBox" ext:member="Ext.MessageBoxprogress">Ext.MessageBoxprogress</a> or <a href="/output/Ext.MessageBox.html#Ext.MessageBox-Ext.MessageBoxwait" ext:cls="Ext.MessageBox" ext:member="Ext.MessageBoxwait">Ext.MessageBoxwait</a>, or by calling <a href="/output/Ext.MessageBox.html#Ext.MessageBox-Ext.MessageBoxshow" ext:cls="Ext.MessageBox" ext:member="Ext.MessageBoxshow">Ext.MessageBoxshow</a> with progress: true.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    value
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    0 到 1 之间的任意数字（例如： .5，默认为 0）。Any number between 0 and 1 (e.g., .5, defaults to 0)
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    progressText
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    进度条中显示的文本（默认为 ''）。The progress text to display inside the progress bar (defaults to '')
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    msg
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    用于替换消息框中 body 元素内容的文本（默认为 undefined，因此如果没有指定该参数则 body 中任何现存的文本将不会被覆写）。The message box's body text is replaced with the specified string (defaults to undefined so that any existing body text will not get overwritten by default unless a new value is passed in)
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-updateText"></a>
+                        <!--名称+参数列表-->
+                        <b>updateText</b>(
+	                        
+                                <code>
+                                    String text
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                更新消息框中body元素的文本。Updates the message... 
+                            </div>
+                            <div class="long">
+                                更新消息框中body元素的文本。Updates the message box body text
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    text
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    可选）使用指定的文本替换消息框中元素的 innerHTML （默认为XHTML兼容的非换行空格字符 '&amp;#160;'）。(optional) Replaces the message box element's innerHTML with the specified string (defaults to the XHTML-compliant non-breaking space character '&amp;#160;')
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.MessageBox-wait"></a>
+                        <!--名称+参数列表-->
+                        <b>wait</b>(
+	                        
+                                <code>
+                                    String msg
+
+,
+                                </code>
+	                        
+                                <code>
+                                    String title
+
+,
+                                </code>
+	                        
+                                <code>
+                                    Object config
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : Ext.MessageBox
+                        <div class="mdesc">
+                            <div class="short">
+                                显示一个带有不断自动更新的进度条的消息框。这个可以被用在一个长时间运行... 
+                            </div>
+                            <div class="long">
+                                显示一个带有不断自动更新的进度条的消息框。这个可以被用在一个长时间运行的进程中防止用户交互。你需要在进程完成的时候关闭消息框。Displays a message box with an infinitely auto-updating progress bar.  This can be used to block user interaction while waiting for a long-running process to complete that does not have defined intervals. You are responsible for closing the message box when the process is complete.
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    msg
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    消息框 body 文本 The message box body text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    title
+                                                </code> : String
+                                                <div class="sub-desc">
+                                                    可选） 标题文本。(optional) The title bar text
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    config
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    可选） <a href="output/wait.html#wait-Ext.ProgressBarwaitConfig" ext:cls="wait" ext:member="Ext.ProgressBarwaitConfig">Ext.ProgressBarwaitConfig</a>对象。(optional) A <a href="output/wait.html#wait-Ext.ProgressBarwaitConfig" ext:cls="wait" ext:member="Ext.ProgressBarwaitConfig">Ext.ProgressBarwaitConfig</a> object
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        Ext.MessageBox
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            this
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        MessageBox
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.MessageBox-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>

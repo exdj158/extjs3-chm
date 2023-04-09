@@ -1,0 +1,303 @@
+﻿<style type="text/css">
+  /**  
+  body {
+        overflow: scroll;
+    }
+    
+	 .mdesc .long {
+        display: block;
+    }
+     */
+     .description{
+	    line-height:120%;
+	    text-align: justify;
+	    text-justify: inter-ideograph;
+     }
+</style>
+<!-- End Mock-->
+<!--
+ * 更新地址：http://ajaxjs.com/docs/
+ * 欢迎参与我们翻译的工作！详见《EXT API2Chinese 相关事宜》：
+ * http://jstang.cn/thread-90-1-2.html
+ * 
+ * 本翻译采用“创作共同约定、Creative Commons”。您可以自由：
+ * 复制、发行、展览、表演、放映、广播或通过信息网络传播本作品
+ * 创作演绎作品
+ * 请遵守：
+ *    署名. 您必须按照作者或者许可人指定的方式对作品进行署名。
+ * # 对任何再使用或者发行，您都必须向他人清楚地展示本作品使用的许可协议条款。
+ * # 如果得到著作权人的许可，您可以不受任何这些条件的限制
+ * http://creativecommons.org/licenses/by/2.5/cn/
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="body-wrap">
+
+	<div class="top-tools">
+		<a class="inner-link" href="#Ext.util.DelayedTask-props" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-prop">属性
+		</a>
+		<a class="inner-link" href="#Ext.util.DelayedTask-methods" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-method">方法
+		</a>
+		<a class="inner-link" href="#Ext.util.DelayedTask-events" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-event">事件
+		</a>
+		<a class="inner-link" href="#Ext.util.DelayedTask-configs" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-config">配置项
+		</a>
+		<a class="bookmark" href="../docs/?class=Ext.util.DelayedTask" style="font-size:9pt;">
+			<img src="/resources/images/default/s.gif" class="item-icon icon-fav">直接连接
+		</a>
+
+	</div>
+	<h1>
+		类<a href="source/DelayedTask.html#cls-Ext.util.DelayedTask">Ext.util.DelayedTask</a>
+	</h1>
+	<table cellspacing="0">		
+		<tr>
+			<td class="label">
+			包：
+			</td>
+			<td class="hd-info">
+			Extutil
+			</td>
+		</tr>			
+		<tr>
+			<td class="label">
+                定义的文件：
+			</td>
+			<td class="hd-info">
+                DelayedTask.js
+               
+			</td>
+		</tr>
+		<tr>
+			<td class="label">
+                类全称：
+			</td>
+			<td class="hd-info">
+                <a href="/source/DelayedTask.html#cls-Ext.util.DelayedTask">Ext.util.DelayedTask</a>
+			</td>
+		</tr> 
+		<tr>
+			<td class="label">
+                继承自于：
+			</td>
+			<td class="hd-info">
+			
+                Object
+                
+            
+                
+			</td>
+		</tr>
+	</table>
+	<div class="description">
+         提供快捷的方法执行setTimeout，新的超时时限会取消旧的超时时限. 例如验证表单的时候，键盘按下(keypress)那一瞬，就可用上该类（不会立即验证表单，稍作延时）。keypress事件会稍作停顿之后（某个时间）才继续执行。Provides a convenient method of performing setTimeout where a new timeout cancels the old timeout. An example would be performing validation on a keypress. You can use this class to buffer the keypress events for a certain number of milliseconds, and perform only if they stop for that amount of time. 
+	</div>
+
+
+	<!----开始配置项------>
+	<div class="hr">
+	</div>
+	<a id="Ext.util.DelayedTask-configs"></a>
+	<h2>配置项</h2>
+
+    
+        这个类没有配置项。
+    
+	<!----结束配置项------>
+
+	<!----开始属性------>
+	<a id="Ext.util.DelayedTask-props"></a>
+    <h2>公告属性</h2>
+    
+    
+        这个类没有公告属性。
+    	
+	<!----结束属性------>
+	
+	<!----开始方法------>
+    <a id="Ext.util.DelayedTask-methods"></a>
+    <h2>公共方法</h2>
+    
+        <table cellspacing="0" class="member-table">
+            <tr>
+                <th class="sig-header" colspan="2">
+                    方法
+                </th>
+                <th class="msource-header">
+                    定义者
+                </th>
+            </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.DelayedTask-cancel"></a>
+                        <!--名称+参数列表-->
+                        <b>cancel</b>(
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                取消最后的排列超时。Cancel the last queued ti... 
+                            </div>
+                            <div class="long">
+                                取消最后的排列超时。Cancel the last queued timeout
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DelayedTask
+                    </td>
+                </tr>
+            
+                <tr class="method-row expandable">
+                    <td class="micon">
+                        <a class="exi" href="#expand">&nbsp;</a>
+                    </td>
+                    <td class="sig">
+                        <!--ClassName--><a id="Ext.util.DelayedTask-delay"></a>
+                        <!--名称+参数列表-->
+                        <b>delay</b>(
+	                        
+                                <code>
+                                    Number delay
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Function newFn]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Object newScope]</span>
+
+,
+                                </code>
+	                        
+                                <code>
+                                    <span class='optional'>[Array newArgs]</span>
+
+
+                                </code>
+	                        
+                        )
+                        
+                     <!--返回类型，跟在方法后面的提示-->
+                        : void
+                        <div class="mdesc">
+                            <div class="short">
+                                取消所有待定的超时（any pending timeout），并重新排... 
+                            </div>
+                            <div class="long">
+                                取消所有待定的超时（any pending timeout），并重新排列（queues）。Cancels any pending timeout and queues a new one
+                                <div class="mdetail-params">
+                                    <b>参数项：</b>
+                                    <ul>
+                                    	
+                                        
+                                            <li>
+                                                <code>
+                                                    delay
+                                                </code> : Number
+                                                <div class="sub-desc">
+                                                    延迟毫秒数The milliseconds to delay
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    newFn
+                                                </code> : Function
+                                                <div class="sub-desc">
+                                                    重写传入到构建器的函数(optional) Overrides function passed to constructor
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    newScope
+                                                </code> : Object
+                                                <div class="sub-desc">
+                                                    重写传入到构建器的作用域(optional) Overrides scope passed to constructor
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                                <code>
+                                                    newArgs
+                                                </code> : Array
+                                                <div class="sub-desc">
+                                                    重写传入到构建器的参数(optional) Overrides args passed to constructor
+                                                </div>
+                                            </li>
+                                        
+                                    	
+                                    	
+                                    </ul>
+                                    <b>返回值：</b>
+                                    <ul>
+                                        <li>
+                                            <code>
+						                        void
+                                            </code>
+                                            <br/>
+                                            <!--返回值的描述-->
+                                            <!--Todo: write THIS?-->
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="msource">
+                        DelayedTask
+                    </td>
+                </tr>
+            
+        </table>
+    
+    	
+	<!----结束方法------>
+	
+	<!----开始事件------>
+    <a id="Ext.util.DelayedTask-events"></a>
+    <h2>公共事件</h2>
+    
+    
+        这个类没有公告事件。
+    	
+	<!----结束事件------>	
+</div>
